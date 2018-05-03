@@ -30,6 +30,8 @@ import cv2
 import numpy.random as npr
 from utils.IoU import IoU
 
+from datasets.WIDERFaceDataset import WIDERFaceDataset
+
 class SimpleFaceDataset(object):
 
 	__positive_IoU = 0.65
@@ -38,6 +40,9 @@ class SimpleFaceDataset(object):
 
 	def __init__(self, name='SimpleFaceDataset'):
 		self._name = name
+		self._clear()
+
+	def _clear(self):
 		self._is_valid = False
 		self._data = dict()
 
@@ -74,58 +79,20 @@ class SimpleFaceDataset(object):
 	def data(self):
 		return(self._data)
 
-	def _read_annotation(self, annotation_image_dir, annotation_file_name):
+	def _read(self, annotation_image_dir, annotation_file_name):
 		
-		if(not os.path.isfile(annotation_file_name)):
-			return(False)
+		self._clear()
 
-		self._data = dict()
-		self._is_valid = False
-
-		images = []
-		bounding_boxes = []
-		annotation_file = open(annotation_file_name, 'r')
-		while( True ):
-       			image_path = annotation_file.readline().strip('\n')
-       			if( not image_path ):
-       				break			
-
-       			image_path = os.path.join(annotation_image_dir, image_path)
-			image = cv2.imread(image_path)
-			if(image is None):
-				continue
-
-       			images.append(image_path)
-
-       			nums = annotation_file.readline().strip('\n')
-       			one_image_boxes = []
-       			for face_index in range(int(nums)):
-       				bounding_box_info = annotation_file.readline().strip('\n').split(' ')
-
-       				face_box = [float(bounding_box_info[i]) for i in range(4)]
-
-       				xmin = face_box[0]
-       				ymin = face_box[1]
-       				xmax = xmin + face_box[2]
-       				ymax = ymin + face_box[3]
-
-       				one_image_boxes.append([xmin, ymin, xmax, ymax])
-
-       			bounding_boxes.append(one_image_boxes)
-
-		if(len(images)):			
-			self._data['images'] = images
-			self._data['bboxes'] = bounding_boxes
+		face_dataset = WIDERFaceDataset()
+		if(face_dataset.read(annotation_image_dir, annotation_file_name)):
 			self._is_valid = True
-		else:
-			self._is_valid = False
+			self._data = face_dataset.data()		
 
-		return(self.is_valid())
-
+		return(self._is_valid)
 
 	def generate_samples(self, annotation_image_dir, annotation_file_name, minimum_face, target_root_dir):
 
-		if(not self._read_annotation(annotation_image_dir, annotation_file_name)):
+		if(not self._read(annotation_image_dir, annotation_file_name)):
 			return(False)
 
 		image_file_names = self._data['images']

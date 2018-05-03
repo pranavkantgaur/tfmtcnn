@@ -47,8 +47,8 @@ class SimpleDataset(AbstractDataset):
 		return(landmark_dataset.generate(landmark_image_dir, landmark_file_name, minimum_face, target_root_dir))
 		
 	def _generate_image_samples(self, annotation_image_dir, annotation_file_name, minimum_face, target_root_dir):
-		wider_dataset = SimpleFaceDataset()		
-		return(wider_dataset.generate_samples(annotation_image_dir, annotation_file_name, minimum_face, target_root_dir))
+		face_dataset = SimpleFaceDataset()		
+		return(face_dataset.generate_samples(annotation_image_dir, annotation_file_name, minimum_face, target_root_dir))
 
 	def _generate_image_list(self, base_number_of_images, target_root_dir):
 		positive_file = open(SimpleFaceDataset.positive_file_name(target_root_dir), 'r')

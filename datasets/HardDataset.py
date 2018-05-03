@@ -43,8 +43,8 @@ class HardDataset(SimpleDataset):
 		SimpleDataset.__init__(self, name)	
 
 	def _generate_image_samples(self, annotation_file_name, annotation_image_dir, model_train_dir, minimum_face, target_root_dir):
-		wider_dataset = HardFaceDataset()
-		return(wider_dataset.generate_samples(annotation_image_dir, annotation_file_name, model_train_dir, self.network_name(), minimum_face, target_root_dir))
+		face_dataset = HardFaceDataset()
+		return(face_dataset.generate_samples(annotation_image_dir, annotation_file_name, model_train_dir, self.network_name(), minimum_face, target_root_dir))
 
 	def _generate_image_list(self, target_root_dir):
 		positive_file = open(SimpleFaceDataset.positive_file_name(target_root_dir), 'r')

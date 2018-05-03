@@ -132,7 +132,7 @@ class HardFaceDataset(SimpleFaceDataset):
 
 	def generate_samples(self, annotation_image_dir, annotation_file_name, model_train_dir, network_name, minimum_face, target_root_dir):
 
-		if(not self._read_annotation(annotation_image_dir, annotation_file_name)):
+		if(not self._read(annotation_image_dir, annotation_file_name)):
 			return(False)
 
 		test_data = InferenceBatch(self._data['images'])

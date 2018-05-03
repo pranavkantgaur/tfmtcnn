@@ -46,6 +46,9 @@ class LandmarkDataset(object):
 
 	def __init__(self, name='Landmark'):
 		self._name = name
+		self._clear()
+
+	def _clear(self):
 		self._is_valid = False
 		self._landmark_data = []
 
@@ -62,17 +65,13 @@ class LandmarkDataset(object):
 
 	def _read(self, landmark_image_dir, landmark_file_name):
 		
-		self._is_valid = False
-    		self._landmark_data = []
+		self._clear()
 	
 		#landmark_dataset = LFWLandmarkDataset()
 		landmark_dataset = CelebADataset()
 		if(landmark_dataset.read(landmark_image_dir, landmark_file_name)):
 			self._is_valid = True
 			self._landmark_data = landmark_dataset.data()		
-		else:
-			self._is_valid = False
-    			self._landmark_data = []
 
 		return(self._is_valid)
 
