@@ -154,7 +154,7 @@ class SimpleFaceDataset(object):
     		for image_file_path, ground_truth_box in zip(image_file_names, ground_truth_boxes):
         		bounding_boxes = np.array(ground_truth_box, dtype=np.float32).reshape(-1, 4)			
 
-			current_image = cv2.imread(os.path.join(annotation_image_dir, image_file_path))
+			current_image = cv2.imread(image_file_path)
     			height, width, channel = current_image.shape
 
 			neg_num = 0
