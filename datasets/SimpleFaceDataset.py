@@ -51,6 +51,10 @@ class SimpleFaceDataset(object):
 		return(SimpleFaceDataset.__positive_IoU)
 
 	@classmethod
+	def minimum_face_size(cls):
+		return(40)
+
+	@classmethod
 	def part_IoU(cls):
 		return(SimpleFaceDataset.__part_IoU)
 
@@ -90,7 +94,7 @@ class SimpleFaceDataset(object):
 
 		return(self._is_valid)
 
-	def generate_samples(self, annotation_image_dir, annotation_file_name, minimum_face, target_root_dir):
+	def generate_samples(self, annotation_image_dir, annotation_file_name, face_size, target_root_dir):
 
 		if(not self._read(annotation_image_dir, annotation_file_name)):
 			return(False)
@@ -126,7 +130,7 @@ class SimpleFaceDataset(object):
 
 			neg_num = 0
 			while(neg_num < 50):
-				size = npr.randint(12, min(width, height) / 2)
+				size = npr.randint(face_size, min(width, height) / 2)
 			        nx = npr.randint(0, width - size)
         			ny = npr.randint(0, height - size)
         
@@ -135,7 +139,7 @@ class SimpleFaceDataset(object):
         			current_IoU = IoU(crop_box, bounding_boxes)
         
         			cropped_image = current_image[ny : ny + size, nx : nx + size, :]
-        			resized_image = cv2.resize(cropped_image, (minimum_face, minimum_face), interpolation=cv2.INTER_LINEAR)
+        			resized_image = cv2.resize(cropped_image, (face_size, face_size), interpolation=cv2.INTER_LINEAR)
 				if( np.max(current_IoU) < SimpleFaceDataset.negative_IoU() ):
 					file_path = os.path.join(negative_dir, "%s.jpg"%negative_images)
 					negative_file.write(file_path + ' 0\n')
@@ -148,22 +152,23 @@ class SimpleFaceDataset(object):
 				w = x2 - x1 + 1
 				h = y2 - y1 + 1
 
-				if( max(w, h) < 40 or x1 < 0 or y1 < 0 ):
+				if( ( max(w, h) < SimpleFaceDataset.minimum_face_size() ) or (x1 < 0) or (y1 < 0) or (w < 0) or (h < 0) ):
             				continue
 
 				for i in range(5):
-			            	size = npr.randint(12, min(width, height) / 2)
+			            	size = npr.randint(face_size, min(width, height) / 2)
             				delta_x = npr.randint(max(-size, -x1), w)
             				delta_y = npr.randint(max(-size, -y1), h)
             				nx1 = int(max(0, x1 + delta_x))
             				ny1 = int(max(0, y1 + delta_y))
-            				if nx1 + size > width or ny1 + size > height:
+            				if ( (nx1 + size) > width ) or ( (ny1 + size) > height ):
                 				continue
+
             				crop_box = np.array([nx1, ny1, nx1 + size, ny1 + size])
             				current_IoU = IoU(crop_box, bounding_boxes)
     
             				cropped_image = current_image[ny1: ny1 + size, nx1: nx1 + size, :]
-            				resized_image = cv2.resize(cropped_image, (minimum_face, minimum_face), interpolation=cv2.INTER_LINEAR)
+            				resized_image = cv2.resize(cropped_image, (face_size, face_size), interpolation=cv2.INTER_LINEAR)
     
             				if( np.max(current_IoU) < SimpleFaceDataset.negative_IoU() ):
                 				file_path = os.path.join(negative_dir, "%s.jpg" % negative_images)
@@ -191,7 +196,7 @@ class SimpleFaceDataset(object):
             				offset_y2 = (y2 - ny2) / float(size)
 
             				cropped_image = current_image[ny1 : ny2, nx1 : nx2, :]
-            				resized_image = cv2.resize(cropped_image, (minimum_face, minimum_face), interpolation=cv2.INTER_LINEAR)
+            				resized_image = cv2.resize(cropped_image, (face_size, face_size), interpolation=cv2.INTER_LINEAR)
 
             				box_ = bounding_box.reshape(1, -1)
             				if( IoU(crop_box, box_) >= SimpleFaceDataset.positive_IoU() ):

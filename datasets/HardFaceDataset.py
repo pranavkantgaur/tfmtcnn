@@ -43,7 +43,7 @@ class HardFaceDataset(SimpleFaceDataset):
 	def __init__(self, name='HardFaceDataset'):
 		SimpleFaceDataset.__init__(self, name)	
 
-	def _generate_hard_samples(self, network_name, detected_boxes, minimum_face, target_root_dir):
+	def _generate_hard_samples(self, network_name, detected_boxes, face_size, target_root_dir):
 
 		image_file_names = self._data['images']
 		ground_truth_boxes = self._data['bboxes']
@@ -90,7 +90,7 @@ class HardFaceDataset(SimpleFaceDataset):
             			width = x_right - x_left + 1
             			height = y_bottom - y_top + 1
 
-            			if( (width < minimum_face) or (x_left < 0) or (y_top < 0) or (x_right > current_image.shape[1] - 1) or (y_bottom > current_image.shape[0] - 1) ):
+            			if( (width < face_size) or (x_left < 0) or (y_top < 0) or (x_right > (current_image.shape[1] - 1) ) or (y_bottom > (current_image.shape[0] - 1 ) ) ):
                 			continue
 
             			current_IoU = IoU(box, ground_truth_box)
@@ -130,7 +130,7 @@ class HardFaceDataset(SimpleFaceDataset):
 
 		return(True)
 
-	def generate_samples(self, annotation_image_dir, annotation_file_name, model_train_dir, network_name, minimum_face, target_root_dir):
+	def generate_samples(self, annotation_image_dir, annotation_file_name, model_train_dir, network_name, face_size, target_root_dir):
 
 		if(not self._read(annotation_image_dir, annotation_file_name)):
 			return(False)
@@ -144,5 +144,5 @@ class HardFaceDataset(SimpleFaceDataset):
 		previous_network = NetworkFactory.previous_network(network_name)
 		detected_boxes, landmarks = face_detector.detect_face(test_data, previous_network)
 
-		return(self._generate_hard_samples(network_name, detected_boxes, minimum_face, target_root_dir))
+		return(self._generate_hard_samples(network_name, detected_boxes, face_size, target_root_dir))
 

@@ -67,8 +67,8 @@ class LandmarkDataset(object):
 		
 		self._clear()
 	
-		#landmark_dataset = LFWLandmarkDataset()
-		landmark_dataset = CelebADataset()
+		landmark_dataset = LFWLandmarkDataset()
+		#landmark_dataset = CelebADataset()
 		if(landmark_dataset.read(landmark_image_dir, landmark_file_name)):
 			self._is_valid = True
 			self._data = landmark_dataset.data()		
