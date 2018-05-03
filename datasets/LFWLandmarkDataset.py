@@ -34,41 +34,58 @@ class LFWLandmarkDataset(object):
 
 	def __init__(self, name='LFWLandmark'):
 		self._name = name
+		self._clear()
+
+	def _clear(self):
 		self._is_valid = False
-		self._landmark_data = []
+		self._data = dict()
 
 	def is_valid(self):
 		return(self._is_valid)
 
 	def data(self):
-		return(self._landmark_data)
+		return(self._data)
 
 	def read(self, landmark_image_dir, landmark_file_name):
 
-		self._is_valid = False
-    		self._landmark_data = []
+		self._clear()
 
-		with open(landmark_file_name, 'r') as landmark_file:
-        		lines = landmark_file.readlines()
+		if(not os.path.isfile(landmark_file_name)):
+			return(False)
 
-    		for line in lines:
-        			line = line.strip()
-        			components = line.split(' ')
-        			image_path = os.path.join(landmark_image_dir, components[0])
+		images = []
+		bounding_boxes = []
+		landmarks = []
+		landmark_file = open(landmark_file_name, 'r')
+		while( True ):
+       			line = landmark_file.readline().strip()
+			landmark_data = line.split(' ')
 
-        			bounding_box = (components[1], components[3], components[2], components[4])        
-        			bounding_box = [float(_) for _ in bounding_box]
-        			bounding_box = map(int,bounding_box)
+			image_path = landmark_data[0]
+       			if( not image_path):
+				break
+			else:
+				image_path = os.path.join(landmark_image_dir, landmark_data[0])
 
-        			landmark = np.zeros((5, 2))
-        			for index in range(0, 5):
-            				rv = (float(components[5+2*index]), float(components[5+2*index+1]))
-            				landmark[index] = rv
+			bounding_box = (landmark_data[1], landmark_data[3], landmark_data[2], landmark_data[4])
+			bounding_box = map(int, bounding_box)
 
-        			self._landmark_data.append((image_path, BBox(bounding_box), landmark))
+       			landmark = np.zeros((5, 2))
+       			for index in range(0, 5):
+       				point = (float(landmark_data[5+2*index]), float(landmark_data[5+2*index+1]))
+       				landmark[index] = point
 
-		if(len(self._landmark_data)):
+			images.append(image_path)
+			bounding_boxes.append(BBox(bounding_box))
+			landmarks.append(landmark)
+
+		if(len(images)):			
+			self._data['images'] = images
+			self._data['bboxes'] = bounding_boxes
+			self._data['landmarks'] = landmarks
 			self._is_valid = True
+		else:
+			self._clear()
 
-    		return(self._is_valid)
+		return(self.is_valid())
 

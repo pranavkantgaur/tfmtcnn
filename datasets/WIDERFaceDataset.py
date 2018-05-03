@@ -45,10 +45,10 @@ class WIDERFaceDataset(object):
 
 	def read(self, annotation_image_dir, annotation_file_name):
 		
-		if(not os.path.isfile(annotation_file_name)):
-			return(False)
-
 		self._clear()
+
+		if(not os.path.isfile(annotation_file_name)):
+			return(False)		
 
 		images = []
 		bounding_boxes = []

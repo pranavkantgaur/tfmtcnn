@@ -50,7 +50,7 @@ class LandmarkDataset(object):
 
 	def _clear(self):
 		self._is_valid = False
-		self._landmark_data = []
+		self._data = []
 
 	@classmethod
 	def landmark_file_name(cls, target_root_dir):
@@ -61,7 +61,7 @@ class LandmarkDataset(object):
 		return(self._is_valid)
 
 	def data(self):
-		return(self._landmark_data)
+		return(self._data)
 
 	def _read(self, landmark_image_dir, landmark_file_name):
 		
@@ -71,7 +71,7 @@ class LandmarkDataset(object):
 		landmark_dataset = CelebADataset()
 		if(landmark_dataset.read(landmark_image_dir, landmark_file_name)):
 			self._is_valid = True
-			self._landmark_data = landmark_dataset.data()		
+			self._data = landmark_dataset.data()		
 
 		return(self._is_valid)
 
@@ -80,6 +80,10 @@ class LandmarkDataset(object):
 		if(not self._read(landmark_image_dir, landmark_file_name)):
 			return(False)
 		
+		image_file_names = self._data['images']
+		ground_truth_boxes = self._data['bboxes']
+		ground_truth_landmarks = self._data['landmarks']
+
 		landmark_dir = os.path.join(target_root_dir, 'landmark')
 		if(not os.path.exists(landmark_dir)):
     			os.makedirs(landmark_dir)
@@ -87,12 +91,12 @@ class LandmarkDataset(object):
 		landmark_file = open(LandmarkDataset.landmark_file_name(target_root_dir), 'w')
 
 		size = minimum_face
-		argument = True
+		augment = True
 
 		number_of_images = 0
     		number_of_input_images = 0
-		total_number_of_input_images = len(self._landmark_data)
-    		for (image_path, bounding_box, landmarkGt) in self._landmark_data:
+		total_number_of_input_images = len(image_file_names)
+		for image_path, bounding_box, landmarkGt in zip(image_file_names, ground_truth_boxes, ground_truth_landmarks):
         		F_imgs = []
         		F_landmarks = []  
 
@@ -115,7 +119,7 @@ class LandmarkDataset(object):
         		F_landmarks.append(landmark.reshape(10))
         		landmark = np.zeros((5, 2))  
 
-			if argument:
+			if augment:
             			number_of_input_images = number_of_input_images + 1
             			if( number_of_input_images % 1000 == 0 ):
                 			print( '( %s / %s ) number of input images are done.' % ( number_of_input_images, total_number_of_input_images) )
@@ -207,6 +211,4 @@ class LandmarkDataset(object):
 
     		landmark_file.close()
 		return(True)
-
-
 
