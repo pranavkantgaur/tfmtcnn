@@ -97,10 +97,10 @@ class SimpleFaceDataset(object):
 		part_file = open(SimpleFaceDataset.part_file_name(target_root_dir), 'w')
 		negative_file = open(SimpleFaceDataset.negative_file_name(target_root_dir), 'w')
 
-		positive_images = 0
-		part_images = 0
-		negative_images = 0
-		annotation_number = 0
+		total_positive_images = 0
+		total_part_images = 0
+		total_negative_images = 0
+		current_image_number = 0		
 
     		for image_file_path, ground_truth_box in zip(image_file_names, ground_truth_boxes):
         		bounding_boxes = np.array(ground_truth_box, dtype=np.float32).reshape(-1, 4)			
@@ -108,11 +108,17 @@ class SimpleFaceDataset(object):
 			current_image = cv2.imread(image_file_path)
     			height, width, channel = current_image.shape
 
-			neg_num = 0
-			while(neg_num < 50):
-				size = npr.randint(face_size, min(width, height) / 2)
-			        nx = npr.randint(0, width - size)
-        			ny = npr.randint(0, height - size)
+			needed_negative_images = 100
+			negative_images = 0
+			maximum_attempts = 5000
+			number_of_attempts = 0
+			while(	(negative_images < needed_negative_images) and (number_of_attempts < maximum_attempts) ):
+				number_of_attempts += 1
+
+				size = npr.randint(face_size, min(width, height)/2 )
+
+			        nx = npr.randint(0, (width - size) )
+        			ny = npr.randint(0, (height - size) )
         
         			crop_box = np.array([nx, ny, nx + size, ny + size])
         
@@ -121,24 +127,32 @@ class SimpleFaceDataset(object):
         			cropped_image = current_image[ny : ny + size, nx : nx + size, :]
         			resized_image = cv2.resize(cropped_image, (face_size, face_size), interpolation=cv2.INTER_LINEAR)
 				if( np.max(current_IoU) < DatasetFactory.negative_IoU() ):
-					file_path = os.path.join(negative_dir, "%s.jpg"%negative_images)
+					file_path = os.path.join(negative_dir, "%s.jpg"%total_negative_images)
 					negative_file.write(file_path + ' 0\n')
 					cv2.imwrite(file_path, resized_image)
-            				negative_images += 1
-            				neg_num += 1
+            				total_negative_images += 1
+            				negative_images += 1					
 
 			for bounding_box in bounding_boxes:
 				x1, y1, x2, y2 = bounding_box
 				w = x2 - x1 + 1
 				h = y2 - y1 + 1
 
-				if( ( max(w, h) < DatasetFactory.minimum_face_size() ) or (x1 < 0) or (y1 < 0) or (w < 0) or (h < 0) ):				
+				if( (x1 < 0) or (y1 < 0) or (w < 0) or (h < 0) ):				
             				continue
 
-				for i in range(5):
-			            	size = npr.randint(face_size, min(width, height) / 2)
+				needed_negative_images = 1
+				negative_images = 0
+				maximum_attempts = 5000
+				number_of_attempts = 0
+				while( (negative_images < needed_negative_images) and (number_of_attempts < maximum_attempts) ):
+					number_of_attempts += 1
+
+			            	size = npr.randint(face_size, min(width, height)/2 )
+
             				delta_x = npr.randint(max(-size, -x1), w)
             				delta_y = npr.randint(max(-size, -y1), h)
+
             				nx1 = int(max(0, x1 + delta_x))
             				ny1 = int(max(0, y1 + delta_y))
             				if ( (nx1 + size) > width ) or ( (ny1 + size) > height ):
@@ -151,16 +165,25 @@ class SimpleFaceDataset(object):
             				resized_image = cv2.resize(cropped_image, (face_size, face_size), interpolation=cv2.INTER_LINEAR)
     
             				if( np.max(current_IoU) < DatasetFactory.negative_IoU() ):
-                				file_path = os.path.join(negative_dir, "%s.jpg" % negative_images)
+                				file_path = os.path.join(negative_dir, "%s.jpg" % total_negative_images)
                 				negative_file.write(file_path + ' 0\n')
                 				cv2.imwrite(file_path, resized_image)
-                				negative_images += 1 
+                				total_negative_images += 1 
+						negative_images += 1
 
-				for i in range(20):
+				needed_images = 1
+				positive_images = 0
+				part_images = 0
+
+				maximum_attempts = 5000
+				number_of_attempts = 0
+				while( (number_of_attempts < maximum_attempts) and ( (positive_images < needed_images) or (part_images < needed_images) ) ):
+					number_of_attempts += 1
+
             				size = npr.randint(int(min(w, h) * 0.8), np.ceil(1.25 * max(w, h)))
 
-            				delta_x = npr.randint(-w * 0.2, w * 0.2)
-            				delta_y = npr.randint(-h * 0.2, h * 0.2)
+            				delta_x = npr.randint(-1.0 * w, +1.0 * w) * 0.2			
+            				delta_y = npr.randint(-1.0 * h, +1.0 * h) * 0.2
 
             				nx1 = int(max(x1 + w / 2 + delta_x - size / 2, 0))
             				ny1 = int(max(y1 + h / 2 + delta_y - size / 2, 0))
@@ -178,21 +201,24 @@ class SimpleFaceDataset(object):
             				cropped_image = current_image[ny1 : ny2, nx1 : nx2, :]
             				resized_image = cv2.resize(cropped_image, (face_size, face_size), interpolation=cv2.INTER_LINEAR)
 
-            				box_ = bounding_box.reshape(1, -1)
-            				if( IoU(crop_box, box_) >= DatasetFactory.positive_IoU() ):
-                				file_path = os.path.join(positive_dir, "%s.jpg"%positive_images)
+            				normalized_box = bounding_box.reshape(1, -1)
+            				if( ( IoU(crop_box, normalized_box) >= DatasetFactory.positive_IoU() ) and (positive_images < needed_images) ):
+                				file_path = os.path.join(positive_dir, "%s.jpg"%total_positive_images)
                 				positive_file.write(file_path + ' 1 %.2f %.2f %.2f %.2f\n'%(offset_x1, offset_y1, offset_x2, offset_y2))
                 				cv2.imwrite(file_path, resized_image)
-                				positive_images += 1
-            				elif( IoU(crop_box, box_) >= DatasetFactory.part_IoU() ):
-                				file_path = os.path.join(part_dir, "%s.jpg"%part_images)
+                				total_positive_images += 1
+						positive_images += 1
+
+            				elif( ( IoU(crop_box, normalized_box) >= DatasetFactory.part_IoU() ) and (part_images < needed_images) ):
+                				file_path = os.path.join(part_dir, "%s.jpg"%total_part_images)
                 				part_file.write(file_path + ' -1 %.2f %.2f %.2f %.2f\n'%(offset_x1, offset_y1, offset_x2, offset_y2))
                 				cv2.imwrite(file_path, resized_image)
-                				part_images += 1
+                				total_part_images += 1
+						part_images += 1
 
-				annotation_number += 1        
-				if(annotation_number % 1000 == 0 ):
-					print('%s number of images are done - positive - %s,  part - %s, negative - %s' % (annotation_number, positive_images, part_images, negative_images))
+				current_image_number += 1        
+				if(current_image_number % 1000 == 0 ):
+					print('%s number of images are done - positive - %s,  part - %s, negative - %s' % (current_image_number, total_positive_images, total_part_images, total_negative_images))
 
 		negative_file.close()
 		part_file.close()

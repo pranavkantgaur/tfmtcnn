@@ -30,10 +30,15 @@ import cv2
 class WIDERFaceDataset(object):
 
 	__name = 'WIDERFaceDataset'
+	__minimum_face_size = 40
 
 	@classmethod
 	def name(cls):
 		return(WIDERFaceDataset.__name)
+
+	@classmethod
+	def minimum_face_size(cls):
+		return(WIDERFaceDataset.__minimum_face_size)
 
 	def __init__(self):
 		self._clear()
@@ -41,12 +46,16 @@ class WIDERFaceDataset(object):
 	def _clear(self):
 		self._is_valid = False
 		self._data = dict()
+		self._number_of_faces = 0
 		
 	def is_valid(self):
 		return(self._is_valid)
 
 	def data(self):
 		return(self._data)
+
+	def number_of_faces(self):
+		return(self._number_of_faces)
 
 	def read(self, annotation_image_dir, annotation_file_name):
 		
@@ -66,9 +75,7 @@ class WIDERFaceDataset(object):
        			image_path = os.path.join(annotation_image_dir, image_path)
 			image = cv2.imread(image_path)
 			if(image is None):
-				continue
-
-       			images.append(image_path)
+				continue       			
 
        			nums = annotation_file.readline().strip('\n')
        			one_image_boxes = []
@@ -79,17 +86,25 @@ class WIDERFaceDataset(object):
 
        				xmin = face_box[0]
        				ymin = face_box[1]
-       				xmax = xmin + face_box[2]
-       				ymax = ymin + face_box[3]
+				width = face_box[2]
+				height = face_box[3]
 
-       				one_image_boxes.append([xmin, ymin, xmax, ymax])
+       				xmax = xmin + width
+       				ymax = ymin + height
 
-       			bounding_boxes.append(one_image_boxes)
+				if(max(width, height) < WIDERFaceDataset.minimum_face_size()):
+       					one_image_boxes.append([xmin, ymin, xmax, ymax])
+					self._number_of_faces += 1
+
+			if(len(one_image_boxes)):
+				images.append(image_path)
+       				bounding_boxes.append(one_image_boxes)
 
 		if(len(images)):			
 			self._data['images'] = images
 			self._data['bboxes'] = bounding_boxes
 			self._is_valid = True
+			print(self._number_of_faces, 'faces in ' , len(images), 'number of images for WIDER Face dataset.')
 		else:
 			self._clear()
 

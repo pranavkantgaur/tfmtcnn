@@ -32,9 +32,7 @@ class DatasetFactory(object):
 
 	__positive_IoU = 0.65
 	__part_IoU = 0.4
-	__negative_IoU = 0.3
-
-	__minimum_face_size = 40
+	__negative_IoU = 0.3	
 
 	def __init__(self):
 		pass
