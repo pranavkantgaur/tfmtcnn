@@ -31,6 +31,7 @@ import numpy.random as npr
 from utils.IoU import IoU
 
 from datasets.WIDERFaceDataset import WIDERFaceDataset
+from datasets.DatasetFactory import DatasetFactory
 
 class SimpleFaceDataset(object):
 
@@ -49,10 +50,6 @@ class SimpleFaceDataset(object):
 	@classmethod
 	def positive_IoU(cls):
 		return(SimpleFaceDataset.__positive_IoU)
-
-	@classmethod
-	def minimum_face_size(cls):
-		return(40)
 
 	@classmethod
 	def part_IoU(cls):
@@ -152,7 +149,7 @@ class SimpleFaceDataset(object):
 				w = x2 - x1 + 1
 				h = y2 - y1 + 1
 
-				if( ( max(w, h) < SimpleFaceDataset.minimum_face_size() ) or (x1 < 0) or (y1 < 0) or (w < 0) or (h < 0) ):
+				if( ( max(w, h) < DatasetFactory.minimum_face_size() ) or (x1 < 0) or (y1 < 0) or (w < 0) or (h < 0) ):				
             				continue
 
 				for i in range(5):

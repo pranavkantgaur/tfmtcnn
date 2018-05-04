@@ -37,11 +37,11 @@ class SimpleDataset(AbstractDataset):
 
 	__positive_ratio = 1
 	__part_ratio = 1
-	__negative_ratio = 3
+	__negative_ratio = 3	
 
 	def __init__(self, network_name='PNet'):	
 		AbstractDataset.__init__(self, network_name)	
-	
+
 	def _generate_landmark_samples(self, landmark_image_dir, landmark_file_name, minimum_face, target_root_dir):
 		landmark_dataset = LandmarkDataset()		
 		return(landmark_dataset.generate(landmark_image_dir, landmark_file_name, minimum_face, target_root_dir))
