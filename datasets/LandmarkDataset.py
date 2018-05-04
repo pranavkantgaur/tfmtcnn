@@ -68,8 +68,6 @@ class LandmarkDataset(object):
 	
 		#landmark_dataset = DatasetFactory.landmark_dataset('LFWLandmark')
 		landmark_dataset = DatasetFactory.landmark_dataset('CelebADataset')
-		#landmark_dataset = LFWLandmarkDataset()
-		#landmark_dataset = CelebADataset()
 		if(landmark_dataset.read(landmark_image_dir, landmark_file_name)):
 			self._is_valid = True
 			self._data = landmark_dataset.data()		
@@ -97,7 +95,7 @@ class LandmarkDataset(object):
 		number_of_images = 0
     		number_of_input_images = 0
 		total_number_of_input_images = len(image_file_names)
-		for image_path, bounding_box, landmarkGt in zip(image_file_names, ground_truth_boxes, ground_truth_landmarks):
+		for image_path, bounding_box, ground_truth_landmark in zip(image_file_names, ground_truth_boxes, ground_truth_landmarks):
         		F_imgs = []
         		F_landmarks = []  
 
@@ -107,14 +105,14 @@ class LandmarkDataset(object):
 				continue     
    		
         		image_height, image_width, image_channels = image.shape
-        		gt_box = np.array([bounding_box.left,bounding_box.top,bounding_box.right,bounding_box.bottom])
-        		f_face = image[bounding_box.top:bounding_box.bottom+1,bounding_box.left:bounding_box.right+1]
+        		gt_box = np.array([bounding_box.left, bounding_box.top, bounding_box.right, bounding_box.bottom])
+        		f_face = image[bounding_box.top:bounding_box.bottom+1, bounding_box.left:bounding_box.right+1]
         		f_face = cv2.resize(f_face,(size,size))
         		landmark = np.zeros((5, 2))
 
-        		for index, one in enumerate(landmarkGt):
-            			rv = ((one[0]-gt_box[0])/(gt_box[2]-gt_box[0]), (one[1]-gt_box[1])/(gt_box[3]-gt_box[1]))
-            			landmark[index] = rv
+        		for index, one in enumerate(ground_truth_landmark):
+            			landmark_point = ((one[0]-gt_box[0])/(gt_box[2]-gt_box[0]), (one[1]-gt_box[1])/(gt_box[3]-gt_box[1]))
+            			landmark[index] = landmark_point
 
         		F_imgs.append(f_face)
         		F_landmarks.append(landmark.reshape(10))
@@ -126,18 +124,18 @@ class LandmarkDataset(object):
                 			print( '( %s / %s ) number of input images are done.' % ( number_of_input_images, total_number_of_input_images) )
 
             			x1, y1, x2, y2 = gt_box
-            			gt_w = x2 - x1 + 1
-            			gt_h = y2 - y1 + 1        
-            			if max(gt_w, gt_h) < 40 or x1 < 0 or y1 < 0:
+            			ground_truth_width = x2 - x1 + 1
+            			ground_truth_height = y2 - y1 + 1        
+            			if max(ground_truth_width, ground_truth_height) < 40 or x1 < 0 or y1 < 0:
                 			continue
 
 				for i in range(10):
 
-                			bounding_box_size = npr.randint(int(min(gt_w, gt_h) * 0.8), np.ceil(1.25 * max(gt_w, gt_h)))
-                			delta_x = npr.randint(-gt_w * 0.2, gt_w * 0.2)
-                			delta_y = npr.randint(-gt_h * 0.2, gt_h * 0.2)
-                			nx1 = int(max(x1+gt_w/2-bounding_box_size/2+delta_x,0))
-                			ny1 = int(max(y1+gt_h/2-bounding_box_size/2+delta_y,0))
+                			bounding_box_size = npr.randint(int(min(ground_truth_width, ground_truth_height) * 0.8), np.ceil(1.25 * max(ground_truth_width, ground_truth_height)))
+                			delta_x = npr.randint(-ground_truth_width, ground_truth_width) * 0.2
+                			delta_y = npr.randint(-ground_truth_height, ground_truth_height) * 0.2
+                			nx1 = int(max(x1+ground_truth_width/2-bounding_box_size/2+delta_x,0))
+                			ny1 = int(max(y1+ground_truth_height/2-bounding_box_size/2+delta_y,0))
                 
                 			nx2 = nx1 + int(bounding_box_size)
                 			ny2 = ny1 + int(bounding_box_size)
@@ -153,9 +151,10 @@ class LandmarkDataset(object):
 					if( current_IoU >= DatasetFactory.positive_IoU() ):
                     				F_imgs.append(resized_im)
 
-                    				for index, one in enumerate(landmarkGt):
-                        				rv = ((one[0]-nx1)/bounding_box_size, (one[1]-ny1)/bounding_box_size)
-                        				landmark[index] = rv
+                    				for index, one in enumerate(ground_truth_landmark):
+                        				landmark_point = ((one[0]-nx1)/bounding_box_size, (one[1]-ny1)/bounding_box_size)
+                        				landmark[index] = landmark_point
+
                     				F_landmarks.append(landmark.reshape(10))
                     				landmark = np.zeros((5, 2))
                     				landmark_ = F_landmarks[-1].reshape(-1,2)

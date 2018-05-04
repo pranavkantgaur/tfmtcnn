@@ -41,6 +41,7 @@ class SimpleFaceDataset(object):
 	def _clear(self):
 		self._is_valid = False
 		self._data = dict()
+		self._number_of_faces = 0
 
 	@classmethod
 	def positive_file_name(cls, target_root_dir):
@@ -70,7 +71,8 @@ class SimpleFaceDataset(object):
 		face_dataset = DatasetFactory.face_dataset('WIDERFaceDataset')
 		if(face_dataset.read(annotation_image_dir, annotation_file_name)):
 			self._is_valid = True
-			self._data = face_dataset.data()		
+			self._data = face_dataset.data()
+			self._number_of_faces = face_dataset.number_of_faces()	
 
 		return(self._is_valid)
 
@@ -81,7 +83,7 @@ class SimpleFaceDataset(object):
 
 		image_file_names = self._data['images']
 		ground_truth_boxes = self._data['bboxes']
-
+		
 		positive_dir = os.path.join(target_root_dir, 'positive')
 		part_dir = os.path.join(target_root_dir, 'part')
 		negative_dir = os.path.join(target_root_dir, 'negative')
@@ -100,7 +102,7 @@ class SimpleFaceDataset(object):
 		total_positive_images = 0
 		total_part_images = 0
 		total_negative_images = 0
-		current_image_number = 0		
+		current_face_number = 0		
 
     		for image_file_path, ground_truth_box in zip(image_file_names, ground_truth_boxes):
         		bounding_boxes = np.array(ground_truth_box, dtype=np.float32).reshape(-1, 4)			
@@ -108,9 +110,9 @@ class SimpleFaceDataset(object):
 			current_image = cv2.imread(image_file_path)
     			height, width, channel = current_image.shape
 
-			needed_negative_images = 100
+			needed_negative_images = np.ceil( (self._number_of_faces *2.0) / len(image_file_names) )
 			negative_images = 0
-			maximum_attempts = 5000
+			maximum_attempts = 10000
 			number_of_attempts = 0
 			while(	(negative_images < needed_negative_images) and (number_of_attempts < maximum_attempts) ):
 				number_of_attempts += 1
@@ -216,9 +218,9 @@ class SimpleFaceDataset(object):
                 				total_part_images += 1
 						part_images += 1
 
-				current_image_number += 1        
-				if(current_image_number % 1000 == 0 ):
-					print('%s number of images are done - positive - %s,  part - %s, negative - %s' % (current_image_number, total_positive_images, total_part_images, total_negative_images))
+				current_face_number += 1        
+				if(current_face_number % 1000 == 0 ):
+					print('%s number of faces are done - positive - %s,  part - %s, negative - %s' % (current_face_number, total_positive_images, total_part_images, total_negative_images))
 
 		negative_file.close()
 		part_file.close()
