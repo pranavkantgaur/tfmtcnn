@@ -30,7 +30,7 @@ import cv2
 class WIDERFaceDataset(object):
 
 	__name = 'WIDERFaceDataset'
-	__minimum_face_size = 40
+	__minimum_face_size = 20
 
 	@classmethod
 	def name(cls):
@@ -92,7 +92,7 @@ class WIDERFaceDataset(object):
        				xmax = xmin + width
        				ymax = ymin + height
 
-				if(max(width, height) < WIDERFaceDataset.minimum_face_size()):
+				if(min(width, height) > WIDERFaceDataset.minimum_face_size()):
        					one_image_boxes.append([xmin, ymin, xmax, ymax])
 					self._number_of_faces += 1
 
