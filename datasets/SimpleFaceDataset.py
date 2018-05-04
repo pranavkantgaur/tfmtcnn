@@ -94,8 +94,8 @@ class SimpleFaceDataset(object):
     			os.makedirs(negative_dir)
 
 		positive_file = open(SimpleFaceDataset.positive_file_name(target_root_dir), 'w')
-		part_file = open(os.path.join(target_root_dir, 'part.txt'), 'w')
-		negative_file = open(os.path.join(target_root_dir, 'negative.txt'), 'w')
+		part_file = open(SimpleFaceDataset.part_file_name(target_root_dir), 'w')
+		negative_file = open(SimpleFaceDataset.negative_file_name(target_root_dir), 'w')
 
 		positive_images = 0
 		part_images = 0
