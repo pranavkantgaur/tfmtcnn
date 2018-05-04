@@ -32,8 +32,13 @@ from utils.BBox import BBox
 
 class LFWLandmarkDataset(object):
 
-	def __init__(self, name='LFWLandmark'):
-		self._name = name
+	__name = 'LFWLandmark'
+
+	@classmethod
+	def name(cls):
+		return(LFWLandmarkDataset.__name)
+
+	def __init__(self):
 		self._clear()
 
 	def _clear(self):

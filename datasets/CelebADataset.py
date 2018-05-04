@@ -32,8 +32,13 @@ from utils.BBox import BBox
 
 class CelebADataset(object):
 
-	def __init__(self, name='CelebA'):
-		self._name = name
+	__name = 'CelebADataset'
+
+	@classmethod
+	def name(cls):
+		return(CelebADataset.__name)
+
+	def __init__(self):
 		self._clear()
 
 	def _clear(self):

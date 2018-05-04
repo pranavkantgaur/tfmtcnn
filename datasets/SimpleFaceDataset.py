@@ -30,7 +30,6 @@ import cv2
 import numpy.random as npr
 from utils.IoU import IoU
 
-from datasets.WIDERFaceDataset import WIDERFaceDataset
 from datasets.DatasetFactory import DatasetFactory
 
 class SimpleFaceDataset(object):
@@ -84,7 +83,7 @@ class SimpleFaceDataset(object):
 		
 		self._clear()
 
-		face_dataset = WIDERFaceDataset()
+		face_dataset = DatasetFactory.face_dataset('WIDERFaceDataset')
 		if(face_dataset.read(annotation_image_dir, annotation_file_name)):
 			self._is_valid = True
 			self._data = face_dataset.data()		

@@ -24,6 +24,10 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
+from datasets.WIDERFaceDataset import WIDERFaceDataset
+from datasets.CelebADataset import CelebADataset
+from datasets.LFWLandmarkDataset import LFWLandmarkDataset
+
 class DatasetFactory(object):
 
 	__minimum_face_size = 40
@@ -34,6 +38,21 @@ class DatasetFactory(object):
 	@classmethod
 	def minimum_face_size(cls):
 		return(DatasetFactory.__minimum_face_size)
+
+	@classmethod
+	def face_dataset(cls, name):
+		if( name == CelebADataset.name() ):
+			return(CelebADataset())
+		elif ( name == WIDERFaceDataset.name() ):
+			return(WIDERFaceDataset())	
+
+	@classmethod
+	def landmark_dataset(cls, name):
+		if( name == CelebADataset.name() ):
+			return(CelebADataset())
+		elif ( name == LFWLandmarkDataset.name() ):
+			return(LFWLandmarkDataset())
+		
 
 
 

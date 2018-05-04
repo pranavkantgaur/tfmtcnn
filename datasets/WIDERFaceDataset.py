@@ -29,8 +29,13 @@ import cv2
 
 class WIDERFaceDataset(object):
 
-	def __init__(self, name='WIDERFaceDataset'):
-		self._name = name
+	__name = 'WIDERFaceDataset'
+
+	@classmethod
+	def name(cls):
+		return(WIDERFaceDataset.__name)
+
+	def __init__(self):
 		self._clear()
 
 	def _clear(self):

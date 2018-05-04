@@ -34,9 +34,9 @@ import numpy.random as npr
 from utils.BBox import BBox
 from utils.IoU import IoU
 
-from datasets.LFWLandmarkDataset import LFWLandmarkDataset
-from datasets.CelebADataset import CelebADataset
 from datasets.SimpleFaceDataset import SimpleFaceDataset
+from datasets.DatasetFactory import DatasetFactory
+
 from datasets.Landmark import rotate
 from datasets.Landmark import flip
 from datasets.Landmark import randomShift
@@ -67,8 +67,10 @@ class LandmarkDataset(object):
 		
 		self._clear()
 	
+		#landmark_dataset = DatasetFactory.landmark_dataset('LFWLandmark')
+		landmark_dataset = DatasetFactory.landmark_dataset('CelebADataset')
 		#landmark_dataset = LFWLandmarkDataset()
-		landmark_dataset = CelebADataset()
+		#landmark_dataset = CelebADataset()
 		if(landmark_dataset.read(landmark_image_dir, landmark_file_name)):
 			self._is_valid = True
 			self._data = landmark_dataset.data()		
