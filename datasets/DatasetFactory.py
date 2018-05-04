@@ -30,6 +30,10 @@ from datasets.LFWLandmarkDataset import LFWLandmarkDataset
 
 class DatasetFactory(object):
 
+	__positive_IoU = 0.65
+	__part_IoU = 0.4
+	__negative_IoU = 0.3
+
 	__minimum_face_size = 40
 
 	def __init__(self):
@@ -38,6 +42,18 @@ class DatasetFactory(object):
 	@classmethod
 	def minimum_face_size(cls):
 		return(DatasetFactory.__minimum_face_size)
+
+	@classmethod
+	def positive_IoU(cls):
+		return(DatasetFactory.__positive_IoU)
+
+	@classmethod
+	def part_IoU(cls):
+		return(DatasetFactory.__part_IoU)
+
+	@classmethod
+	def negative_IoU(cls):
+		return(DatasetFactory.__negative_IoU)
 
 	@classmethod
 	def face_dataset(cls, name):

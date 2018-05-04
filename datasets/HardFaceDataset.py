@@ -29,6 +29,7 @@ import numpy as np
 import cv2
 import numpy.random as npr
 
+from datasets.DatasetFactory import DatasetFactory
 from datasets.SimpleFaceDataset import SimpleFaceDataset
 from datasets.InferenceBatch import InferenceBatch
 
@@ -97,7 +98,7 @@ class HardFaceDataset(SimpleFaceDataset):
             			cropped_image = current_image[y_top:y_bottom + 1, x_left:x_right + 1, :]
             			resized_image = cv2.resize(cropped_image, (image_size, image_size), interpolation=cv2.INTER_LINEAR)
 
-            			if( (np.max(current_IoU) < SimpleFaceDataset.negative_IoU()) and (neg_num < 60) ):
+            			if( (np.max(current_IoU) < DatasetFactory.negative_IoU()) and (neg_num < 60) ):
                 			file_path = os.path.join(negative_dir, "%s.jpg" % negative_images)
                 			negative_file.write(file_path + ' 0\n')
                 			cv2.imwrite(file_path, resized_image)
@@ -113,13 +114,13 @@ class HardFaceDataset(SimpleFaceDataset):
                 			offset_x2 = (x2 - x_right) / float(width)
                 			offset_y2 = (y2 - y_bottom) / float(height)
 
-                			if( np.max(current_IoU) >= SimpleFaceDataset.positive_IoU() ):
+                			if( np.max(current_IoU) >= DatasetFactory.positive_IoU() ):
                     				file_path = os.path.join(positive_dir, "%s.jpg" % positive_images)
                     				positive_file.write(file_path + ' 1 %.2f %.2f %.2f %.2f\n' % (offset_x1, offset_y1, offset_x2, offset_y2))
                     				cv2.imwrite(file_path, resized_image)
                     				positive_images += 1
 
-                			elif( np.max(current_IoU) >= SimpleFaceDataset.part_IoU() ):
+                			elif( np.max(current_IoU) >= DatasetFactory.part_IoU() ):
                     				file_path = os.path.join(part_dir, "%s.jpg" % part_images)
                     				part_file.write(file_path + ' -1 %.2f %.2f %.2f %.2f\n' % (offset_x1, offset_y1, offset_x2, offset_y2))
                     				cv2.imwrite(file_path, resized_image)

@@ -34,7 +34,6 @@ import numpy.random as npr
 from utils.BBox import BBox
 from utils.IoU import IoU
 
-from datasets.SimpleFaceDataset import SimpleFaceDataset
 from datasets.DatasetFactory import DatasetFactory
 
 from datasets.Landmark import rotate
@@ -151,7 +150,7 @@ class LandmarkDataset(object):
 
                 			current_IoU = IoU(crop_box, np.expand_dims(gt_box,0))
 
-					if( current_IoU >= SimpleFaceDataset.positive_IoU() ):
+					if( current_IoU >= DatasetFactory.positive_IoU() ):
                     				F_imgs.append(resized_im)
 
                     				for index, one in enumerate(landmarkGt):

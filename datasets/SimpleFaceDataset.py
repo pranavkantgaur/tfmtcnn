@@ -34,10 +34,6 @@ from datasets.DatasetFactory import DatasetFactory
 
 class SimpleFaceDataset(object):
 
-	__positive_IoU = 0.65
-	__part_IoU = 0.4
-	__negative_IoU = 0.3
-
 	def __init__(self, name='SimpleFaceDataset'):
 		self._name = name
 		self._clear()
@@ -45,18 +41,6 @@ class SimpleFaceDataset(object):
 	def _clear(self):
 		self._is_valid = False
 		self._data = dict()
-
-	@classmethod
-	def positive_IoU(cls):
-		return(SimpleFaceDataset.__positive_IoU)
-
-	@classmethod
-	def part_IoU(cls):
-		return(SimpleFaceDataset.__part_IoU)
-
-	@classmethod
-	def negative_IoU(cls):
-		return(SimpleFaceDataset.__negative_IoU)
 
 	@classmethod
 	def positive_file_name(cls, target_root_dir):
@@ -136,7 +120,7 @@ class SimpleFaceDataset(object):
         
         			cropped_image = current_image[ny : ny + size, nx : nx + size, :]
         			resized_image = cv2.resize(cropped_image, (face_size, face_size), interpolation=cv2.INTER_LINEAR)
-				if( np.max(current_IoU) < SimpleFaceDataset.negative_IoU() ):
+				if( np.max(current_IoU) < DatasetFactory.negative_IoU() ):
 					file_path = os.path.join(negative_dir, "%s.jpg"%negative_images)
 					negative_file.write(file_path + ' 0\n')
 					cv2.imwrite(file_path, resized_image)
@@ -166,7 +150,7 @@ class SimpleFaceDataset(object):
             				cropped_image = current_image[ny1: ny1 + size, nx1: nx1 + size, :]
             				resized_image = cv2.resize(cropped_image, (face_size, face_size), interpolation=cv2.INTER_LINEAR)
     
-            				if( np.max(current_IoU) < SimpleFaceDataset.negative_IoU() ):
+            				if( np.max(current_IoU) < DatasetFactory.negative_IoU() ):
                 				file_path = os.path.join(negative_dir, "%s.jpg" % negative_images)
                 				negative_file.write(file_path + ' 0\n')
                 				cv2.imwrite(file_path, resized_image)
@@ -195,12 +179,12 @@ class SimpleFaceDataset(object):
             				resized_image = cv2.resize(cropped_image, (face_size, face_size), interpolation=cv2.INTER_LINEAR)
 
             				box_ = bounding_box.reshape(1, -1)
-            				if( IoU(crop_box, box_) >= SimpleFaceDataset.positive_IoU() ):
+            				if( IoU(crop_box, box_) >= DatasetFactory.positive_IoU() ):
                 				file_path = os.path.join(positive_dir, "%s.jpg"%positive_images)
                 				positive_file.write(file_path + ' 1 %.2f %.2f %.2f %.2f\n'%(offset_x1, offset_y1, offset_x2, offset_y2))
                 				cv2.imwrite(file_path, resized_image)
                 				positive_images += 1
-            				elif( IoU(crop_box, box_) >= SimpleFaceDataset.part_IoU() ):
+            				elif( IoU(crop_box, box_) >= DatasetFactory.part_IoU() ):
                 				file_path = os.path.join(part_dir, "%s.jpg"%part_images)
                 				part_file.write(file_path + ' -1 %.2f %.2f %.2f %.2f\n'%(offset_x1, offset_y1, offset_x2, offset_y2))
                 				cv2.imwrite(file_path, resized_image)
