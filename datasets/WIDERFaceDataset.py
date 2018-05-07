@@ -30,7 +30,7 @@ import cv2
 class WIDERFaceDataset(object):
 
 	__name = 'WIDERFaceDataset'
-	__minimum_face_size = 20
+	__minimum_face_size = 40
 
 	@classmethod
 	def name(cls):

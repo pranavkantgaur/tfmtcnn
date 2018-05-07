@@ -33,7 +33,7 @@ from utils.BBox import BBox
 class CelebADataset(object):
 
 	__name = 'CelebADataset'
-	__minimum_face_size = 20
+	__minimum_face_size = 40
 
 	@classmethod
 	def name(cls):
