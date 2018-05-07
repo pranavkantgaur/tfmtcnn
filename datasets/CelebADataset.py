@@ -33,10 +33,15 @@ from utils.BBox import BBox
 class CelebADataset(object):
 
 	__name = 'CelebADataset'
+	__minimum_face_size = 20
 
 	@classmethod
 	def name(cls):
 		return(CelebADataset.__name)
+
+	@classmethod
+	def minimum_face_size(cls):
+		return(CelebADataset.__minimum_face_size)
 
 	def __init__(self):
 		self._clear()
@@ -44,6 +49,7 @@ class CelebADataset(object):
 	def _clear(self):
 		self._is_valid = False
 		self._data = dict()
+		self._number_of_faces = 0
 
 	def is_valid(self):
 		return(self._is_valid)
@@ -73,9 +79,10 @@ class CelebADataset(object):
 
 			image_left = float(landmark_data[1])
 			image_top = float(landmark_data[2])
-			image_with = float(landmark_data[3])
+			image_width = float(landmark_data[3])
 			image_height = float(landmark_data[4])
-			image_right = image_left + image_with
+
+			image_right = image_left + image_width
 			image_bottom = image_top  + image_height
 
        			bounding_box = (image_left, image_top, image_right, image_bottom)        
@@ -83,18 +90,21 @@ class CelebADataset(object):
 
        			landmark = np.zeros((5, 2))
        			for index in range(0, 5):
-       				point = (float(landmark_data[5+2*index]), float(landmark_data[5+2*index+1]))
-       				landmark[index] = point
+       				landmark_point = (float(landmark_data[5+2*index]), float(landmark_data[5+2*index+1]))
+       				landmark[index] = landmark_point
 
-			images.append(image_path)
-			bounding_boxes.append(BBox(bounding_box))
-			landmarks.append(landmark)
+			if(min(image_width, image_height) > CelebADataset.minimum_face_size()):
+				images.append(image_path)
+				bounding_boxes.append(BBox(bounding_box))
+				landmarks.append(landmark)
+				self._number_of_faces += 1
 
 		if(len(images)):			
 			self._data['images'] = images
 			self._data['bboxes'] = bounding_boxes
 			self._data['landmarks'] = landmarks
 			self._is_valid = True
+			print(self._number_of_faces, 'faces in ' , len(images), 'number of images for CelebA dataset')
 		else:
 			self._clear()
 
