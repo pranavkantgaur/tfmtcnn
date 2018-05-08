@@ -74,7 +74,8 @@ def main(args):
 		else:
 			model_root_dir = NetworkFactory.model_deploy_dir()
 
-	face_detector = FaceDetector(model_root_dir)
+	last_network='ONet'
+	face_detector = FaceDetector(last_network, model_root_dir)
 	webcamera = cv2.VideoCapture(args.webcamera_id)
 	webcamera.set(3, 600)
 	webcamera.set(4, 800)

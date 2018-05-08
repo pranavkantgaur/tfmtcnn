@@ -36,7 +36,7 @@ from nets.NetworkFactory import NetworkFactory
 
 class FaceDetector(object):
 
-	def __init__(self, model_root_dir=None):
+	def __init__(self, last_network='ONet', model_root_dir=None):
 	    	if( not model_root_dir ):
 	        	self._model_root_dir = NetworkFactory.model_deploy_dir()
 		else:
@@ -47,17 +47,26 @@ class FaceDetector(object):
 		self._scale_factor = 0.79
 
 		status_ok = True
-		self._pnet = NetworkFactory.network('PNet')
-		pnet_model_path = os.path.join(self._model_root_dir, self._pnet.network_name())
-		status_ok = self._pnet.setup_inference_network(pnet_model_path) and status_ok
+		if( last_network in ['PNet', 'RNet', 'ONet'] ):
+			self._pnet = NetworkFactory.network('PNet')
+			pnet_model_path = os.path.join(self._model_root_dir, self._pnet.network_name())
+			status_ok = self._pnet.setup_inference_network(pnet_model_path) and status_ok
+		else:
+			self._pnet = None
 
-		self._rnet = NetworkFactory.network('RNet')
-		rnet_model_path = os.path.join(self._model_root_dir, self._rnet.network_name())
-		status_ok = self._rnet.setup_inference_network(rnet_model_path) and status_ok
+		if( last_network in ['RNet', 'ONet'] ):
+			self._rnet = NetworkFactory.network('RNet')
+			rnet_model_path = os.path.join(self._model_root_dir, self._rnet.network_name())
+			status_ok = self._rnet.setup_inference_network(rnet_model_path) and status_ok
+		else:
+			self._rnet = None
 
-		self._onet = NetworkFactory.network('ONet')
-		onet_model_path = os.path.join(self._model_root_dir, self._onet.network_name())
-		status_ok = self._onet.setup_inference_network(onet_model_path) and status_ok
+		if( last_network in ['ONet'] ):
+			self._onet = NetworkFactory.network('ONet')
+			onet_model_path = os.path.join(self._model_root_dir, self._onet.network_name())
+			status_ok = self._onet.setup_inference_network(onet_model_path) and status_ok
+		else:
+			self._onet = None
 
 		if(not status_ok):
 			raise SystemExit		

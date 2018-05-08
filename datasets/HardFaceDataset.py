@@ -138,11 +138,11 @@ class HardFaceDataset(SimpleFaceDataset):
 
 		test_data = InferenceBatch(self._data['images'])
 
+		previous_network = NetworkFactory.previous_network(network_name)
 		if(not model_train_dir):
 			model_train_dir = NetworkFactory.model_train_dir()			
-		face_detector = FaceDetector(model_train_dir)
+		face_detector = FaceDetector(previous_network, model_train_dir)
 
-		previous_network = NetworkFactory.previous_network(network_name)
 		detected_boxes, landmarks = face_detector.detect_face(test_data, previous_network)
 
 		return(self._generate_hard_samples(network_name, detected_boxes, face_size, target_root_dir))
