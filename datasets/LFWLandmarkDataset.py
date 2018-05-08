@@ -33,10 +33,15 @@ from utils.BBox import BBox
 class LFWLandmarkDataset(object):
 
 	__name = 'LFWLandmark'
+	__minimum_face_size = 40
 
 	@classmethod
 	def name(cls):
 		return(LFWLandmarkDataset.__name)
+
+	@classmethod
+	def minimum_face_size(cls):
+		return(LFWLandmarkDataset.__minimum_face_size)
 
 	def __init__(self):
 		self._clear()
@@ -74,15 +79,18 @@ class LFWLandmarkDataset(object):
 
 			bounding_box = (landmark_data[1], landmark_data[3], landmark_data[2], landmark_data[4])
 			bounding_box = map(int, bounding_box)
+			image_width = bounding_box[2] - bounding_box[0]
+			image_height = bounding_box[3] - bounding_box[1]
 
        			landmark = np.zeros((5, 2))
        			for index in range(0, 5):
        				point = (float(landmark_data[5+2*index]), float(landmark_data[5+2*index+1]))
        				landmark[index] = point
 
-			images.append(image_path)
-			bounding_boxes.append(BBox(bounding_box))
-			landmarks.append(landmark)
+			if(max(image_width, image_height) > LFWLandmarkDataset.minimum_face_size()):
+				images.append(image_path)
+				bounding_boxes.append(BBox(bounding_box))
+				landmarks.append(landmark)
 
 		if(len(images)):			
 			self._data['images'] = images

@@ -92,7 +92,7 @@ class WIDERFaceDataset(object):
        				xmax = xmin + width
        				ymax = ymin + height
 
-				if(min(width, height) > WIDERFaceDataset.minimum_face_size()):
+				if(max(width, height) > WIDERFaceDataset.minimum_face_size()):
        					one_image_boxes.append([xmin, ymin, xmax, ymax])
 					self._number_of_faces += 1
 

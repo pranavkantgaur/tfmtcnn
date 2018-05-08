@@ -93,7 +93,7 @@ class CelebADataset(object):
        				landmark_point = (float(landmark_data[5+2*index]), float(landmark_data[5+2*index+1]))
        				landmark[index] = landmark_point
 
-			if(min(image_width, image_height) > CelebADataset.minimum_face_size()):
+			if(max(image_width, image_height) > CelebADataset.minimum_face_size()):
 				images.append(image_path)
 				bounding_boxes.append(BBox(bounding_box))
 				landmarks.append(landmark)
