@@ -143,7 +143,7 @@ class HardFaceDataset(SimpleFaceDataset):
 			model_train_dir = NetworkFactory.model_train_dir()			
 		face_detector = FaceDetector(previous_network, model_train_dir)
 
-		detected_boxes, landmarks = face_detector.detect_face(test_data, previous_network)
+		detected_boxes, landmarks = face_detector.detect_face(test_data)
 
 		return(self._generate_hard_samples(network_name, detected_boxes, face_size, target_root_dir))
 

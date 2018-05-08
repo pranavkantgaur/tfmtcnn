@@ -259,12 +259,12 @@ class FaceDetector(object):
         	landmark = landmark[keep]
         	return( boxes, boxes_c,landmark )		
 
-	def detect(self, image, last_network='ONet'):
+	def detect(self, image):
 		boxes = boxes_c = landmark = None 
 
 		start_time = time.time()
 		pnet_time = 0
-        	if( (last_network in ['PNet', 'RNet', 'ONet'] ) and self._pnet ):
+        	if( self._pnet ):
             		boxes, boxes_c, _ = self._propose_faces(image)
             		if boxes_c is None:
                 		return( np.array([]), np.array([]) )    
@@ -272,7 +272,7 @@ class FaceDetector(object):
 
 		start_time = time.time()
 		rnet_time = 0
-        	if ( (last_network in ['RNet', 'ONet'] ) and self._rnet ):
+        	if ( self._rnet ):
             		boxes, boxes_c, _ = self._refine_faces(image, boxes_c)
             		if boxes_c is None:
                 		return( np.array([]),np.array([]) )    
@@ -280,7 +280,7 @@ class FaceDetector(object):
 
             	start_time = time.time()
 		onet_time = 0
-        	if ( (last_network in ['ONet'] ) and self._onet ):
+        	if ( self._onet ):
             		boxes, boxes_c, landmark = self._outpute_faces(image, boxes_c)
             		if boxes_c is None:
                 		return( np.array([]),np.array([]) )    
@@ -288,11 +288,11 @@ class FaceDetector(object):
 
 		return(boxes_c, landmark)
 
-	def detect_face(self, data_batch, last_network):
+	def detect_face(self, data_batch):
         	all_boxes_c = []
         	all_landmarks = []
 		for image in data_batch:
-			boxes_c, landmarks = self.detect(image, last_network)
+			boxes_c, landmarks = self.detect(image)
 			       
 			all_boxes_c.append(boxes_c)
             		all_landmarks.append(landmarks)
