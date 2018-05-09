@@ -59,7 +59,7 @@ def parse_arguments(argv):
 	parser.add_argument('--landmark_image_dir', type=str, help='Input landmark dataset training image directory.', default=None)
 	parser.add_argument('--landmark_file_name', type=str, help='Input landmark dataset annotation file.', default=None)
 
-	parser.add_argument('--base_number_of_images', type=int, help='Input base number of images.', default=25000)
+	parser.add_argument('--sample_multiplier_factor', type=int, help='Number of samples generated from one input sample.', default=20)
 
 	parser.add_argument('--target_root_dir', type=str, help='Output directory where output images and TensorFlow data files are saved.', default=None)
 	return(parser.parse_args(argv))
@@ -80,7 +80,7 @@ def main(args):
 		raise ValueError('You must supply output directory for storing output images and TensorFlow data files with --target_root_dir.')
 
 	simple_dataset = SimpleDataset()
-	status = simple_dataset.generate(args.annotation_image_dir, args.annotation_file_name, args.landmark_image_dir, args.landmark_file_name, args.base_number_of_images, args.target_root_dir)
+	status = simple_dataset.generate(args.annotation_image_dir, args.annotation_file_name, args.landmark_image_dir, args.landmark_file_name, args.sample_multiplier_factor, args.target_root_dir)
 	if(status):
 		print('Basic dataset is generated at ' + args.target_root_dir)
 	else:

@@ -25,7 +25,7 @@ from __future__ import division
 from __future__ import print_function
 
 import os
-import numpy.random as npr
+import numpy as np
 
 from datasets.AbstractDataset import AbstractDataset
 from datasets.LandmarkDataset import LandmarkDataset
@@ -35,10 +35,6 @@ from nets.NetworkFactory import NetworkFactory
 
 class SimpleDataset(AbstractDataset):
 
-	__positive_ratio = 1
-	__part_ratio = 1
-	__negative_ratio = 3	
-
 	def __init__(self, network_name='PNet'):	
 		AbstractDataset.__init__(self, network_name)	
 
@@ -46,11 +42,11 @@ class SimpleDataset(AbstractDataset):
 		landmark_dataset = LandmarkDataset()		
 		return(landmark_dataset.generate(landmark_image_dir, landmark_file_name, minimum_face, target_root_dir))
 		
-	def _generate_image_samples(self, annotation_image_dir, annotation_file_name, minimum_face, target_root_dir):
+	def _generate_image_samples(self, annotation_image_dir, annotation_file_name, sample_multiplier_factor, minimum_face, target_root_dir):
 		face_dataset = SimpleFaceDataset()		
-		return(face_dataset.generate_samples(annotation_image_dir, annotation_file_name, minimum_face, target_root_dir))
+		return(face_dataset.generate_samples(annotation_image_dir, annotation_file_name, sample_multiplier_factor, minimum_face, target_root_dir))
 
-	def _generate_image_list(self, base_number_of_images, target_root_dir):
+	def _generate_image_list(self, target_root_dir):
 		positive_file = open(SimpleFaceDataset.positive_file_name(target_root_dir), 'r')
 		positive_data = positive_file.readlines()
 
@@ -65,23 +61,17 @@ class SimpleDataset(AbstractDataset):
 
 		image_list_file = open(self._image_list_file_name(target_root_dir), 'w')
 
-    		if(len(negative_data) > base_number_of_images * SimpleDataset.__negative_ratio ):
-        		negative_number_of_images = npr.choice(len(negative_data), size=base_number_of_images * SimpleDataset.__negative_ratio, replace=True)
-    		else:
-        		negative_number_of_images = npr.choice(len(negative_data), size=len(negative_data), replace=True)
-
-    		positive_number_of_images = npr.choice(len(positive_data), size=base_number_of_images * SimpleDataset.__positive_ratio, replace=True)
-    		part_number_of_images = npr.choice(len(part_data), size=base_number_of_images * SimpleDataset.__part_ratio, replace=True)
-
-    		for i in positive_number_of_images:
+    		for i in np.arange(len(positive_data)):
         		image_list_file.write(positive_data[i])
-    		for i in negative_number_of_images:
+
+    		for i in np.arange(len(negative_data)):
         		image_list_file.write(negative_data[i])
-    		for i in part_number_of_images:
+
+    		for i in np.arange(len(part_data)):
         		image_list_file.write(part_data[i])
 
-    		for item in landmark_data:
-        		image_list_file.write(item)
+    		for i in np.arange(len(landmark_data)):
+        		image_list_file.write(landmark_data[i])
 
 		return(True)
 
@@ -92,7 +82,7 @@ class SimpleDataset(AbstractDataset):
 
 		return(True)
 
-	def generate(self, annotation_image_dir, annotation_file_name, landmark_image_dir, landmark_file_name, base_number_of_images, target_root_dir):
+	def generate(self, annotation_image_dir, annotation_file_name, landmark_image_dir, landmark_file_name, sample_multiplier_factor, target_root_dir):
 
 		if(not os.path.isfile(annotation_file_name)):
 			return(False)
@@ -118,12 +108,12 @@ class SimpleDataset(AbstractDataset):
 		print('Generated landmark samples.')
 
 		print('Generating image samples.')
-		if(not self._generate_image_samples(annotation_image_dir, annotation_file_name, minimum_face, target_root_dir)):
+		if(not self._generate_image_samples(annotation_image_dir, annotation_file_name, sample_multiplier_factor, minimum_face, target_root_dir)):
 			print('Error generating image samples.')
 			return(False)
 		print('Generated image samples.')
 
-		if(not self._generate_image_list(base_number_of_images, target_root_dir)):
+		if(not self._generate_image_list(target_root_dir)):
 			return(False)
 
 		print('Generating TensorFlow dataset.')

@@ -46,35 +46,6 @@ class HardDataset(SimpleDataset):
 		face_dataset = HardFaceDataset()
 		return(face_dataset.generate_samples(annotation_image_dir, annotation_file_name, model_train_dir, self.network_name(), minimum_face, target_root_dir))
 
-	def _generate_image_list(self, target_root_dir):
-		positive_file = open(SimpleFaceDataset.positive_file_name(target_root_dir), 'r')
-		positive_data = positive_file.readlines()
-
-		part_file = open(SimpleFaceDataset.part_file_name(target_root_dir), 'r')
-		part_data = part_file.readlines()
-
-		negative_file = open(SimpleFaceDataset.negative_file_name(target_root_dir), 'r')
-		negative_data = negative_file.readlines()
-
-		landmark_file = open(LandmarkDataset.landmark_file_name(target_root_dir), 'r')
-		landmark_data = landmark_file.readlines()
-
-		image_list_file = open(self._image_list_file_name(target_root_dir), 'w')
-
-    		for i in np.arange(len(positive_data)):
-        		image_list_file.write(positive_data[i])
-
-    		for i in np.arange(len(negative_data)):
-        		image_list_file.write(negative_data[i])
-
-    		for i in np.arange(len(part_data)):
-        		image_list_file.write(part_data[i])
-
-    		for i in np.arange(len(landmark_data)):
-        		image_list_file.write(landmark_data[i])
-
-		return(True)
-
 	def _generate_dataset(self, target_root_dir):
 		tensorflow_dataset = TensorFlowDataset()
 
