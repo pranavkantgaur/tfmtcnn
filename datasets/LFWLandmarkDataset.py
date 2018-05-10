@@ -49,6 +49,7 @@ class LFWLandmarkDataset(object):
 	def _clear(self):
 		self._is_valid = False
 		self._data = dict()
+		self._number_of_faces = 0
 
 	def is_valid(self):
 		return(self._is_valid)
@@ -91,12 +92,14 @@ class LFWLandmarkDataset(object):
 				images.append(image_path)
 				bounding_boxes.append(BBox(bounding_box))
 				landmarks.append(landmark)
+				self._number_of_faces += 1
 
 		if(len(images)):			
 			self._data['images'] = images
 			self._data['bboxes'] = bounding_boxes
 			self._data['landmarks'] = landmarks
 			self._is_valid = True
+			print(self._number_of_faces, 'faces in ' , len(images), 'number of images for LFWLandmark dataset')
 		else:
 			self._clear()
 

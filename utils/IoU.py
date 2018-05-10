@@ -34,6 +34,6 @@ def IoU(box, boxes):
     h = np.maximum(0, yy2 - yy1 + 1)
 
     inter = w * h
-    ovrerlap = inter / (box_area + area - inter)
+    ovrerlap = (inter * 1.0) / (box_area + area - inter)
     return(ovrerlap)
 
