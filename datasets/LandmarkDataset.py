@@ -68,13 +68,16 @@ class LandmarkDataset(object):
 		
 		self._clear()
 	
-		#landmark_dataset = DatasetFactory.landmark_dataset('LFWLandmark')
-		landmark_dataset = DatasetFactory.landmark_dataset('CelebADataset')
+		landmark_dataset = DatasetFactory.landmark_dataset('LFWLandmark')
+		#landmark_dataset = DatasetFactory.landmark_dataset('CelebADataset')
 		if(landmark_dataset.read(landmark_image_dir, landmark_file_name)):
 			self._is_valid = True
 			self._data = landmark_dataset.data()		
 
 		return(self._is_valid)
+
+	def _can_generate_sample(self):
+		return( random.choice([0,1,2,3]) > 1 )		
 
 	def generate(self, landmark_image_dir, landmark_file_name, base_number_of_images, minimum_face, target_root_dir):
 
@@ -94,9 +97,11 @@ class LandmarkDataset(object):
 		size = minimum_face
 		augment = True
 
-		number_of_images = 0
-    		number_of_input_images = 0
+		generated_landmark_images = 0
+
+    		processed_input_images = 0
 		total_number_of_input_images = len(image_file_names)
+
 		for image_path, bounding_box, ground_truth_landmark in zip(image_file_names, ground_truth_boxes, ground_truth_landmarks):
         		F_imgs = []
         		F_landmarks = []  
@@ -120,15 +125,15 @@ class LandmarkDataset(object):
         		F_landmarks.append(landmark.reshape(10))
         		landmark = np.zeros((5, 2))  
 
-			if augment:
-            			number_of_input_images = number_of_input_images + 1
-            			if( number_of_input_images % 1000 == 0 ):
-                			print( '( %s / %s ) number of input images are done.' % ( number_of_input_images, total_number_of_input_images) )
+			if( augment ):
+            			processed_input_images = processed_input_images + 1
+            			if( processed_input_images % 1000 == 0 ):
+                			print( '( %s / %s ) number of input images are processed.' % ( processed_input_images, total_number_of_input_images) )
 
             			x1, y1, x2, y2 = gt_box
             			ground_truth_width = x2 - x1 + 1
             			ground_truth_height = y2 - y1 + 1        
-            			if max(ground_truth_width, ground_truth_height) < 40 or x1 < 0 or y1 < 0:
+            			if (x1 < 0 )or (y1 < 0):
                 			continue
 
 				for i in range(10):
@@ -136,12 +141,12 @@ class LandmarkDataset(object):
                 			bounding_box_size = npr.randint(int(min(ground_truth_width, ground_truth_height) * 0.8), np.ceil(1.25 * max(ground_truth_width, ground_truth_height)))
                 			delta_x = npr.randint(-ground_truth_width, ground_truth_width) * 0.2
                 			delta_y = npr.randint(-ground_truth_height, ground_truth_height) * 0.2
-                			nx1 = int(max(x1+ground_truth_width/2-bounding_box_size/2+delta_x,0))
-                			ny1 = int(max(y1+ground_truth_height/2-bounding_box_size/2+delta_y,0))
+                			nx1 = int(max(x1+ground_truth_width/2-bounding_box_size/2+delta_x, 0))
+                			ny1 = int(max(y1+ground_truth_height/2-bounding_box_size/2+delta_y, 0))
                 
                 			nx2 = nx1 + int(bounding_box_size)
                 			ny2 = ny1 + int(bounding_box_size)
-                			if nx2 > image_width or ny2 > image_height:
+                			if( ( nx2 > image_width ) or ( ny2 > image_height ) ):
                     				continue
 
                 			crop_box = np.array([nx1,ny1,nx2,ny2])
@@ -163,14 +168,15 @@ class LandmarkDataset(object):
                     				bounding_box = BBox([nx1,ny1,nx2,ny2])   
 
                     				#mirror                    
-                    				if random.choice([0,1]) > 0:
+                    				if( self._can_generate_sample() ):
                         				face_flipped, landmark_flipped = flip(resized_im, landmark_)
                         				face_flipped = cv2.resize(face_flipped, (size, size))
                         				#c*h*w
                         				F_imgs.append(face_flipped)
                         				F_landmarks.append(landmark_flipped.reshape(10))
+
                     				#rotate
-                    				if random.choice([0,1]) > 0:
+                    				if( self._can_generate_sample() ):
                         				face_rotated_by_alpha, landmark_rotated = rotate(image, bounding_box,bounding_box.reprojectLandmark(landmark_), 5)
                         				#landmark_offset
                         				landmark_rotated = bounding_box.projectLandmark(landmark_rotated)
@@ -182,10 +188,10 @@ class LandmarkDataset(object):
                         				face_flipped, landmark_flipped = flip(face_rotated_by_alpha, landmark_rotated)
                         				face_flipped = cv2.resize(face_flipped, (size, size))
                         				F_imgs.append(face_flipped)
-                       					F_landmarks.append(landmark_flipped.reshape(10))                
+                       					F_landmarks.append(landmark_flipped.reshape(10))       							
                     
                     				#inverse clockwise rotation
-                    				if random.choice([0,1]) > 0: 
+                    				if( self._can_generate_sample() ):
                         				face_rotated_by_alpha, landmark_rotated = rotate(image, bounding_box, bounding_box.reprojectLandmark(landmark_), -5)
                         				landmark_rotated = bounding_box.projectLandmark(landmark_rotated)
                         				face_rotated_by_alpha = cv2.resize(face_rotated_by_alpha, (size, size))
@@ -206,11 +212,12 @@ class LandmarkDataset(object):
                 			if np.sum(np.where(F_landmarks[i] >= 1, 1, 0)) > 0:
                     				continue
 
-                			cv2.imwrite(join(landmark_dir,"%d.jpg" %(number_of_images)), F_imgs[i])
+                			cv2.imwrite(join(landmark_dir,"%d.jpg" %(generated_landmark_images)), F_imgs[i])
                 			landmarks = map(str,list(F_landmarks[i]))
-                			landmark_file.write(join(landmark_dir,"%d.jpg" %(number_of_images))+" -2 "+" ".join(landmarks)+"\n")
-                			number_of_images = number_of_images + 1
+                			landmark_file.write(join(landmark_dir,"%d.jpg" %(generated_landmark_images))+" -2 "+" ".join(landmarks)+"\n")
+                			generated_landmark_images += 1
 
     		landmark_file.close()
+
 		return(True)
 
