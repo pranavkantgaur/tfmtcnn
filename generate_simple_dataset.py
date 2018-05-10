@@ -51,6 +51,8 @@ import argparse
 
 from datasets.SimpleDataset import SimpleDataset
 
+default_multiplier_factor = 20
+
 def parse_arguments(argv):
 	parser = argparse.ArgumentParser()
 	parser.add_argument('--annotation_image_dir', type=str, help='Input WIDER face dataset training image directory.', default=None)
@@ -59,7 +61,7 @@ def parse_arguments(argv):
 	parser.add_argument('--landmark_image_dir', type=str, help='Input landmark dataset training image directory.', default=None)
 	parser.add_argument('--landmark_file_name', type=str, help='Input landmark dataset annotation file.', default=None)
 
-	parser.add_argument('--sample_multiplier_factor', type=int, help='Number of samples generated from one input sample.', default=20)
+	parser.add_argument('--sample_multiplier_factor', type=int, help='Number of samples generated from one input sample.', default=default_multiplier_factor)
 
 	parser.add_argument('--target_root_dir', type=str, help='Output directory where output images and TensorFlow data files are saved.', default=None)
 	return(parser.parse_args(argv))
@@ -79,10 +81,15 @@ def main(args):
 	if(not args.target_root_dir):
 		raise ValueError('You must supply output directory for storing output images and TensorFlow data files with --target_root_dir.')
 
+	if(args.sample_multiplier_factor < 1):
+		sample_multiplier_factor = default_multiplier_factor
+	else:
+		sample_multiplier_factor = args.sample_multiplier_factor
+
 	simple_dataset = SimpleDataset()
-	status = simple_dataset.generate(args.annotation_image_dir, args.annotation_file_name, args.landmark_image_dir, args.landmark_file_name, args.sample_multiplier_factor, args.target_root_dir)
+	status = simple_dataset.generate(args.annotation_image_dir, args.annotation_file_name, args.landmark_image_dir, args.landmark_file_name, sample_multiplier_factor, args.target_root_dir)
 	if(status):
-		print('Basic dataset is generated at ' + args.target_root_dir)
+		print('PNet dataset is generated at ' + args.target_root_dir)
 	else:
 		print('Error generating basic dataset.')
 

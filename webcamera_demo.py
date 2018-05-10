@@ -60,7 +60,7 @@ from nets.NetworkFactory import NetworkFactory
 def parse_arguments(argv):
 	parser = argparse.ArgumentParser()
 	parser.add_argument('--webcamera_id', type=int, help='Webcamera ID.', default=0)
-	parser.add_argument('--threshold', type=float, help='Lower threshold value for face probability (0 to 1.0).', default=0.125)
+	parser.add_argument('--threshold', type=float, help='Lower threshold value for face probability (0 to 1.0).', default=0.6)
 	parser.add_argument('--model_root_dir', type=str, help='Input model root directory where model weights are saved.', default=None)
 	parser.add_argument('--test_mode', action='store_true')
 	return(parser.parse_args(argv))
@@ -90,7 +90,7 @@ def main(args):
 			end_time = cv2.getTickCount()
         		time_duration = (end_time - start_time) / cv2.getTickFrequency()
         		frames_per_sec = 1.0 / time_duration
-        		cv2.putText(current_frame, '{:.3f}'.format(frames_per_sec) + ' fps', (10, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 255), 2)
+        		cv2.putText(current_frame, '{:.2f} FPS'.format(frames_per_sec), (10, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 0), 2)
 
         		for index in range(boxes_c.shape[0]):
             			bounding_box = boxes_c[index, :4]
@@ -98,7 +98,8 @@ def main(args):
             			crop_box = [int(bounding_box[0]), int(bounding_box[1]), int(bounding_box[2]), int(bounding_box[3])]
             
             			if( probability > args.threshold ):
-            				cv2.rectangle(current_frame, (crop_box[0], crop_box[1]),(crop_box[2], crop_box[3]), (255, 0, 0), 1)
+            				cv2.rectangle(current_frame, (crop_box[0], crop_box[1]),(crop_box[2], crop_box[3]), (0, 255, 0), 1)
+					cv2.putText(current_frame, 'Score - {:.2f}'.format(probability), (crop_box[0], crop_box[1] - 2), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
      
 		        cv2.imshow("", current_frame)
         		if cv2.waitKey(1) & 0xFF == ord('q'):
