@@ -40,12 +40,6 @@ class SimpleFaceDataset(object):
 
 	def __init__(self, name='SimpleFaceDataset'):
 		self._name = name
-		self._clear()
-
-	def _clear(self):
-		self._is_valid = False
-		self._data = dict()
-		self._number_of_faces = 0
 
 	@classmethod
 	def positive_file_name(cls, target_root_dir):
@@ -68,26 +62,27 @@ class SimpleFaceDataset(object):
 	def data(self):
 		return(self._data)
 
-	def _read(self, annotation_image_dir, annotation_file_name):
+	def _read(self, annotation_image_dir, annotation_file_name, face_dataset_name='WIDERFaceDataset'):
 		
-		self._clear()
+		dataset = None
+		status = False
+		face_dataset = DatasetFactory.face_dataset(face_dataset_name)
+		if(face_dataset.read(annotation_image_dir, annotation_file_name)):			
+			dataset = face_dataset.data()
+			status = True
 
-		face_dataset = DatasetFactory.face_dataset('WIDERFaceDataset')
-		if(face_dataset.read(annotation_image_dir, annotation_file_name)):
-			self._is_valid = True
-			self._data = face_dataset.data()
-			self._number_of_faces = face_dataset.number_of_faces()	
-
-		return(self._is_valid)
+		return(status, dataset)
 
 	def generate_samples(self, annotation_image_dir, annotation_file_name, sample_multiplier_factor, face_size, target_root_dir):
 
 		average_face_samples = 0 
-		if(not self._read(annotation_image_dir, annotation_file_name)):
+		status, dataset = self._read(annotation_image_dir, annotation_file_name)
+		if(not status):
 			return(False, average_face_samples)
 
-		image_file_names = self._data['images']
-		ground_truth_boxes = self._data['bboxes']
+		image_file_names = dataset['images']
+		ground_truth_boxes = dataset['bboxes']
+		number_of_faces = dataset['number_of_faces']
 		
 		positive_dir = os.path.join(target_root_dir, 'positive')
 		part_dir = os.path.join(target_root_dir, 'part')
@@ -117,7 +112,7 @@ class SimpleFaceDataset(object):
 			current_image = cv2.imread(image_file_path)
     			height, width, channel = current_image.shape
 
-			needed_negative_images = np.ceil( (self._number_of_faces * (SimpleFaceDataset.__negative_ratio - 1) * sample_multiplier_factor ) / len(image_file_names) )
+			needed_negative_images = np.ceil( (number_of_faces * (SimpleFaceDataset.__negative_ratio - 1) * sample_multiplier_factor ) / len(image_file_names) )
 			negative_images = 0
 			maximum_attempts = base_number_of_attempts * (SimpleFaceDataset.__negative_ratio - 1) * sample_multiplier_factor
 			number_of_attempts = 0

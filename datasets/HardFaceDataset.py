@@ -44,11 +44,11 @@ class HardFaceDataset(SimpleFaceDataset):
 	def __init__(self, name='HardFaceDataset'):
 		SimpleFaceDataset.__init__(self, name)	
 
-	def _generate_hard_samples(self, network_name, detected_boxes, face_size, target_root_dir):
+	def _generate_hard_samples(self, dataset, network_name, detected_boxes, face_size, target_root_dir):
 		average_face_samples = 0
 
-		image_file_names = self._data['images']
-		ground_truth_boxes = self._data['bboxes']
+		image_file_names = dataset['images']
+		ground_truth_boxes = dataset['bboxes']
     		number_of_images = len(image_file_names)
 
 		if(not (len(detected_boxes) == number_of_images)):
@@ -136,10 +136,11 @@ class HardFaceDataset(SimpleFaceDataset):
 
 	def generate_samples(self, annotation_image_dir, annotation_file_name, model_train_dir, network_name, face_size, target_root_dir):
 		average_face_samples = 0
-		if(not self._read(annotation_image_dir, annotation_file_name)):
+		status, dataset = self._read(annotation_image_dir, annotation_file_name)
+		if(not status):
 			return(False, average_face_samples)
 
-		test_data = InferenceBatch(self._data['images'])
+		test_data = InferenceBatch(dataset['images'])
 
 		previous_network = NetworkFactory.previous_network(network_name)
 		if(not model_train_dir):
@@ -148,5 +149,5 @@ class HardFaceDataset(SimpleFaceDataset):
 
 		detected_boxes, landmarks = face_detector.detect_face(test_data)
 
-		return(self._generate_hard_samples(network_name, detected_boxes, face_size, target_root_dir))
+		return(self._generate_hard_samples(dataset, network_name, detected_boxes, face_size, target_root_dir))
 
