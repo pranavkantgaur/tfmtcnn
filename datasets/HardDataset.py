@@ -94,19 +94,21 @@ class HardDataset(SimpleDataset):
 		if(not os.path.exists(target_root_dir)):
 			os.makedirs(target_root_dir)
 
-		image_size = NetworkFactory.network_size(self.network_name())
-
-		print('Generating landmark samples.')
-		if(not super(HardDataset, self)._generate_landmark_samples(landmark_image_dir, landmark_file_name, image_size, target_root_dir)):
-			print('Error generating landmark samples.')
-			return(False)
-		print('Generated landmark samples.')
+		minimum_face = NetworkFactory.network_size(self.network_name())
 
 		print('Generating image samples.')
-		if(not self._generate_image_samples(annotation_file_name, annotation_image_dir, model_train_dir, image_size, target_root_dir)):
+		status, average_face_samples = self._generate_image_samples(annotation_file_name, annotation_image_dir, model_train_dir, minimum_face, target_root_dir)
+		if(not status):
 			print('Error generating image samples.')
 			return(False)
 		print('Generated image samples.')
+
+		base_number_of_images = average_face_samples
+		print('Generating landmark samples.')
+		if(not super(HardDataset, self)._generate_landmark_samples(landmark_image_dir, landmark_file_name, base_number_of_images, minimum_face, target_root_dir)):
+			print('Error generating landmark samples.')
+			return(False)
+		print('Generated landmark samples.')
 
 		if(not self._generate_image_list(target_root_dir)):
 			return(False)

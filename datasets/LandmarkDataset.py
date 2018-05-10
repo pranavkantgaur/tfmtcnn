@@ -43,6 +43,8 @@ from datasets.Landmark import randomShiftWithArgument
 
 class LandmarkDataset(object):
 
+	__landmark_ratio = 1
+
 	def __init__(self, name='Landmark'):
 		self._name = name
 		self._clear()
@@ -74,7 +76,7 @@ class LandmarkDataset(object):
 
 		return(self._is_valid)
 
-	def generate(self, landmark_image_dir, landmark_file_name, minimum_face, target_root_dir):
+	def generate(self, landmark_image_dir, landmark_file_name, base_number_of_images, minimum_face, target_root_dir):
 
 		if(not self._read(landmark_image_dir, landmark_file_name)):
 			return(False)

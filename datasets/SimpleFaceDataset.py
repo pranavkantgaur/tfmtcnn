@@ -82,8 +82,9 @@ class SimpleFaceDataset(object):
 
 	def generate_samples(self, annotation_image_dir, annotation_file_name, sample_multiplier_factor, face_size, target_root_dir):
 
+		average_face_samples = 0 
 		if(not self._read(annotation_image_dir, annotation_file_name)):
-			return(False)
+			return(False, average_face_samples)
 
 		image_file_names = self._data['images']
 		ground_truth_boxes = self._data['bboxes']
@@ -233,5 +234,8 @@ class SimpleFaceDataset(object):
 		part_file.close()
 		positive_file.close()
 
-		return(True)
+		average_face_samples = (total_positive_images*1.0)/SimpleFaceDataset.__positive_ratio + (total_part_images*1.0)/SimpleFaceDataset.__part_ratio + (total_negative_images*1.0)/SimpleFaceDataset.__negative_ratio
+
+		return(True, average_face_samples)
+
 
