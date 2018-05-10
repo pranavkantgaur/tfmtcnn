@@ -51,7 +51,7 @@ import argparse
 
 from datasets.SimpleDataset import SimpleDataset
 
-default_multiplier_factor = 20
+default_multiplier_factor = 10
 
 def parse_arguments(argv):
 	parser = argparse.ArgumentParser()
