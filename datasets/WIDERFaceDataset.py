@@ -93,16 +93,18 @@ class WIDERFaceDataset(object):
        				ymax = ymin + height
 
 				if(max(width, height) > WIDERFaceDataset.minimum_face_size()):
-       					one_image_boxes.append([xmin, ymin, xmax, ymax])
-					self._number_of_faces += 1
+       					one_image_boxes.append([xmin, ymin, xmax, ymax])					
 
 			if(len(one_image_boxes)):
 				images.append(image_path)
        				bounding_boxes.append(one_image_boxes)
+				self._number_of_faces += len(one_image_boxes)
 
 		if(len(images)):			
 			self._data['images'] = images
 			self._data['bboxes'] = bounding_boxes
+			self._data['number_of_faces'] = self._number_of_faces
+
 			self._is_valid = True
 			print(self._number_of_faces, 'faces in ' , len(images), 'number of images for WIDER Face dataset.')
 		else:

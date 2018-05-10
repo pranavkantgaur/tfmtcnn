@@ -103,6 +103,8 @@ class CelebADataset(object):
 			self._data['images'] = images
 			self._data['bboxes'] = bounding_boxes
 			self._data['landmarks'] = landmarks
+			self._data['number_of_faces'] = self._number_of_faces
+
 			self._is_valid = True
 			print(self._number_of_faces, 'faces in ' , len(images), 'number of images for CelebA dataset')
 		else:
