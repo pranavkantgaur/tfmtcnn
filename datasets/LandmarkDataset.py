@@ -68,8 +68,8 @@ class LandmarkDataset(object):
 		
 		self._clear()
 	
-		landmark_dataset = DatasetFactory.landmark_dataset('LFWLandmark')
-		#landmark_dataset = DatasetFactory.landmark_dataset('CelebADataset')
+		#landmark_dataset = DatasetFactory.landmark_dataset('LFWLandmark')
+		landmark_dataset = DatasetFactory.landmark_dataset('CelebADataset')
 		if(landmark_dataset.read(landmark_image_dir, landmark_file_name)):
 			self._is_valid = True
 			self._data = landmark_dataset.data()		
@@ -106,8 +106,8 @@ class LandmarkDataset(object):
 
 		for image_path, ground_truth_bounding_box, ground_truth_landmark in zip(image_file_names, ground_truth_boxes, ground_truth_landmarks):
 
-        		F_imgs = []
-        		F_landmarks = []  
+        		current_face_images = []
+        		current_face_landmarks = []  
 
 			image_path = image_path.replace("\\", '/')
         		image = cv2.imread(image_path)
@@ -124,8 +124,8 @@ class LandmarkDataset(object):
             			landmark_point = ((one[0]-gt_box[0])/(gt_box[2]-gt_box[0]), (one[1]-gt_box[1])/(gt_box[3]-gt_box[1]))
             			landmark[index] = landmark_point
 
-        		F_imgs.append(f_face)
-        		F_landmarks.append(landmark.reshape(10))
+        		current_face_images.append(f_face)
+        		current_face_landmarks.append(landmark.reshape(10))
         		landmark = np.zeros((5, 2))  
 
 			current_landmark_images = 0
@@ -163,10 +163,10 @@ class LandmarkDataset(object):
                        				landmark_point = ((one[0]-nx1)/bounding_box_size, (one[1]-ny1)/bounding_box_size)
                        				landmark[index] = landmark_point
 
-					F_imgs.append(resized_im)
-               				F_landmarks.append(landmark.reshape(10))
+					current_face_images.append(resized_im)
+               				current_face_landmarks.append(landmark.reshape(10))
                				landmark = np.zeros((5, 2))
-               				landmark_ = F_landmarks[-1].reshape(-1,2)
+               				landmark_ = current_face_landmarks[-1].reshape(-1,2)
                				bounding_box = BBox([nx1,ny1,nx2,ny2])   
 
                				#mirror                    
@@ -174,8 +174,8 @@ class LandmarkDataset(object):
                       				face_flipped, landmark_flipped = flip(resized_im, landmark_)
                        				face_flipped = cv2.resize(face_flipped, (size, size))
                        				#c*h*w
-                       				F_imgs.append(face_flipped)
-                       				F_landmarks.append(landmark_flipped.reshape(10))
+                       				current_face_images.append(face_flipped)
+                       				current_face_landmarks.append(landmark_flipped.reshape(10))
 
                				#rotate
                				if( self._can_generate_sample() ):
@@ -183,40 +183,40 @@ class LandmarkDataset(object):
                        				#landmark_offset
                        				landmark_rotated = bounding_box.projectLandmark(landmark_rotated)
                        				face_rotated_by_alpha = cv2.resize(face_rotated_by_alpha, (size, size))
-                       				F_imgs.append(face_rotated_by_alpha)
-                       				F_landmarks.append(landmark_rotated.reshape(10))
+                       				current_face_images.append(face_rotated_by_alpha)
+                       				current_face_landmarks.append(landmark_rotated.reshape(10))
                 
                        				#flip
                        				face_flipped, landmark_flipped = flip(face_rotated_by_alpha, landmark_rotated)
                        				face_flipped = cv2.resize(face_flipped, (size, size))
-                       				F_imgs.append(face_flipped)
-               					F_landmarks.append(landmark_flipped.reshape(10))       							
+                       				current_face_images.append(face_flipped)
+               					current_face_landmarks.append(landmark_flipped.reshape(10))       							
                     
                				#inverse clockwise rotation
                				if( self._can_generate_sample() ):
                       				face_rotated_by_alpha, landmark_rotated = rotate(image, bounding_box, bounding_box.reprojectLandmark(landmark_), -5)
                        				landmark_rotated = bounding_box.projectLandmark(landmark_rotated)
                        				face_rotated_by_alpha = cv2.resize(face_rotated_by_alpha, (size, size))
-                       				F_imgs.append(face_rotated_by_alpha)
-                       				F_landmarks.append(landmark_rotated.reshape(10))
+                       				current_face_images.append(face_rotated_by_alpha)
+                       				current_face_landmarks.append(landmark_rotated.reshape(10))
                 
                        				face_flipped, landmark_flipped = flip(face_rotated_by_alpha, landmark_rotated)
                        				face_flipped = cv2.resize(face_flipped, (size, size))
-                       				F_imgs.append(face_flipped)
-                       				F_landmarks.append(landmark_flipped.reshape(10)) 
+                       				current_face_images.append(face_flipped)
+                       				current_face_landmarks.append(landmark_flipped.reshape(10)) 
 
-				F_imgs, F_landmarks = np.asarray(F_imgs), np.asarray(F_landmarks)
+				current_image_array, current_landmark_array = np.asarray(current_face_images), np.asarray(current_face_landmarks)
 
-            			for i in range(len(F_imgs)):
-                			if np.sum(np.where(F_landmarks[i] <= 0, 1, 0)) > 0:
+            			for i in range(len(current_image_array)):
+                			if np.sum(np.where(current_landmark_array[i] <= 0, 1, 0)) > 0:
                     				continue
 
-                			if np.sum(np.where(F_landmarks[i] >= 1, 1, 0)) > 0:
+                			if np.sum(np.where(current_landmark_array[i] >= 1, 1, 0)) > 0:
                     				continue
 
 					if(current_landmark_images < needed_landmark_images):
-                				cv2.imwrite(join(landmark_dir,"%d.jpg" %(generated_landmark_images)), F_imgs[i])
-                				landmarks = map(str,list(F_landmarks[i]))
+                				cv2.imwrite(join(landmark_dir,"%d.jpg" %(generated_landmark_images)), current_image_array[i])
+                				landmarks = map(str, list(current_landmark_array[i]))
                 				landmark_file.write(join(landmark_dir,"%d.jpg" %(generated_landmark_images))+" -2 "+" ".join(landmarks)+"\n")
                 				generated_landmark_images += 1
 						current_landmark_images += 1
