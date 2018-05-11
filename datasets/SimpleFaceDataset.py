@@ -114,7 +114,7 @@ class SimpleFaceDataset(object):
 
 			needed_negative_images = np.ceil( (number_of_faces * (SimpleFaceDataset.__negative_ratio - 1) * sample_multiplier_factor ) / len(image_file_names) )
 			negative_images = 0
-			maximum_attempts = base_number_of_attempts * (SimpleFaceDataset.__negative_ratio - 1) * sample_multiplier_factor
+			maximum_attempts = base_number_of_attempts * SimpleFaceDataset.__negative_ratio * sample_multiplier_factor
 			number_of_attempts = 0
 			while(	(negative_images < needed_negative_images) and (number_of_attempts < maximum_attempts) ):
 				number_of_attempts += 1
@@ -143,7 +143,7 @@ class SimpleFaceDataset(object):
 				w = x2 - x1 + 1
 				h = y2 - y1 + 1
 
-				if( (x1 < 0) or (y1 < 0) ):				
+				if( (w < 0) or ( h < 0) or (x1 < 0) or (y1 < 0) ):				
             				continue
 
 				needed_negative_images = sample_multiplier_factor
@@ -156,8 +156,11 @@ class SimpleFaceDataset(object):
 
 			            	size = npr.randint(face_size, min(width, height)/2 )
 
-            				delta_x = npr.randint(max(-size, -x1), w)
-            				delta_y = npr.randint(max(-size, -y1), h)
+            				#delta_x = npr.randint(max(-size, -x1), w)					
+            				#delta_y = npr.randint(max(-size, -y1), h)
+					
+					delta_x = npr.randint(-size, +size) * 0.2
+					delta_y = npr.randint(-size, +size) * 0.2
 
             				nx1 = int(max(0, x1 + delta_x))
             				ny1 = int(max(0, y1 + delta_y))
