@@ -43,7 +43,7 @@ from datasets.Landmark import randomShiftWithArgument
 
 class LandmarkDataset(object):
 
-	__landmark_ratio = 1
+	__landmark_ratio = 1.0
 
 	def __init__(self, name='Landmark'):
 		self._name = name
