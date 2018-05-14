@@ -102,7 +102,7 @@ class SimpleFaceDataset(object):
 		generated_positive_images = 0
 		generated_part_images = 0
 		generated_negative_images = 0
-		current_face_number = 0		
+		current_image_number = 0		
 
 		base_number_of_attempts = 5000
 
@@ -110,30 +110,31 @@ class SimpleFaceDataset(object):
         		bounding_boxes = np.array(ground_truth_box, dtype=np.float32).reshape(-1, 4)			
 
 			current_image = cv2.imread(image_file_path)
-    			height, width, channel = current_image.shape
+    			input_image_height, input_image_width, input_image_channels = current_image.shape
 
 			needed_negative_images = np.ceil( (number_of_faces * (SimpleFaceDataset.__negative_ratio - 1) * sample_multiplier_factor ) / len(image_file_names) )
 			negative_images = 0
-			maximum_attempts = base_number_of_attempts * SimpleFaceDataset.__negative_ratio * sample_multiplier_factor
+			maximum_attempts = base_number_of_attempts * (SimpleFaceDataset.__negative_ratio) * sample_multiplier_factor
 			number_of_attempts = 0
 			while(	(negative_images < needed_negative_images) and (number_of_attempts < maximum_attempts) ):
 				number_of_attempts += 1
 
-				size = npr.randint(face_size, min(width, height)/2 )
+				size = npr.randint(face_size, min(input_image_width, input_image_height)/2 )
 
-			        nx = npr.randint(0, (width - size) )
-        			ny = npr.randint(0, (height - size) )
+			        nx = npr.randint(0, (input_image_width - size) )
+        			ny = npr.randint(0, (input_image_height - size) )
         
-        			crop_box = np.array([nx, ny, nx + size, ny + size])
-        
-        			current_IoU = IoU(crop_box, bounding_boxes)
-        
-        			cropped_image = current_image[ny : ny + size, nx : nx + size, :]
-        			resized_image = cv2.resize(cropped_image, (face_size, face_size), interpolation=cv2.INTER_LINEAR)
+        			crop_box = np.array([nx, ny, nx + size, ny + size])        
+        			current_IoU = IoU(crop_box, bounding_boxes)        			
+        			
 				if( np.max(current_IoU) < DatasetFactory.negative_IoU() ):
+					cropped_image = current_image[ny : ny + size, nx : nx + size, :]
+					resized_image = cv2.resize(cropped_image, (face_size, face_size), interpolation=cv2.INTER_LINEAR)
+
 					file_path = os.path.join(negative_dir, "%s.jpg"%generated_negative_images)
 					negative_file.write(file_path + ' 0\n')
 					cv2.imwrite(file_path, resized_image)
+
             				generated_negative_images += 1
             				negative_images += 1					
 
@@ -143,7 +144,7 @@ class SimpleFaceDataset(object):
 				w = x2 - x1 + 1
 				h = y2 - y1 + 1
 
-				if( (w < 0) or ( h < 0) or (x1 < 0) or (y1 < 0) ):				
+				if( ( max(w,h) < 40 ) or (x1 < 0) or (y1 < 0) or (w < 0) or (h < 0) ):				
             				continue
 
 				needed_negative_images = sample_multiplier_factor
@@ -154,29 +155,30 @@ class SimpleFaceDataset(object):
 
 					number_of_attempts += 1
 
-			            	size = npr.randint(face_size, min(width, height)/2 )
+			            	size = npr.randint(face_size, min(input_image_width, input_image_height)/2 )
 
-            				#delta_x = npr.randint(max(-size, -x1), w)					
+            				#delta_x = npr.randint(max(-size, -x1), w)
             				#delta_y = npr.randint(max(-size, -y1), h)
-					
+
 					delta_x = npr.randint(-size, +size) * 0.2
 					delta_y = npr.randint(-size, +size) * 0.2
 
             				nx1 = int(max(0, x1 + delta_x))
             				ny1 = int(max(0, y1 + delta_y))
-            				if( ( (nx1 + size) > width ) or ( (ny1 + size) > height ) ):
+            				if( ( (nx1 + size) > input_image_width ) or ( (ny1 + size) > input_image_height ) ):
                 				continue
 
             				crop_box = np.array([nx1, ny1, nx1 + size, ny1 + size])
-            				current_IoU = IoU(crop_box, bounding_boxes)
-    
-            				cropped_image = current_image[ny1: ny1 + size, nx1: nx1 + size, :]
-            				resized_image = cv2.resize(cropped_image, (face_size, face_size), interpolation=cv2.INTER_LINEAR)
-    
+            				current_IoU = IoU(crop_box, bounding_boxes) 				
+            				    
             				if( np.max(current_IoU) < DatasetFactory.negative_IoU() ):
+						cropped_image = current_image[ny1: ny1 + size, nx1: nx1 + size, :]
+						resized_image = cv2.resize(cropped_image, (face_size, face_size), interpolation=cv2.INTER_LINEAR)
+
                 				file_path = os.path.join(negative_dir, "%s.jpg" % generated_negative_images)
                 				negative_file.write(file_path + ' 0\n')
                 				cv2.imwrite(file_path, resized_image)
+
                 				generated_negative_images += 1 
 						negative_images += 1
 
@@ -203,7 +205,7 @@ class SimpleFaceDataset(object):
             				nx2 = nx1 + size
             				ny2 = ny1 + size
 
-            				if( (nx2 > width) or (ny2 > height) ):
+            				if( (nx2 > input_image_width) or (ny2 > input_image_height) ):
                 				continue 
 
             				crop_box = np.array([nx1, ny1, nx2, ny2])
@@ -230,9 +232,9 @@ class SimpleFaceDataset(object):
                 				generated_part_images += 1
 						part_images += 1
 
-				current_face_number += 1        
-				if(current_face_number % 1000 == 0 ):
-					print('%s number of faces are done - positive - %s,  part - %s, negative - %s' % (current_face_number, generated_positive_images, generated_part_images, generated_negative_images))
+        		current_image_number += 1        
+        		if(current_image_number % 1000 == 0 ):
+				print('%s number of images are done - positive - %s,  part - %s, negative - %s' % (current_image_number, generated_positive_images, generated_part_images, generated_negative_images))
 
 		negative_file.close()
 		part_file.close()
