@@ -100,7 +100,8 @@ class LandmarkDataset(object):
     		processed_input_images = 0
 		total_number_of_input_images = len(image_file_names)
 
-		needed_landmark_images = np.ceil( ( base_number_of_images * LandmarkDataset.__landmark_ratio ) / total_number_of_input_images )
+		needed_landmark_images = int( ( 1.0 * base_number_of_images * LandmarkDataset.__landmark_ratio ) / total_number_of_input_images )
+		needed_landmark_images = max(1, needed_landmark_images)
 		base_number_of_attempts = 200
 		maximum_attempts = base_number_of_attempts * needed_landmark_images
 
