@@ -119,16 +119,15 @@ class SimpleFaceDataset(object):
 			while(	(negative_images < needed_negative_images) and (number_of_attempts < maximum_attempts) ):
 				number_of_attempts += 1
 
-				size = npr.randint(face_size, min(input_image_width, input_image_height)/2 )
-
-			        nx = npr.randint(0, (input_image_width - size) )
-        			ny = npr.randint(0, (input_image_height - size) )
+				crop_box_size = npr.randint(face_size, min(input_image_width, input_image_height)/2 )
+			        nx = npr.randint(0, (input_image_width - crop_box_size) )
+        			ny = npr.randint(0, (input_image_height - crop_box_size) )
         
-        			crop_box = np.array([nx, ny, nx + size, ny + size])        
+        			crop_box = np.array([nx, ny, nx + crop_box_size, ny + crop_box_size])        
         			current_IoU = IoU(crop_box, bounding_boxes)        			
         			
 				if( np.max(current_IoU) < DatasetFactory.negative_IoU() ):
-					cropped_image = current_image[ny : ny + size, nx : nx + size, :]
+					cropped_image = current_image[ny : ny + crop_box_size, nx : nx + crop_box_size, :]
 					resized_image = cv2.resize(cropped_image, (face_size, face_size), interpolation=cv2.INTER_LINEAR)
 
 					file_path = os.path.join(negative_dir, "%s.jpg"%generated_negative_images)
@@ -141,13 +140,13 @@ class SimpleFaceDataset(object):
 			for bounding_box in bounding_boxes:
 
 				x1, y1, x2, y2 = bounding_box
-				w = x2 - x1 + 1
-				h = y2 - y1 + 1
+				bounding_box_width = x2 - x1 + 1
+				bounding_box_height = y2 - y1 + 1
 
-				if( ( max(w,h) < 40 ) or (x1 < 0) or (y1 < 0) or (w < 0) or (h < 0) ):				
+				if( (x1 < 0) or (y1 < 0) ):				
             				continue
 
-				needed_negative_images = sample_multiplier_factor
+				needed_negative_images = 2 * sample_multiplier_factor
 				negative_images = 0
 				maximum_attempts = base_number_of_attempts * sample_multiplier_factor
 				number_of_attempts = 0
@@ -155,24 +154,24 @@ class SimpleFaceDataset(object):
 
 					number_of_attempts += 1
 
-			            	size = npr.randint(face_size, min(input_image_width, input_image_height)/2 )
+			            	crop_box_size = npr.randint(face_size, min(input_image_width, input_image_height)/2 )
 
-            				#delta_x = npr.randint(max(-size, -x1), w)
-            				#delta_y = npr.randint(max(-size, -y1), h)
+            				#delta_x = npr.randint(max(-crop_box_size, -x1), bounding_box_width)
+            				#delta_y = npr.randint(max(-crop_box_size, -y1), bounding_box_height)
 
-					delta_x = npr.randint(-size, +size) * 0.2
-					delta_y = npr.randint(-size, +size) * 0.2
+					delta_x = npr.randint(-1 * crop_box_size, +1 * crop_box_size + 1) * 0.2
+					delta_y = npr.randint(-1 * crop_box_size, +1 * crop_box_size + 1) * 0.2
 
             				nx1 = int(max(0, x1 + delta_x))
             				ny1 = int(max(0, y1 + delta_y))
-            				if( ( (nx1 + size) > input_image_width ) or ( (ny1 + size) > input_image_height ) ):
+            				if( ( (nx1 + crop_box_size) > input_image_width ) or ( (ny1 + crop_box_size) > input_image_height ) ):
                 				continue
 
-            				crop_box = np.array([nx1, ny1, nx1 + size, ny1 + size])
+            				crop_box = np.array([nx1, ny1, nx1 + crop_box_size, ny1 + crop_box_size])
             				current_IoU = IoU(crop_box, bounding_boxes) 				
             				    
             				if( np.max(current_IoU) < DatasetFactory.negative_IoU() ):
-						cropped_image = current_image[ny1: ny1 + size, nx1: nx1 + size, :]
+						cropped_image = current_image[ny1: ny1 + crop_box_size, nx1: nx1 + crop_box_size, :]
 						resized_image = cv2.resize(cropped_image, (face_size, face_size), interpolation=cv2.INTER_LINEAR)
 
                 				file_path = os.path.join(negative_dir, "%s.jpg" % generated_negative_images)
@@ -195,24 +194,23 @@ class SimpleFaceDataset(object):
 
 					number_of_attempts += 1
 
-            				size = npr.randint(int(min(w, h) * 0.8), np.ceil(1.25 * max(w, h)))
+            				crop_box_size = npr.randint(int(min(bounding_box_width, bounding_box_height) * 0.8), np.ceil(1.25 * max(bounding_box_width, bounding_box_height)))
+            				delta_x = npr.randint(-1.0 * bounding_box_width, +1.0 * bounding_box_width + 1) * 0.2			
+            				delta_y = npr.randint(-1.0 * bounding_box_height, +1.0 * bounding_box_height + 1) * 0.2
 
-            				delta_x = npr.randint(-1.0 * w, +1.0 * w) * 0.2			
-            				delta_y = npr.randint(-1.0 * h, +1.0 * h) * 0.2
-
-            				nx1 = int(max(x1 + w / 2 + delta_x - size / 2, 0))
-            				ny1 = int(max(y1 + h / 2 + delta_y - size / 2, 0))
-            				nx2 = nx1 + size
-            				ny2 = ny1 + size
+            				nx1 = int(max( (x1 + bounding_box_width/2.0 + delta_x - crop_box_size/2.0), 0))
+            				ny1 = int(max( (y1 + bounding_box_height/2.0 + delta_y - crop_box_size/2.0), 0))
+            				nx2 = nx1 + crop_box_size
+            				ny2 = ny1 + crop_box_size
 
             				if( (nx2 > input_image_width) or (ny2 > input_image_height) ):
                 				continue 
 
             				crop_box = np.array([nx1, ny1, nx2, ny2])
-            				offset_x1 = (x1 - nx1) / float(size)
-					offset_y1 = (y1 - ny1) / float(size)
-            				offset_x2 = (x2 - nx2) / float(size)
-            				offset_y2 = (y2 - ny2) / float(size)
+            				offset_x1 = (x1 - nx1) / float(crop_box_size)
+					offset_y1 = (y1 - ny1) / float(crop_box_size)
+            				offset_x2 = (x2 - nx2) / float(crop_box_size)
+            				offset_y2 = (y2 - ny2) / float(crop_box_size)
 
             				cropped_image = current_image[ny1 : ny2, nx1 : nx2, :]
             				resized_image = cv2.resize(cropped_image, (face_size, face_size), interpolation=cv2.INTER_LINEAR)
