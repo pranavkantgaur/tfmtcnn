@@ -80,19 +80,20 @@ class WIDERFaceDataset(object):
        			nums = annotation_file.readline().strip('\n')
        			one_image_boxes = []
        			for face_index in range(int(nums)):
-       				bounding_box_info = annotation_file.readline().strip('\n').split(' ')
+       				bounding_box_info = annotation_file.readline().strip('\n').split(' ')       				
 
-       				face_box = [float(bounding_box_info[i]) for i in range(4)]
-
-       				xmin = face_box[0]
-       				ymin = face_box[1]
-				width = face_box[2]
-				height = face_box[3]
+       				xmin = float(bounding_box_info[0])
+       				ymin = float(bounding_box_info[1])
+				width = float(bounding_box_info[2])
+				height = float(bounding_box_info[3])
 
        				xmax = xmin + width
        				ymax = ymin + height
 
-				if(max(width, height) > WIDERFaceDataset.minimum_face_size()):
+				if(	(max(width, height) > WIDERFaceDataset.minimum_face_size())
+				   and 	(width > 0)
+				   and	(height > 0) 
+				  ):
        					one_image_boxes.append([xmin, ymin, xmax, ymax])					
 
 			if(len(one_image_boxes)):
