@@ -30,13 +30,14 @@ import cv2
 import numpy.random as npr
 from utils.IoU import IoU
 
+import datasets.constants as datasets_constants
 from datasets.DatasetFactory import DatasetFactory
 
 class SimpleFaceDataset(object):
 
-	__positive_ratio = 1
-	__part_ratio = 1
-	__negative_ratio = 3	
+	__positive_ratio = datasets_constants.positive_ratio
+	__part_ratio = datasets_constants.part_ratio
+	__negative_ratio = datasets_constants.negative_ratio
 
 	def __init__(self, name='SimpleFaceDataset'):
 		self._name = name

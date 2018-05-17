@@ -34,6 +34,7 @@ import numpy.random as npr
 from utils.BBox import BBox
 from utils.IoU import IoU
 
+import datasets.constants as datasets_constants
 from datasets.DatasetFactory import DatasetFactory
 
 from datasets.Landmark import rotate
@@ -43,7 +44,7 @@ from datasets.Landmark import randomShiftWithArgument
 
 class LandmarkDataset(object):
 
-	__landmark_ratio = 1.0
+	__landmark_ratio = datasets_constants.landmark_ratio
 
 	def __init__(self, name='Landmark'):
 		self._name = name

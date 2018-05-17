@@ -27,10 +27,12 @@ from __future__ import print_function
 import os
 import cv2
 
+import datasets.constants as datasets_constants
+
 class WIDERFaceDataset(object):
 
 	__name = 'WIDERFaceDataset'
-	__minimum_face_size = 40
+	__minimum_face_size = datasets_constants.minimum_face_size
 
 	@classmethod
 	def name(cls):

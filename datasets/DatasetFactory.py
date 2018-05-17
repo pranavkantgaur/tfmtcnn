@@ -24,22 +24,20 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
+import datasets.constants as datasets_constants
+
 from datasets.WIDERFaceDataset import WIDERFaceDataset
 from datasets.CelebADataset import CelebADataset
 from datasets.LFWLandmarkDataset import LFWLandmarkDataset
 
 class DatasetFactory(object):
 
-	__positive_IoU = 0.65
-	__part_IoU = 0.4
-	__negative_IoU = 0.3	
+	__positive_IoU = datasets_constants.positive_IoU
+	__part_IoU = datasets_constants.part_IoU
+	__negative_IoU = datasets_constants.negative_IoU
 
 	def __init__(self):
 		pass
-
-	@classmethod
-	def minimum_face_size(cls):
-		return(DatasetFactory.__minimum_face_size)
 
 	@classmethod
 	def positive_IoU(cls):

@@ -28,12 +28,13 @@ import os
 import cv2
 import numpy as np
 
+import datasets.constants as datasets_constants
 from utils.BBox import BBox
 
 class LFWLandmarkDataset(object):
 
 	__name = 'LFWLandmark'
-	__minimum_face_size = 40
+	__minimum_face_size = datasets_constants.minimum_face_size
 
 	@classmethod
 	def name(cls):
