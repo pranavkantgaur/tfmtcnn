@@ -49,7 +49,7 @@ from __future__ import print_function
 import sys
 import argparse
 
-from datasets.SimpleDataset import SimpleDataset
+from tfmtcnn.datasets.SimpleDataset import SimpleDataset
 
 default_multiplier_factor = 10
 

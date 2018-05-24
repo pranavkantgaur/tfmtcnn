@@ -29,15 +29,15 @@ import numpy as np
 import cv2
 import numpy.random as npr
 
-from datasets.DatasetFactory import DatasetFactory
-from datasets.SimpleFaceDataset import SimpleFaceDataset
-from datasets.InferenceBatch import InferenceBatch
+from tfmtcnn.datasets.DatasetFactory import DatasetFactory
+from tfmtcnn.datasets.SimpleFaceDataset import SimpleFaceDataset
+from tfmtcnn.datasets.InferenceBatch import InferenceBatch
 
-from nets.FaceDetector import FaceDetector
-from nets.NetworkFactory import NetworkFactory
+from tfmtcnn.nets.FaceDetector import FaceDetector
+from tfmtcnn.nets.NetworkFactory import NetworkFactory
 
-from utils.convert_to_square import convert_to_square
-from utils.IoU import IoU
+from tfmtcnn.utils.convert_to_square import convert_to_square
+from tfmtcnn.utils.IoU import IoU
 
 class HardFaceDataset(SimpleFaceDataset):
 

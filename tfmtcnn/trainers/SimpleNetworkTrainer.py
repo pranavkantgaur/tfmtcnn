@@ -32,14 +32,14 @@ import tensorflow as tf
 from tensorflow.contrib import slim
 from datetime import datetime
 
-from trainers.AbstractNetworkTrainer import AbstractNetworkTrainer
-from datasets.TensorFlowDataset import TensorFlowDataset
+from tfmtcnn.trainers.AbstractNetworkTrainer import AbstractNetworkTrainer
+from tfmtcnn.datasets.TensorFlowDataset import TensorFlowDataset
 
-from nets.NetworkFactory import NetworkFactory
+from tfmtcnn.nets.NetworkFactory import NetworkFactory
 
-from losses.class_loss_ohem import class_loss_ohem
-from losses.bounding_box_loss_ohem import bounding_box_loss_ohem
-from losses.landmark_loss_ohem import landmark_loss_ohem
+from tfmtcnn.losses.class_loss_ohem import class_loss_ohem
+from tfmtcnn.losses.bounding_box_loss_ohem import bounding_box_loss_ohem
+from tfmtcnn.losses.landmark_loss_ohem import landmark_loss_ohem
 
 class SimpleNetworkTrainer(AbstractNetworkTrainer):
 

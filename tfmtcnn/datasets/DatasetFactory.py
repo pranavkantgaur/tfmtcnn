@@ -24,11 +24,11 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
-import datasets.constants as datasets_constants
+import tfmtcnn.datasets.constants as datasets_constants
 
-from datasets.WIDERFaceDataset import WIDERFaceDataset
-from datasets.CelebADataset import CelebADataset
-from datasets.LFWLandmarkDataset import LFWLandmarkDataset
+from tfmtcnn.datasets.WIDERFaceDataset import WIDERFaceDataset
+from tfmtcnn.datasets.CelebADataset import CelebADataset
+from tfmtcnn.datasets.LFWLandmarkDataset import LFWLandmarkDataset
 
 class DatasetFactory(object):
 

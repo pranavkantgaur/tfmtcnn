@@ -53,7 +53,7 @@ import sys
 import os
 import argparse
 
-from datasets.HardDataset import HardDataset
+from tfmtcnn.datasets.HardDataset import HardDataset
 
 def parse_arguments(argv):
 	parser = argparse.ArgumentParser()

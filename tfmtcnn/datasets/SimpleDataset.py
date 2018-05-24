@@ -27,11 +27,11 @@ from __future__ import print_function
 import os
 import numpy as np
 
-from datasets.AbstractDataset import AbstractDataset
-from datasets.LandmarkDataset import LandmarkDataset
-from datasets.SimpleFaceDataset import SimpleFaceDataset
-from datasets.TensorFlowDataset import TensorFlowDataset
-from nets.NetworkFactory import NetworkFactory
+from tfmtcnn.datasets.AbstractDataset import AbstractDataset
+from tfmtcnn.datasets.LandmarkDataset import LandmarkDataset
+from tfmtcnn.datasets.SimpleFaceDataset import SimpleFaceDataset
+from tfmtcnn.datasets.TensorFlowDataset import TensorFlowDataset
+from tfmtcnn.nets.NetworkFactory import NetworkFactory
 
 class SimpleDataset(AbstractDataset):
 

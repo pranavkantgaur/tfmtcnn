@@ -27,7 +27,7 @@ from __future__ import print_function
 import os
 import cv2
 
-import datasets.constants as datasets_constants
+import tfmtcnn.datasets.constants as datasets_constants
 
 class WIDERFaceDataset(object):
 

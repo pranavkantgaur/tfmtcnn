@@ -28,8 +28,8 @@ import numpy as np
 import tensorflow as tf
 from tensorflow.contrib import slim
 
-from nets.AbstractFaceDetector import AbstractFaceDetector
-from utils.prelu import prelu
+from tfmtcnn.nets.AbstractFaceDetector import AbstractFaceDetector
+from tfmtcnn.utils.prelu import prelu
 
 class RNet(AbstractFaceDetector):
 

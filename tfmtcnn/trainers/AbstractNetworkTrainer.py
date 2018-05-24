@@ -27,8 +27,8 @@ from __future__ import print_function
 import os
 from easydict import EasyDict as edict
 
-from nets.NetworkFactory import NetworkFactory
-from datasets.TensorFlowDataset import TensorFlowDataset
+from tfmtcnn.nets.NetworkFactory import NetworkFactory
+from tfmtcnn.datasets.TensorFlowDataset import TensorFlowDataset
 
 class AbstractNetworkTrainer(object):
 

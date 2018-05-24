@@ -56,10 +56,10 @@ import sys
 import os
 import argparse
 
-from trainers.SimpleNetworkTrainer import SimpleNetworkTrainer
-from trainers.HardNetworkTrainer import HardNetworkTrainer
+from tfmtcnn.trainers.SimpleNetworkTrainer import SimpleNetworkTrainer
+from tfmtcnn.trainers.HardNetworkTrainer import HardNetworkTrainer
 
-from nets.NetworkFactory import NetworkFactory
+from tfmtcnn.nets.NetworkFactory import NetworkFactory
 
 def parse_arguments(argv):
 	parser = argparse.ArgumentParser()

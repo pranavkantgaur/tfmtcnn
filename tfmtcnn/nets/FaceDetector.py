@@ -29,10 +29,10 @@ import time
 import cv2
 import numpy as np
 
-from utils.nms import py_nms
-from utils.convert_to_square import convert_to_square
+from tfmtcnn.utils.nms import py_nms
+from tfmtcnn.utils.convert_to_square import convert_to_square
 
-from nets.NetworkFactory import NetworkFactory
+from tfmtcnn.nets.NetworkFactory import NetworkFactory
 
 class FaceDetector(object):
 

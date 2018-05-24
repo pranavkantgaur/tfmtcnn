@@ -26,9 +26,9 @@ from __future__ import print_function
 
 import os
 
-from nets.PNet import PNet
-from nets.RNet import RNet
-from nets.ONet import ONet
+from tfmtcnn.nets.PNet import PNet
+from tfmtcnn.nets.RNet import RNet
+from tfmtcnn.nets.ONet import ONet
 
 class NetworkFactory(object):
 

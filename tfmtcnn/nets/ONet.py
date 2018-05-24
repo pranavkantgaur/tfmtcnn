@@ -28,8 +28,8 @@ import numpy as np
 import tensorflow as tf
 from tensorflow.contrib import slim
 
-from nets.RNet import RNet
-from utils.prelu import prelu
+from tfmtcnn.nets.RNet import RNet
+from tfmtcnn.utils.prelu import prelu
 
 class ONet(RNet):
 

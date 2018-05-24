@@ -28,8 +28,8 @@ import os
 import cv2
 import numpy as np
 
-import datasets.constants as datasets_constants
-from utils.BBox import BBox
+import tfmtcnn.datasets.constants as datasets_constants
+from tfmtcnn.utils.BBox import BBox
 
 class LFWLandmarkDataset(object):
 

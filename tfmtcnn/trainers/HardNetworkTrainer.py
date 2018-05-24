@@ -27,9 +27,8 @@ from __future__ import print_function
 import numpy as np
 import tensorflow as tf
 
-from trainers.SimpleNetworkTrainer import SimpleNetworkTrainer
-from datasets.TensorFlowDataset import TensorFlowDataset
-
+from tfmtcnn.trainers.SimpleNetworkTrainer import SimpleNetworkTrainer
+from tfmtcnn.datasets.TensorFlowDataset import TensorFlowDataset
 
 class HardNetworkTrainer(SimpleNetworkTrainer):
 

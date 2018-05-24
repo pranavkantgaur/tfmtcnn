@@ -31,16 +31,16 @@ import cv2
 import numpy as np
 import numpy.random as npr
 
-from utils.BBox import BBox
-from utils.IoU import IoU
+from tfmtcnn.utils.BBox import BBox
+from tfmtcnn.utils.IoU import IoU
 
 import datasets.constants as datasets_constants
-from datasets.DatasetFactory import DatasetFactory
+from tfmtcnn.datasets.DatasetFactory import DatasetFactory
 
-from datasets.Landmark import rotate
-from datasets.Landmark import flip
-from datasets.Landmark import randomShift
-from datasets.Landmark import randomShiftWithArgument
+from tfmtcnn.datasets.Landmark import rotate
+from tfmtcnn.datasets.Landmark import flip
+from tfmtcnn.datasets.Landmark import randomShift
+from tfmtcnn.datasets.Landmark import randomShiftWithArgument
 
 class LandmarkDataset(object):
 

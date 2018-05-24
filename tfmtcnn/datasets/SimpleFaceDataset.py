@@ -28,10 +28,11 @@ import os
 import numpy as np
 import cv2
 import numpy.random as npr
-from utils.IoU import IoU
 
-import datasets.constants as datasets_constants
-from datasets.DatasetFactory import DatasetFactory
+from tfmtcnn.utils.IoU import IoU
+
+import tfmtcnn.datasets.constants as datasets_constants
+from tfmtcnn.datasets.DatasetFactory import DatasetFactory
 
 class SimpleFaceDataset(object):
 
