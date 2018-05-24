@@ -26,19 +26,19 @@ Usage:
 ```shell
 
 $ python generate_simple_dataset.py \
-	--annotation_image_dir=./data/WIDER_Face/WIDER_train/images \ 
-	--annotation_file_name=./data/WIDER_Face/WIDER_train/wider_face_train_bbx_gt.txt \
-	--landmark_image_dir=./data/CelebA/images \
-	--landmark_file_name=./data/CelebA/CelebA.txt \
-	--target_root_dir=./data/datasets/mtcnn 
+	--annotation_image_dir=../data/WIDER_Face/WIDER_train/images \ 
+	--annotation_file_name=../data/WIDER_Face/WIDER_train/wider_face_train_bbx_gt.txt \
+	--landmark_image_dir=../data/CelebA/images \
+	--landmark_file_name=../data/CelebA/CelebA.txt \
+	--sample_multiplier_factor=10 \
+	--target_root_dir=../data/datasets/mtcnn 
 
 $ python generate_simple_dataset.py \
-	--annotation_image_dir=./data/WIDER_Face/WIDER_train/images \ 
-	--annotation_file_name=./data/WIDER_Face/WIDER_train/wider_face_train_bbx_gt.txt \
-	--landmark_image_dir=./data/CelebA/images \
-	--landmark_file_name=./data/CelebA/CelebA.txt \
-	--sample_multiplier_factor=20 \
-	--target_root_dir=./data/datasets/mtcnn 
+	--annotation_image_dir=../data/WIDER_Face/WIDER_train/images \ 
+	--annotation_file_name=../data/WIDER_Face/WIDER_train/wider_face_train_bbx_gt.txt \
+	--landmark_image_dir=../data/CelebA/images \
+	--landmark_file_name=../data/CelebA/CelebA.txt \
+	--target_root_dir=../data/datasets/mtcnn 
 ```
 """
 

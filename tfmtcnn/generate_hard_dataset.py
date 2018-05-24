@@ -27,21 +27,21 @@ Usage:
 
 $ python generate_hard_dataset.py \
 	--network_name=RNet \ 
-	--train_root_dir=./data/models/mtcnn/train \
-	--annotation_image_dir=./data/WIDER_Face/WIDER_train/images \ 
-	--annotation_file_name=./data/WIDER_Face/WIDER_train/wider_face_train_bbx_gt.txt \
-	--landmark_image_dir=./data/CelebA/images \
-	--landmark_file_name=./data/CelebA/CelebA.txt \
-	--target_root_dir=./data/datasets/mtcnn 
+	--train_root_dir=../data/models/mtcnn/train \
+	--annotation_image_dir=../data/WIDER_Face/WIDER_train/images \ 
+	--annotation_file_name=../data/WIDER_Face/WIDER_train/wider_face_train_bbx_gt.txt \
+	--landmark_image_dir=../data/CelebA/images \
+	--landmark_file_name=../data/CelebA/CelebA.txt \
+	--target_root_dir=../data/datasets/mtcnn 
 
 $ python generate_hard_dataset.py \
 	--network_name=ONet \ 
-	--train_root_dir=./data/models/mtcnn/train \
-	--annotation_image_dir=./data/WIDER_Face/WIDER_train/images \ 
-	--annotation_file_name=./data/WIDER_Face/WIDER_train/wider_face_train_bbx_gt.txt \
-	--landmark_image_dir=./data/CelebA/images \
-	--landmark_file_name=./data/CelebA/CelebA.txt \
-	--target_root_dir=./data/datasets/mtcnn 
+	--train_root_dir=../data/models/mtcnn/train \
+	--annotation_image_dir=../data/WIDER_Face/WIDER_train/images \ 
+	--annotation_file_name=../data/WIDER_Face/WIDER_train/wider_face_train_bbx_gt.txt \
+	--landmark_image_dir=../data/CelebA/images \
+	--landmark_file_name=../data/CelebA/CelebA.txt \
+	--target_root_dir=../data/datasets/mtcnn 
 ```
 """
 

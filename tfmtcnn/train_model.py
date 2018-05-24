@@ -27,22 +27,22 @@ Usage:
 
 $ python train_model.py \
 	--network_name=PNet \ 
-	--train_root_dir=./data/models/mtcnn/train \
-	--dataset_root_dir=./data/datasets/mtcnn \
+	--train_root_dir=../data/models/mtcnn/train \
+	--dataset_root_dir=../data/datasets/mtcnn \
 	--base_learning_rate=0.01 \
 	--max_number_of_epoch=30
 
 $ python train_model.py \
 	--network_name=RNet \ 
-	--train_root_dir=./data/models/mtcnn/train \
-	--dataset_root_dir=./data/datasets/mtcnn \
+	--train_root_dir=../data/models/mtcnn/train \
+	--dataset_root_dir=../data/datasets/mtcnn \
 	--base_learning_rate=0.01 \
 	--max_number_of_epoch=22
 
 $ python train_model.py \
 	--network_name=ONet \ 
-	--train_root_dir=./data/models/mtcnn/train \
-	--dataset_root_dir=./data/datasets/mtcnn \
+	--train_root_dir=../data/models/mtcnn/train \
+	--dataset_root_dir=../data/datasets/mtcnn \
 	--base_learning_rate=0.01 \
 	--max_number_of_epoch=22
 ```
