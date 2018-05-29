@@ -60,21 +60,15 @@ from tfmtcnn.networks.FaceDetector import FaceDetector
 from tfmtcnn.networks.NetworkFactory import NetworkFactory
 
 from tfmtcnn.utils.read_class_names import read_class_names
-
-def get_class_names(args):
-
-	class_names = []
-	class_names = read_class_names(args.class_name_file)
-	
-	if(len(class_names) == 0):
-		class_names = [ class_name for class_name in os.listdir(args.source_dir) if os.path.isdir(os.path.join(args.source_dir, class_name)) ]
-
-	return(class_names)
+from tfmtcnn.utils.get_class_names import get_class_names
 
 def align_faces(args):
+	
+	class_names = read_class_names(args.class_name_file)
 
-	class_names = get_class_names(args)
-
+	if(len(class_names) == 0):
+		class_names = get_class_names(args.source_dir)
+	
 	source_path = os.path.expanduser(args.source_dir)
 	target_path = os.path.expanduser(args.target_dir)
 
@@ -93,6 +87,7 @@ def align_faces(args):
 		prefix = args.class_name_file + '-'
 	else:
 		prefix = ""
+
 	successful_file = open(prefix + 'successful.txt', 'w')
 	unsuccessful_file = open(prefix + 'unsuccessful.txt', 'w')	
 
