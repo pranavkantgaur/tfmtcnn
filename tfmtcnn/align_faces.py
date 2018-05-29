@@ -64,9 +64,7 @@ from tfmtcnn.utils.read_class_names import read_class_names
 def get_class_names(args):
 
 	class_names = []
-
-	if(args.class_name_file) and (os.path.isfile(args.class_name_file)):		
-		class_names = read_class_names(args.class_name_file)
+	class_names = read_class_names(args.class_name_file)
 	
 	if(len(class_names) == 0):
 		class_names = [ class_name for class_name in os.listdir(args.source_dir) if os.path.isdir(os.path.join(args.source_dir, class_name)) ]

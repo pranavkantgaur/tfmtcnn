@@ -24,10 +24,12 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
+import os
+
 def read_class_names(class_name_file):
 	class_names = [] 
 
-	if(class_name_file is None):
+	if( (class_name_file is None) or (not os.path.isfile(class_name_file)) ):
 		return(class_names)
 
 	with open(class_name_file) as class_file: 
