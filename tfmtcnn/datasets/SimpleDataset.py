@@ -31,7 +31,8 @@ from tfmtcnn.datasets.AbstractDataset import AbstractDataset
 from tfmtcnn.datasets.LandmarkDataset import LandmarkDataset
 from tfmtcnn.datasets.SimpleFaceDataset import SimpleFaceDataset
 from tfmtcnn.datasets.TensorFlowDataset import TensorFlowDataset
-from tfmtcnn.nets.NetworkFactory import NetworkFactory
+
+from tfmtcnn.networks.NetworkFactory import NetworkFactory
 
 class SimpleDataset(AbstractDataset):
 

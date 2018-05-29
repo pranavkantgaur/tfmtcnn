@@ -32,7 +32,7 @@ import numpy as np
 from tfmtcnn.utils.nms import py_nms
 from tfmtcnn.utils.convert_to_square import convert_to_square
 
-from tfmtcnn.nets.NetworkFactory import NetworkFactory
+from tfmtcnn.networks.NetworkFactory import NetworkFactory
 
 class FaceDetector(object):
 

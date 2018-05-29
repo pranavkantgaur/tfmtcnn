@@ -34,8 +34,8 @@ from tfmtcnn.datasets.HardFaceDataset import HardFaceDataset
 from tfmtcnn.datasets.LandmarkDataset import LandmarkDataset
 from tfmtcnn.datasets.TensorFlowDataset import TensorFlowDataset
 
-from tfmtcnn.nets.FaceDetector import FaceDetector
-from tfmtcnn.nets.NetworkFactory import NetworkFactory
+from tfmtcnn.networks.FaceDetector import FaceDetector
+from tfmtcnn.networks.NetworkFactory import NetworkFactory
 
 class HardDataset(SimpleDataset):
 

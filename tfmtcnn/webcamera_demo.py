@@ -54,8 +54,8 @@ import argparse
 import cv2
 import numpy as np
 
-from tfmtcnn.nets.FaceDetector import FaceDetector
-from tfmtcnn.nets.NetworkFactory import NetworkFactory
+from tfmtcnn.networks.FaceDetector import FaceDetector
+from tfmtcnn.networks.NetworkFactory import NetworkFactory
 
 def parse_arguments(argv):
 	parser = argparse.ArgumentParser()

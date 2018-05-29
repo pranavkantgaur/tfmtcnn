@@ -35,7 +35,7 @@ from datetime import datetime
 from tfmtcnn.trainers.AbstractNetworkTrainer import AbstractNetworkTrainer
 from tfmtcnn.datasets.TensorFlowDataset import TensorFlowDataset
 
-from tfmtcnn.nets.NetworkFactory import NetworkFactory
+from tfmtcnn.networks.NetworkFactory import NetworkFactory
 
 from tfmtcnn.losses.class_loss_ohem import class_loss_ohem
 from tfmtcnn.losses.bounding_box_loss_ohem import bounding_box_loss_ohem

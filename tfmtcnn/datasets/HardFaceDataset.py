@@ -33,8 +33,8 @@ from tfmtcnn.datasets.DatasetFactory import DatasetFactory
 from tfmtcnn.datasets.SimpleFaceDataset import SimpleFaceDataset
 from tfmtcnn.datasets.InferenceBatch import InferenceBatch
 
-from tfmtcnn.nets.FaceDetector import FaceDetector
-from tfmtcnn.nets.NetworkFactory import NetworkFactory
+from tfmtcnn.networks.FaceDetector import FaceDetector
+from tfmtcnn.networks.NetworkFactory import NetworkFactory
 
 from tfmtcnn.utils.convert_to_square import convert_to_square
 from tfmtcnn.utils.IoU import IoU
