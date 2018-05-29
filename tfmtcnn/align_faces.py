@@ -59,17 +59,7 @@ import numpy as np
 from tfmtcnn.networks.FaceDetector import FaceDetector
 from tfmtcnn.networks.NetworkFactory import NetworkFactory
 
-def read_class_names(class_name_file):
-	class_names = [] 
-
-	with open(class_name_file) as class_file: 
-		class_names = class_file.readlines()
-
-	no_of_classes = len(class_names)
-	for index in range(no_of_classes):
-		class_names[index] = class_names[index].rstrip()
-
-	return(class_names)
+from tfmtcnn.utils.read_class_names import read_class_names
 
 def get_class_names(args):
 
