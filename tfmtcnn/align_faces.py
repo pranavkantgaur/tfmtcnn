@@ -30,7 +30,7 @@ $ python align_faces.py \
 	--target_dir=/datasets/mtcnn_images/faces \
 	--image_format=png \
 	--image_size=299 \
-	--margin=20 \
+	--margin=20.0 \
 	--gpu_memory_fraction=0.2
 
 $ python align_faces.py \
@@ -38,7 +38,7 @@ $ python align_faces.py \
 	--target_dir=/datasets/mtcnn_images/faces \
 	--image_format=png \
 	--image_size=299 \
-	--margin=20 \
+	--margin=20.0 \
 	--gpu_memory_fraction=0.2 \
 	--class_name_file=class-name-file
 ```
