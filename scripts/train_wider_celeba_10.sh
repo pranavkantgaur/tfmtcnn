@@ -1,7 +1,7 @@
 echo '########################################################################################################################################################################################################'
 
 if [ "$MTCNN_ROOT_DIR" == "" ]; then
-	export MTCNN_ROOT_DIR=/git-space
+	export MTCNN_ROOT_DIR=/
 fi
 
 echo 'Check MTCNN_ROOT_DIR, current MTCNN_ROOT_DIR is - '$MTCNN_ROOT_DIR
@@ -9,12 +9,14 @@ echo 'Check MTCNN_ROOT_DIR, current MTCNN_ROOT_DIR is - '$MTCNN_ROOT_DIR
 echo '########################################################################################################################################################################################################'
 
 export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64:$LD_LIBRARY_PATH
-export PYTHONPATH=$MTCNN_ROOT_DIR/tfmtcnn:$PYTHONPATH
+
+export PYTHONPATH=$MTCNN_ROOT_DIR/git-space/tfmtcnn:$PYTHONPATH
+
 export CUDA_VISIBLE_DEVICES=0
 
 echo '########################################################################################################################################################################################################'
 
-cd $MTCNN_ROOT_DIR/tfmtcnn/tfmtcnn
+cd $MTCNN_ROOT_DIR/git-space/tfmtcnn/tfmtcnn
 
 echo 'Prepare CelebA dataset for input.'
 
