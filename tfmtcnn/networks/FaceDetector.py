@@ -26,6 +26,7 @@ from __future__ import print_function
 
 import os
 import time
+import math
 import cv2
 import numpy as np
 
@@ -44,7 +45,8 @@ class FaceDetector(object):
 
 		self._min_face_size = 24
 		self._threshold = [0.9, 0.6, 0.7]
-		self._scale_factor = 0.79
+		#self._scale_factor = 0.79
+		self._scale_factor = 1.0/ ( math.sqrt(2.0) )
 
 		status_ok = True
 		if( last_network in ['PNet', 'RNet', 'ONet'] ):
@@ -70,6 +72,12 @@ class FaceDetector(object):
 
 		if(not status_ok):
 			raise SystemExit		
+
+	def set_threshold(self, threshold):
+		self._threshold = threshold
+	
+	def set_min_face_size(self, min_face_size):
+		self._min_face_size = min_face_size
 
     	def _generate_bbox(self, cls_map, reg, scale, threshold):
  
