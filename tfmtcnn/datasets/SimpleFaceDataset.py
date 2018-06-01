@@ -133,7 +133,7 @@ class SimpleFaceDataset(object):
 					resized_image = cv2.resize(cropped_image, (face_size, face_size), interpolation=cv2.INTER_LINEAR)
 
 					file_path = os.path.join(negative_dir, "%s.jpg"%generated_negative_images)
-					negative_file.write(file_path + ' 0\n')
+					negative_file.write(file_path + ' 0' + os.linesep)
 					cv2.imwrite(file_path, resized_image)
 
             				generated_negative_images += 1
@@ -177,7 +177,7 @@ class SimpleFaceDataset(object):
 						resized_image = cv2.resize(cropped_image, (face_size, face_size), interpolation=cv2.INTER_LINEAR)
 
                 				file_path = os.path.join(negative_dir, "%s.jpg" % generated_negative_images)
-                				negative_file.write(file_path + ' 0\n')
+                				negative_file.write(file_path + ' 0' + os.linesep)
                 				cv2.imwrite(file_path, resized_image)
 
                 				generated_negative_images += 1 
@@ -220,14 +220,14 @@ class SimpleFaceDataset(object):
             				normalized_box = bounding_box.reshape(1, -1)
             				if( ( IoU(crop_box, normalized_box) >= DatasetFactory.positive_IoU() ) and (positive_images < needed_positive_images) ):
                 				file_path = os.path.join(positive_dir, "%s.jpg"%generated_positive_images)
-                				positive_file.write(file_path + ' 1 %.2f %.2f %.2f %.2f\n'%(offset_x1, offset_y1, offset_x2, offset_y2))
+                				positive_file.write(file_path + ' 1 %.2f %.2f %.2f %.2f'%(offset_x1, offset_y1, offset_x2, offset_y2) + os.linesep)
                 				cv2.imwrite(file_path, resized_image)
                 				generated_positive_images += 1
 						positive_images += 1
 
             				elif( ( IoU(crop_box, normalized_box) >= DatasetFactory.part_IoU() ) and (part_images < needed_part_images) ):
                 				file_path = os.path.join(part_dir, "%s.jpg"%generated_part_images)
-                				part_file.write(file_path + ' -1 %.2f %.2f %.2f %.2f\n'%(offset_x1, offset_y1, offset_x2, offset_y2))
+                				part_file.write(file_path + ' -1 %.2f %.2f %.2f %.2f'%(offset_x1, offset_y1, offset_x2, offset_y2) + os.linesep)
                 				cv2.imwrite(file_path, resized_image)
                 				generated_part_images += 1
 						part_images += 1

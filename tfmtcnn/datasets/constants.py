@@ -34,4 +34,4 @@ positive_IoU = 0.65
 part_IoU = 0.40
 negative_IoU = 0.30
 
-minimum_face_size = 40
+minimum_face_size = 24

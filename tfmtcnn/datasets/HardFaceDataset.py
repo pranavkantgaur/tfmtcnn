@@ -71,6 +71,7 @@ class HardFaceDataset(SimpleFaceDataset):
 		part_file = open(SimpleFaceDataset.part_file_name(target_root_dir), 'w')
 		negative_file = open(SimpleFaceDataset.negative_file_name(target_root_dir), 'w')
 
+		needed_negative_images = 100
     		negative_images = 0
     		positive_images = 0
     		part_images = 0
@@ -86,7 +87,7 @@ class HardFaceDataset(SimpleFaceDataset):
 
         		current_image = cv2.imread(image_file_path)
 
-        		neg_num = 0
+        		current_negative_images = 0
         		for box in detected_box:
             			x_left, y_top, x_right, y_bottom, _ = box.astype(int)
             			width = x_right - x_left + 1
@@ -99,12 +100,12 @@ class HardFaceDataset(SimpleFaceDataset):
             			cropped_image = current_image[y_top:y_bottom + 1, x_left:x_right + 1, :]
             			resized_image = cv2.resize(cropped_image, (image_size, image_size), interpolation=cv2.INTER_LINEAR)
 
-            			if( (np.max(current_IoU) < DatasetFactory.negative_IoU()) and (neg_num < 60) ):
+            			if( (np.max(current_IoU) < DatasetFactory.negative_IoU()) and (current_negative_images < needed_negative_images) ):
                 			file_path = os.path.join(negative_dir, "%s.jpg" % negative_images)
-                			negative_file.write(file_path + ' 0\n')
+                			negative_file.write(file_path + ' 0' + os.linesep)
                 			cv2.imwrite(file_path, resized_image)
                 			negative_images += 1
-                			neg_num += 1
+                			current_negative_images += 1
             			else:
                 			idx = np.argmax(current_IoU)
                 			assigned_gt = ground_truth_box[idx]
@@ -117,13 +118,13 @@ class HardFaceDataset(SimpleFaceDataset):
 
                 			if( np.max(current_IoU) >= DatasetFactory.positive_IoU() ):
                     				file_path = os.path.join(positive_dir, "%s.jpg" % positive_images)
-                    				positive_file.write(file_path + ' 1 %.2f %.2f %.2f %.2f\n' % (offset_x1, offset_y1, offset_x2, offset_y2))
+                    				positive_file.write(file_path + ' 1 %.2f %.2f %.2f %.2f' % (offset_x1, offset_y1, offset_x2, offset_y2) + os.linesep)
                     				cv2.imwrite(file_path, resized_image)
                     				positive_images += 1
 
                 			elif( np.max(current_IoU) >= DatasetFactory.part_IoU() ):
                     				file_path = os.path.join(part_dir, "%s.jpg" % part_images)
-                    				part_file.write(file_path + ' -1 %.2f %.2f %.2f %.2f\n' % (offset_x1, offset_y1, offset_x2, offset_y2))
+                    				part_file.write(file_path + ' -1 %.2f %.2f %.2f %.2f' % (offset_x1, offset_y1, offset_x2, offset_y2) + os.linesep)
                     				cv2.imwrite(file_path, resized_image)
                     				part_images += 1
     		negative_file.close()
