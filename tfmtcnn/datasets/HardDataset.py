@@ -34,6 +34,8 @@ from tfmtcnn.datasets.HardFaceDataset import HardFaceDataset
 from tfmtcnn.datasets.LandmarkDataset import LandmarkDataset
 from tfmtcnn.datasets.TensorFlowDataset import TensorFlowDataset
 
+import tfmtcnn.datasets.constants as datasets_constants
+
 from tfmtcnn.networks.FaceDetector import FaceDetector
 from tfmtcnn.networks.NetworkFactory import NetworkFactory
 
@@ -42,9 +44,9 @@ class HardDataset(SimpleDataset):
 	def __init__(self, name):	
 		SimpleDataset.__init__(self, name)	
 
-	def _generate_image_samples(self, annotation_file_name, annotation_image_dir, model_train_dir, minimum_face, target_root_dir):
+	def _generate_image_samples(self, annotation_file_name, annotation_image_dir, model_train_dir, target_root_dir):
 		face_dataset = HardFaceDataset()
-		return(face_dataset.generate_samples(annotation_image_dir, annotation_file_name, model_train_dir, self.network_name(), minimum_face, target_root_dir))
+		return(face_dataset.generate_samples(annotation_image_dir, annotation_file_name, model_train_dir, self.network_name(), self._minimum_face_size, target_root_dir))
 
 	def _generate_dataset(self, target_root_dir):
 		tensorflow_dataset = TensorFlowDataset()
@@ -94,10 +96,10 @@ class HardDataset(SimpleDataset):
 		if(not os.path.exists(target_root_dir)):
 			os.makedirs(target_root_dir)
 
-		minimum_face = NetworkFactory.network_size(self.network_name())
+		self._minimum_face_size = datasets_constants.minimum_face_size
 
 		print('Generating image samples.')
-		status, average_face_samples = self._generate_image_samples(annotation_file_name, annotation_image_dir, model_train_dir, minimum_face, target_root_dir)
+		status, average_face_samples = self._generate_image_samples(annotation_file_name, annotation_image_dir, model_train_dir, target_root_dir)
 		if(not status):
 			print('Error generating image samples.')
 			return(False)
@@ -105,7 +107,7 @@ class HardDataset(SimpleDataset):
 
 		base_number_of_images = average_face_samples
 		print('Generating landmark samples.')
-		if(not super(HardDataset, self)._generate_landmark_samples(landmark_image_dir, landmark_file_name, base_number_of_images, minimum_face, target_root_dir)):
+		if(not super(HardDataset, self)._generate_landmark_samples(landmark_image_dir, landmark_file_name, base_number_of_images, target_root_dir)):
 			print('Error generating landmark samples.')
 			return(False)
 		print('Generated landmark samples.')

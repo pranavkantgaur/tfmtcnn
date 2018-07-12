@@ -28,7 +28,7 @@ positive_ratio = 1
 part_ratio = 1
 negative_ratio = 3
 
-landmark_ratio = 1
+landmark_ratio = 2
 
 positive_IoU = 0.65
 part_IoU = 0.40

@@ -93,7 +93,7 @@ class HardFaceDataset(SimpleFaceDataset):
             			width = x_right - x_left + 1
             			height = y_bottom - y_top + 1
 
-            			if( (width < face_size) or (x_left < 0) or (y_top < 0) or (x_right > (current_image.shape[1] - 1) ) or (y_bottom > (current_image.shape[0] - 1 ) ) ):
+            			if( (width < face_size) or (height < face_size) or (x_left < 0) or (y_top < 0) or (x_right > (current_image.shape[1] - 1) ) or (y_bottom > (current_image.shape[0] - 1 ) ) ):
                 			continue
 
             			current_IoU = IoU(box, ground_truth_box)
