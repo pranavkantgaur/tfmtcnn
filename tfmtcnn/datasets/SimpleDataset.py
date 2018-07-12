@@ -44,7 +44,7 @@ class SimpleDataset(AbstractDataset):
 
 	def _generate_landmark_samples(self, landmark_image_dir, landmark_file_name, base_number_of_images, target_root_dir):
 		landmark_dataset = LandmarkDataset()		
-		return(landmark_dataset.generate(landmark_image_dir, landmark_file_name, base_number_of_images, self._minimum_face_size, target_root_dir))
+		return(landmark_dataset.generate(landmark_image_dir, landmark_file_name, base_number_of_images, NetworkFactory.network_size(self.network_name()), target_root_dir))
 		
 	def _generate_image_samples(self, annotation_image_dir, annotation_file_name, sample_multiplier_factor, target_root_dir):
 		face_dataset = SimpleFaceDataset()		
@@ -112,7 +112,7 @@ class SimpleDataset(AbstractDataset):
 			return(False)
 		print('Generated image samples.')
 
-		base_number_of_images = average_face_samples * datasets_constants.landmark_ratio
+		base_number_of_images = average_face_samples
 
 		print('Generating landmark samples.')
 		if(not self._generate_landmark_samples(landmark_image_dir, landmark_file_name, base_number_of_images, target_root_dir)):

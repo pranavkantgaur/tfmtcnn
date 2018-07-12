@@ -107,7 +107,7 @@ class CelebADataset(object):
 			self._data['number_of_faces'] = self._number_of_faces
 
 			self._is_valid = True
-			print(self._number_of_faces, 'faces in ' , len(images), 'number of images for CelebA dataset')
+			print(self._number_of_faces, 'faces in ' , len(images), 'number of images for CelebA dataset.')
 		else:
 			self._clear()
 
