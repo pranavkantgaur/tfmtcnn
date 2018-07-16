@@ -148,7 +148,7 @@ class SimpleFaceDataset(object):
 				if( (x1 < 0) or (y1 < 0) ):				
             				continue
 
-				needed_negative_images = 2 * sample_multiplier_factor
+				needed_negative_images = (SimpleFaceDataset.__negative_ratio - 1) * sample_multiplier_factor
 				negative_images = 0
 				maximum_attempts = base_number_of_attempts * sample_multiplier_factor
 				number_of_attempts = 0
