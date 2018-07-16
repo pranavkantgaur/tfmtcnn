@@ -132,7 +132,7 @@ class HardFaceDataset(SimpleFaceDataset):
     		part_file.close()
     		positive_file.close()
 
-		average_face_samples = (generated_positive_samples*1.0)/datasets_constants.positive_ratio + (generated_part_samples*1.0)/datasets_constants.part_ratio + (generated_negative_samples*1.0)/datasets_constants.negative_ratio
+		average_face_samples = ( (generated_positive_samples*1.0)/datasets_constants.positive_ratio + (generated_part_samples*1.0)/datasets_constants.part_ratio + (generated_negative_samples*1.0)/datasets_constants.negative_ratio ) / 3.0
 
 		return(True, average_face_samples)
 

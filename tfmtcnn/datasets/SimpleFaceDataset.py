@@ -247,7 +247,7 @@ class SimpleFaceDataset(object):
 		part_file.close()
 		positive_file.close()
 
-		average_face_samples = (generated_positive_samples*1.0)/SimpleFaceDataset.__positive_ratio + (generated_part_samples*1.0)/SimpleFaceDataset.__part_ratio + (generated_negative_samples*1.0)/SimpleFaceDataset.__negative_ratio
+		average_face_samples = ( (generated_positive_samples*1.0)/SimpleFaceDataset.__positive_ratio + (generated_part_samples*1.0)/SimpleFaceDataset.__part_ratio + (generated_negative_samples*1.0)/SimpleFaceDataset.__negative_ratio ) / 3.0
 
 		return(True, average_face_samples)
 
