@@ -32,6 +32,7 @@ import numpy.random as npr
 from tfmtcnn.datasets.DatasetFactory import DatasetFactory
 from tfmtcnn.datasets.SimpleFaceDataset import SimpleFaceDataset
 from tfmtcnn.datasets.InferenceBatch import InferenceBatch
+import tfmtcnn.datasets.constants as datasets_constants
 
 from tfmtcnn.networks.FaceDetector import FaceDetector
 from tfmtcnn.networks.NetworkFactory import NetworkFactory
@@ -131,7 +132,7 @@ class HardFaceDataset(SimpleFaceDataset):
     		part_file.close()
     		positive_file.close()
 
-		average_face_samples = (generated_positive_samples*1.0)/SimpleFaceDataset.__positive_ratio + (generated_part_samples*1.0)/SimpleFaceDataset.__part_ratio + (generated_negative_samples*1.0)/SimpleFaceDataset.__negative_ratio
+		average_face_samples = (generated_positive_samples*1.0)/datasets_constants.positive_ratio + (generated_part_samples*1.0)/datasets_constants.part_ratio + (generated_negative_samples*1.0)/datasets_constants.negative_ratio
 
 		return(True, average_face_samples)
 
