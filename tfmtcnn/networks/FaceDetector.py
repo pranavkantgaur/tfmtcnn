@@ -165,7 +165,7 @@ class FaceDetector(object):
         	current_height, current_width, _ = resized_image.shape
         	
         	all_boxes = list()
-        	while min(current_height, current_width) > net_size:
+        	while ( min(current_height, current_width) >= net_size ):
             		cls_cls_map, reg = self._pnet.detect(resized_image)
             		boxes = self._generate_bbox(cls_cls_map[:, :,1], reg, current_scale, self._threshold[0])
 
