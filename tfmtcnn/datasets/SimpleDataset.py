@@ -32,15 +32,12 @@ from tfmtcnn.datasets.LandmarkDataset import LandmarkDataset
 from tfmtcnn.datasets.SimpleFaceDataset import SimpleFaceDataset
 from tfmtcnn.datasets.TensorFlowDataset import TensorFlowDataset
 
-import tfmtcnn.datasets.constants as datasets_constants
-
 from tfmtcnn.networks.NetworkFactory import NetworkFactory
 
 class SimpleDataset(AbstractDataset):
 
 	def __init__(self, network_name='PNet'):	
-		AbstractDataset.__init__(self, network_name)
-		self._minimum_face_size = datasets_constants.minimum_face_size	
+		AbstractDataset.__init__(self, network_name)			
 
 	def _generate_landmark_samples(self, landmark_image_dir, landmark_file_name, base_number_of_images, target_root_dir):
 		landmark_dataset = LandmarkDataset()		
@@ -48,7 +45,7 @@ class SimpleDataset(AbstractDataset):
 		
 	def _generate_image_samples(self, annotation_image_dir, annotation_file_name, sample_multiplier_factor, target_root_dir):
 		face_dataset = SimpleFaceDataset()		
-		return(face_dataset.generate_samples(annotation_image_dir, annotation_file_name, sample_multiplier_factor, self._minimum_face_size, target_root_dir))
+		return(face_dataset.generate_samples(annotation_image_dir, annotation_file_name, sample_multiplier_factor, NetworkFactory.network_size(self.network_name()), target_root_dir))
 
 	def _generate_image_list(self, target_root_dir):
 		positive_file = open(SimpleFaceDataset.positive_file_name(target_root_dir), 'r')
@@ -102,8 +99,6 @@ class SimpleDataset(AbstractDataset):
 		target_root_dir = os.path.join(target_root_dir, self.network_name())
 		if(not os.path.exists(target_root_dir)):
 			os.makedirs(target_root_dir)
-
-		self._minimum_face_size = NetworkFactory.network_size(self.network_name())
 
 		print('Generating image samples.')
 		status, average_face_samples = self._generate_image_samples(annotation_image_dir, annotation_file_name, sample_multiplier_factor, target_root_dir)

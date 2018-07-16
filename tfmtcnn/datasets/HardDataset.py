@@ -42,7 +42,8 @@ from tfmtcnn.networks.NetworkFactory import NetworkFactory
 class HardDataset(SimpleDataset):
 
 	def __init__(self, name):	
-		SimpleDataset.__init__(self, name)	
+		SimpleDataset.__init__(self, name)
+		self._minimum_face_size = datasets_constants.minimum_face_size	
 
 	def _generate_image_samples(self, annotation_file_name, annotation_image_dir, model_train_dir, target_root_dir):
 		face_dataset = HardFaceDataset()

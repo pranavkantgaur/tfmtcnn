@@ -32,7 +32,7 @@ import tfmtcnn.datasets.constants as datasets_constants
 class WIDERFaceDataset(object):
 
 	__name = 'WIDERFaceDataset'
-	__minimum_face_size = datasets_constants.minimum_face_size
+	__minimum_face_size = datasets_constants.minimum_dataset_face_size
 
 	@classmethod
 	def name(cls):

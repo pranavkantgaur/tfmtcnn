@@ -50,8 +50,9 @@ import sys
 import argparse
 
 from tfmtcnn.datasets.SimpleDataset import SimpleDataset
+import tfmtcnn.datasets.constants as datasets_constants
 
-default_multiplier_factor = 10
+default_multiplier_factor = datasets_constants.default_multiplier_factor
 
 def parse_arguments(argv):
 	parser = argparse.ArgumentParser()

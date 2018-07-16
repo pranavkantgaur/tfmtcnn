@@ -34,4 +34,8 @@ positive_IoU = 0.65
 part_IoU = 0.40
 negative_IoU = 0.30
 
-minimum_face_size = 24
+default_multiplier_factor = 10
+
+minimum_dataset_face_size = 24
+
+minimum_face_size = 20

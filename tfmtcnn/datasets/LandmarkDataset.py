@@ -80,7 +80,7 @@ class LandmarkDataset(object):
 	def _can_generate_sample(self):
 		return( random.choice([0,1,2,3]) > 1 )		
 
-	def generate(self, landmark_image_dir, landmark_file_name, base_number_of_images, minimum_face, target_root_dir):
+	def generate(self, landmark_image_dir, landmark_file_name, base_number_of_images, target_face_size, target_root_dir):
 
 		if(not self._read(landmark_image_dir, landmark_file_name)):
 			return(False)
@@ -95,15 +95,13 @@ class LandmarkDataset(object):
 
 		landmark_file = open(LandmarkDataset.landmark_file_name(target_root_dir), 'w')
 
-		size = minimum_face
-
 		generated_landmark_images = 0
     		processed_input_images = 0
 		total_number_of_input_images = len(image_file_names)
 
-		#needed_landmark_samples = int( ( 1.0 * base_number_of_images * LandmarkDataset.__landmark_ratio ) / total_number_of_input_images )
-		#needed_landmark_samples = max(1, needed_landmark_samples)
-		needed_landmark_samples = int(LandmarkDataset.__landmark_ratio)
+		needed_landmark_samples = int( ( 1.0 * base_number_of_images * LandmarkDataset.__landmark_ratio ) / total_number_of_input_images )
+		needed_landmark_samples = max(1, needed_landmark_samples)
+		#needed_landmark_samples = int(LandmarkDataset.__landmark_ratio)
 
 		base_number_of_attempts = 200
 		maximum_attempts = base_number_of_attempts * needed_landmark_samples
@@ -121,7 +119,7 @@ class LandmarkDataset(object):
         		image_height, image_width, image_channels = image.shape
         		gt_box = np.array([ground_truth_bounding_box.left, ground_truth_bounding_box.top, ground_truth_bounding_box.right, ground_truth_bounding_box.bottom])
         		f_face = image[ground_truth_bounding_box.top:ground_truth_bounding_box.bottom+1, ground_truth_bounding_box.left:ground_truth_bounding_box.right+1]
-        		f_face = cv2.resize(f_face,(size,size))
+        		f_face = cv2.resize(f_face,(target_face_size, target_face_size))
         		landmark = np.zeros((5, 2))
 
         		for index, one in enumerate(ground_truth_landmark):
@@ -157,7 +155,7 @@ class LandmarkDataset(object):
 
                			crop_box = np.array([nx1,ny1,nx2,ny2])
                			cropped_im = image[ny1:ny2+1,nx1:nx2+1,:]
-               			resized_im = cv2.resize(cropped_im, (size, size))
+               			resized_im = cv2.resize(cropped_im, (target_face_size, target_face_size))
 
                			current_IoU = IoU(crop_box, np.expand_dims(gt_box,0))
 
@@ -176,7 +174,7 @@ class LandmarkDataset(object):
                				#mirror                    
                				if( self._can_generate_sample() ):
                       				face_flipped, landmark_flipped = flip(resized_im, landmark_)
-                       				face_flipped = cv2.resize(face_flipped, (size, size))
+                       				face_flipped = cv2.resize(face_flipped, (target_face_size, target_face_size))
                        				#c*h*w
                        				current_face_images.append(face_flipped)
                        				current_face_landmarks.append(landmark_flipped.reshape(10))
@@ -186,13 +184,13 @@ class LandmarkDataset(object):
                        				face_rotated_by_alpha, landmark_rotated = rotate(image, bounding_box, bounding_box.reprojectLandmark(landmark_), 5)
                        				#landmark_offset
                        				landmark_rotated = bounding_box.projectLandmark(landmark_rotated)
-                       				face_rotated_by_alpha = cv2.resize(face_rotated_by_alpha, (size, size))
+                       				face_rotated_by_alpha = cv2.resize(face_rotated_by_alpha, (target_face_size, target_face_size))
                        				current_face_images.append(face_rotated_by_alpha)
                        				current_face_landmarks.append(landmark_rotated.reshape(10))
                 
                        				#flip
                        				face_flipped, landmark_flipped = flip(face_rotated_by_alpha, landmark_rotated)
-                       				face_flipped = cv2.resize(face_flipped, (size, size))
+                       				face_flipped = cv2.resize(face_flipped, (target_face_size, target_face_size))
                        				current_face_images.append(face_flipped)
                					current_face_landmarks.append(landmark_flipped.reshape(10))       							
                     
@@ -200,12 +198,12 @@ class LandmarkDataset(object):
                				if( self._can_generate_sample() ):
                       				face_rotated_by_alpha, landmark_rotated = rotate(image, bounding_box, bounding_box.reprojectLandmark(landmark_), -5)
                        				landmark_rotated = bounding_box.projectLandmark(landmark_rotated)
-                       				face_rotated_by_alpha = cv2.resize(face_rotated_by_alpha, (size, size))
+                       				face_rotated_by_alpha = cv2.resize(face_rotated_by_alpha, (target_face_size, target_face_size))
                        				current_face_images.append(face_rotated_by_alpha)
                        				current_face_landmarks.append(landmark_rotated.reshape(10))
                 
                        				face_flipped, landmark_flipped = flip(face_rotated_by_alpha, landmark_rotated)
-                       				face_flipped = cv2.resize(face_flipped, (size, size))
+                       				face_flipped = cv2.resize(face_flipped, (target_face_size, target_face_size))
                        				current_face_images.append(face_flipped)
                        				current_face_landmarks.append(landmark_flipped.reshape(10)) 
 

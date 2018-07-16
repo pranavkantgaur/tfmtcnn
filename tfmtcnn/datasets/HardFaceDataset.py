@@ -54,7 +54,7 @@ class HardFaceDataset(SimpleFaceDataset):
 		if(not (len(detected_boxes) == number_of_images)):
 			return(False, average_face_samples)
 
-		image_size = NetworkFactory.network_size(network_name)
+		target_face_size = NetworkFactory.network_size(network_name)
 
 		positive_dir = os.path.join(target_root_dir, 'positive')
 		part_dir = os.path.join(target_root_dir, 'part')
@@ -71,10 +71,10 @@ class HardFaceDataset(SimpleFaceDataset):
 		part_file = open(SimpleFaceDataset.part_file_name(target_root_dir), 'w')
 		negative_file = open(SimpleFaceDataset.negative_file_name(target_root_dir), 'w')
 
-		needed_negative_images = 100
-    		negative_images = 0
-    		positive_images = 0
-    		part_images = 0
+		needed_negative_images = 50
+    		generated_negative_samples = 0
+    		generated_positive_samples = 0
+    		generated_part_samples = 0
 
     		for image_file_path, detected_box, ground_truth_box in zip(image_file_names, detected_boxes, ground_truth_boxes):
         		ground_truth_box = np.array(ground_truth_box, dtype=np.float32).reshape(-1, 4)
@@ -98,13 +98,13 @@ class HardFaceDataset(SimpleFaceDataset):
 
             			current_IoU = IoU(box, ground_truth_box)
             			cropped_image = current_image[y_top:y_bottom + 1, x_left:x_right + 1, :]
-            			resized_image = cv2.resize(cropped_image, (image_size, image_size), interpolation=cv2.INTER_LINEAR)
+            			resized_image = cv2.resize(cropped_image, (target_face_size, target_face_size), interpolation=cv2.INTER_LINEAR)
 
             			if( (np.max(current_IoU) < DatasetFactory.negative_IoU()) and (current_negative_images < needed_negative_images) ):
-                			file_path = os.path.join(negative_dir, "%s.jpg" % negative_images)
+                			file_path = os.path.join(negative_dir, "%s.jpg" % generated_negative_samples)
                 			negative_file.write(file_path + ' 0' + os.linesep)
                 			cv2.imwrite(file_path, resized_image)
-                			negative_images += 1
+                			generated_negative_samples += 1
                 			current_negative_images += 1
             			else:
                 			idx = np.argmax(current_IoU)
@@ -117,21 +117,21 @@ class HardFaceDataset(SimpleFaceDataset):
                 			offset_y2 = (y2 - y_bottom) / float(height)
 
                 			if( np.max(current_IoU) >= DatasetFactory.positive_IoU() ):
-                    				file_path = os.path.join(positive_dir, "%s.jpg" % positive_images)
+                    				file_path = os.path.join(positive_dir, "%s.jpg" % generated_positive_samples)
                     				positive_file.write(file_path + ' 1 %.2f %.2f %.2f %.2f' % (offset_x1, offset_y1, offset_x2, offset_y2) + os.linesep)
                     				cv2.imwrite(file_path, resized_image)
-                    				positive_images += 1
+                    				generated_positive_samples += 1
 
                 			elif( np.max(current_IoU) >= DatasetFactory.part_IoU() ):
-                    				file_path = os.path.join(part_dir, "%s.jpg" % part_images)
+                    				file_path = os.path.join(part_dir, "%s.jpg" % generated_part_samples)
                     				part_file.write(file_path + ' -1 %.2f %.2f %.2f %.2f' % (offset_x1, offset_y1, offset_x2, offset_y2) + os.linesep)
                     				cv2.imwrite(file_path, resized_image)
-                    				part_images += 1
+                    				generated_part_samples += 1
     		negative_file.close()
     		part_file.close()
     		positive_file.close()
 
-		average_face_samples = max(positive_images, part_images)
+		average_face_samples = (generated_positive_samples*1.0)/SimpleFaceDataset.__positive_ratio + (generated_part_samples*1.0)/SimpleFaceDataset.__part_ratio + (generated_negative_samples*1.0)/SimpleFaceDataset.__negative_ratio
 
 		return(True, average_face_samples)
 

@@ -34,7 +34,7 @@ from tfmtcnn.utils.BBox import BBox
 class LFWLandmarkDataset(object):
 
 	__name = 'LFWLandmark'
-	__minimum_face_size = datasets_constants.minimum_face_size
+	__minimum_face_size = datasets_constants.minimum_dataset_face_size
 
 	@classmethod
 	def name(cls):

@@ -75,7 +75,7 @@ class SimpleFaceDataset(object):
 
 		return(status, dataset)
 
-	def generate_samples(self, annotation_image_dir, annotation_file_name, sample_multiplier_factor, face_size, target_root_dir):
+	def generate_samples(self, annotation_image_dir, annotation_file_name, sample_multiplier_factor, target_face_size, target_root_dir):
 
 		average_face_samples = 0 
 		status, dataset = self._read(annotation_image_dir, annotation_file_name)
@@ -85,7 +85,7 @@ class SimpleFaceDataset(object):
 		image_file_names = dataset['images']
 		ground_truth_boxes = dataset['bboxes']
 		number_of_faces = dataset['number_of_faces']
-		
+
 		positive_dir = os.path.join(target_root_dir, 'positive')
 		part_dir = os.path.join(target_root_dir, 'part')
 		negative_dir = os.path.join(target_root_dir, 'negative')
@@ -108,15 +108,17 @@ class SimpleFaceDataset(object):
 
 		base_number_of_attempts = 5000
 
-		negative_samples_per_annotation_image = 100
+		base_negative_samples_per_annotation_image = 5
+		negative_samples_per_annotation_image = base_negative_samples_per_annotation_image * sample_multiplier_factor
+
     		for image_file_path, ground_truth_box in zip(image_file_names, ground_truth_boxes):
         		bounding_boxes = np.array(ground_truth_box, dtype=np.float32).reshape(-1, 4)			
 
 			current_image = cv2.imread(image_file_path)
     			input_image_height, input_image_width, input_image_channels = current_image.shape
 
-			needed_negative_samples = np.ceil( (number_of_faces * (1) * sample_multiplier_factor ) / len(image_file_names) )
-			#needed_negative_samples = negative_samples_per_annotation_image
+			#needed_negative_samples = np.ceil( (number_of_faces * (1) * sample_multiplier_factor ) / len(image_file_names) )
+			needed_negative_samples = negative_samples_per_annotation_image
 
 			negative_images = 0
 			maximum_attempts = base_number_of_attempts * (SimpleFaceDataset.__negative_ratio) * sample_multiplier_factor
@@ -124,7 +126,7 @@ class SimpleFaceDataset(object):
 			while(	(negative_images < needed_negative_samples) and (number_of_attempts < maximum_attempts) ):
 				number_of_attempts += 1
 
-				crop_box_size = npr.randint(face_size, min(input_image_width, input_image_height)/2 )
+				crop_box_size = npr.randint(target_face_size, min(input_image_width, input_image_height)/2 )
 			        nx = npr.randint(0, (input_image_width - crop_box_size) )
         			ny = npr.randint(0, (input_image_height - crop_box_size) )
         
@@ -133,7 +135,7 @@ class SimpleFaceDataset(object):
         			
 				if( np.max(current_IoU) < DatasetFactory.negative_IoU() ):
 					cropped_image = current_image[ny : ny + crop_box_size, nx : nx + crop_box_size, :]
-					resized_image = cv2.resize(cropped_image, (face_size, face_size), interpolation=cv2.INTER_LINEAR)
+					resized_image = cv2.resize(cropped_image, (target_face_size, target_face_size), interpolation=cv2.INTER_LINEAR)
 
 					file_path = os.path.join(negative_dir, "%s.jpg"%generated_negative_samples)
 					negative_file.write(file_path + ' 0' + os.linesep)
@@ -161,7 +163,7 @@ class SimpleFaceDataset(object):
 
 					number_of_attempts += 1
 
-			            	crop_box_size = npr.randint(face_size, min(input_image_width, input_image_height)/2 )
+			            	crop_box_size = npr.randint(target_face_size, min(input_image_width, input_image_height)/2 )
 
             				#delta_x = npr.randint(max(-crop_box_size, -x1), bounding_box_width)
             				#delta_y = npr.randint(max(-crop_box_size, -y1), bounding_box_height)
@@ -179,7 +181,7 @@ class SimpleFaceDataset(object):
             				    
             				if( np.max(current_IoU) < DatasetFactory.negative_IoU() ):
 						cropped_image = current_image[ny1: ny1 + crop_box_size, nx1: nx1 + crop_box_size, :]
-						resized_image = cv2.resize(cropped_image, (face_size, face_size), interpolation=cv2.INTER_LINEAR)
+						resized_image = cv2.resize(cropped_image, (target_face_size, target_face_size), interpolation=cv2.INTER_LINEAR)
 
                 				file_path = os.path.join(negative_dir, "%s.jpg" % generated_negative_samples)
                 				negative_file.write(file_path + ' 0' + os.linesep)
@@ -220,7 +222,7 @@ class SimpleFaceDataset(object):
             				offset_y2 = (y2 - ny2) / float(crop_box_size)
 
             				cropped_image = current_image[ny1 : ny2, nx1 : nx2, :]
-            				resized_image = cv2.resize(cropped_image, (face_size, face_size), interpolation=cv2.INTER_LINEAR)
+            				resized_image = cv2.resize(cropped_image, (target_face_size, target_face_size), interpolation=cv2.INTER_LINEAR)
 
             				normalized_box = bounding_box.reshape(1, -1)
             				if( ( IoU(crop_box, normalized_box) >= DatasetFactory.positive_IoU() ) and (positive_images < needed_positive_samples) ):
