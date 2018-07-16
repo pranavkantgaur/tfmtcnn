@@ -101,10 +101,10 @@ class LandmarkDataset(object):
     		processed_input_images = 0
 		total_number_of_input_images = len(image_file_names)
 
-		needed_landmark_images = int( ( 1.0 * base_number_of_images * LandmarkDataset.__landmark_ratio ) / total_number_of_input_images )
-		needed_landmark_images = max(1, needed_landmark_images)
+		needed_landmark_samples = int( ( 1.0 * base_number_of_images * LandmarkDataset.__landmark_ratio ) / total_number_of_input_images )
+		needed_landmark_samples = max(1, needed_landmark_samples)
 		base_number_of_attempts = 200
-		maximum_attempts = base_number_of_attempts * needed_landmark_images
+		maximum_attempts = base_number_of_attempts * needed_landmark_samples
 
 		for image_path, ground_truth_bounding_box, ground_truth_landmark in zip(image_file_names, ground_truth_boxes, ground_truth_landmarks):
 
@@ -130,9 +130,9 @@ class LandmarkDataset(object):
         		current_face_landmarks.append(landmark.reshape(10))
         		landmark = np.zeros((5, 2))  
 
-			current_landmark_images = 0
+			current_landmark_samples = 0
 			number_of_attempts = 0
-			while(	(current_landmark_images < needed_landmark_images) and (number_of_attempts < maximum_attempts) ):
+			while(	(current_landmark_samples < needed_landmark_samples) and (number_of_attempts < maximum_attempts) ):
 
 				number_of_attempts += 1
 
@@ -216,12 +216,12 @@ class LandmarkDataset(object):
                 			if np.sum(np.where(current_landmark_array[i] >= 1, 1, 0)) > 0:
                     				continue
 
-					if(current_landmark_images < needed_landmark_images):
+					if(current_landmark_samples < needed_landmark_samples):
                 				cv2.imwrite(join(landmark_dir,"%d.jpg" %(generated_landmark_images)), current_image_array[i])
                 				landmarks = map(str, list(current_landmark_array[i]))
                 				landmark_file.write(join(landmark_dir,"%d.jpg" %(generated_landmark_images))+" -2 "+" ".join(landmarks)+"\n")
                 				generated_landmark_images += 1
-						current_landmark_images += 1
+						current_landmark_samples += 1
 					else:
 						break
 
