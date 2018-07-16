@@ -115,8 +115,9 @@ class SimpleFaceDataset(object):
 			current_image = cv2.imread(image_file_path)
     			input_image_height, input_image_width, input_image_channels = current_image.shape
 
-			#needed_negative_samples = np.ceil( (number_of_faces * (SimpleFaceDataset.__negative_ratio - 1) * sample_multiplier_factor ) / len(image_file_names) )
-			needed_negative_samples = negative_samples_per_annotation_image
+			needed_negative_samples = np.ceil( (number_of_faces * (1) * sample_multiplier_factor ) / len(image_file_names) )
+			#needed_negative_samples = negative_samples_per_annotation_image
+
 			negative_images = 0
 			maximum_attempts = base_number_of_attempts * (SimpleFaceDataset.__negative_ratio) * sample_multiplier_factor
 			number_of_attempts = 0
@@ -151,6 +152,8 @@ class SimpleFaceDataset(object):
             				continue
 
 				needed_negative_samples = (SimpleFaceDataset.__negative_ratio - 1) * sample_multiplier_factor
+				#needed_negative_samples = (SimpleFaceDataset.__negative_ratio) * sample_multiplier_factor
+
 				negative_images = 0
 				maximum_attempts = base_number_of_attempts * sample_multiplier_factor
 				number_of_attempts = 0
