@@ -101,9 +101,8 @@ class LandmarkDataset(object):
 
 		needed_landmark_samples = int( ( 1.0 * base_number_of_images * LandmarkDataset.__landmark_ratio ) / total_number_of_input_images )
 		needed_landmark_samples = max(1, needed_landmark_samples)
-		#needed_landmark_samples = int(LandmarkDataset.__landmark_ratio)
 
-		base_number_of_attempts = 200
+		base_number_of_attempts = 500
 		maximum_attempts = base_number_of_attempts * needed_landmark_samples
 
 		for image_path, ground_truth_bounding_box, ground_truth_landmark in zip(image_file_names, ground_truth_boxes, ground_truth_landmarks):
@@ -226,7 +225,7 @@ class LandmarkDataset(object):
 						break
 
        			processed_input_images = processed_input_images + 1
-       			if( processed_input_images % 1000 == 0 ):
+       			if( processed_input_images % 5000 == 0 ):
                			print( '( %s / %s ) number of input images are processed.' % ( processed_input_images, total_number_of_input_images) )
 
     		landmark_file.close()
