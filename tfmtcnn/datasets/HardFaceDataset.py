@@ -32,7 +32,6 @@ import numpy.random as npr
 from tfmtcnn.datasets.DatasetFactory import DatasetFactory
 from tfmtcnn.datasets.SimpleFaceDataset import SimpleFaceDataset
 from tfmtcnn.datasets.InferenceBatch import InferenceBatch
-import tfmtcnn.datasets.constants as datasets_constants
 
 from tfmtcnn.networks.FaceDetector import FaceDetector
 from tfmtcnn.networks.NetworkFactory import NetworkFactory
@@ -72,7 +71,8 @@ class HardFaceDataset(SimpleFaceDataset):
 		part_file = open(SimpleFaceDataset.part_file_name(target_root_dir), 'w')
 		negative_file = open(SimpleFaceDataset.negative_file_name(target_root_dir), 'w')
 
-		needed_negative_images = 50
+		needed_negative_images = 100
+
     		generated_negative_samples = 0
     		generated_positive_samples = 0
     		generated_part_samples = 0
@@ -101,7 +101,7 @@ class HardFaceDataset(SimpleFaceDataset):
             			cropped_image = current_image[y_top:y_bottom + 1, x_left:x_right + 1, :]
             			resized_image = cv2.resize(cropped_image, (target_face_size, target_face_size), interpolation=cv2.INTER_LINEAR)
 
-            			if( (np.max(current_IoU) < DatasetFactory.negative_IoU()) and (current_negative_images < needed_negative_images) ):
+            			if( ( np.max(current_IoU) < DatasetFactory.negative_IoU() )  ): #and (current_negative_images < needed_negative_images) ):
                 			file_path = os.path.join(negative_dir, "%s.jpg" % generated_negative_samples)
                 			negative_file.write(file_path + ' 0' + os.linesep)
                 			cv2.imwrite(file_path, resized_image)
@@ -132,7 +132,7 @@ class HardFaceDataset(SimpleFaceDataset):
     		part_file.close()
     		positive_file.close()
 
-		average_face_samples = ( (generated_positive_samples*1.0)/datasets_constants.positive_ratio + (generated_part_samples*1.0)/datasets_constants.part_ratio + (generated_negative_samples*1.0)/datasets_constants.negative_ratio ) / 3.0
+		average_face_samples = max(generated_positive_samples, generated_part_samples)
 
 		return(True, average_face_samples)
 
