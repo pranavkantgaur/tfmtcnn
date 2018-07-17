@@ -30,7 +30,7 @@ $ python generate_simple_dataset.py \
 	--annotation_file_name=../data/WIDER_Face/WIDER_train/wider_face_train_bbx_gt.txt \
 	--landmark_image_dir=../data/CelebA/images \
 	--landmark_file_name=../data/CelebA/CelebA.txt \
-	--sample_multiplier_factor=10 \
+	--sample_multiplier_factor=12 \
 	--target_root_dir=../data/datasets/mtcnn 
 
 $ python generate_simple_dataset.py \

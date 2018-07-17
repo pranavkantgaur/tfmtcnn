@@ -108,20 +108,17 @@ class SimpleFaceDataset(object):
 
 		base_number_of_attempts = 5000
 
-		base_negative_samples_per_annotation_image = 5
-		negative_samples_per_annotation_image = base_negative_samples_per_annotation_image * sample_multiplier_factor
-
     		for image_file_path, ground_truth_box in zip(image_file_names, ground_truth_boxes):
         		bounding_boxes = np.array(ground_truth_box, dtype=np.float32).reshape(-1, 4)			
 
 			current_image = cv2.imread(image_file_path)
     			input_image_height, input_image_width, input_image_channels = current_image.shape
 
-			#needed_negative_samples = np.ceil( (number_of_faces * (1) * sample_multiplier_factor ) / len(image_file_names) )
-			needed_negative_samples = negative_samples_per_annotation_image
+			negative_samples_per_annotation = (SimpleFaceDataset.__negative_ratio - 1)
+			needed_negative_samples = np.ceil( (number_of_faces * negative_samples_per_annotation * sample_multiplier_factor ) / len(image_file_names) )
 
 			negative_images = 0
-			maximum_attempts = base_number_of_attempts * (SimpleFaceDataset.__negative_ratio) * sample_multiplier_factor
+			maximum_attempts = base_number_of_attempts * needed_negative_samples
 			number_of_attempts = 0
 			while(	(negative_images < needed_negative_samples) and (number_of_attempts < maximum_attempts) ):
 				number_of_attempts += 1
@@ -153,11 +150,10 @@ class SimpleFaceDataset(object):
 				if( (x1 < 0) or (y1 < 0) ):				
             				continue
 
-				needed_negative_samples = (SimpleFaceDataset.__negative_ratio - 1) * sample_multiplier_factor
-				#needed_negative_samples = (SimpleFaceDataset.__negative_ratio) * sample_multiplier_factor
+				needed_negative_samples = (SimpleFaceDataset.__negative_ratio - negative_samples_per_annotation) * sample_multiplier_factor
 
 				negative_images = 0
-				maximum_attempts = base_number_of_attempts * sample_multiplier_factor
+				maximum_attempts = base_number_of_attempts * needed_negative_samples
 				number_of_attempts = 0
 				while( (negative_images < needed_negative_samples) and (number_of_attempts < maximum_attempts) ):
 
@@ -196,7 +192,7 @@ class SimpleFaceDataset(object):
 				needed_part_samples = SimpleFaceDataset.__part_ratio * sample_multiplier_factor				
 				part_images = 0
 
-				maximum_attempts = base_number_of_attempts * (SimpleFaceDataset.__positive_ratio + SimpleFaceDataset.__part_ratio) * sample_multiplier_factor
+				maximum_attempts = base_number_of_attempts * (needed_positive_samples + needed_part_samples)
 				number_of_attempts = 0
 
 				while( (number_of_attempts < maximum_attempts) and ( (positive_images < needed_positive_samples) or (part_images < needed_part_samples) ) ):
