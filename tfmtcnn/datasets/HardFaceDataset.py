@@ -72,8 +72,6 @@ class HardFaceDataset(SimpleFaceDataset):
 		part_file = open(SimpleFaceDataset.part_file_name(target_root_dir), 'w')
 		negative_file = open(SimpleFaceDataset.negative_file_name(target_root_dir), 'w')
 
-		needed_negative_images = 100
-
     		generated_negative_samples = 0
     		generated_positive_samples = 0
     		generated_part_samples = 0
