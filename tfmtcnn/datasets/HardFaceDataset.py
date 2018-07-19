@@ -32,6 +32,7 @@ import numpy.random as npr
 from tfmtcnn.datasets.DatasetFactory import DatasetFactory
 from tfmtcnn.datasets.SimpleFaceDataset import SimpleFaceDataset
 from tfmtcnn.datasets.InferenceBatch import InferenceBatch
+import tfmtcnn.datasets.constants as datasets_constants
 
 from tfmtcnn.networks.FaceDetector import FaceDetector
 from tfmtcnn.networks.NetworkFactory import NetworkFactory
@@ -88,7 +89,7 @@ class HardFaceDataset(SimpleFaceDataset):
 
         		current_image = cv2.imread(image_file_path)
 
-        		current_negative_images = 0
+			per_image_face_images = 0
         		for box in detected_box:
             			x_left, y_top, x_right, y_bottom, _ = box.astype(int)
             			width = x_right - x_left + 1
@@ -101,12 +102,8 @@ class HardFaceDataset(SimpleFaceDataset):
             			cropped_image = current_image[y_top:y_bottom + 1, x_left:x_right + 1, :]
             			resized_image = cv2.resize(cropped_image, (target_face_size, target_face_size), interpolation=cv2.INTER_LINEAR)
 
-            			if( ( np.max(current_IoU) < DatasetFactory.negative_IoU() )  ): #and (current_negative_images < needed_negative_images) ):
-                			file_path = os.path.join(negative_dir, "%s.jpg" % generated_negative_samples)
-                			negative_file.write(file_path + ' 0' + os.linesep)
-                			cv2.imwrite(file_path, resized_image)
-                			generated_negative_samples += 1
-                			current_negative_images += 1
+            			if( np.max(current_IoU) < DatasetFactory.negative_IoU() ):
+                			continue
             			else:
                 			idx = np.argmax(current_IoU)
                 			assigned_gt = ground_truth_box[idx]
@@ -122,12 +119,38 @@ class HardFaceDataset(SimpleFaceDataset):
                     				positive_file.write(file_path + ' 1 %.2f %.2f %.2f %.2f' % (offset_x1, offset_y1, offset_x2, offset_y2) + os.linesep)
                     				cv2.imwrite(file_path, resized_image)
                     				generated_positive_samples += 1
+						per_image_face_images += 1
 
                 			elif( np.max(current_IoU) >= DatasetFactory.part_IoU() ):
                     				file_path = os.path.join(part_dir, "%s.jpg" % generated_part_samples)
                     				part_file.write(file_path + ' -1 %.2f %.2f %.2f %.2f' % (offset_x1, offset_y1, offset_x2, offset_y2) + os.linesep)
                     				cv2.imwrite(file_path, resized_image)
                     				generated_part_samples += 1
+						per_image_face_images += 1
+
+			needed_negative_images = int( ( 1.0 * per_image_face_images * datasets_constants.negative_ratio ) / (datasets_constants.positive_ratio + datasets_constants.part_ratio) )
+			needed_negative_images = max(1, needed_negative_images)
+
+        		current_negative_images = 0
+        		for box in detected_box:
+            			x_left, y_top, x_right, y_bottom, _ = box.astype(int)
+            			width = x_right - x_left + 1
+            			height = y_bottom - y_top + 1
+
+            			if( (width < minimum_face_size) or (height < minimum_face_size) or (x_left < 0) or (y_top < 0) or (x_right > (current_image.shape[1] - 1) ) or (y_bottom > (current_image.shape[0] - 1 ) ) ):
+                			continue
+
+            			current_IoU = IoU(box, ground_truth_box)
+            			cropped_image = current_image[y_top:y_bottom + 1, x_left:x_right + 1, :]
+            			resized_image = cv2.resize(cropped_image, (target_face_size, target_face_size), interpolation=cv2.INTER_LINEAR)
+
+            			if( ( np.max(current_IoU) < DatasetFactory.negative_IoU() ) and ( current_negative_images < needed_negative_images ) ):
+                			file_path = os.path.join(negative_dir, "%s.jpg" % generated_negative_samples)
+                			negative_file.write(file_path + ' 0' + os.linesep)
+                			cv2.imwrite(file_path, resized_image)
+                			generated_negative_samples += 1
+                			current_negative_images += 1
+
     		negative_file.close()
     		part_file.close()
     		positive_file.close()
