@@ -242,9 +242,9 @@ class SimpleFaceDataset(object):
                 				generated_part_samples += 1
 						part_images += 1
 
-        		current_image_number += 1        
-        		if(current_image_number % 1000 == 0 ):
-				print('%s number of images are done - positive - %s,  part - %s, negative - %s' % (current_image_number, generated_positive_samples, generated_part_samples, generated_negative_samples))
+        			current_image_number += 1        
+        			if(current_image_number % 5000 == 0 ):
+					print('%s number of images are done - positive - %s,  part - %s, negative - %s' % (current_image_number, generated_positive_samples, generated_part_samples, generated_negative_samples))
 
 		negative_file.close()
 		part_file.close()
