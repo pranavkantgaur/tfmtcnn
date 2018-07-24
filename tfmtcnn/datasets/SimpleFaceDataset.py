@@ -75,6 +75,22 @@ class SimpleFaceDataset(object):
 
 		return(status, dataset)
 
+	def _generated_samples(self, target_root_dir):
+		positive_file = open(SimpleFaceDataset.positive_file_name(target_root_dir), 'a+')
+		generated_positive_samples = len(positive_file.readlines())
+
+		part_file = open(SimpleFaceDataset.part_file_name(target_root_dir), 'a+')
+		generated_part_samples = len(part_file.readlines())
+
+		negative_file = open(SimpleFaceDataset.negative_file_name(target_root_dir), 'a+')
+		generated_negative_samples = len(negative_file.readlines())
+
+		negative_file.close()
+		part_file.close()
+		positive_file.close()
+
+		return( generated_positive_samples, generated_part_samples, generated_negative_samples)
+
 	def generate_samples(self, annotation_image_dir, annotation_file_name, base_number_of_images, target_face_size, target_root_dir):
 
 		status, dataset = self._read(annotation_image_dir, annotation_file_name)
@@ -96,24 +112,27 @@ class SimpleFaceDataset(object):
 		if(not os.path.exists(negative_dir)):
     			os.makedirs(negative_dir)
 
-		positive_file = open(SimpleFaceDataset.positive_file_name(target_root_dir), 'w')
-		part_file = open(SimpleFaceDataset.part_file_name(target_root_dir), 'w')
-		negative_file = open(SimpleFaceDataset.negative_file_name(target_root_dir), 'w')
+		generated_positive_samples, generated_part_samples, generated_negative_samples = self._generated_samples(target_root_dir)
+		print('previous_positive_samples',generated_positive_samples, 'previous_part_samples',generated_part_samples, 'previous_negative_samples',  generated_negative_samples)
 
-		generated_positive_samples = 0
-		generated_part_samples = 0
-		generated_negative_samples = 0
+		positive_file = open(SimpleFaceDataset.positive_file_name(target_root_dir), 'a+')
+		part_file = open(SimpleFaceDataset.part_file_name(target_root_dir), 'a+')
+		negative_file = open(SimpleFaceDataset.negative_file_name(target_root_dir), 'a+')
 
 		current_image_number = 0		
 		
 		negative_samples_per_image_ratio = (SimpleFaceDataset.__negative_ratio - 1)
-		needed_base_negative_samples = (1.0 * base_number_of_images) / number_of_faces
+		needed_negative_samples = base_number_of_images - generated_negative_samples / (1.0 * SimpleFaceDataset.__negative_ratio)
+		needed_base_negative_samples = ( 1.0 * needed_negative_samples ) / number_of_faces
 
 		needed_negative_samples_per_image = int( 1.0 * negative_samples_per_image_ratio * needed_base_negative_samples * ( 1.0 * number_of_faces / len(image_file_names) ) )
 		needed_negative_samples_per_bounding_box = np.ceil(1.0 * (SimpleFaceDataset.__negative_ratio - negative_samples_per_image_ratio) * needed_base_negative_samples )
 
-		needed_positive_samples_per_bounding_box = np.ceil( 1.0 * base_number_of_images * SimpleFaceDataset.__positive_ratio / number_of_faces )
-		needed_part_samples_per_bounding_box = np.ceil( 1.0 * base_number_of_images * SimpleFaceDataset.__part_ratio / number_of_faces )
+		needed_positive_samples = base_number_of_images * SimpleFaceDataset.__positive_ratio - generated_positive_samples
+		needed_positive_samples_per_bounding_box = np.ceil( 1.0 * needed_positive_samples / number_of_faces )
+
+		needed_part_samples = base_number_of_images * SimpleFaceDataset.__part_ratio - generated_part_samples
+		needed_part_samples_per_bounding_box = np.ceil( 1.0 *  needed_part_samples / number_of_faces )
 
 		base_number_of_attempts = 5000
 
