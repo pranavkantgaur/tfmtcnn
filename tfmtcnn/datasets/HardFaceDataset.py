@@ -113,14 +113,14 @@ class HardFaceDataset(SimpleFaceDataset):
                 			offset_y2 = (y2 - y_bottom) / float(height)
 
                 			if( np.max(current_IoU) >= DatasetFactory.positive_IoU() ):
-                    				file_path = os.path.join(positive_dir, "%s.jpg" % generated_positive_samples)
+                    				file_path = os.path.join(positive_dir, "hard-positive-%s.jpg" % generated_positive_samples)
                     				positive_file.write(file_path + ' 1 %.2f %.2f %.2f %.2f' % (offset_x1, offset_y1, offset_x2, offset_y2) + os.linesep)
                     				cv2.imwrite(file_path, resized_image)
                     				generated_positive_samples += 1
 						per_image_face_images += 1
 
                 			elif( np.max(current_IoU) >= DatasetFactory.part_IoU() ):
-                    				file_path = os.path.join(part_dir, "%s.jpg" % generated_part_samples)
+                    				file_path = os.path.join(part_dir, "hard-part-%s.jpg" % generated_part_samples)
                     				part_file.write(file_path + ' -1 %.2f %.2f %.2f %.2f' % (offset_x1, offset_y1, offset_x2, offset_y2) + os.linesep)
                     				cv2.imwrite(file_path, resized_image)
                     				generated_part_samples += 1
@@ -143,7 +143,7 @@ class HardFaceDataset(SimpleFaceDataset):
             			resized_image = cv2.resize(cropped_image, (target_face_size, target_face_size), interpolation=cv2.INTER_LINEAR)
 
             			if( ( np.max(current_IoU) < DatasetFactory.negative_IoU() ) and ( current_negative_images < needed_negative_images ) ):
-                			file_path = os.path.join(negative_dir, "%s.jpg" % generated_negative_samples)
+                			file_path = os.path.join(negative_dir, "hard-negative-%s.jpg" % generated_negative_samples)
                 			negative_file.write(file_path + ' 0' + os.linesep)
                 			cv2.imwrite(file_path, resized_image)
                 			generated_negative_samples += 1
