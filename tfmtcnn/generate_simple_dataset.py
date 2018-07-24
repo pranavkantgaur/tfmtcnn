@@ -30,7 +30,7 @@ $ python generate_simple_dataset.py \
 	--annotation_file_name=../data/WIDER_Face/WIDER_train/wider_face_train_bbx_gt.txt \
 	--landmark_image_dir=../data/CelebA/images \
 	--landmark_file_name=../data/CelebA/CelebA.txt \
-	--sample_multiplier_factor=12 \
+	--base_number_of_images=200000 \
 	--target_root_dir=../data/datasets/mtcnn 
 
 $ python generate_simple_dataset.py \
@@ -52,7 +52,7 @@ import argparse
 from tfmtcnn.datasets.SimpleDataset import SimpleDataset
 import tfmtcnn.datasets.constants as datasets_constants
 
-default_multiplier_factor = datasets_constants.default_multiplier_factor
+default_base_number_of_images = datasets_constants.default_base_number_of_images
 
 def parse_arguments(argv):
 	parser = argparse.ArgumentParser()
@@ -62,7 +62,7 @@ def parse_arguments(argv):
 	parser.add_argument('--landmark_image_dir', type=str, help='Input landmark dataset training image directory.', default=None)
 	parser.add_argument('--landmark_file_name', type=str, help='Input landmark dataset annotation file.', default=None)
 
-	parser.add_argument('--sample_multiplier_factor', type=int, help='Number of samples generated from one input sample.', default=default_multiplier_factor)
+	parser.add_argument('--base_number_of_images', type=int, help='Input base number of images.', default=default_base_number_of_images)
 
 	parser.add_argument('--target_root_dir', type=str, help='Output directory where output images and TensorFlow data files are saved.', default=None)
 	return(parser.parse_args(argv))
@@ -82,19 +82,18 @@ def main(args):
 	if(not args.target_root_dir):
 		raise ValueError('You must supply output directory for storing output images and TensorFlow data files with --target_root_dir.')
 
-	if(args.sample_multiplier_factor < 1):
-		sample_multiplier_factor = default_multiplier_factor
+	if(args.base_number_of_images < 1):
+		base_number_of_images = default_base_number_of_images
 	else:
-		sample_multiplier_factor = args.sample_multiplier_factor
+		base_number_of_images = args.base_number_of_images
 
 	simple_dataset = SimpleDataset()
-	status = simple_dataset.generate(args.annotation_image_dir, args.annotation_file_name, args.landmark_image_dir, args.landmark_file_name, sample_multiplier_factor, args.target_root_dir)
+	status = simple_dataset.generate(args.annotation_image_dir, args.annotation_file_name, args.landmark_image_dir, args.landmark_file_name, base_number_of_images, args.target_root_dir)
 	if(status):
 		print('PNet dataset is generated at ' + args.target_root_dir)
 	else:
-		print('Error generating basic dataset.')
+		print('Error generating PNet dataset.')
 
 if __name__ == '__main__':
 	main(parse_arguments(sys.argv[1:]))
-
 

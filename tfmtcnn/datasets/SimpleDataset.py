@@ -43,9 +43,9 @@ class SimpleDataset(AbstractDataset):
 		landmark_dataset = LandmarkDataset()		
 		return(landmark_dataset.generate(landmark_image_dir, landmark_file_name, base_number_of_images, NetworkFactory.network_size(self.network_name()), target_root_dir))
 		
-	def _generate_image_samples(self, annotation_image_dir, annotation_file_name, sample_multiplier_factor, target_root_dir):
+	def _generate_image_samples(self, annotation_image_dir, annotation_file_name, base_number_of_images, target_root_dir):
 		face_dataset = SimpleFaceDataset()		
-		return(face_dataset.generate_samples(annotation_image_dir, annotation_file_name, sample_multiplier_factor, NetworkFactory.network_size(self.network_name()), target_root_dir))
+		return(face_dataset.generate_samples(annotation_image_dir, annotation_file_name, base_number_of_images, NetworkFactory.network_size(self.network_name()), target_root_dir))
 
 	def _generate_image_list(self, target_root_dir):
 		positive_file = open(SimpleFaceDataset.positive_file_name(target_root_dir), 'r')
@@ -83,7 +83,7 @@ class SimpleDataset(AbstractDataset):
 
 		return(True)
 
-	def generate(self, annotation_image_dir, annotation_file_name, landmark_image_dir, landmark_file_name, sample_multiplier_factor, target_root_dir):
+	def generate(self, annotation_image_dir, annotation_file_name, landmark_image_dir, landmark_file_name, base_number_of_images, target_root_dir):
 
 		if(not os.path.isfile(annotation_file_name)):
 			return(False)
@@ -101,13 +101,10 @@ class SimpleDataset(AbstractDataset):
 			os.makedirs(target_root_dir)
 
 		print('Generating image samples.')
-		status, average_face_samples = self._generate_image_samples(annotation_image_dir, annotation_file_name, sample_multiplier_factor, target_root_dir)
-		if(not status):
+		if(not self._generate_image_samples(annotation_image_dir, annotation_file_name, base_number_of_images, target_root_dir)):
 			print('Error generating image samples.')
 			return(False)
 		print('Generated image samples.')
-
-		base_number_of_images = average_face_samples
 
 		print('Generating landmark samples.')
 		if(not self._generate_landmark_samples(landmark_image_dir, landmark_file_name, base_number_of_images, target_root_dir)):

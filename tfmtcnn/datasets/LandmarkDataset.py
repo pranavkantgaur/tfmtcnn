@@ -112,7 +112,7 @@ class LandmarkDataset(object):
 
 			image_path = image_path.replace("\\", '/')
         		image = cv2.imread(image_path)
-			if( image is None):
+			if( image is None ):
 				continue     
    		
         		image_height, image_width, image_channels = image.shape
