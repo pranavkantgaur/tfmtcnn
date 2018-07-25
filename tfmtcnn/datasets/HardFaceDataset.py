@@ -46,14 +46,13 @@ class HardFaceDataset(SimpleFaceDataset):
 		SimpleFaceDataset.__init__(self, name)	
 
 	def _generate_hard_samples(self, dataset, network_name, detected_boxes, minimum_face_size, target_root_dir):
-		average_face_samples = 0
 
 		image_file_names = dataset['images']
 		ground_truth_boxes = dataset['bboxes']
     		number_of_images = len(image_file_names)
 
 		if(not (len(detected_boxes) == number_of_images)):
-			return(False, average_face_samples)
+			return(False)
 
 		target_face_size = NetworkFactory.network_size(network_name)
 
@@ -153,15 +152,12 @@ class HardFaceDataset(SimpleFaceDataset):
     		part_file.close()
     		positive_file.close()
 
-		average_face_samples = max(generated_positive_samples, generated_part_samples)
-
-		return(True, average_face_samples)
+		return(True)
 
 	def generate_samples(self, annotation_image_dir, annotation_file_name, model_train_dir, network_name, minimum_face_size, target_root_dir):
-		average_face_samples = 0
 		status, dataset = self._read(annotation_image_dir, annotation_file_name)
 		if(not status):
-			return(False, average_face_samples)
+			return(False)
 
 		test_data = InferenceBatch(dataset['images'])
 

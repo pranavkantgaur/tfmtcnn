@@ -32,6 +32,7 @@ $ python generate_hard_dataset.py \
 	--annotation_file_name=../data/WIDER_Face/WIDER_train/wider_face_train_bbx_gt.txt \
 	--landmark_image_dir=../data/CelebA/images \
 	--landmark_file_name=../data/CelebA/CelebA.txt \
+	--base_number_of_images=200000 \
 	--target_root_dir=../data/datasets/mtcnn 
 
 $ python generate_hard_dataset.py \
@@ -41,6 +42,7 @@ $ python generate_hard_dataset.py \
 	--annotation_file_name=../data/WIDER_Face/WIDER_train/wider_face_train_bbx_gt.txt \
 	--landmark_image_dir=../data/CelebA/images \
 	--landmark_file_name=../data/CelebA/CelebA.txt \
+	--base_number_of_images=200000 \
 	--target_root_dir=../data/datasets/mtcnn 
 ```
 """
@@ -54,6 +56,9 @@ import os
 import argparse
 
 from tfmtcnn.datasets.HardDataset import HardDataset
+import tfmtcnn.datasets.constants as datasets_constants
+
+default_base_number_of_images = datasets_constants.default_base_number_of_images
 
 def parse_arguments(argv):
 	parser = argparse.ArgumentParser()
@@ -65,6 +70,8 @@ def parse_arguments(argv):
 
 	parser.add_argument('--landmark_image_dir', type=str, help='Input landmark dataset training image directory.', default=None)
 	parser.add_argument('--landmark_file_name', type=str, help='Input landmark dataset annotation file.', default=None)
+
+	parser.add_argument('--base_number_of_images', type=int, help='Input base number of images.', default=default_base_number_of_images)
 
 	parser.add_argument('--target_root_dir', type=str, help='Output directory where output images and TensorFlow data files are saved.', default=None)
 	return(parser.parse_args(argv))
@@ -87,8 +94,13 @@ def main(args):
 	if( not (args.network_name in ['RNet', 'ONet']) ):
 		raise ValueError('The network name should be either RNet or ONet.')
 
+	if(args.base_number_of_images < 1):
+		base_number_of_images = default_base_number_of_images
+	else:
+		base_number_of_images = args.base_number_of_images
+
 	hard_dataset = HardDataset(args.network_name)
-	status = hard_dataset.generate(args.annotation_image_dir, args.annotation_file_name, args.landmark_image_dir, args.landmark_file_name, args.train_root_dir, args.target_root_dir)
+	status = hard_dataset.generate(args.annotation_image_dir, args.annotation_file_name, args.landmark_image_dir, args.landmark_file_name, args.train_root_dir, base_number_of_images, args.target_root_dir)
 	if(status):
 		print(args.network_name + ' network dataset is generated at ' + args.target_root_dir)
 	else:

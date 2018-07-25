@@ -45,9 +45,16 @@ class HardDataset(SimpleDataset):
 		SimpleDataset.__init__(self, name)
 		self._minimum_face_size = datasets_constants.minimum_face_size	
 
-	def _generate_image_samples(self, annotation_file_name, annotation_image_dir, model_train_dir, target_root_dir):
-		face_dataset = HardFaceDataset()
-		return(face_dataset.generate_samples(annotation_image_dir, annotation_file_name, model_train_dir, self.network_name(), self._minimum_face_size, target_root_dir))
+	def _generate_image_samples(self, annotation_file_name, annotation_image_dir, model_train_dir, base_number_of_images, target_root_dir):
+		status = True
+
+		hard_face_dataset = HardFaceDataset()
+		status = hard_face_dataset.generate_samples(annotation_image_dir, annotation_file_name, model_train_dir, self.network_name(), self._minimum_face_size, target_root_dir) and status
+
+		simple_face_dataset = SimpleFaceDataset()		
+		status = simple_face_dataset.generate_samples(annotation_image_dir, annotation_file_name, base_number_of_images, NetworkFactory.network_size(self.network_name()), target_root_dir) and status
+
+		return(status)
 
 	def _generate_dataset(self, target_root_dir):
 		tensorflow_dataset = TensorFlowDataset()
@@ -78,17 +85,15 @@ class HardDataset(SimpleDataset):
 
 		return(True)
 
-	def generate(self, annotation_image_dir, annotation_file_name, landmark_image_dir, landmark_file_name, model_train_dir, target_root_dir):
+	def generate(self, annotation_image_dir, annotation_file_name, landmark_image_dir, landmark_file_name, model_train_dir, base_number_of_images, target_root_dir):
 
 		if(not os.path.isfile(annotation_file_name)):
 			return(False)
-
 		if(not os.path.exists(annotation_image_dir)):
 			return(False)
 
 		if(not os.path.isfile(landmark_file_name)):
 			return(False)
-
 		if(not os.path.exists(landmark_image_dir)):
 			return(False)
 
@@ -100,13 +105,12 @@ class HardDataset(SimpleDataset):
 		self._minimum_face_size = datasets_constants.minimum_face_size
 
 		print('Generating image samples.')
-		status, average_face_samples = self._generate_image_samples(annotation_file_name, annotation_image_dir, model_train_dir, target_root_dir)
+		status = self._generate_image_samples(annotation_file_name, annotation_image_dir, model_train_dir, base_number_of_images, target_root_dir)
 		if(not status):
 			print('Error generating image samples.')
 			return(False)
 		print('Generated image samples.')
 
-		base_number_of_images = average_face_samples
 		print('Generating landmark samples.')
 		if(not super(HardDataset, self)._generate_landmark_samples(landmark_image_dir, landmark_file_name, base_number_of_images, target_root_dir)):
 			print('Error generating landmark samples.')
