@@ -122,17 +122,22 @@ class SimpleFaceDataset(object):
 		current_image_number = 0		
 		
 		negative_samples_per_image_ratio = (SimpleFaceDataset.__negative_ratio - 1)
-		needed_negative_samples = base_number_of_images - generated_negative_samples / (1.0 * SimpleFaceDataset.__negative_ratio)
+		needed_negative_samples = base_number_of_images - ( generated_negative_samples / (1.0 * SimpleFaceDataset.__negative_ratio) )
 		needed_base_negative_samples = ( 1.0 * needed_negative_samples ) / number_of_faces
 
 		needed_negative_samples_per_image = int( 1.0 * negative_samples_per_image_ratio * needed_base_negative_samples * ( 1.0 * number_of_faces / len(image_file_names) ) )
+		needed_negative_samples_per_image = max(0, needed_negative_samples_per_image)
+
 		needed_negative_samples_per_bounding_box = np.ceil(1.0 * (SimpleFaceDataset.__negative_ratio - negative_samples_per_image_ratio) * needed_base_negative_samples )
+		needed_negative_samples_per_bounding_box = max(0, needed_negative_samples_per_bounding_box)
 
-		needed_positive_samples = base_number_of_images * SimpleFaceDataset.__positive_ratio - generated_positive_samples
+		needed_positive_samples = ( base_number_of_images * SimpleFaceDataset.__positive_ratio ) - generated_positive_samples
 		needed_positive_samples_per_bounding_box = np.ceil( 1.0 * needed_positive_samples / number_of_faces )
+		needed_positive_samples_per_bounding_box = max(0, needed_positive_samples_per_bounding_box)
 
-		needed_part_samples = base_number_of_images * SimpleFaceDataset.__part_ratio - generated_part_samples
+		needed_part_samples = ( base_number_of_images * SimpleFaceDataset.__part_ratio ) - generated_part_samples
 		needed_part_samples_per_bounding_box = np.ceil( 1.0 *  needed_part_samples / number_of_faces )
+		needed_part_samples_per_bounding_box = max(0, needed_part_samples_per_bounding_box)
 
 		base_number_of_attempts = 5000
 
@@ -263,7 +268,7 @@ class SimpleFaceDataset(object):
 
         			current_image_number += 1        
         			if(current_image_number % 1000 == 0 ):
-					print('%s number of images are done - positive - %s,  part - %s, negative - %s' % (current_image_number, generated_positive_samples, generated_part_samples, generated_negative_samples))
+					print('(%s/%s) number of images are done - positive - %s,  part - %s, negative - %s' % (current_image_number, len(image_file_names), generated_positive_samples, generated_part_samples, generated_negative_samples))
 
 		negative_file.close()
 		part_file.close()
