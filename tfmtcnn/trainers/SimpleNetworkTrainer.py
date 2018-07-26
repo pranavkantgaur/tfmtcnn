@@ -50,8 +50,8 @@ class SimpleNetworkTrainer(AbstractNetworkTrainer):
 
     		learning_rate_factor = 0.1
     		global_step = tf.Variable(0, name='global_step', trainable=False)
-    		boundaries = [int(epoch * data_num / self._batch_size) for epoch in self._config.LR_EPOCH]
-    		learning_rate_values = [base_learning_rate * (learning_rate_factor ** x) for x in range(0, len(self._config.LR_EPOCH) + 1)]
+    		boundaries = [int(epoch * data_num / self._batch_size) for epoch in self._learning_rate_epoch]
+    		learning_rate_values = [base_learning_rate * (learning_rate_factor ** x) for x in range(0, len(self._learning_rate_epoch) + 1)]
     		learning_rate_op = tf.train.piecewise_constant(global_step, boundaries, learning_rate_values)
     		optimizer = tf.train.MomentumOptimizer(learning_rate_op, 0.9)
     		train_op = optimizer.minimize(loss, global_step=global_step)

@@ -35,16 +35,11 @@ class AbstractNetworkTrainer(object):
 	def __init__(self, network_name):
 		self._network = NetworkFactory.network(network_name)
 		self._number_of_samples = 0
+		self._batch_size = 384
 		self._config = edict()
 
-		self._batch_size = 384
-		self._config.CLS_OHEM = True
-		self._config.CLS_OHEM_RATIO = 0.7
-		self._config.BBOX_OHEM = False
-		self._config.BBOX_OHEM_RATIO = 0.7
-
-		self._config.EPS = 1e-14
-		self._config.LR_EPOCH = [36, 24, 24]
+		#self._config.EPS = 1e-14
+		self._learning_rate_epoch = [6, 14, 20]
 
 	def network_name(self):
 		return(self._network.network_name())
