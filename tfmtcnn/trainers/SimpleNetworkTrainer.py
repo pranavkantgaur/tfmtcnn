@@ -49,12 +49,12 @@ class SimpleNetworkTrainer(AbstractNetworkTrainer):
 	def _train_model(self, base_learning_rate, loss, data_num):
 
     		learning_rate_factor = 0.1
-    		global_step = tf.Variable(0, name='global_step', trainable=False)
+    		self._global_step = tf.Variable(0, name='global_step', trainable=False)
     		boundaries = [int(epoch * data_num / self._batch_size) for epoch in self._learning_rate_epoch]
     		learning_rate_values = [base_learning_rate * (learning_rate_factor ** x) for x in range(0, len(self._learning_rate_epoch) + 1)]
-    		learning_rate_op = tf.train.piecewise_constant(global_step, boundaries, learning_rate_values)
+    		learning_rate_op = tf.train.piecewise_constant(self._global_step, boundaries, learning_rate_values)
     		optimizer = tf.train.MomentumOptimizer(learning_rate_op, 0.9)
-    		train_op = optimizer.minimize(loss, global_step=global_step)
+    		train_op = optimizer.minimize(loss, global_step=self._global_step)
 
     		return( train_op, learning_rate_op )
 
@@ -150,17 +150,17 @@ class SimpleNetworkTrainer(AbstractNetworkTrainer):
     		max_number_of_steps = int(self._number_of_samples / self._batch_size + 1) * max_number_of_epoch
     		epoch = 0
 
-		global_step = 0
+		global_step = 0 
 		if( self._network.load_model(self._session, network_train_dir) ):
 			model_path = self._network.model_path()		
-			print( 'Model is restored from %s.' %( model_path ) )
-			global_step = int(os.path.basename(model_path).split('-')[1])
+			global_step = tf.train.global_step(self._session, self._global_step)
+			print( 'Model is restored from model path - %s with global step - %s.' %( model_path, global_step ) )
 		
 		network_train_file_name = os.path.join(network_train_dir, self.network_name())	
     		self._session.graph.finalize()    
 
     		try:
-        		for step in range(max_number_of_steps):
+        		for step in range(global_step, max_number_of_steps):
             			current_step = current_step + 1
 
             			if coordinator.should_stop():
@@ -190,12 +190,12 @@ class SimpleNetworkTrainer(AbstractNetworkTrainer):
                 			print("%s - step - %d accuracy - %3f, class loss - %4f, bbox loss - %4f, landmark loss - %4f, L2 loss - %4f, lr - %f " 
 						% (datetime.now(), step+1, current_accuracy, current_class_loss, current_bbox_loss, current_landmark_loss, current_L2_loss, current_lr))
 
-					summary_writer.add_summary(summary, global_step=(global_step + step) )
+					summary_writer.add_summary(summary)#, global_step=self._global_step )
 
             			if( current_step * self._batch_size > self._number_of_samples*2 ):
                 			epoch = epoch + 1
                 			current_step = 0
-                			saver.save(self._session, network_train_file_name, global_step=(global_step + epoch))            			
+                			saver.save(self._session, network_train_file_name, global_step=self._global_step)            			
 		except tf.errors.OutOfRangeError:
        			print("Error")
 		finally:
