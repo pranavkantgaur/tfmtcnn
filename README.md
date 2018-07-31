@@ -14,7 +14,7 @@ python generate_simple_dataset.py --annotation_image_dir=../data/WIDER_Face/WIDE
 
 3) Train PNet.
 
-python train_model.py --network_name=PNet --train_root_dir=../data/models/mtcnn/train --dataset_root_dir=../data/datasets/mtcnn --base_learning_rate=0.01 --max_number_of_epoch=30
+python train_model.py --network_name=PNet --train_root_dir=../data/models/mtcnn/train --dataset_root_dir=../data/datasets/mtcnn --base_learning_rate=0.01 --max_number_of_epoch=36
 
 4) Generate a hard dataset i.e. RNet dataset.
 
@@ -22,7 +22,7 @@ python generate_hard_dataset.py --network_name=RNet --train_root_dir=../data/mod
 
 5) Train RNet.
 
-python train_model.py --network_name=RNet --train_root_dir=../data/models/mtcnn/train --dataset_root_dir=../data/datasets/mtcnn --base_learning_rate=0.01 --max_number_of_epoch=22
+python train_model.py --network_name=RNet --train_root_dir=../data/models/mtcnn/train --dataset_root_dir=../data/datasets/mtcnn --base_learning_rate=0.01 --max_number_of_epoch=36
 
 6) Generate a hard dataset i.e. ONet dataset.
 
@@ -30,7 +30,7 @@ python generate_hard_dataset.py --network_name=ONet --train_root_dir=../data/mod
 
 7) Train ONet.
 
-python train_model.py --network_name=ONet --train_root_dir=../data/models/mtcnn/train --dataset_root_dir=../data/datasets/mtcnn --base_learning_rate=0.01 --max_number_of_epoch=22
+python train_model.py --network_name=ONet --train_root_dir=../data/models/mtcnn/train --dataset_root_dir=../data/datasets/mtcnn --base_learning_rate=0.01 --max_number_of_epoch=36
 
 8) Webcamera demo.
    
