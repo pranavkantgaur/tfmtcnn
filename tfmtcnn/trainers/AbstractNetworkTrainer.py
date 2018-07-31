@@ -39,7 +39,7 @@ class AbstractNetworkTrainer(object):
 		self._config = edict()
 
 		#self._config.EPS = 1e-14
-		self._learning_rate_epoch = [6, 14, 20]
+		self._learning_rate_epoch = [10, 25, 40]
 
 	def network_name(self):
 		return(self._network.network_name())
