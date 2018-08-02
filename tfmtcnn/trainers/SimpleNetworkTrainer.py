@@ -151,9 +151,11 @@ class SimpleNetworkTrainer(AbstractNetworkTrainer):
     		epoch = 0
 
 		global_step = 0 
+		skip_model_saving = False
 		if( self._network.load_model(self._session, network_train_dir) ):
 			model_path = self._network.model_path()		
 			global_step = tf.train.global_step(self._session, self._global_step)
+			skip_model_saving = True
 			print( 'Model is restored from model path - %s with global step - %s.' %( model_path, global_step ) )
 		
 		network_train_file_name = os.path.join(network_train_dir, self.network_name())	
@@ -195,7 +197,10 @@ class SimpleNetworkTrainer(AbstractNetworkTrainer):
             			if( current_step * self._batch_size > self._number_of_samples*2 ):
                 			epoch = epoch + 1
                 			current_step = 0
-                			saver.save(self._session, network_train_file_name, global_step=self._global_step)            			
+					if(skip_model_saving):
+						skip_model_saving = False
+					else:
+                				saver.save(self._session, network_train_file_name, global_step=self._global_step)            			
 		except tf.errors.OutOfRangeError:
        			print("Error")
 		finally:
