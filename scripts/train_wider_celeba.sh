@@ -36,7 +36,7 @@ echo '##########################################################################
 
 echo 'Train PNet.'
 
-python train_model.py --network_name=PNet --train_root_dir=../data/models/mtcnn/train --dataset_root_dir=../data/datasets/mtcnn --base_learning_rate=0.01 --max_number_of_epoch=36
+python train_model.py --network_name=PNet --train_root_dir=../data/models/mtcnn/train --dataset_root_dir=../data/datasets/mtcnn --base_learning_rate=0.01 --max_number_of_epoch=30
 
 echo 'Trained PNet.'
 
@@ -52,7 +52,7 @@ echo '##########################################################################
 
 echo 'Train RNet.'
 
-python train_model.py --network_name=RNet --train_root_dir=../data/models/mtcnn/train --dataset_root_dir=../data/datasets/mtcnn --base_learning_rate=0.01 --max_number_of_epoch=36
+python train_model.py --network_name=RNet --train_root_dir=../data/models/mtcnn/train --dataset_root_dir=../data/datasets/mtcnn --base_learning_rate=0.01 --max_number_of_epoch=22
 
 echo 'Trained RNet.'
 
@@ -68,7 +68,7 @@ echo '##########################################################################
 
 echo 'Train ONet.'
 
-python train_model.py --network_name=ONet --train_root_dir=../data/models/mtcnn/train --dataset_root_dir=../data/datasets/mtcnn --base_learning_rate=0.01 --max_number_of_epoch=36
+python train_model.py --network_name=ONet --train_root_dir=../data/models/mtcnn/train --dataset_root_dir=../data/datasets/mtcnn --base_learning_rate=0.01 --max_number_of_epoch=22
 
 echo 'Trained ONet.'
 

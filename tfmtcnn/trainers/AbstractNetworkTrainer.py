@@ -38,8 +38,7 @@ class AbstractNetworkTrainer(object):
 		self._batch_size = 384
 		self._config = edict()
 
-		#self._config.EPS = 1e-14
-		self._learning_rate_epoch = [10, 25, 40]
+		self._config.LR_EPOCH = [6, 14, 20]
 
 	def network_name(self):
 		return(self._network.network_name())

@@ -192,7 +192,7 @@ class SimpleNetworkTrainer(AbstractNetworkTrainer):
                 			print("%s - step - %d accuracy - %3f, class loss - %4f, bbox loss - %4f, landmark loss - %4f, L2 loss - %4f, lr - %f " 
 						% (datetime.now(), step+1, current_accuracy, current_class_loss, current_bbox_loss, current_landmark_loss, current_L2_loss, current_lr))
 
-					summary_writer.add_summary(summary)#, global_step=self._global_step )
+					summary_writer.add_summary(summary, global_step=global_step )
 
             			if( current_step * self._batch_size > self._number_of_samples*2 ):
                 			epoch = epoch + 1
