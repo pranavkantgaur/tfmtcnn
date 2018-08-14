@@ -30,21 +30,21 @@ $ python train_model.py \
 	--train_root_dir=../data/models/mtcnn/train \
 	--dataset_root_dir=../data/datasets/mtcnn \
 	--base_learning_rate=0.01 \
-	--max_number_of_epoch=30
+	--max_number_of_epoch=36
 
 $ python train_model.py \
 	--network_name=RNet \ 
 	--train_root_dir=../data/models/mtcnn/train \
 	--dataset_root_dir=../data/datasets/mtcnn \
 	--base_learning_rate=0.01 \
-	--max_number_of_epoch=22
+	--max_number_of_epoch=36
 
 $ python train_model.py \
 	--network_name=ONet \ 
 	--train_root_dir=../data/models/mtcnn/train \
 	--dataset_root_dir=../data/datasets/mtcnn \
 	--base_learning_rate=0.01 \
-	--max_number_of_epoch=22
+	--max_number_of_epoch=36
 ```
 """
 
@@ -67,8 +67,8 @@ def parse_arguments(argv):
 	parser.add_argument('--dataset_root_dir', type=str, help='The directory where the dataset files are stored.', default=None)
 	parser.add_argument('--train_root_dir', type=str, help='Input train root directory where model weights are saved.', default=None)
 	parser.add_argument('--base_learning_rate', type=float, help='Initial learning rate.', default=0.01)
-	parser.add_argument('--max_number_of_epoch', type=int, help='The maximum number of training steps.', default=5)
-	parser.add_argument('--log_every_n_steps', type=int, help='The frequency with which logs are print.', default=200)
+	parser.add_argument('--max_number_of_epoch', type=int, help='The maximum number of training steps.', default=36)
+	parser.add_argument('--log_every_n_steps', type=int, help='The frequency with which logs are print.', default=3840)
 
 	return(parser.parse_args(argv))
 

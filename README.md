@@ -10,7 +10,7 @@ python prepare_celeba_dataset.py --bounding_box_file_name=../data/CelebA/list_bb
 
 2) Generate a basic dataset i.e. PNet dataset.
 
-python generate_simple_dataset.py --annotation_image_dir=../data/WIDER_Face/WIDER_train/images --annotation_file_name=../data/WIDER_Face/WIDER_train/wider_face_train_bbx_gt.txt --landmark_image_dir=../data/CelebA/images --landmark_file_name=../data/CelebA/CelebA.txt --base_number_of_images=700000 --target_root_dir=../data/datasets/mtcnn 
+python generate_simple_dataset.py --annotation_image_dir=../data/WIDER_Face/WIDER_train/images --annotation_file_name=../data/WIDER_Face/WIDER_train/wider_face_train_bbx_gt.txt --landmark_image_dir=../data/CelebA/images --landmark_file_name=../data/CelebA/CelebA.txt --base_number_of_images=1000000 --target_root_dir=../data/datasets/mtcnn 
 
 3) Train PNet.
 
@@ -18,7 +18,7 @@ python train_model.py --network_name=PNet --train_root_dir=../data/models/mtcnn/
 
 4) Generate a hard dataset i.e. RNet dataset.
 
-python generate_hard_dataset.py --network_name=RNet --train_root_dir=../data/models/mtcnn/train --annotation_image_dir=../data/WIDER_Face/WIDER_train/images --annotation_file_name=../data/WIDER_Face/WIDER_train/wider_face_train_bbx_gt.txt --landmark_image_dir=../data/CelebA/images --landmark_file_name=../data/CelebA/CelebA.txt --base_number_of_images=500000 --target_root_dir=../data/datasets/mtcnn 
+python generate_hard_dataset.py --network_name=RNet --train_root_dir=../data/models/mtcnn/train --annotation_image_dir=../data/WIDER_Face/WIDER_train/images --annotation_file_name=../data/WIDER_Face/WIDER_train/wider_face_train_bbx_gt.txt --landmark_image_dir=../data/CelebA/images --landmark_file_name=../data/CelebA/CelebA.txt --base_number_of_images=1000000 --target_root_dir=../data/datasets/mtcnn 
 
 5) Train RNet.
 
@@ -26,7 +26,7 @@ python train_model.py --network_name=RNet --train_root_dir=../data/models/mtcnn/
 
 6) Generate a hard dataset i.e. ONet dataset.
 
-python generate_hard_dataset.py --network_name=ONet --train_root_dir=../data/models/mtcnn/train --annotation_image_dir=../data/WIDER_Face/WIDER_train/images --annotation_file_name=../data/WIDER_Face/WIDER_train/wider_face_train_bbx_gt.txt --landmark_image_dir=../data/CelebA/images --landmark_file_name=../data/CelebA/CelebA.txt --base_number_of_images=500000 --target_root_dir=../data/datasets/mtcnn 
+python generate_hard_dataset.py --network_name=ONet --train_root_dir=../data/models/mtcnn/train --annotation_image_dir=../data/WIDER_Face/WIDER_train/images --annotation_file_name=../data/WIDER_Face/WIDER_train/wider_face_train_bbx_gt.txt --landmark_image_dir=../data/CelebA/images --landmark_file_name=../data/CelebA/CelebA.txt --base_number_of_images=1000000 --target_root_dir=../data/datasets/mtcnn 
 
 7) Train ONet.
 
