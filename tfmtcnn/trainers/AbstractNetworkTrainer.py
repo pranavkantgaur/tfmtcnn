@@ -25,7 +25,6 @@ from __future__ import division
 from __future__ import print_function
 
 import os
-from easydict import EasyDict as edict
 
 from tfmtcnn.networks.NetworkFactory import NetworkFactory
 from tfmtcnn.datasets.TensorFlowDataset import TensorFlowDataset
@@ -36,9 +35,7 @@ class AbstractNetworkTrainer(object):
 		self._network = NetworkFactory.network(network_name)
 		self._number_of_samples = 0
 		self._batch_size = 384
-		self._config = edict()
-
-		self._config.LR_EPOCH = [8, 16, 24]
+		self._learning_rate_epoch = [8, 16, 24]
 
 	def network_name(self):
 		return(self._network.network_name())
