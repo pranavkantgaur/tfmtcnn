@@ -225,7 +225,7 @@ class FaceDetector(object):
         	else:
             		return( None, None, None )        
         
-        	keep = py_nms(boxes, 0.6)
+        	keep = py_nms(boxes, 0.7, 'Union')
         	boxes = boxes[keep]
         	boxes_c = self._calibrate_box(boxes, reg[keep])
         	return( boxes, boxes_c, None )
@@ -261,8 +261,8 @@ class FaceDetector(object):
         	boxes_c = self._calibrate_box(boxes, reg)
         
         
-        	boxes = boxes[py_nms(boxes, 0.6, "Minimum")]
-        	keep = py_nms(boxes_c, 0.6, "Minimum")
+        	boxes = boxes[py_nms(boxes, 0.7, "Minimum")]
+        	keep = py_nms(boxes_c, 0.7, "Minimum")
         	boxes_c = boxes_c[keep]
         	landmark = landmark[keep]
         	return( boxes, boxes_c,landmark )		
