@@ -63,14 +63,20 @@ def _convert_to_example_simple(image_example, image_buffer):
     }))
     return example
 
+
 def _process_image_withoutcoder(filename):
     image = cv2.imread(filename)
-    image_data = image.tostring()
-    assert len(image.shape) == 3
+    rgb_image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+    image_data = rgb_image.tostring()
+
+    assert( len(image.shape) == 3 )
+
     height = image.shape[0]
     width = image.shape[1]
-    assert image.shape[2] == 3
-    return image_data, height, width
+    assert( image.shape[2] == 3 )
+
+    return( image_data, height, width )
+
 
 class TensorFlowDataset(object):
 
