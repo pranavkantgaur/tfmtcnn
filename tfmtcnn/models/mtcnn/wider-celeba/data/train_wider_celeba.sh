@@ -24,6 +24,8 @@ echo 'Prepare CelebA dataset for input.'
 
 python tools/prepare_celeba_dataset.py --bounding_box_file_name=../data/CelebA/list_bbox_celeba.txt --landmark_file_name=../data/CelebA/list_landmarks_celeba.txt --output_file_name=../data/CelebA/CelebA.txt
 
+echo 'Prepared CelebA dataset for input.'
+
 echo '########################################################################################################################################################################################################'
 
 echo 'Generate a basic dataset i.e. PNet dataset.'
@@ -36,7 +38,7 @@ echo '##########################################################################
 
 echo 'Train PNet.'
 
-python train_model.py --network_name=PNet --train_root_dir=../data/models/mtcnn/train --dataset_root_dir=../data/datasets/mtcnn --base_learning_rate=0.01 --max_number_of_epoch=36
+python train_model.py --network_name=PNet --train_root_dir=../data/models/mtcnn/train --dataset_root_dir=../data/datasets/mtcnn --base_learning_rate=0.01 --max_number_of_epoch=60
 
 echo 'Trained PNet.'
 
@@ -52,7 +54,7 @@ echo '##########################################################################
 
 echo 'Train RNet.'
 
-python train_model.py --network_name=RNet --train_root_dir=../data/models/mtcnn/train --dataset_root_dir=../data/datasets/mtcnn --base_learning_rate=0.01 --max_number_of_epoch=36
+python train_model.py --network_name=RNet --train_root_dir=../data/models/mtcnn/train --dataset_root_dir=../data/datasets/mtcnn --base_learning_rate=0.01 --max_number_of_epoch=60
 
 echo 'Trained RNet.'
 
@@ -68,9 +70,10 @@ echo '##########################################################################
 
 echo 'Train ONet.'
 
-python train_model.py --network_name=ONet --train_root_dir=../data/models/mtcnn/train --dataset_root_dir=../data/datasets/mtcnn --base_learning_rate=0.01 --max_number_of_epoch=36
+ython train_model.py --network_name=ONet --train_root_dir=../data/models/mtcnn/train --dataset_root_dir=../data/datasets/mtcnn --base_learning_rate=0.01 --max_number_of_epoch=60
 
 echo 'Trained ONet.'
 
 echo '########################################################################################################################################################################################################'
+
 
