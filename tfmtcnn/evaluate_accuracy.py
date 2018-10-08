@@ -67,10 +67,7 @@ def main(args):
 	if(args.model_root_dir):
 		model_root_dir = args.model_root_dir
 	else:
-		if(args.test_mode):
-			model_root_dir = NetworkFactory.model_train_dir()
-		else:
-			model_root_dir = NetworkFactory.model_deploy_dir()
+		model_root_dir = NetworkFactory.model_deploy_dir()
 
 	last_network='ONet'
 	face_detector = FaceDetector(last_network, model_root_dir)
