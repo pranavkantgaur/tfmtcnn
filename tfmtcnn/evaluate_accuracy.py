@@ -40,6 +40,7 @@ import sys
 import os
 import argparse
 import numpy as np
+import cv2
 
 import tfmtcnn.datasets.constants as datasets_constants
 from tfmtcnn.datasets.DatasetFactory import DatasetFactory
@@ -98,7 +99,7 @@ def main(args):
 
 	accuracy = 0.0 
 	number_of_faces = 0
-	for detected_box, ground_truth_box in zip(detected_boxes, ground_truth_boxes):
+	for image_file_path, detected_box, ground_truth_box in zip(image_file_names, detected_boxes, ground_truth_boxes):
        		ground_truth_box = np.array(ground_truth_box, dtype=np.float32).reshape(-1, 4)
 
        		if( detected_box.shape[0] == 0 ):
@@ -106,6 +107,8 @@ def main(args):
 
        		detected_box = convert_to_square(detected_box)
        		detected_box[:, 0:4] = np.round(detected_box[:, 0:4])
+
+		current_image = cv2.imread(image_file_path)
 
        		for box in detected_box:
        			x_left, y_top, x_right, y_bottom, _ = box.astype(int)
