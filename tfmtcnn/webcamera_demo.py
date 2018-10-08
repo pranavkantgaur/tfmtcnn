@@ -25,21 +25,21 @@ r"""Webcamera demo.
 Usage:
 ```shell
 
-$ python webcamera_demo.py
+$ python tfmtcnn/tfmtcnn/webcamera_demo.py
 
-$ python webcamera_demo.py \
-	 --webcamera_id=0 \
-	 --threshold=0.125 
+$ python tfmtcnn/tfmtcnn/webcamera_demo.py \
+	 --webcamera_id 0 \
+	 --threshold 0.9 
 
-$ python webcamera_demo.py \
-	 --webcamera_id=0 \
-	 --threshold=0.125 \
+$ python tfmtcnn/tfmtcnn/webcamera_demo.py \
+	 --webcamera_id 0 \
+	 --threshold 0.9 \
 	 --test_mode
 
-$ python webcamera_demo.py \
-	 --webcamera_id=0 \
-	 --threshold=0.125 \
-	 --model_root_dir=/mtcnn/models/mtcnn/deploy/
+$ python tfmtcnn/tfmtcnn/webcamera_demo.py \
+	 --webcamera_id 0 \
+	 --threshold 0.9 \
+	 --model_root_dir tfmtcnn/models/mtcnn/wider-celeba
 ```
 """
 
@@ -84,25 +84,27 @@ def main(args):
     		start_time = cv2.getTickCount()
     		status, current_frame = webcamera.read()
     		if status:
-        		image = np.array(current_frame)
-			rgb_image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-        		boxes_c, landmarks = face_detector.detect(rgb_image)
+        		input_bgr_image = np.array(current_frame)
+			image_height, image_width, image_channels = input_bgr_image.shape
+			input_rgb_image = cv2.cvtColor(input_bgr_image, cv2.COLOR_BGR2RGB)
+
+        		boxes_c, landmarks = face_detector.detect(input_bgr_image)
 
 			end_time = cv2.getTickCount()
         		time_duration = (end_time - start_time) / cv2.getTickFrequency()
         		frames_per_sec = 1.0 / time_duration
-        		cv2.putText(image, '{:.2f} FPS'.format(frames_per_sec), (10, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 0), 2)
+        		cv2.putText(input_bgr_image, '{:.2f} FPS'.format(frames_per_sec), (10, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 0), 2)
 
         		for index in range(boxes_c.shape[0]):
             			bounding_box = boxes_c[index, :4]
             			probability = boxes_c[index, 4]
-            			crop_box = [int(bounding_box[0]), int(bounding_box[1]), int(bounding_box[2]), int(bounding_box[3])]
+            			crop_box = [int(max(bounding_box[0],0)), int(max(bounding_box[1],0)), int(min(bounding_box[2], image_width)), int(min(bounding_box[3], image_height))]
             
             			if( probability > args.threshold ):
-            				cv2.rectangle(image, (crop_box[0], crop_box[1]),(crop_box[2], crop_box[3]), (0, 255, 0), 1)
-					cv2.putText(image, 'Score - {:.2f}'.format(probability), (crop_box[0], crop_box[1] - 2), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+            				cv2.rectangle(input_bgr_image, (crop_box[0], crop_box[1]),(crop_box[2], crop_box[3]), (0, 255, 0), 1)
+					cv2.putText(input_bgr_image, 'Score - {:.2f}'.format(probability), (crop_box[0], crop_box[1] - 2), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
      
-		        cv2.imshow("", image)
+		        cv2.imshow("", input_bgr_image)
         		if cv2.waitKey(1) & 0xFF == ord('q'):
             			break
     		else:
