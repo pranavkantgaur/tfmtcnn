@@ -42,6 +42,7 @@ import argparse
 
 import tfmtcnn.datasets.constants as datasets_constants
 from tfmtcnn.datasets.DatasetFactory import DatasetFactory
+from tfmtcnn.datasets.InferenceBatch import InferenceBatch
 
 from tfmtcnn.networks.FaceDetector import FaceDetector
 from tfmtcnn.networks.NetworkFactory import NetworkFactory
@@ -77,7 +78,7 @@ def main(args):
 	status = False
 	face_dataset_name='WIDERFaceDataset'
 	face_dataset = DatasetFactory.face_dataset(face_dataset_name)
-	if(face_dataset.read(annotation_image_dir, annotation_file_name)):			
+	if(face_dataset.read(args.annotation_image_dir, args.annotation_file_name)):			
 		dataset = face_dataset.data()
 		status = True
 
