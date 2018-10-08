@@ -39,6 +39,7 @@ from __future__ import print_function
 import sys
 import os
 import argparse
+import numpy as np
 
 import tfmtcnn.datasets.constants as datasets_constants
 from tfmtcnn.datasets.DatasetFactory import DatasetFactory
