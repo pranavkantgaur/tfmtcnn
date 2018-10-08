@@ -102,7 +102,7 @@ def main(args):
 	number_of_faces = 0
 	for image_file_path, detected_box, ground_truth_box in zip(image_file_names, detected_boxes, ground_truth_boxes):
        		ground_truth_box = np.array(ground_truth_box, dtype=np.float32).reshape(-1, 4)
-
+		number_of_faces = number_of_faces + len(ground_truth_box)
        		if( detected_box.shape[0] == 0 ):
             			continue
 
@@ -119,10 +119,11 @@ def main(args):
        			if( (width < minimum_face_size) or (height < minimum_face_size) or (x_left < 0) or (y_top < 0) or (x_right > (current_image.shape[1] - 1) ) or (y_bottom > (current_image.shape[0] - 1 ) ) ):
                			continue
 
-			number_of_faces = number_of_faces + 1
-       			current_IoU = IoU(box, ground_truth_box)
+			current_IoU = IoU(box, ground_truth_box)
 			maximum_IoU = np.max(current_IoU)
-			accuracy = accuracy + maximum_IoU
+			print('maximum_IoU', maximum_IoU)
+			if(maximum_IoU > 0.01):
+				accuracy = accuracy + 1
 
 	print('Accuracy - ', accuracy, 'number_of_faces', number_of_faces)
 
