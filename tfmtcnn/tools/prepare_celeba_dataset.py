@@ -25,10 +25,10 @@ r"""Prepare CelebA dataset for input.
 Usage:
 ```shell
 
-$ python prepare_celeba_dataset.py \
-	--bounding_box_file_name=../data/CelebA/list_bbox_celeba.txt \
-	--landmark_file_name=../data/CelebA/list_landmarks_celeba.txt \
-	--output_file_name=../data/CelebA/CelebA.txt 
+$ python tfmtcnn/tfmtcnn/tools/prepare_celeba_dataset.py \
+    --bounding_box_file_name=../data/CelebA/list_bbox_celeba.txt \
+    --landmark_file_name=../data/CelebA/list_landmarks_celeba.txt \
+    --output_file_name=../data/CelebA/CelebA.txt 
 ```
 """
 
