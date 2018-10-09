@@ -68,6 +68,6 @@ class AbstractNetworkTrainer(object):
 		image_list_file_name = TensorFlowDataset.tensorflow_file_name(dataset_dir, 'image_list')
 		return(image_list_file_name)
 
-	def train(self, network_name, dataset_root_dir, train_root_dir, base_learning_rate, max_number_of_epoch, log_every_n_steps):
+	def train(self, network_name, dataset_root_dir, train_root_dir, base_learning_rate, learning_rate_epoch, max_number_of_epoch, log_every_n_steps):
 		raise NotImplementedError('Must be implemented by the subclass.')
 

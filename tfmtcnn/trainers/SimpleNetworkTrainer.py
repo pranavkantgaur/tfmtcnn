@@ -47,7 +47,7 @@ class SimpleNetworkTrainer(AbstractNetworkTrainer):
 		AbstractNetworkTrainer.__init__(self, network_name)	
 
 	def _train_model(self, base_learning_rate, loss):
-    		
+    		#print('self._learning_rate_epoch', self._learning_rate_epoch)
     		self._global_step = tf.Variable(0, name='global_step', trainable=False)
 
     		boundaries = [int(epoch * self._number_of_samples / self._batch_size) for epoch in self._learning_rate_epoch]
@@ -101,7 +101,7 @@ class SimpleNetworkTrainer(AbstractNetworkTrainer):
 		tensorflow_dataset = TensorFlowDataset()
 		return(tensorflow_dataset.read_tensorflow_file(tensorflow_file_name, self._batch_size, image_size))
 
-	def train(self, network_name, dataset_root_dir, train_root_dir, base_learning_rate, max_number_of_epoch, log_every_n_steps):
+	def train(self, network_name, dataset_root_dir, train_root_dir, base_learning_rate, learning_rate_epoch, max_number_of_epoch, log_every_n_steps):
 		network_train_dir = self.network_train_dir(train_root_dir)
 		if(not os.path.exists(network_train_dir)):
 			os.makedirs(network_train_dir)
@@ -127,6 +127,7 @@ class SimpleNetworkTrainer(AbstractNetworkTrainer):
 		L2_loss_op = tf.add_n(tf.losses.get_regularization_losses())
 
 		total_loss = class_loss_ratio*class_loss_op + bbox_loss_ratio*bounding_box_loss_op + landmark_loss_ratio*landmark_loss_op + L2_loss_op
+		self._learning_rate_epoch = learning_rate_epoch
 		train_op, learning_rate_op = self._train_model(base_learning_rate, total_loss)
 
     		init = tf.global_variables_initializer()

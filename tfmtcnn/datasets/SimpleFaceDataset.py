@@ -113,7 +113,7 @@ class SimpleFaceDataset(object):
     			os.makedirs(negative_dir)
 
 		generated_positive_samples, generated_part_samples, generated_negative_samples = self._generated_samples(target_root_dir)
-		print('previous_positive_samples',generated_positive_samples, 'previous_part_samples',generated_part_samples, 'previous_negative_samples',  generated_negative_samples)
+		#print('previous_positive_samples',generated_positive_samples, 'previous_part_samples',generated_part_samples, 'previous_negative_samples',  generated_negative_samples)
 
 		positive_file = open(SimpleFaceDataset.positive_file_name(target_root_dir), 'a+')
 		part_file = open(SimpleFaceDataset.part_file_name(target_root_dir), 'a+')
