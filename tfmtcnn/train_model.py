@@ -25,26 +25,29 @@ r"""Trains a model using either of PNet, RNet or ONet.
 Usage:
 ```shell
 
-$ python train_model.py \
-	--network_name=PNet \ 
-	--train_root_dir=../data/models/mtcnn/train \
-	--dataset_root_dir=../data/datasets/mtcnn \
-	--base_learning_rate=0.01 \
-	--max_number_of_epoch=36
+$ python tfmtcnn/tfmtcnn/train_model.py \
+	--network_name PNet \ 
+	--train_root_dir ../data/models/mtcnn/train \
+	--dataset_root_dir ../data/datasets/mtcnn \
+	--base_learning_rate 0.01 \
+	--learning_rate_epoch 8 16 24 \
+	--max_number_of_epoch 36
 
-$ python train_model.py \
-	--network_name=RNet \ 
-	--train_root_dir=../data/models/mtcnn/train \
-	--dataset_root_dir=../data/datasets/mtcnn \
-	--base_learning_rate=0.01 \
-	--max_number_of_epoch=36
+$ python tfmtcnn/tfmtcnn/train_model.py \
+	--network_name RNet \ 
+	--train_root_dir ../data/models/mtcnn/train \
+	--dataset_root_dir ../data/datasets/mtcnn \
+	--base_learning_rate 0.01 \
+	--learning_rate_epoch 8 16 24 \
+	--max_number_of_epoch 36
 
-$ python train_model.py \
-	--network_name=ONet \ 
-	--train_root_dir=../data/models/mtcnn/train \
-	--dataset_root_dir=../data/datasets/mtcnn \
-	--base_learning_rate=0.01 \
-	--max_number_of_epoch=36
+$ python tfmtcnn/tfmtcnn/train_model.py \
+	--network_name ONet \ 
+	--train_root_dir ../data/models/mtcnn/train \
+	--dataset_root_dir ../data/datasets/mtcnn \
+	--base_learning_rate 0.01 \
+	--learning_rate_epoch 8 16 24 \
+	--max_number_of_epoch 36
 ```
 """
 

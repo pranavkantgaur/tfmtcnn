@@ -34,7 +34,7 @@ positive_IoU = 0.65
 part_IoU = 0.40
 negative_IoU = 0.30
 
-default_base_number_of_images = 1000000
+default_base_number_of_images = 700000
 
 minimum_dataset_face_size = 24
 
