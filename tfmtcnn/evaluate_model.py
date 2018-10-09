@@ -98,11 +98,12 @@ def main(args):
 	if(not (len(detected_boxes) == number_of_images)):
 		return
 
-	accuracy = 0.0 
-	number_of_faces = 0
+	number_of_positive_faces = 0
+	number_of_part_faces = 0  
+	number_of_input_faces = 0
 	for image_file_path, detected_box, ground_truth_box in zip(image_file_names, detected_boxes, ground_truth_boxes):
        		ground_truth_box = np.array(ground_truth_box, dtype=np.float32).reshape(-1, 4)
-		number_of_faces = number_of_faces + len(ground_truth_box)
+		number_of_input_faces = number_of_input_faces + len(ground_truth_box)
        		if( detected_box.shape[0] == 0 ):
             			continue
 
@@ -116,16 +117,19 @@ def main(args):
        			width = x_right - x_left + 1
        			height = y_bottom - y_top + 1
 
-       			if( (width < minimum_face_size) or (height < minimum_face_size) or (x_left < 0) or (y_top < 0) or (x_right > (current_image.shape[1] - 1) ) or (y_bottom > (current_image.shape[0] - 1 ) ) ):
+       			if( (width < minimum_dataset_face_size) or (height < minimum_dataset_face_size) or (x_left < 0) or (y_top < 0) or (x_right > (current_image.shape[1] - 1) ) or (y_bottom > (current_image.shape[0] - 1 ) ) ):
                			continue
 
 			current_IoU = IoU(box, ground_truth_box)
 			maximum_IoU = np.max(current_IoU)
-			print('maximum_IoU', maximum_IoU)
-			if(maximum_IoU > 0.01):
-				accuracy = accuracy + 1
+			#print('maximum_IoU', maximum_IoU)
 
-	print('Accuracy - ', accuracy, 'number_of_faces', number_of_faces)
+			if(maximum_IoU > positive_IoU):
+				number_of_positive_faces = number_of_positive_faces + 1
+			elif (maximum_IoU > part_IoU):
+				number_of_part_faces = number_of_part_faces + 1
+
+	print('number_of_positive_faces - ', number_of_positive_faces, 'number_of_part_faces - ', number_of_part_faces, 'total detected faces', (number_of_positive_faces + number_of_part_faces),'number_of_input_faces', number_of_input_faces)
 
 if __name__ == '__main__':
 	os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
