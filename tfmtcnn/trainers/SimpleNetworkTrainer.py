@@ -46,13 +46,16 @@ class SimpleNetworkTrainer(AbstractNetworkTrainer):
 	def __init__(self, network_name='PNet'):	
 		AbstractNetworkTrainer.__init__(self, network_name)	
 
-	def _train_model(self, base_learning_rate, loss, data_num):
-
-    		learning_rate_factor = 0.1
+	def _train_model(self, base_learning_rate, loss):
+    		
     		self._global_step = tf.Variable(0, name='global_step', trainable=False)
-    		boundaries = [int(epoch * data_num / self._batch_size) for epoch in self._learning_rate_epoch]
+
+    		boundaries = [int(epoch * self._number_of_samples / self._batch_size) for epoch in self._learning_rate_epoch]
+
+		learning_rate_factor = 0.1
     		learning_rate_values = [base_learning_rate * (learning_rate_factor ** x) for x in range(0, len(self._learning_rate_epoch) + 1)]
     		learning_rate_op = tf.train.piecewise_constant(self._global_step, boundaries, learning_rate_values)
+
     		optimizer = tf.train.MomentumOptimizer(learning_rate_op, 0.9)
     		train_op = optimizer.minimize(loss, global_step=self._global_step)
 
@@ -123,7 +126,8 @@ class SimpleNetworkTrainer(AbstractNetworkTrainer):
 		class_accuracy_op = self._calculate_accuracy(output_class_probability, target_label)
 		L2_loss_op = tf.add_n(tf.losses.get_regularization_losses())
 
-		train_op, learning_rate_op = self._train_model(base_learning_rate, class_loss_ratio*class_loss_op + bbox_loss_ratio*bounding_box_loss_op + landmark_loss_ratio*landmark_loss_op + L2_loss_op, self._number_of_samples)
+		total_loss = class_loss_ratio*class_loss_op + bbox_loss_ratio*bounding_box_loss_op + landmark_loss_ratio*landmark_loss_op + L2_loss_op
+		train_op, learning_rate_op = self._train_model(base_learning_rate, total_loss)
 
     		init = tf.global_variables_initializer()
     		self._session = tf.Session()
