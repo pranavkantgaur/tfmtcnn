@@ -1,4 +1,4 @@
-# WIDER Face dataset - face detection  
+# WIDER Face dataset - Face detection  
 
 WIDER Face dataset is used for face detection.
 

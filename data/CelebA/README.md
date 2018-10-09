@@ -1,4 +1,4 @@
-# CelebA dataset - landmark detection
+# CelebA dataset - Landmark detection
 
 CelebA dataset is used for landmark detection. 
 - Download CelebA dataset from official website (http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html).
