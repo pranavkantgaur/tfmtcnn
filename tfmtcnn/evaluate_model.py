@@ -25,7 +25,7 @@ r"""Evaluate the MTCNN model for the given dataset.
 Usage:
 ```shell
 
-$ python tfmtcnn/tfmtcnn/evaluate_dataset.py \
+$ python tfmtcnn/tfmtcnn/evaluate_model.py \
 	--model_root_dir tfmtcnn/models/mtcnn/wider-celeba \
 	--annotation_image_dir ../data/WIDER_Face/WIDER_val/images \ 
 	--annotation_file_name ../data/WIDER_Face/WIDER_val/wider_face_val_bbx_gt.txt 

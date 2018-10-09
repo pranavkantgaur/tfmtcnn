@@ -65,17 +65,18 @@ def _convert_to_example_simple(image_example, image_buffer):
 
 
 def _process_image_withoutcoder(filename):
-    image = cv2.imread(filename)
-    rgb_image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-    image_data = rgb_image.tostring()
+    input_bgr_image = cv2.imread(filename)
 
-    assert( len(image.shape) == 3 )
+    input_rgb_image = cv2.cvtColor(input_bgr_image, cv2.COLOR_BGR2RGB)
+    image_data = input_rgb_image.tostring()
 
-    height = image.shape[0]
-    width = image.shape[1]
-    assert( image.shape[2] == 3 )
+    assert( len(input_bgr_image.shape) == 3 )
 
-    return( image_data, height, width )
+    image_height = input_bgr_image.shape[0]
+    image_width = input_bgr_image.shape[1]
+    assert( input_bgr_image.shape[2] == 3 )
+
+    return( image_data, image_height, image_width )
 
 
 class TensorFlowDataset(object):
@@ -171,7 +172,7 @@ class TensorFlowDataset(object):
 
     		image = tf.decode_raw(image_features['image/encoded'], tf.uint8)
     		image = tf.reshape(image, [image_size, image_size, 3])
-    		image = (tf.cast(image, tf.float32)-127.5) / 128
+    		image = (tf.cast(image, tf.float32) - 127.5) / 128.0
     
     		# image = tf.image.per_image_standardization(image)
     		label = tf.cast(image_features['image/label'], tf.float32)

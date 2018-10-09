@@ -74,6 +74,8 @@ class InferenceBatch(object):
 
     	def get_batch(self):
         	image_path = self.images[self.current]
-        	image = cv2.imread(image_path)
-        	self.data = image
+        	input_bgr_image = cv2.imread(image_path)
+
+		input_rgb_image = cv2.cvtColor(input_bgr_image, cv2.COLOR_BGR2RGB)
+        	self.data = input_rgb_image
 
