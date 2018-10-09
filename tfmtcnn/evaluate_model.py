@@ -129,7 +129,7 @@ def main(args):
 			elif (maximum_IoU > part_IoU):
 				number_of_part_faces = number_of_part_faces + 1
 
-	print('number_of_positive_faces - ', number_of_positive_faces, 'number_of_part_faces - ', number_of_part_faces, 'total detected faces', (number_of_positive_faces + number_of_part_faces),'number_of_input_faces', number_of_input_faces)
+	print('Positive faces - ', number_of_positive_faces, 'partial faces - ', number_of_part_faces, 'total detected faces - ', (number_of_positive_faces + number_of_part_faces),'input faces - ', number_of_input_faces)
 
 if __name__ == '__main__':
 	os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
