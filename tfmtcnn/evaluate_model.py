@@ -117,19 +117,22 @@ def main(args):
        			width = x_right - x_left + 1
        			height = y_bottom - y_top + 1
 
-       			if( (width < minimum_dataset_face_size) or (height < minimum_dataset_face_size) or (x_left < 0) or (y_top < 0) or (x_right > (current_image.shape[1] - 1) ) or (y_bottom > (current_image.shape[0] - 1 ) ) ):
+       			if( (width < datasets_constants.minimum_dataset_face_size) or (height < datasets_constants.minimum_dataset_face_size) or (x_left < 0) or (y_top < 0) or (x_right > (current_image.shape[1] - 1) ) or (y_bottom > (current_image.shape[0] - 1 ) ) ):
                			continue
 
 			current_IoU = IoU(box, ground_truth_box)
 			maximum_IoU = np.max(current_IoU)
 			#print('maximum_IoU', maximum_IoU)
 
-			if(maximum_IoU > positive_IoU):
+			if(maximum_IoU > datasets_constants.positive_IoU):
 				number_of_positive_faces = number_of_positive_faces + 1
-			elif (maximum_IoU > part_IoU):
+			elif (maximum_IoU > datasets_constants.part_IoU):
 				number_of_part_faces = number_of_part_faces + 1
 
-	print('Positive faces - ', number_of_positive_faces, 'partial faces - ', number_of_part_faces, 'total detected faces - ', (number_of_positive_faces + number_of_part_faces),'input faces - ', number_of_input_faces)
+	print('Positive faces       - ', number_of_positive_faces)
+	print('Partial faces        - ', number_of_part_faces)
+	print('Total detected faces - ', (number_of_positive_faces + number_of_part_faces))
+	print('Input faces          - ', number_of_input_faces)
 
 if __name__ == '__main__':
 	os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
