@@ -88,12 +88,21 @@ python tfmtcnn/tfmtcnn/train_model.py \
 ```
 
 ## Webcamera demo.
-```sh   
+```sh
 python  tfmtcnn/tfmtcnn/webcamera_demo.py
 ```
 
 ## Webcamera demo using trained models.
-```sh   
+```sh
 python  tfmtcnn/tfmtcnn/webcamera_demo.py --test_mode
+```
+
+## Evaluate the model accuracy on the FDDB dataset.
+```sh
+python tfmtcnn/tfmtcnn/evaluate_model.py \
+	--model_root_dir tfmtcnn/tfmtcnn/models/mtcnn/train \
+	--dataset_name FDDBDataset \
+	--annotation_image_dir /datasets/FDDB/ \ 
+	--annotation_file_name /datasets/FDDB/FDDB-folds/FDDB-fold-01-ellipseList.txt
 ```
 
