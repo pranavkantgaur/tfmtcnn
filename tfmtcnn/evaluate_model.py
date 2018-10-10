@@ -28,7 +28,13 @@ Usage:
 $ python tfmtcnn/tfmtcnn/evaluate_model.py \
 	--model_root_dir tfmtcnn/tfmtcnn/models/mtcnn/wider-celeba \
 	--annotation_image_dir /datasets/WIDER_Face/WIDER_val/images \ 
-	--annotation_file_name /datasets/WIDER_Face/WIDER_val/wider_face_val_bbx_gt.txt 
+	--annotation_file_name /datasets/WIDER_Face/WIDER_val/wider_face_val_bbx_gt.txt
+
+$ python tfmtcnn/tfmtcnn/evaluate_model.py \
+	--model_root_dir tfmtcnn/tfmtcnn/models/mtcnn/wider-celeba \
+	--dataset_name FDDBDataset \
+	--annotation_image_dir /datasets/FDDB/ \ 
+	--annotation_file_name /datasets/FDDB/FDDB-folds/FDDB-fold-01-ellipseList.txt  
 ```
 """
 
@@ -56,17 +62,18 @@ def parse_arguments(argv):
 	parser = argparse.ArgumentParser()
 	parser.add_argument('--model_root_dir', type=str, help='Input model root directory where model weights are saved.', default=None)
 
-	parser.add_argument('--annotation_file_name', type=str, help='Input WIDER face dataset annotations file.', default=None)
-	parser.add_argument('--annotation_image_dir', type=str, help='Input WIDER face dataset training image directory.', default=None)
+	parser.add_argument('--dataset_name', type=str, help='Input dataset name.', choices=['WIDERFaceDataset', 'CelebADataset', 'FDDBDataset'], default='WIDERFaceDataset')
+	parser.add_argument('--annotation_file_name', type=str, help='Input face dataset annotations file.', default=None)
+	parser.add_argument('--annotation_image_dir', type=str, help='Input face dataset image directory.', default=None)
 
 	return(parser.parse_args(argv))
 
 def main(args):
 
 	if(not args.annotation_file_name):
-		raise ValueError('You must supply input WIDER face dataset annotations file with --annotation_file_name.')
+		raise ValueError('You must supply input face dataset annotations file with --annotation_file_name.')
 	if(not args.annotation_image_dir):
-		raise ValueError('You must supply input WIDER face dataset training image directory with --annotation_image_dir.')		
+		raise ValueError('You must supply input face dataset training image directory with --annotation_image_dir.')		
 
 	if(args.model_root_dir):
 		model_root_dir = args.model_root_dir
@@ -78,14 +85,10 @@ def main(args):
 	minimum_face_size = datasets_constants.minimum_face_size
 
 	dataset = None
-	status = False
-	face_dataset_name='WIDERFaceDataset'
-	face_dataset = DatasetFactory.face_dataset(face_dataset_name)
+	face_dataset = DatasetFactory.face_dataset(args.dataset_name)
 	if(face_dataset.read(args.annotation_image_dir, args.annotation_file_name)):			
 		dataset = face_dataset.data()
-		status = True
-
-	if(not status):
+	else:
 		return
 
 	test_data = InferenceBatch(dataset['images'])
@@ -117,13 +120,11 @@ def main(args):
        			width = x_right - x_left + 1
        			height = y_bottom - y_top + 1
 
-       			#if( (width < datasets_constants.minimum_dataset_face_size) or (height < datasets_constants.minimum_dataset_face_size) or (x_left < 0) or (y_top < 0) or (x_right > (current_image.shape[1] - 1) ) or (y_bottom > (current_image.shape[0] - 1 ) ) ):
 			if( (x_left < 0) or (y_top < 0) or (x_right > (current_image.shape[1] - 1) ) or (y_bottom > (current_image.shape[0] - 1 ) ) ):
                			continue
 
 			current_IoU = IoU(box, ground_truth_box)
 			maximum_IoU = np.max(current_IoU)
-			#print('maximum_IoU', maximum_IoU)
 
 			if(maximum_IoU > datasets_constants.positive_IoU):
 				number_of_positive_faces = number_of_positive_faces + 1

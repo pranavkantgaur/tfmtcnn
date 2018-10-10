@@ -68,7 +68,7 @@ default_learning_rate_epoch = [8, 16, 24]
 
 def parse_arguments(argv):
 	parser = argparse.ArgumentParser()
-	parser.add_argument('--network_name', type=str, help='The name of the network.', default='PNet')  
+	parser.add_argument('--network_name', type=str, help='The name of the network.', choices=['PNet', 'RNet', 'ONet'], default='PNet')  
 
 	parser.add_argument('--dataset_root_dir', type=str, help='The directory where the dataset files are stored.', default=None)
 	parser.add_argument('--train_root_dir', type=str, help='Input train root directory where model weights are saved.', default=None)

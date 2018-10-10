@@ -29,6 +29,7 @@ import tfmtcnn.datasets.constants as datasets_constants
 from tfmtcnn.datasets.WIDERFaceDataset import WIDERFaceDataset
 from tfmtcnn.datasets.CelebADataset import CelebADataset
 from tfmtcnn.datasets.LFWLandmarkDataset import LFWLandmarkDataset
+from tfmtcnn.datasets.FDDBDataset import FDDBDataset
 
 class DatasetFactory(object):
 
@@ -56,7 +57,11 @@ class DatasetFactory(object):
 		if( name == CelebADataset.name() ):
 			return(CelebADataset())
 		elif ( name == WIDERFaceDataset.name() ):
-			return(WIDERFaceDataset())	
+			return(WIDERFaceDataset())
+		elif ( name == FDDBDataset.name() ):
+			return(FDDBDataset())
+		else:
+			return(None)
 
 	@classmethod
 	def landmark_dataset(cls, name):
@@ -64,9 +69,8 @@ class DatasetFactory(object):
 			return(CelebADataset())
 		elif ( name == LFWLandmarkDataset.name() ):
 			return(LFWLandmarkDataset())
-		
-
-
+		else:
+			return(None)
 
 
 
