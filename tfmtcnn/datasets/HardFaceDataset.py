@@ -165,6 +165,7 @@ class HardFaceDataset(SimpleFaceDataset):
 		if(not model_train_dir):
 			model_train_dir = NetworkFactory.model_train_dir()			
 		face_detector = FaceDetector(previous_network, model_train_dir)
+		face_detector.set_min_face_size(minimum_face_size)
 		face_detector.set_threshold([0.6, 0.7, 0.7])
 
 		detected_boxes, landmarks = face_detector.detect_face(test_data)

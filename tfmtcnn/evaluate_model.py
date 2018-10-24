@@ -83,6 +83,7 @@ def main(args):
 	last_network='ONet'
 	face_detector = FaceDetector(last_network, model_root_dir)
 	minimum_face_size = datasets_constants.minimum_face_size
+	face_detector.set_min_face_size(minimum_face_size)
 
 	dataset = None
 	face_dataset = DatasetFactory.face_dataset(args.dataset_name)

@@ -33,6 +33,8 @@ import numpy as np
 from tfmtcnn.utils.nms import py_nms
 from tfmtcnn.utils.convert_to_square import convert_to_square
 
+import tfmtcnn.datasets.constants as datasets_constants
+
 from tfmtcnn.networks.NetworkFactory import NetworkFactory
 
 class FaceDetector(object):
@@ -43,7 +45,7 @@ class FaceDetector(object):
 		else:
 			self._model_root_dir = model_root_dir
 
-		self._min_face_size = 24
+		self._min_face_size = datasets_constants.minimum_face_size
 		self._threshold = [0.9, 0.6, 0.7]
 		#self._scale_factor = 0.79
 		self._scale_factor = 1.0/ ( math.sqrt(2.0) )
