@@ -22,7 +22,7 @@ echo '##########################################################################
 
 echo 'Generate a basic dataset i.e. PNet dataset.'
 
-python generate_simple_dataset.py --annotation_image_dir=../data/WIDER_Face/WIDER_train/images --annotation_file_name=../data/WIDER_Face/WIDER_train/wider_face_train_bbx_gt.txt --landmark_image_dir=../data/LFW_Landmark --landmark_file_name=../data/LFW_Landmark/trainImageList.txt --base_number_of_images=1000000 --target_root_dir=../data/datasets/mtcnn
+python generate_simple_dataset.py --annotation_image_dir ../data/WIDER_Face/WIDER_train/images --annotation_file_name ../data/WIDER_Face/WIDER_train/wider_face_train_bbx_gt.txt --landmark_image_dir ../data/LFW_Landmark --landmark_file_name ../data/LFW_Landmark/trainImageList.txt --base_number_of_images 700000 --target_root_dir ../data/datasets/mtcnn
 
 echo 'Generated a basic dataset i.e. PNet dataset.'
 
@@ -30,7 +30,7 @@ echo '##########################################################################
 
 echo 'Train PNet.'
 
-python train_model.py --network_name=PNet --train_root_dir=../data/models/mtcnn/train --dataset_root_dir=../data/datasets/mtcnn --base_learning_rate=0.01 --max_number_of_epoch=36
+python train_model.py --network_name=PNet --train_root_dir ../data/models/mtcnn/train --dataset_root_dir ../data/datasets/mtcnn --base_learning_rate 0.01 --learning_rate_epoch 8 16 24 --max_number_of_epoch 32
 
 echo 'Trained PNet.'
 
@@ -38,7 +38,7 @@ echo '##########################################################################
 
 echo 'Generate a hard dataset i.e. RNet dataset.'
 
-python generate_hard_dataset.py --network_name=RNet --train_root_dir=../data/models/mtcnn/train --annotation_image_dir=../data/WIDER_Face/WIDER_train/images --annotation_file_name=../data/WIDER_Face/WIDER_train/wider_face_train_bbx_gt.txt --landmark_image_dir=../data/LFW_Landmark --landmark_file_name=../data/LFW_Landmark/trainImageList.txt --base_number_of_images=1000000 --target_root_dir=../data/datasets/mtcnn 
+python generate_hard_dataset.py --network_name RNet --train_root_dir ../data/models/mtcnn/train --annotation_image_dir ../data/WIDER_Face/WIDER_train/images --annotation_file_name ../data/WIDER_Face/WIDER_train/wider_face_train_bbx_gt.txt --landmark_image_dir ../data/LFW_Landmark --landmark_file_name ../data/LFW_Landmark/trainImageList.txt --base_number_of_images 700000 --target_root_dir ../data/datasets/mtcnn 
 
 echo 'Generated a hard dataset i.e. RNet dataset.'
 
@@ -46,7 +46,7 @@ echo '##########################################################################
 
 echo 'Train RNet.'
 
-python train_model.py --network_name=RNet --train_root_dir=../data/models/mtcnn/train --dataset_root_dir=../data/datasets/mtcnn --base_learning_rate=0.01 --max_number_of_epoch=36
+python train_model.py --network_name RNet --train_root_dir ../data/models/mtcnn/train --dataset_root_dir ../data/datasets/mtcnn --base_learning_rate 0.01 --learning_rate_epoch 8 16 24 --max_number_of_epoch 32
 
 echo 'Trained RNet.'
 
@@ -54,7 +54,7 @@ echo '##########################################################################
 
 echo 'Generate a hard dataset i.e. ONet dataset.'
 
-python generate_hard_dataset.py --network_name=ONet --train_root_dir=../data/models/mtcnn/train --annotation_image_dir=../data/WIDER_Face/WIDER_train/images --annotation_file_name=../data/WIDER_Face/WIDER_train/wider_face_train_bbx_gt.txt --landmark_image_dir=../data/LFW_Landmark --landmark_file_name=../data/LFW_Landmark/trainImageList.txt --base_number_of_images=1000000 --target_root_dir=../data/datasets/mtcnn 
+python generate_hard_dataset.py --network_name ONet --train_root_dir ../data/models/mtcnn/train --annotation_image_dir ../data/WIDER_Face/WIDER_train/images --annotation_file_name ../data/WIDER_Face/WIDER_train/wider_face_train_bbx_gt.txt --landmark_image_dir ../data/LFW_Landmark --landmark_file_name ../data/LFW_Landmark/trainImageList.txt --base_number_of_images 700000 --target_root_dir ../data/datasets/mtcnn 
 
 echo 'Generated a hard dataset i.e. ONet dataset.'
 
@@ -62,7 +62,7 @@ echo '##########################################################################
 
 echo 'Train ONet.'
 
-python train_model.py --network_name=ONet --train_root_dir=../data/models/mtcnn/train --dataset_root_dir=../data/datasets/mtcnn --base_learning_rate=0.01 --max_number_of_epoch=36
+python train_model.py --network_name ONet --train_root_dir ../data/models/mtcnn/train --dataset_root_dir ../data/datasets/mtcnn --base_learning_rate 0.01 --learning_rate_epoch 8 16 24 --max_number_of_epoch 32
 
 echo 'Trained ONet.'
 
