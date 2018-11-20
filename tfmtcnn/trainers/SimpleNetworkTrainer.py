@@ -47,7 +47,6 @@ class SimpleNetworkTrainer(AbstractNetworkTrainer):
 		AbstractNetworkTrainer.__init__(self, network_name)	
 
 	def _train_model(self, base_learning_rate, loss):
-    		#print('self._learning_rate_epoch', self._learning_rate_epoch)
     		self._global_step = tf.Variable(0, name='global_step', trainable=False)
 
     		boundaries = [int(epoch * self._number_of_samples / self._batch_size) for epoch in self._learning_rate_epoch]
@@ -133,7 +132,8 @@ class SimpleNetworkTrainer(AbstractNetworkTrainer):
     		init = tf.global_variables_initializer()
     		self._session = tf.Session()
 
-    		saver = tf.train.Saver(save_relative_paths=True, max_to_keep=3)
+    		#saver = tf.train.Saver(save_relative_paths=True, max_to_keep=3)		
+    		saver = tf.train.Saver(save_relative_paths=True, max_to_keep=0) # All checkpoint files are kept.
     		self._session.run(init)
 
     		tf.summary.scalar("class_loss", class_loss_op)
@@ -194,12 +194,12 @@ class SimpleNetworkTrainer(AbstractNetworkTrainer):
 								target_bounding_box:bbox_batch_array, 
 								target_landmarks: landmark_batch_array
 								})                
-                			print("%s - step - %d accuracy - %3f, class loss - %4f, bbox loss - %4f, landmark loss - %4f, L2 loss - %4f, lr - %f " 
-						% (datetime.now(), step+1, current_accuracy, current_class_loss, current_bbox_loss, current_landmark_loss, current_L2_loss, current_lr))
+                			print("(epoch - %d step - %d) - (accuracy - %3f, class loss - %4f, bbox loss - %4f, landmark loss - %4f, L2 loss - %4f, lr - %f )" 
+						% (epoch, step+1, current_accuracy, current_class_loss, current_bbox_loss, current_landmark_loss, current_L2_loss, current_lr))
 
 					summary_writer.add_summary(summary, global_step=global_step )
 
-            			if( current_step * self._batch_size > self._number_of_samples*2 ):
+            			if( current_step * self._batch_size >= self._number_of_samples ):
                 			epoch = epoch + 1
                 			current_step = 0
 					if(skip_model_saving):
