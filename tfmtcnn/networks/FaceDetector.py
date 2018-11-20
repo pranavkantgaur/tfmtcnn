@@ -32,8 +32,11 @@ import numpy as np
 
 from tfmtcnn.utils.nms import py_nms
 from tfmtcnn.utils.convert_to_square import convert_to_square
+from tfmtcnn.utils.IoU import IoU
 
 import tfmtcnn.datasets.constants as datasets_constants
+from tfmtcnn.datasets.DatasetFactory import DatasetFactory
+from tfmtcnn.datasets.InferenceBatch import InferenceBatch
 
 from tfmtcnn.networks.NetworkFactory import NetworkFactory
 
@@ -312,5 +315,69 @@ class FaceDetector(object):
             		all_landmarks.append(landmarks)
 
 		return(all_boxes_c, all_landmarks)
+
+	def evaluate(self, dataset_name, annotation_image_dir, annotation_file_name, print_result=False):
+
+		dataset = None
+		face_dataset = DatasetFactory.face_dataset(dataset_name)
+		if(face_dataset.read(annotation_image_dir, annotation_file_name)):			
+			dataset = face_dataset.data()
+		else:
+			return(False)
+
+		test_data = InferenceBatch(dataset['images'])
+		detected_boxes, landmarks = self.detect_face(test_data)
+
+		image_file_names = dataset['images']
+		ground_truth_boxes = dataset['bboxes']
+		number_of_images = len(image_file_names)
+
+		if(not (len(detected_boxes) == number_of_images)):
+			return(False)
+
+		number_of_positive_faces = 0
+		number_of_part_faces = 0  
+		number_of_input_faces = 0
+		accuracy = 0.0
+		for image_file_path, detected_box, ground_truth_box in zip(image_file_names, detected_boxes, ground_truth_boxes):
+       			ground_truth_box = np.array(ground_truth_box, dtype=np.float32).reshape(-1, 4)
+			number_of_input_faces = number_of_input_faces + len(ground_truth_box)
+	       		if( detected_box.shape[0] == 0 ):
+            			continue
+
+       			detected_box = convert_to_square(detected_box)
+       			detected_box[:, 0:4] = np.round(detected_box[:, 0:4])
+
+			current_image = cv2.imread(image_file_path)
+
+       			for box in detected_box:
+       				x_left, y_top, x_right, y_bottom, _ = box.astype(int)
+       				width = x_right - x_left + 1
+       				height = y_bottom - y_top + 1
+
+				if( (x_left < 0) or (y_top < 0) or (x_right > (current_image.shape[1] - 1) ) or (y_bottom > (current_image.shape[0] - 1 ) ) ):
+               				continue
+
+				current_IoU = IoU(box, ground_truth_box)
+				maximum_IoU = np.max(current_IoU)
+
+				accuracy = accuracy + maximum_IoU
+				if(maximum_IoU > datasets_constants.positive_IoU):
+					number_of_positive_faces = number_of_positive_faces + 1
+				elif (maximum_IoU > datasets_constants.part_IoU):
+					number_of_part_faces = number_of_part_faces + 1
+
+		if(print_result):
+			print('Positive faces       - ', number_of_positive_faces)
+			print('Partial faces        - ', number_of_part_faces)
+			print('Total detected faces - ', (number_of_positive_faces + number_of_part_faces))
+			print('Input faces          - ', number_of_input_faces)
+			print('Detection accuracy   - ', (number_of_positive_faces + number_of_part_faces)/number_of_input_faces)
+			print('Accuracy             - ', accuracy/number_of_input_faces)
+
+		return(True)
+
+
+
 
 
