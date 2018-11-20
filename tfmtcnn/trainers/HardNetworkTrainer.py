@@ -32,8 +32,8 @@ from tfmtcnn.datasets.TensorFlowDataset import TensorFlowDataset
 
 class HardNetworkTrainer(SimpleNetworkTrainer):
 
-	def __init__(self, network_name='RNet'):	
-		SimpleNetworkTrainer.__init__(self, network_name)	
+	def __init__(self, network_name='RNet', test_dataset=None):	
+		SimpleNetworkTrainer.__init__(self, network_name, test_dataset)	
 
 	def _read_data(self, dataset_root_dir):
 

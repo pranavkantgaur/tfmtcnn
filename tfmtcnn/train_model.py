@@ -64,6 +64,8 @@ from tfmtcnn.trainers.HardNetworkTrainer import HardNetworkTrainer
 
 from tfmtcnn.networks.NetworkFactory import NetworkFactory
 
+from tfmtcnn.datasets.DatasetFactory import DatasetFactory
+
 default_learning_rate_epoch = [8, 16, 24]
 
 def parse_arguments(argv):
@@ -79,6 +81,10 @@ def parse_arguments(argv):
 
 	parser.add_argument('--log_every_n_steps', type=int, help='The frequency with which logs are print.', default=3840)
 
+	parser.add_argument('--test_dataset', type=str, help='Test dataset name.', choices=['WIDERFaceDataset', 'CelebADataset', 'FDDBDataset'], default='FDDBDataset')
+	parser.add_argument('--test_annotation_file', type=str, help='Face dataset annotations file used for evaluating the trained model.', default=None)
+	parser.add_argument('--test_annotation_image_dir', type=str, help='Face dataset image directory used for evaluating the trained model.', default=None)
+
 	return(parser.parse_args(argv))
 
 def main(args):
@@ -88,18 +94,25 @@ def main(args):
 	if(not args.dataset_root_dir):
 		raise ValueError('You must supply the input dataset directory with --dataset_root_dir.')
 
-	if(not args.learning_rate_epoch):
-		raise ValueError('You must supply the epoch steps with --learning_rate_epoch.')
+	if(not args.test_annotation_file):
+		raise ValueError('You must supply face dataset annotations file used for evaluating the trained model with --test_annotation_file.')
+	if(not args.test_annotation_image_dir):
+		raise ValueError('You must supply face dataset image directory used for evaluating the trained model with --test_annotation_image_dir.')		
 
 	if(args.train_root_dir):
 		train_root_dir = args.train_root_dir
 	else:
 		train_root_dir = NetworkFactory.model_train_dir()
 
+	test_dataset = None
+	face_dataset = DatasetFactory.face_dataset(args.test_dataset)
+	if(face_dataset.read(args.test_annotation_image_dir, args.test_annotation_file)):			
+		test_dataset = face_dataset.data()
+
 	if(args.network_name == 'PNet'):
-		trainer = SimpleNetworkTrainer(args.network_name)
+		trainer = SimpleNetworkTrainer(args.network_name, test_dataset)
 	else:
-		trainer = HardNetworkTrainer(args.network_name)
+		trainer = HardNetworkTrainer(args.network_name, test_dataset)
 		
 	status = trainer.train(args.network_name, args.dataset_root_dir, train_root_dir, args.base_learning_rate, args.learning_rate_epoch, args.max_number_of_epoch, args.log_every_n_steps)
 	if(status):
