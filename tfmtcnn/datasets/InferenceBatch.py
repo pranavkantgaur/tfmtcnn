@@ -78,4 +78,5 @@ class InferenceBatch(object):
 
 		input_rgb_image = cv2.cvtColor(input_bgr_image, cv2.COLOR_BGR2RGB)
         	self.data = input_rgb_image
+		#self.data = input_bgr_image
 
