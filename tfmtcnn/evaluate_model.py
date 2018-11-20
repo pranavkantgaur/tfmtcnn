@@ -78,7 +78,9 @@ def main(args):
 	minimum_face_size = datasets_constants.minimum_face_size
 	face_detector.set_min_face_size(minimum_face_size)
 
-	face_detector.evaluate(args.dataset_name, args.annotation_image_dir, args.annotation_file_name, True)
+	status = face_detector.evaluate(args.dataset_name, args.annotation_image_dir, args.annotation_file_name, True)
+	if(not status):
+		print('Error evaluating the model')
 
 if __name__ == '__main__':
 	os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
