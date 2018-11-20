@@ -316,20 +316,13 @@ class FaceDetector(object):
 
 		return(all_boxes_c, all_landmarks)
 
-	def evaluate(self, dataset_name, annotation_image_dir, annotation_file_name, print_result=False):
+	def evaluate_dataset(self, test_dataset, print_result=False):
 
-		dataset = None
-		face_dataset = DatasetFactory.face_dataset(dataset_name)
-		if(face_dataset.read(annotation_image_dir, annotation_file_name)):			
-			dataset = face_dataset.data()
-		else:
-			return(False)
-
-		test_data = InferenceBatch(dataset['images'])
+		test_data = InferenceBatch(test_dataset['images'])
 		detected_boxes, landmarks = self.detect_face(test_data)
 
-		image_file_names = dataset['images']
-		ground_truth_boxes = dataset['bboxes']
+		image_file_names = test_dataset['images']
+		ground_truth_boxes = test_dataset['bboxes']
 		number_of_images = len(image_file_names)
 
 		if(not (len(detected_boxes) == number_of_images)):
@@ -376,6 +369,18 @@ class FaceDetector(object):
 			print('Accuracy             - ', accuracy/number_of_input_faces)
 
 		return(True)
+
+	
+	def evaluate(self, dataset_name, annotation_image_dir, annotation_file_name, print_result=False):
+
+		test_dataset = None
+		face_dataset = DatasetFactory.face_dataset(dataset_name)
+		if(face_dataset.read(annotation_image_dir, annotation_file_name)):			
+			test_dataset = face_dataset.data()
+		else:
+			return(False)
+
+		return(self.evaluate_dataset(test_dataset, print_result))
 
 
 
