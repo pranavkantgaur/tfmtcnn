@@ -64,8 +64,6 @@ from tfmtcnn.trainers.HardNetworkTrainer import HardNetworkTrainer
 
 from tfmtcnn.networks.NetworkFactory import NetworkFactory
 
-from tfmtcnn.datasets.DatasetFactory import DatasetFactory
-
 default_learning_rate_epoch = [8, 16, 24]
 
 def parse_arguments(argv):
@@ -99,21 +97,20 @@ def main(args):
 	if(not args.test_annotation_image_dir):
 		raise ValueError('You must supply face dataset image directory used for evaluating the trained model with --test_annotation_image_dir.')		
 
+	if(args.network_name == 'PNet'):
+		trainer = SimpleNetworkTrainer(args.network_name)
+	else:
+		trainer = HardNetworkTrainer(args.network_name)
+
+	status = trainer.load_test_dataset(args.test_dataset, args.test_annotation_image_dir, args.test_annotation_file)
+	if(not status):
+		print('Error loading the test dataset for evaluating the trained model.')
+
 	if(args.train_root_dir):
 		train_root_dir = args.train_root_dir
 	else:
 		train_root_dir = NetworkFactory.model_train_dir()
 
-	test_dataset = None
-	face_dataset = DatasetFactory.face_dataset(args.test_dataset)
-	if(face_dataset.read(args.test_annotation_image_dir, args.test_annotation_file)):			
-		test_dataset = face_dataset.data()
-
-	if(args.network_name == 'PNet'):
-		trainer = SimpleNetworkTrainer(args.network_name, test_dataset)
-	else:
-		trainer = HardNetworkTrainer(args.network_name, test_dataset)
-		
 	status = trainer.train(args.network_name, args.dataset_root_dir, train_root_dir, args.base_learning_rate, args.learning_rate_epoch, args.max_number_of_epoch, args.log_every_n_steps)
 	if(status):
 		print(args.network_name + ' - network is trained and weights are generated at ' + train_root_dir)

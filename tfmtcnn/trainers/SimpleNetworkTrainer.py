@@ -32,11 +32,12 @@ import tensorflow as tf
 from tensorflow.contrib import slim
 from datetime import datetime
 
+from tfmtcnn.trainers.AbstractNetworkTrainer import AbstractNetworkTrainer
+from tfmtcnn.trainers.ModelEvaluator import ModelEvaluator
+
 from tfmtcnn.losses.class_loss_ohem import class_loss_ohem
 from tfmtcnn.losses.bounding_box_loss_ohem import bounding_box_loss_ohem
 from tfmtcnn.losses.landmark_loss_ohem import landmark_loss_ohem
-
-from tfmtcnn.trainers.AbstractNetworkTrainer import AbstractNetworkTrainer
 
 from tfmtcnn.datasets.TensorFlowDataset import TensorFlowDataset
 import tfmtcnn.datasets.constants as datasets_constants
@@ -47,8 +48,8 @@ from tfmtcnn.networks.FaceDetector import FaceDetector
 class SimpleNetworkTrainer(AbstractNetworkTrainer):
 
 	def __init__(self, network_name='PNet', test_dataset=None):	
-		AbstractNetworkTrainer.__init__(self, network_name)	
-		self._test_dataset = test_dataset
+		AbstractNetworkTrainer.__init__(self, network_name)
+		self._model_evaluator = ModelEvaluator()	
 
 	def _train_model(self, base_learning_rate, loss):
     		self._global_step = tf.Variable(0, name='global_step', trainable=False)
@@ -105,15 +106,14 @@ class SimpleNetworkTrainer(AbstractNetworkTrainer):
 		return(tensorflow_dataset.read_tensorflow_file(tensorflow_file_name, self._batch_size, image_size))
 
 	def _evaluate(self, network_name, model_root_dir):
-		if(not self._test_dataset):		
+		if(not self._model_evaluator.create_detector(network_name, model_root_dir)):
 			return(False)
 
-		face_detector = FaceDetector(network_name, model_root_dir)
-		minimum_face_size = datasets_constants.minimum_face_size
-		face_detector.set_min_face_size(minimum_face_size)
-
-		return(face_detector.evaluate_dataset(self._test_dataset, True))
+		return(self._model_evaluator.evaluate(print_result=True))
 		
+	def load_test_dataset(self, dataset_name, annotation_image_dir, annotation_file_name):
+		return(self._model_evaluator.load(dataset_name, annotation_image_dir, annotation_file_name))
+
 	def train(self, network_name, dataset_root_dir, train_root_dir, base_learning_rate, learning_rate_epoch, max_number_of_epoch, log_every_n_steps):
 		network_train_dir = self.network_train_dir(train_root_dir)
 		if(not os.path.exists(network_train_dir)):
