@@ -222,7 +222,7 @@ class SimpleNetworkTrainer(AbstractNetworkTrainer):
                 			epoch = epoch + 1
                 			current_step = 0
 
-			print("epoch - %d, step - %d"	% ( (epoch+1), max_number_of_steps) )
+			print("epoch - %d, step - %d"	% ( (epoch), max_number_of_steps) )
 			saver.save(self._session, network_train_file_name, global_step=self._global_step)    
 			self._evaluate(network_name, train_root_dir)
        			
