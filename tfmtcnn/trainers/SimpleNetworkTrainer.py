@@ -49,7 +49,6 @@ class SimpleNetworkTrainer(AbstractNetworkTrainer):
 	def __init__(self, network_name='PNet', test_dataset=None):	
 		AbstractNetworkTrainer.__init__(self, network_name)	
 		self._test_dataset = test_dataset
-		self._face_detector = None
 
 	def _train_model(self, base_learning_rate, loss):
     		self._global_step = tf.Variable(0, name='global_step', trainable=False)
@@ -109,12 +108,11 @@ class SimpleNetworkTrainer(AbstractNetworkTrainer):
 		if(not self._test_dataset):		
 			return(False)
 
-		if(not self._face_detector):
-			self._face_detector = FaceDetector(network_name, model_root_dir)
-			minimum_face_size = datasets_constants.minimum_face_size
-			self._face_detector.set_min_face_size(minimum_face_size)
+		face_detector = FaceDetector(network_name, model_root_dir)
+		minimum_face_size = datasets_constants.minimum_face_size
+		face_detector.set_min_face_size(minimum_face_size)
 
-		return(self._face_detector.evaluate_dataset(self._test_dataset, True))
+		return(face_detector.evaluate_dataset(self._test_dataset, True))
 		
 	def train(self, network_name, dataset_root_dir, train_root_dir, base_learning_rate, learning_rate_epoch, max_number_of_epoch, log_every_n_steps):
 		network_train_dir = self.network_train_dir(train_root_dir)
@@ -168,7 +166,7 @@ class SimpleNetworkTrainer(AbstractNetworkTrainer):
     		threads = tf.train.start_queue_runners(sess=self._session, coord=coordinator)
     		current_step = 0
 
-    		max_number_of_steps = int(self._number_of_samples / self._batch_size + 1) * max_number_of_epoch
+    		max_number_of_steps = int(self._number_of_samples/self._batch_size + 1) * max_number_of_epoch
     		epoch = 0
 
 		global_step = 0 
@@ -201,7 +199,7 @@ class SimpleNetworkTrainer(AbstractNetworkTrainer):
 								target_landmarks:landmark_batch_array
 								})
             
-            			if( (step+1) % log_every_n_steps == 0 ):
+            			if( (step) % log_every_n_steps == 0 ):
                 			current_class_loss, current_bbox_loss, current_landmark_loss, current_L2_loss, current_lr, current_accuracy = self._session.run(
 							[class_loss_op, bounding_box_loss_op, landmark_loss_op, L2_loss_op, learning_rate_op, class_accuracy_op],
 							feed_dict={
@@ -210,19 +208,20 @@ class SimpleNetworkTrainer(AbstractNetworkTrainer):
 								target_bounding_box:bbox_batch_array, 
 								target_landmarks: landmark_batch_array
 								})                
-                			print("(epoch - %d, step - %d) - (accuracy - %3f, class loss - %4f, bbox loss - %4f, landmark loss - %4f, L2 loss - %4f, lr - %f )" 
-						% (epoch, step+1, current_accuracy, current_class_loss, current_bbox_loss, current_landmark_loss, current_L2_loss, current_lr))
-
+                			print("(epoch - %d, step - %d) - (accuracy - %3f, class loss - %4f, bbox loss - %4f, landmark loss - %4f, L2 loss - %4f, lr - %f )" % (epoch, step, current_accuracy, current_class_loss, current_bbox_loss, current_landmark_loss, current_L2_loss, current_lr))
 					summary_writer.add_summary(summary, global_step=global_step )
 
             			if( current_step * self._batch_size >= self._number_of_samples ):
-                			epoch = epoch + 1
-                			current_step = 0
 					if(skip_model_saving):
 						skip_model_saving = False
 					else:
+						print("epoch - %d, step - %d"	% (epoch, step) )
                 				saver.save(self._session, network_train_file_name, global_step=self._global_step)    
-						self._evaluate(network_name, train_root_dir)       			
+						self._evaluate(network_name, train_root_dir)
+
+                			epoch = epoch + 1
+                			current_step = 0
+       			
 		except tf.errors.OutOfRangeError:
        			print("Error")
 		finally:

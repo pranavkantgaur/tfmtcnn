@@ -330,11 +330,11 @@ class FaceDetector(object):
 
 		number_of_positive_faces = 0
 		number_of_part_faces = 0  
-		number_of_input_faces = 0
+		number_of_ground_truth_faces = 0
 		accuracy = 0.0
 		for image_file_path, detected_box, ground_truth_box in zip(image_file_names, detected_boxes, ground_truth_boxes):
        			ground_truth_box = np.array(ground_truth_box, dtype=np.float32).reshape(-1, 4)
-			number_of_input_faces = number_of_input_faces + len(ground_truth_box)
+			number_of_ground_truth_faces = number_of_ground_truth_faces + len(ground_truth_box)
 	       		if( detected_box.shape[0] == 0 ):
             			continue
 
@@ -364,9 +364,10 @@ class FaceDetector(object):
 			print('Positive faces       - ', number_of_positive_faces)
 			print('Partial faces        - ', number_of_part_faces)
 			print('Total detected faces - ', (number_of_positive_faces + number_of_part_faces))
-			print('Input faces          - ', number_of_input_faces)
-			print('Detection accuracy   - ', (number_of_positive_faces + number_of_part_faces)/number_of_input_faces)
-			print('Accuracy             - ', accuracy/number_of_input_faces)
+			print('Ground truth faces   - ', number_of_ground_truth_faces)
+			print('Positive accuracy    - ', number_of_positive_faces/number_of_ground_truth_faces)
+			print('Detection accuracy   - ', (number_of_positive_faces + number_of_part_faces)/number_of_ground_truth_faces)
+			print('Accuracy             - ', accuracy/number_of_ground_truth_faces)
 
 		return(True)
 
