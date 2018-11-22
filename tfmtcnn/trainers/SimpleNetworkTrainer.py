@@ -166,14 +166,17 @@ class SimpleNetworkTrainer(AbstractNetworkTrainer):
     		threads = tf.train.start_queue_runners(sess=self._session, coord=coordinator)
     		current_step = 0
 
-    		max_number_of_steps = int(self._number_of_samples/self._batch_size + 1) * max_number_of_epoch
-    		epoch = 0
+    		max_number_of_steps = int(self._number_of_samples/self._batch_size + 1) * max_number_of_epoch    		
 
 		global_step = 0 
+		epoch = 0
 		skip_model_saving = False
 		if( self._network.load_model(self._session, network_train_dir) ):
-			model_path = self._network.model_path()		
+			model_path = self._network.model_path()	
+	
 			global_step = tf.train.global_step(self._session, self._global_step)
+			epoch = int(global_step*self._batch_size / self._number_of_samples)
+   
 			skip_model_saving = True
 			print( 'Model is restored from model path - %s with global step - %s.' %( model_path, global_step ) )
 		
@@ -221,10 +224,6 @@ class SimpleNetworkTrainer(AbstractNetworkTrainer):
 
                 			epoch = epoch + 1
                 			current_step = 0
-
-			print("epoch - %d, step - %d"	% ( (epoch), max_number_of_steps) )
-			saver.save(self._session, network_train_file_name, global_step=self._global_step)    
-			self._evaluate(network_name, train_root_dir)
        			
 		except tf.errors.OutOfRangeError:
        			print("Error")
