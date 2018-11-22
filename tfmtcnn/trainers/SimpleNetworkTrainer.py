@@ -199,7 +199,7 @@ class SimpleNetworkTrainer(AbstractNetworkTrainer):
 								target_landmarks:landmark_batch_array
 								})
             
-            			if( (step) % log_every_n_steps == 0 ):
+            			if( (step+1) % log_every_n_steps == 0 ):
                 			current_class_loss, current_bbox_loss, current_landmark_loss, current_L2_loss, current_lr, current_accuracy = self._session.run(
 							[class_loss_op, bounding_box_loss_op, landmark_loss_op, L2_loss_op, learning_rate_op, class_accuracy_op],
 							feed_dict={
@@ -208,19 +208,23 @@ class SimpleNetworkTrainer(AbstractNetworkTrainer):
 								target_bounding_box:bbox_batch_array, 
 								target_landmarks: landmark_batch_array
 								})                
-                			print("(epoch - %d, step - %d) - (accuracy - %3f, class loss - %4f, bbox loss - %4f, landmark loss - %4f, L2 loss - %4f, lr - %f )" % (epoch, step, current_accuracy, current_class_loss, current_bbox_loss, current_landmark_loss, current_L2_loss, current_lr))
+                			print("(epoch - %d, step - %d) - (accuracy - %3f, class loss - %4f, bbox loss - %4f, landmark loss - %4f, L2 loss - %4f, lr - %f )" % ( (epoch+1), (step+1), current_accuracy, current_class_loss, current_bbox_loss, current_landmark_loss, current_L2_loss, current_lr))
 					summary_writer.add_summary(summary, global_step=global_step )
 
             			if( current_step * self._batch_size >= self._number_of_samples ):
 					if(skip_model_saving):
 						skip_model_saving = False
 					else:
-						print("epoch - %d, step - %d"	% (epoch, step) )
+						print("epoch - %d, step - %d"	% ( (epoch+1), (step+1) ) )
                 				saver.save(self._session, network_train_file_name, global_step=self._global_step)    
 						self._evaluate(network_name, train_root_dir)
 
                 			epoch = epoch + 1
                 			current_step = 0
+
+			print("epoch - %d, step - %d"	% ( (epoch+1), max_number_of_steps) )
+			saver.save(self._session, network_train_file_name, global_step=self._global_step)    
+			self._evaluate(network_name, train_root_dir)
        			
 		except tf.errors.OutOfRangeError:
        			print("Error")
