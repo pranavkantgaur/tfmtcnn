@@ -93,15 +93,17 @@ class ModelEvaluator(object):
 
 			current_image = cv2.imread(image_file_path)
 
-       			for box in detected_box:
+       			for box in ground_truth_box:
+				"""
        				x_left, y_top, x_right, y_bottom, _ = box.astype(int)
        				width = x_right - x_left + 1
        				height = y_bottom - y_top + 1
 
 				if( (x_left < 0) or (y_top < 0) or (x_right > (current_image.shape[1] - 1) ) or (y_bottom > (current_image.shape[0] - 1 ) ) ):
                				continue
+				"""
 
-				current_IoU = IoU(box, ground_truth_box)
+				current_IoU = IoU(box, detected_box)
 				maximum_IoU = np.max(current_IoU)
 
 				accuracy = accuracy + maximum_IoU
