@@ -60,7 +60,20 @@ class SimpleNetworkTrainer(AbstractNetworkTrainer):
     		learning_rate_values = [base_learning_rate * (learning_rate_factor ** x) for x in range(0, len(self._learning_rate_epoch) + 1)]
     		learning_rate_op = tf.train.piecewise_constant(self._global_step, boundaries, learning_rate_values)
 
-    		optimizer = tf.train.MomentumOptimizer(learning_rate_op, 0.9)
+		optimizer = tf.train.MomentumOptimizer(learning_rate_op, 0.9)
+		"""    		
+    		optimizer = tf.train.optimizer = tf.train.RMSPropOptimizer(
+					learning_rate_op,
+					decay=0.9,  #decay=FLAGS.rmsprop_decay,
+					momentum=0.9, #momentum=FLAGS.rmsprop_momentum,
+					epsilon=1.0, #epsilon=FLAGS.opt_epsilon
+					)
+    		optimizer = tf.train.AdamOptimizer(
+        			learning_rate_op,
+        			beta1=0.9, #FLAGS.adam_beta1,
+        			beta2=0.999, #FLAGS.adam_beta2,
+        			epsilon=0.0001) #FLAGS.opt_epsilon)
+		"""
     		train_op = optimizer.minimize(loss, global_step=self._global_step)
 
     		return( train_op, learning_rate_op )
