@@ -63,6 +63,12 @@ class SimpleNetworkTrainer(AbstractNetworkTrainer):
 		optimizer = tf.train.MomentumOptimizer(learning_rate_op, 0.9)
     		optimizer = tf.train.optimizer = tf.train.RMSPropOptimizer(learning_rate_op, decay=0.9, momentum=0.9, epsilon=1.0)
 		"""
+
+		"""
+		number_of_iterations = int(self._number_of_samples / self._batch_size)
+		learning_rate_op = tf.train.exponential_decay(base_learning_rate, self._global_step, number_of_iterations, 0.9, staircase=True)
+		"""
+
     		optimizer = tf.train.AdamOptimizer(learning_rate_op, beta1=0.9, beta2=0.999, epsilon=1e-08) 
     		train_op = optimizer.minimize(loss, global_step=self._global_step)
 
