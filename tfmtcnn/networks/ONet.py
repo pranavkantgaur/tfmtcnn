@@ -38,7 +38,7 @@ class ONet(RNet):
 		self._network_size = 48
 		self._network_name = 'ONet'
 
-	def _setup_basic_network(self, inputs):
+	def _setup_basic_network(self, inputs, is_training=True):
 		self._end_points = {}
 
     		with slim.arg_scope([slim.conv2d],
@@ -82,19 +82,23 @@ class ONet(RNet):
         		fc1 = slim.fully_connected(fc_flatten, num_outputs=256, scope=end_point, activation_fn=prelu)
 			self._end_points[end_point] = fc1
 
+			end_point = 'dropout1'
+        		dropout1 = slim.dropout(fc1, keep_prob=0.8, is_training=is_training, scope=end_point)
+			self._end_points[end_point] = dropout1
+
         		#batch*2
 			end_point = 'cls_fc'
-        		class_probability = slim.fully_connected(fc1, num_outputs=2, scope=end_point, activation_fn=tf.nn.softmax)
+        		class_probability = slim.fully_connected(dropout1, num_outputs=2, scope=end_point, activation_fn=tf.nn.softmax)
 			self._end_points[end_point] = class_probability
 
         		#batch*4
 			end_point = 'bbox_fc'
-        		bounding_box_predictions = slim.fully_connected(fc1, num_outputs=4, scope=end_point, activation_fn=None)
+        		bounding_box_predictions = slim.fully_connected(dropout1, num_outputs=4, scope=end_point, activation_fn=None)
 			self._end_points[end_point] = bounding_box_predictions
 
         		#batch*10
 			end_point = 'landmark_fc'
-        		landmark_predictions = slim.fully_connected(fc1, num_outputs=10, scope=end_point, activation_fn=None)
+        		landmark_predictions = slim.fully_connected(dropout1, num_outputs=10, scope=end_point, activation_fn=None)
 			self._end_points[end_point] = landmark_predictions
 
 			return(class_probability, bounding_box_predictions, landmark_predictions)

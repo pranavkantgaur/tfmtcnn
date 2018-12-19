@@ -42,7 +42,7 @@ class RNet(AbstractFaceDetector):
 	def batch_size(self):
 		return(self._batch_size)
 
-	def _setup_basic_network(self, inputs):
+	def _setup_basic_network(self, inputs, is_training=True):
 		self._end_points = {}
 
 		with slim.arg_scope([slim.conv2d],
@@ -78,31 +78,35 @@ class RNet(AbstractFaceDetector):
         		fc1 = slim.fully_connected(fc_flatten, num_outputs=128, scope=end_point, activation_fn=prelu)
 			self._end_points[end_point] = fc1
 
+			end_point = 'dropout1'
+        		dropout1 = slim.dropout(fc1, keep_prob=0.8, is_training=is_training, scope=end_point)
+			self._end_points[end_point] = dropout1
+
         		#batch*2
 			end_point = 'cls_fc'
-        		class_probability = slim.fully_connected(fc1, num_outputs=2, scope=end_point, activation_fn=tf.nn.softmax)
+        		class_probability = slim.fully_connected(dropout1, num_outputs=2, scope=end_point, activation_fn=tf.nn.softmax)
 			self._end_points[end_point] = class_probability
 
         		#batch*4
 			end_point = 'bbox_fc'
-        		bounding_box_predictions = slim.fully_connected(fc1, num_outputs=4, scope=end_point, activation_fn=None)
+        		bounding_box_predictions = slim.fully_connected(dropout1, num_outputs=4, scope=end_point, activation_fn=None)
 			self._end_points[end_point] = bounding_box_predictions
 
         		#batch*10
 			end_point = 'landmark_fc'
-        		landmark_predictions = slim.fully_connected(fc1, num_outputs=10, scope=end_point, activation_fn=None)
+        		landmark_predictions = slim.fully_connected(dropout1, num_outputs=10, scope=end_point, activation_fn=None)
 			self._end_points[end_point] = landmark_predictions
 
 			return(class_probability, bounding_box_predictions, landmark_predictions)
 
 	def setup_training_network(self, inputs):
-		return(self._setup_basic_network(inputs))
+		return(self._setup_basic_network(inputs, is_training=True))
 
 	def setup_inference_network(self, checkpoint_path):
         	graph = tf.Graph()
         	with graph.as_default():
             		self._input_batch = tf.placeholder(tf.float32, shape=[self.batch_size(), self.network_size(), self.network_size(), 3], name='input_batch')            		
-            		self._output_class_probability, self._output_bounding_box, self._output_landmarks = self._setup_basic_network(self._input_batch)
+            		self._output_class_probability, self._output_bounding_box, self._output_landmarks = self._setup_basic_network(self._input_batch, is_training=False)
 
             		self._session = tf.Session(config=tf.ConfigProto(allow_soft_placement=True, gpu_options=tf.GPUOptions(allow_growth=True)))
 			return(self.load_model(self._session, checkpoint_path))
