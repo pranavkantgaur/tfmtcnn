@@ -64,22 +64,24 @@ class PNet(AbstractFaceDetector):
         		net = slim.conv2d(net, num_outputs=32, kernel_size=[3,3], stride=1, scope=end_point)
 			self._end_points[end_point] = net
 
-			flatten1 = slim.flatten(net)
+			end_point = 'dropout1'
+        		dropout1 = slim.dropout(net, keep_prob=0.8, is_training=is_training, scope=end_point)
+			self._end_points[end_point] = dropout1
 
         		#batch*H*W*2
 			end_point = 'conv4_1'
-        		conv4_1 = slim.conv2d(flatten1, num_outputs=2, kernel_size=[1,1], stride=1, scope=end_point, activation_fn=tf.nn.softmax)
+        		conv4_1 = slim.conv2d(dropout1, num_outputs=2, kernel_size=[1,1], stride=1, scope=end_point, activation_fn=tf.nn.softmax)
         		#conv4_1 = slim.conv2d(flatten1, num_outputs=1, kernel_size=[1,1], stride=1, scope=end_point, activation_fn=tf.nn.sigmoid)
 			self._end_points[end_point] = conv4_1        
 
         		#batch*H*W*4
 			end_point = 'conv4_2'
-        		bounding_box_predictions = slim.conv2d(flatten1, num_outputs=4, kernel_size=[1,1], stride=1, scope=end_point, activation_fn=None)
+        		bounding_box_predictions = slim.conv2d(dropout1, num_outputs=4, kernel_size=[1,1], stride=1, scope=end_point, activation_fn=None)
 			self._end_points[end_point] = bounding_box_predictions
 
         		#batch*H*W*10
 			end_point = 'conv4_3'
-        		landmark_predictions = slim.conv2d(flatten1, num_outputs=10, kernel_size=[1,1], stride=1, scope=end_point, activation_fn=None)
+        		landmark_predictions = slim.conv2d(dropout1, num_outputs=10, kernel_size=[1,1], stride=1, scope=end_point, activation_fn=None)
 			self._end_points[end_point] = landmark_predictions
 
 			return(conv4_1, bounding_box_predictions, landmark_predictions)
