@@ -45,7 +45,7 @@ class ONet(RNet):
                         		activation_fn = prelu,
                         		weights_initializer=slim.xavier_initializer(),
                         		biases_initializer=tf.zeros_initializer(),
-                        		weights_regularizer=slim.l2_regularizer(0.0005),                        
+                        		weights_regularizer = slim.l2_regularizer(0.00004),  
                         		padding='valid'):
 
 			end_point = 'conv1'
