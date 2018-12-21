@@ -105,11 +105,13 @@ def prepare_dataset(bounding_box_file_name, landmark_file_name,
 
 def parse_arguments(argv):
     parser = argparse.ArgumentParser()
+
     parser.add_argument(
         '--bounding_box_file_name',
         type=str,
         help='Input CelebA dataset bounding box file name.',
         default=None)
+
     parser.add_argument(
         '--landmark_file_name',
         type=str,
@@ -121,6 +123,7 @@ def parse_arguments(argv):
         type=str,
         help='Output file name where CelebA dataset file is saved.',
         default=None)
+
     return (parser.parse_args(argv))
 
 
@@ -130,6 +133,7 @@ def main(args):
         raise ValueError(
             'You must supply input CelebA dataset bounding box file name with --bounding_box_file_name.'
         )
+
     if (not args.landmark_file_name):
         raise ValueError(
             'You must supply input CelebA dataset landmark file name with --landmark_file_name.'
