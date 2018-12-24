@@ -1,17 +1,17 @@
 # MIT License
-# 
+#
 # Copyright (c) 2018
-# 
+#
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
 # in the Software without restriction, including without limitation the rights
 # to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 # copies of the Software, and to permit persons to whom the Software is
 # furnished to do so, subject to the following conditions:
-# 
+#
 # The above copyright notice and this permission notice shall be included in all
 # copies or substantial portions of the Software.
-# 
+#
 # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 # FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -26,9 +26,13 @@ from __future__ import print_function
 
 import tensorflow as tf
 
-def prelu(inputs):
-    alphas = tf.get_variable("alphas", shape=inputs.get_shape()[-1], dtype=tf.float32, initializer=tf.constant_initializer(0.25))
-    pos = tf.nn.relu(inputs)
-    neg = alphas * (inputs-abs(inputs))*0.5
-    return( pos + neg )
 
+def prelu(inputs):
+    alphas = tf.get_variable(
+        "alphas",
+        shape=inputs.get_shape()[-1],
+        dtype=tf.float32,
+        initializer=tf.constant_initializer(0.25))
+    pos = tf.nn.relu(inputs)
+    neg = alphas * (inputs - abs(inputs)) * 0.5
+    return (pos + neg)
