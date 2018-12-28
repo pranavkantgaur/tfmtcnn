@@ -92,8 +92,9 @@ class LFWLandmarkDataset(object):
                          float(landmark_data[5 + 2 * index + 1]))
                 landmark[index] = point
 
-            if (max(image_width, image_height) >
-                    LFWLandmarkDataset.minimum_face_size()):
+            if ((max(image_width, image_height) >=
+                 LFWLandmarkDataset.minimum_face_size()) and (image_width > 0)
+                    and (image_height > 0)):
                 images.append(image_path)
                 bounding_boxes.append(BBox(bounding_box))
                 landmarks.append(landmark)

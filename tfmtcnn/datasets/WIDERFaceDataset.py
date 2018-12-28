@@ -94,8 +94,9 @@ class WIDERFaceDataset(object):
                 xmax = xmin + width
                 ymax = ymin + height
 
-                if ((max(width, height) > WIDERFaceDataset.minimum_face_size())
-                        and (width > 0) and (height > 0)):
+                if ((max(width, height) >=
+                     WIDERFaceDataset.minimum_face_size()) and (width > 0)
+                        and (height > 0)):
                     one_image_boxes.append([xmin, ymin, xmax, ymax])
 
             if (len(one_image_boxes)):
