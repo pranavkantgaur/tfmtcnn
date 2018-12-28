@@ -244,13 +244,13 @@ class SimpleFaceDataset(object):
                         target_face_size,
                         min(input_image_width, input_image_height) / 2)
 
-                    #delta_x = npr.randint(max(-crop_box_size, -x1), bounding_box_width)
-                    #delta_y = npr.randint(max(-crop_box_size, -y1), bounding_box_height)
+                    delta_x = npr.randint(
+                        max(-1 * crop_box_size, -1 * x1), bounding_box_width)
+                    delta_y = npr.randint(
+                        max(-1 * crop_box_size, -1 * y1), bounding_box_height)
 
-                    delta_x = npr.randint(-1 * crop_box_size,
-                                          +1 * crop_box_size + 1) * 0.2
-                    delta_y = npr.randint(-1 * crop_box_size,
-                                          +1 * crop_box_size + 1) * 0.2
+                    #delta_x = npr.randint(-1 * crop_box_size, +1 * crop_box_size + 1) * 0.2
+                    #delta_y = npr.randint(-1 * crop_box_size, +1 * crop_box_size + 1) * 0.2
 
                     nx1 = int(max(0, x1 + delta_x))
                     ny1 = int(max(0, y1 + delta_y))
