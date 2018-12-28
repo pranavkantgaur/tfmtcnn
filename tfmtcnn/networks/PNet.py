@@ -87,7 +87,6 @@ class PNet(AbstractFaceDetector):
                 stride=1,
                 scope=end_point,
                 activation_fn=tf.nn.softmax)
-            #conv4_1 = slim.conv2d(net, num_outputs=1, kernel_size=[1,1], stride=1, scope=end_point, activation_fn=tf.nn.sigmoid)
             self._end_points[end_point] = conv4_1
 
             end_point = 'conv4_2'
