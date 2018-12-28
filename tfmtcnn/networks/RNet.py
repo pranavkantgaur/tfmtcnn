@@ -103,14 +103,9 @@ class RNet(AbstractFaceDetector):
                 activation_fn=prelu)
             self._end_points[end_point] = fc1
 
-            end_point = 'dropout1'
-            dropout1 = slim.dropout(
-                fc1, keep_prob=0.8, is_training=is_training, scope=end_point)
-            self._end_points[end_point] = dropout1
-
             end_point = 'cls_fc'
             class_probability = slim.fully_connected(
-                dropout1,
+                fc1,
                 num_outputs=2,
                 scope=end_point,
                 activation_fn=tf.nn.softmax)
@@ -118,12 +113,12 @@ class RNet(AbstractFaceDetector):
 
             end_point = 'bbox_fc'
             bounding_box_predictions = slim.fully_connected(
-                dropout1, num_outputs=4, scope=end_point, activation_fn=None)
+                fc1, num_outputs=4, scope=end_point, activation_fn=None)
             self._end_points[end_point] = bounding_box_predictions
 
             end_point = 'landmark_fc'
             landmark_predictions = slim.fully_connected(
-                dropout1, num_outputs=10, scope=end_point, activation_fn=None)
+                fc1, num_outputs=10, scope=end_point, activation_fn=None)
             self._end_points[end_point] = landmark_predictions
 
             return (class_probability, bounding_box_predictions,
