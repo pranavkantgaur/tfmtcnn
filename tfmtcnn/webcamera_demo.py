@@ -101,7 +101,8 @@ def main(args):
             image_height, image_width, image_channels = input_bgr_image.shape
             input_rgb_image = cv2.cvtColor(input_bgr_image, cv2.COLOR_BGR2RGB)
 
-            boxes_c, landmarks = face_detector.detect(input_bgr_image)
+            #boxes_c, landmarks = face_detector.detect(input_bgr_image)
+            boxes_c, landmarks = face_detector.detect(input_rgb_image)
 
             end_time = cv2.getTickCount()
             time_duration = (end_time - start_time) / cv2.getTickFrequency()
