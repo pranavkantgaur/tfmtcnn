@@ -35,7 +35,6 @@ class AbstractNetworkTrainer(object):
         self._network = NetworkFactory.network(network_name)
         self._number_of_samples = 0
         self._batch_size = 384
-        self._learning_rate_epoch = [8, 16, 24]
 
     def network_name(self):
         return (self._network.network_name())
@@ -73,6 +72,5 @@ class AbstractNetworkTrainer(object):
         return (image_list_file_name)
 
     def train(self, network_name, dataset_root_dir, train_root_dir,
-              base_learning_rate, learning_rate_epoch, max_number_of_epoch,
-              log_every_n_steps):
+              base_learning_rate, max_number_of_epoch, log_every_n_steps):
         raise NotImplementedError('Must be implemented by the subclass.')

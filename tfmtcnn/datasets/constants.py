@@ -36,6 +36,6 @@ negative_IoU = 0.30
 
 default_base_number_of_images = 700000
 
-minimum_dataset_face_size = 40
+minimum_dataset_face_size = 24
 
 minimum_face_size = 20

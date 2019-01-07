@@ -29,7 +29,6 @@ $ python tfmtcnn/tfmtcnn/train_model.py \
 	--train_root_dir ../data/models/mtcnn/train \
 	--dataset_root_dir ../data/datasets/mtcnn \
 	--base_learning_rate 0.001 \
-	--learning_rate_epoch 5 10 15 \
 	--max_number_of_epoch 5 \
 	--test_dataset FDDBDataset \
 	--test_annotation_image_dir /datasets/FDDB/ \
@@ -40,7 +39,6 @@ $ python tfmtcnn/tfmtcnn/train_model.py \
 	--train_root_dir ../data/models/mtcnn/train \
 	--dataset_root_dir ../data/datasets/mtcnn \
 	--base_learning_rate 0.001 \
-	--learning_rate_epoch 23 30 40 \
 	--max_number_of_epoch 23 \
 	--test_dataset FDDBDataset \
 	--test_annotation_image_dir /datasets/FDDB/ \
@@ -51,8 +49,7 @@ $ python tfmtcnn/tfmtcnn/train_model.py \
 	--train_root_dir ../data/models/mtcnn/train \
 	--dataset_root_dir ../data/datasets/mtcnn \
 	--base_learning_rate 0.001 \
-	--learning_rate_epoch 5 10 15 \
-	--max_number_of_epoch 5 \
+	--max_number_of_epoch 10 \
 	--test_dataset FDDBDataset \
 	--test_annotation_image_dir /datasets/FDDB/ \
 	--test_annotation_file /datasets/FDDB/FDDB-folds/FDDB-fold-01-ellipseList.txt
@@ -71,8 +68,6 @@ from tfmtcnn.trainers.SimpleNetworkTrainer import SimpleNetworkTrainer
 from tfmtcnn.trainers.HardNetworkTrainer import HardNetworkTrainer
 
 from tfmtcnn.networks.NetworkFactory import NetworkFactory
-
-default_learning_rate_epoch = [8, 16, 24]
 
 
 def parse_arguments(argv):
@@ -100,21 +95,13 @@ def parse_arguments(argv):
         '--base_learning_rate',
         type=float,
         help='Initial learning rate.',
-        default=0.01)
-
-    parser.add_argument(
-        '--learning_rate_epoch',
-        type=int,
-        help=
-        'The number of epoch utilized for training the model with different learning rates.',
-        nargs=3,
-        default=default_learning_rate_epoch)
+        default=0.001)
 
     parser.add_argument(
         '--max_number_of_epoch',
         type=int,
         help='The maximum number of training epoch.',
-        default=36)
+        default=30)
 
     parser.add_argument(
         '--log_every_n_steps',
@@ -184,8 +171,7 @@ def main(args):
 
     status = trainer.train(args.network_name, args.dataset_root_dir,
                            train_root_dir, args.base_learning_rate,
-                           args.learning_rate_epoch, args.max_number_of_epoch,
-                           args.log_every_n_steps)
+                           args.max_number_of_epoch, args.log_every_n_steps)
     if (status):
         print(args.network_name +
               ' - network is trained and weights are generated at ' +
