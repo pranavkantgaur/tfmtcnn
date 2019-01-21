@@ -1,41 +1,114 @@
+# MTCNN using TensorFlow framework
+This work is used to reproduce MTCNN, a Joint Face Detection and Alignment using Multi-task Cascaded Convolutional Networks using TensorFlow framework.
+  - See <MTCNN_ROOT>/data/WIDER_Face/README.md for downloading WIDER Face dataset.
+  - See <MTCNN_ROOT>/data/CelebA/README.md for downloading CelebA facial landmark dataset.
 
-This work is used to reproduce MTCNN, a Joint Face Detection and Alignment using Multi-task Cascaded Convolutional Networks usng TensorFlow framework.
+## Prepare CelebA dataset for input.
 
-See data/WIDER_Face/README.md for downloading WIDER Face dataset.
+```sh
+python tfmtcnn/tfmtcnn/tools/prepare_celeba_dataset.py \
+    --bounding_box_file_name ../data/CelebA/list_bbox_celeba.txt \
+    --landmark_file_name ../data/CelebA/list_landmarks_celeba.txt \
+    --output_file_name ../data/CelebA/CelebA.txt 
+```
+## Generate a basic dataset i.e. PNet dataset.
 
-See data/LFW_Landmark/README.md for downloading LFW facial landmark dataset.
+```sh
+python tfmtcnn/tfmtcnn/generate_simple_dataset.py \
+	--annotation_image_dir ../data/WIDER_Face/WIDER_train/images \ 
+	--annotation_file_name ../data/WIDER_Face/WIDER_train/wider_face_train_bbx_gt.txt \
+	--landmark_image_dir ../data/CelebA/images \
+	--landmark_file_name ../data/CelebA/CelebA.txt \
+	--base_number_of_images 700000 \
+	--target_root_dir ../data/datasets/mtcnn 
+```	
 
-See data/CelebA/README.md for downloading CelebA facial landmark dataset.
+## Train PNet.
 
+```sh
+python tfmtcnn/tfmtcnn/train_model.py \
+	--network_name PNet \ 
+	--train_root_dir ../data/models/mtcnn/train \
+	--dataset_root_dir ../data/datasets/mtcnn \
+	--base_learning_rate 0.001 \
+	--max_number_of_epoch 19 \
+	--test_dataset FDDBDataset \
+	--test_annotation_image_dir /datasets/FDDB/ \
+	--test_annotation_file /datasets/FDDB/FDDB-folds/FDDB-fold-01-ellipseList.txt
+```
 
-1) Generate a basic dataset i.e. PNet dataset.
+## Generate a hard dataset i.e. RNet dataset.
 
-python generate_simple_dataset.py --annotation_image_dir=./data/WIDER_Face/WIDER_train/images --annotation_file_name=./data/WIDER_Face/WIDER_train/wider_face_train_bbx_gt.txt --landmark_image_dir=./data/LFW_Landmark --landmark_file_name=./data/LFW_Landmark/trainImageList.txt --base_number_of_images=250000 --target_root_dir=./data/datasets/mtcnn 
+```sh
+python tfmtcnn/tfmtcnn/generate_hard_dataset.py \
+	--network_name RNet \ 
+	--train_root_dir ../data/models/mtcnn/train \
+	--annotation_image_dir ../data/WIDER_Face/WIDER_train/images \ 
+	--annotation_file_name ../data/WIDER_Face/WIDER_train/wider_face_train_bbx_gt.txt \
+	--landmark_image_dir ../data/CelebA/images \
+	--landmark_file_name ../data/CelebA/CelebA.txt \
+	--base_number_of_images 700000 \
+	--target_root_dir ../data/datasets/mtcnn 
+```	
 
-2) Train PNet.
+## Train RNet.
 
-python train_model.py --network_name=PNet --train_root_dir=./data/models/mtcnn/train --dataset_root_dir=./data/datasets/mtcnn --base_learning_rate=0.01 --max_number_of_epoch=30
+```sh
+python tfmtcnn/tfmtcnn/train_model.py \
+	--network_name RNet \ 
+	--train_root_dir ../data/models/mtcnn/train \
+	--dataset_root_dir ../data/datasets/mtcnn \
+	--base_learning_rate 0.001 \
+	--max_number_of_epoch 22 \
+	--test_dataset FDDBDataset \
+	--test_annotation_image_dir /datasets/FDDB/ \
+	--test_annotation_file /datasets/FDDB/FDDB-folds/FDDB-fold-01-ellipseList.txt
+```
 
-3) Generate a hard dataset i.e. RNet dataset.
+## Generate a hard dataset i.e. ONet dataset.
 
-python generate_hard_dataset.py --network_name=RNet --train_root_dir=./data/models/mtcnn/train --annotation_image_dir=./data/WIDER_Face/WIDER_train/images --annotation_file_name=./data/WIDER_Face/WIDER_train/wider_face_train_bbx_gt.txt --landmark_image_dir=./data/LFW_Landmark --landmark_file_name=./data/LFW_Landmark/trainImageList.txt --target_root_dir=./data/datasets/mtcnn 
+```sh
+python tfmtcnn/tfmtcnn/generate_hard_dataset.py \
+	--network_name ONet \ 
+	--train_root_dir ../data/models/mtcnn/train \
+	--annotation_image_dir ../data/WIDER_Face/WIDER_train/images \ 
+	--annotation_file_name ../data/WIDER_Face/WIDER_train/wider_face_train_bbx_gt.txt \
+	--landmark_image_dir ../data/CelebA/images \
+	--landmark_file_name ../data/CelebA/CelebA.txt \
+	--base_number_of_images 700000 \
+	--target_root_dir ../data/datasets/mtcnn 
+```	
 
-4) Train RNet.
+## Train ONet.
 
-python train_model.py --network_name=RNet --train_root_dir=./data/models/mtcnn/train --dataset_root_dir=./data/datasets/mtcnn --base_learning_rate=0.01 --max_number_of_epoch=22
+```sh
+python tfmtcnn/tfmtcnn/train_model.py \
+	--network_name ONet \ 
+	--train_root_dir ../data/models/mtcnn/train \
+	--dataset_root_dir ../data/datasets/mtcnn \
+	--base_learning_rate 0.001 \
+	--max_number_of_epoch 21 \
+	--test_dataset FDDBDataset \
+	--test_annotation_image_dir /datasets/FDDB/ \
+	--test_annotation_file /datasets/FDDB/FDDB-folds/FDDB-fold-01-ellipseList.txt
+```
 
-5) Generate a hard dataset i.e. ONet dataset.
+## Webcamera demo.
+```sh
+python  tfmtcnn/tfmtcnn/webcamera_demo.py
+```
 
-python generate_hard_dataset.py --network_name=ONet --train_root_dir=./data/models/mtcnn/train --annotation_image_dir=./data/WIDER_Face/WIDER_train/images --annotation_file_name=./data/WIDER_Face/WIDER_train/wider_face_train_bbx_gt.txt --landmark_image_dir=./data/LFW_Landmark --landmark_file_name=./data/LFW_Landmark/trainImageList.txt --target_root_dir=./data/datasets/mtcnn 
+## Webcamera demo using trained models.
+```sh
+python  tfmtcnn/tfmtcnn/webcamera_demo.py --test_mode
+```
 
-6) Train ONet.
+## Evaluate the model accuracy on the FDDB dataset.
+```sh
+python tfmtcnn/tfmtcnn/evaluate_model.py \
+	--model_root_dir tfmtcnn/tfmtcnn/models/mtcnn/train \
+	--dataset_name FDDBDataset \
+	--annotation_image_dir /datasets/FDDB/ \ 
+	--annotation_file_name /datasets/FDDB/FDDB-folds/FDDB-fold-01-ellipseList.txt
+```
 
-python train_model.py --network_name=ONet --train_root_dir=./data/models/mtcnn/train --dataset_root_dir=./data/datasets/mtcnn --base_learning_rate=0.01 --max_number_of_epoch=22
-
-7) Webcamera demo.
-   
-python webcamera_demo.py
-
-OR
-
-python webcamera_demo.py --test_mode
