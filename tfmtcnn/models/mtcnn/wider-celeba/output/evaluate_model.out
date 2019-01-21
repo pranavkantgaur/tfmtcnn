@@ -1,0 +1,120 @@
+1)
+python tfmtcnn/tfmtcnn/evaluate_model.py --model_root_dir tfmtcnn/tfmtcnn/models/mtcnn/wider-celeba/ --dataset_name FDDBDataset --annotation_image_dir /datasets/FDDB/ --annotation_file_name /datasets/FDDB/FDDB-folds/FDDB-fold-01-ellipseList.txt
+
+508 faces in  290 number of images for FDDB dataset.
+Positive faces       -  329
+Partial faces        -  150
+Total detected faces -  479
+Ground truth faces   -  508
+Positive accuracy    -  0.647637795276
+Detection accuracy   -  0.942913385827
+Accuracy             -  0.6359935746816371
+
+2)
+python tfmtcnn/tfmtcnn/evaluate_model.py --model_root_dir tfmtcnn/tfmtcnn/models/mtcnn/wider-celeba/ --dataset_name FDDBDataset --annotation_image_dir /datasets/FDDB/ --annotation_file_name /datasets/FDDB/FDDB-folds/FDDB-fold-02-ellipseList.txt
+
+514 faces in  285 number of images for FDDB dataset.
+Positive faces       -  326
+Partial faces        -  147
+Total detected faces -  473
+Ground truth faces   -  514
+Positive accuracy    -  0.634241245136
+Detection accuracy   -  0.920233463035
+Accuracy             -  0.627417754638589
+
+3)
+python tfmtcnn/tfmtcnn/evaluate_model.py --model_root_dir tfmtcnn/tfmtcnn/models/mtcnn/wider-celeba/ --dataset_name FDDBDataset --annotation_image_dir /datasets/FDDB/ --annotation_file_name /datasets/FDDB/FDDB-folds/FDDB-fold-03-ellipseList.txt
+
+509 faces in  274 number of images for FDDB dataset.
+Positive faces       -  327
+Partial faces        -  144
+Total detected faces -  471
+Ground truth faces   -  509
+Positive accuracy    -  0.642436149312
+Detection accuracy   -  0.925343811395
+Accuracy             -  0.6289745960044175
+
+4)
+python tfmtcnn/tfmtcnn/evaluate_model.py --model_root_dir tfmtcnn/tfmtcnn/models/mtcnn/wider-celeba/ --dataset_name FDDBDataset --annotation_image_dir /datasets/FDDB/ --annotation_file_name /datasets/FDDB/FDDB-folds/FDDB-fold-04-ellipseList.txt
+
+512 faces in  302 number of images for FDDB dataset.
+Positive faces       -  337
+Partial faces        -  142
+Total detected faces -  479
+Ground truth faces   -  512
+Positive accuracy    -  0.658203125
+Detection accuracy   -  0.935546875
+Accuracy             -  0.6375134597749
+
+5)
+python tfmtcnn/tfmtcnn/evaluate_model.py --model_root_dir tfmtcnn/tfmtcnn/models/mtcnn/wider-celeba/ --dataset_name FDDBDataset --annotation_image_dir /datasets/FDDB/ --annotation_file_name /datasets/FDDB/FDDB-folds/FDDB-fold-05-ellipseList.txt
+
+510 faces in  298 number of images for FDDB dataset.
+Positive faces       -  355
+Partial faces        -  132
+Total detected faces -  487
+Ground truth faces   -  510
+Positive accuracy    -  0.696078431373
+Detection accuracy   -  0.954901960784
+Accuracy             -  0.6514907321009663
+
+6)
+python tfmtcnn/tfmtcnn/evaluate_model.py --model_root_dir tfmtcnn/tfmtcnn/models/mtcnn/wider-celeba/ --dataset_name FDDBDataset --annotation_image_dir /datasets/FDDB/ --annotation_file_name /datasets/FDDB/FDDB-folds/FDDB-fold-06-ellipseList.txt
+
+511 faces in  302 number of images for FDDB dataset.
+Positive faces       -  353
+Partial faces        -  126
+Total detected faces -  479
+Ground truth faces   -  511
+Positive accuracy    -  0.690802348337
+Detection accuracy   -  0.937377690802
+Accuracy             -  0.6425867113865242
+
+7)
+python tfmtcnn/tfmtcnn/evaluate_model.py --model_root_dir tfmtcnn/tfmtcnn/models/mtcnn/wider-celeba/ --dataset_name FDDBDataset --annotation_image_dir /datasets/FDDB/ --annotation_file_name /datasets/FDDB/FDDB-folds/FDDB-fold-07-ellipseList.txt
+
+511 faces in  279 number of images for FDDB dataset.
+Positive faces       -  319
+Partial faces        -  155
+Total detected faces -  474
+Ground truth faces   -  511
+Positive accuracy    -  0.624266144814
+Detection accuracy   -  0.92759295499
+Accuracy             -  0.6246985335260364
+
+8)
+python tfmtcnn/tfmtcnn/evaluate_model.py --model_root_dir tfmtcnn/tfmtcnn/models/mtcnn/wider-celeba/ --dataset_name FDDBDataset --annotation_image_dir /datasets/FDDB/ --annotation_file_name /datasets/FDDB/FDDB-folds/FDDB-fold-08-ellipseList.txt
+
+508 faces in  276 number of images for FDDB dataset.
+Positive faces       -  331
+Partial faces        -  138
+Total detected faces -  469
+Ground truth faces   -  508
+Positive accuracy    -  0.65157480315
+Detection accuracy   -  0.923228346457
+Accuracy             -  0.6274416522500709
+
+9)
+python tfmtcnn/tfmtcnn/evaluate_model.py --model_root_dir tfmtcnn/tfmtcnn/models/mtcnn/wider-celeba/ --dataset_name FDDBDataset --annotation_image_dir /datasets/FDDB/ --annotation_file_name /datasets/FDDB/FDDB-folds/FDDB-fold-09-ellipseList.txt
+
+498 faces in  259 number of images for FDDB dataset.
+Positive faces       -  336
+Partial faces        -  133
+Total detected faces -  469
+Ground truth faces   -  498
+Positive accuracy    -  0.674698795181
+Detection accuracy   -  0.941767068273
+Accuracy             -  0.6381798760797539
+
+10)
+python tfmtcnn/tfmtcnn/evaluate_model.py --model_root_dir tfmtcnn/tfmtcnn/models/mtcnn/wider-celeba/ --dataset_name FDDBDataset --annotation_image_dir /datasets/FDDB/ --annotation_file_name /datasets/FDDB/FDDB-folds/FDDB-fold-10-ellipseList.txt
+
+521 faces in  280 number of images for FDDB dataset.
+Positive faces       -  339
+Partial faces        -  154
+Total detected faces -  493
+Ground truth faces   -  521
+Positive accuracy    -  0.650671785029
+Detection accuracy   -  0.946257197697
+Accuracy             -  0.6415994942149478
+
