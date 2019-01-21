@@ -1,6 +1,5 @@
 tensorflow
 numpy
 opencv-python
-easydict
 
 

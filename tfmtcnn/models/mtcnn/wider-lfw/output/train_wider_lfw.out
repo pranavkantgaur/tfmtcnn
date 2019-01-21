@@ -1,0 +1,2595 @@
+########################################################################################################################################################################################################
+Check MTCNN_ROOT_DIR, current MTCNN_ROOT_DIR is - /
+########################################################################################################################################################################################################
+########################################################################################################################################################################################################
+########################################################################################################################################################################################################
+Generate a basic dataset i.e. PNet dataset.
+Generating image samples.
+64745 faces in  12431 number of images for WIDER Face dataset.
+previous_positive_samples 0 previous_part_samples 0 previous_negative_samples 0
+(1000/12431) number of images are done - positive - 10164,  part - 10967, negative - 24093
+(2000/12431) number of images are done - positive - 20449,  part - 21923, negative - 46292
+(3000/12431) number of images are done - positive - 30492,  part - 32857, negative - 70501
+(4000/12431) number of images are done - positive - 40238,  part - 43802, negative - 95596
+(5000/12431) number of images are done - positive - 50094,  part - 54758, negative - 122612
+(6000/12431) number of images are done - positive - 60280,  part - 65747, negative - 145036
+(7000/12431) number of images are done - positive - 70136,  part - 76714, negative - 170260
+(8000/12431) number of images are done - positive - 80597,  part - 87692, negative - 194364
+(9000/12431) number of images are done - positive - 91377,  part - 98681, negative - 217684
+(10000/12431) number of images are done - positive - 102102,  part - 109681, negative - 239324
+(11000/12431) number of images are done - positive - 112728,  part - 120670, negative - 261300
+(12000/12431) number of images are done - positive - 123321,  part - 131670, negative - 284620
+(13000/12431) number of images are done - positive - 133364,  part - 142659, negative - 323388
+(14000/12431) number of images are done - positive - 142868,  part - 153637, negative - 381652
+(15000/12431) number of images are done - positive - 152581,  part - 164615, negative - 425468
+(16000/12431) number of images are done - positive - 162074,  part - 175549, negative - 452688
+(17000/12431) number of images are done - positive - 171842,  part - 186549, negative - 494264
+(18000/12431) number of images are done - positive - 181588,  part - 197483, negative - 519040
+(19000/12431) number of images are done - positive - 191444,  part - 208439, negative - 542584
+(20000/12431) number of images are done - positive - 201190,  part - 219384, negative - 562320
+(21000/12431) number of images are done - positive - 210716,  part - 230340, negative - 582840
+(22000/12431) number of images are done - positive - 220627,  part - 241296, negative - 601445
+(23000/12431) number of images are done - positive - 230208,  part - 252263, negative - 622861
+(24000/12431) number of images are done - positive - 239943,  part - 263208, negative - 643594
+(25000/12431) number of images are done - positive - 249722,  part - 274142, negative - 666802
+(26000/12431) number of images are done - positive - 259479,  part - 285120, negative - 689338
+(27000/12431) number of images are done - positive - 269401,  part - 296032, negative - 710864
+(28000/12431) number of images are done - positive - 279686,  part - 306966, negative - 733725
+(29000/12431) number of images are done - positive - 290521,  part - 317955, negative - 758053
+(30000/12431) number of images are done - positive - 301026,  part - 328922, negative - 781015
+(31000/12431) number of images are done - positive - 310717,  part - 339867, negative - 809813
+(32000/12431) number of images are done - positive - 319979,  part - 350812, negative - 856877
+(33000/12431) number of images are done - positive - 329802,  part - 361790, negative - 902821
+(34000/12431) number of images are done - positive - 339757,  part - 372724, negative - 944509
+(35000/12431) number of images are done - positive - 349767,  part - 383680, negative - 975775
+(36000/12431) number of images are done - positive - 359502,  part - 394658, negative - 1006263
+(37000/12431) number of images are done - positive - 369490,  part - 405625, negative - 1054559
+(38000/12431) number of images are done - positive - 379214,  part - 416548, negative - 1106204
+(39000/12431) number of images are done - positive - 389202,  part - 427526, negative - 1135233
+(40000/12431) number of images are done - positive - 399036,  part - 438515, negative - 1164365
+(41000/12431) number of images are done - positive - 409057,  part - 449515, negative - 1191717
+(42000/12431) number of images are done - positive - 419001,  part - 460482, negative - 1225996
+(43000/12431) number of images are done - positive - 429462,  part - 471482, negative - 1258836
+(44000/12431) number of images are done - positive - 439648,  part - 482482, negative - 1311052
+(45000/12431) number of images are done - positive - 449460,  part - 493471, negative - 1354084
+(46000/12431) number of images are done - positive - 459877,  part - 504471, negative - 1388940
+(47000/12431) number of images are done - positive - 470228,  part - 515460, negative - 1448660
+(48000/12431) number of images are done - positive - 479996,  part - 526427, negative - 1496038
+(49000/12431) number of images are done - positive - 489973,  part - 537427, negative - 1548142
+(50000/12431) number of images are done - positive - 499950,  part - 548394, negative - 1584678
+(51000/12431) number of images are done - positive - 509432,  part - 559372, negative - 1626702
+(52000/12431) number of images are done - positive - 519211,  part - 570328, negative - 1663126
+(53000/12431) number of images are done - positive - 529287,  part - 581295, negative - 1708846
+(54000/12431) number of images are done - positive - 538967,  part - 592240, negative - 1761846
+(55000/12431) number of images are done - positive - 549098,  part - 603207, negative - 1800503
+(56000/12431) number of images are done - positive - 559196,  part - 614163, negative - 1840287
+(57000/12431) number of images are done - positive - 568370,  part - 625141, negative - 1883431
+(58000/12431) number of images are done - positive - 578688,  part - 636108, negative - 1911556
+(59000/12431) number of images are done - positive - 588489,  part - 647042, negative - 1948876
+(60000/12431) number of images are done - positive - 598554,  part - 658009, negative - 1977684
+(61000/12431) number of images are done - positive - 608179,  part - 668965, negative - 2001441
+(62000/12431) number of images are done - positive - 618002,  part - 679910, negative - 2018254
+(63000/12431) number of images are done - positive - 627946,  part - 690855, negative - 2036982
+(64000/12431) number of images are done - positive - 637956,  part - 701778, negative - 2060750
+Generated image samples.
+Generating TensorFlow dataset.
+Processed ( 10000 / 4859535 ) image samples.
+Processed ( 20000 / 4859535 ) image samples.
+Processed ( 30000 / 4859535 ) image samples.
+Processed ( 40000 / 4859535 ) image samples.
+Processed ( 50000 / 4859535 ) image samples.
+Processed ( 60000 / 4859535 ) image samples.
+Processed ( 70000 / 4859535 ) image samples.
+Processed ( 80000 / 4859535 ) image samples.
+Processed ( 90000 / 4859535 ) image samples.
+Processed ( 100000 / 4859535 ) image samples.
+Processed ( 110000 / 4859535 ) image samples.
+Processed ( 120000 / 4859535 ) image samples.
+Processed ( 130000 / 4859535 ) image samples.
+Processed ( 140000 / 4859535 ) image samples.
+Processed ( 150000 / 4859535 ) image samples.
+Processed ( 160000 / 4859535 ) image samples.
+Processed ( 170000 / 4859535 ) image samples.
+Processed ( 180000 / 4859535 ) image samples.
+Processed ( 190000 / 4859535 ) image samples.
+Processed ( 200000 / 4859535 ) image samples.
+Processed ( 210000 / 4859535 ) image samples.
+Processed ( 220000 / 4859535 ) image samples.
+Processed ( 230000 / 4859535 ) image samples.
+Processed ( 240000 / 4859535 ) image samples.
+Processed ( 250000 / 4859535 ) image samples.
+Processed ( 260000 / 4859535 ) image samples.
+Processed ( 270000 / 4859535 ) image samples.
+Processed ( 280000 / 4859535 ) image samples.
+Processed ( 290000 / 4859535 ) image samples.
+Processed ( 300000 / 4859535 ) image samples.
+Processed ( 310000 / 4859535 ) image samples.
+Processed ( 320000 / 4859535 ) image samples.
+Processed ( 330000 / 4859535 ) image samples.
+Processed ( 340000 / 4859535 ) image samples.
+Processed ( 350000 / 4859535 ) image samples.
+Processed ( 360000 / 4859535 ) image samples.
+Processed ( 370000 / 4859535 ) image samples.
+Processed ( 380000 / 4859535 ) image samples.
+Processed ( 390000 / 4859535 ) image samples.
+Processed ( 400000 / 4859535 ) image samples.
+Processed ( 410000 / 4859535 ) image samples.
+Processed ( 420000 / 4859535 ) image samples.
+Processed ( 430000 / 4859535 ) image samples.
+Processed ( 440000 / 4859535 ) image samples.
+Processed ( 450000 / 4859535 ) image samples.
+Processed ( 460000 / 4859535 ) image samples.
+Processed ( 470000 / 4859535 ) image samples.
+Processed ( 480000 / 4859535 ) image samples.
+Processed ( 490000 / 4859535 ) image samples.
+Processed ( 500000 / 4859535 ) image samples.
+Processed ( 510000 / 4859535 ) image samples.
+Processed ( 520000 / 4859535 ) image samples.
+Processed ( 530000 / 4859535 ) image samples.
+Processed ( 540000 / 4859535 ) image samples.
+Processed ( 550000 / 4859535 ) image samples.
+Processed ( 560000 / 4859535 ) image samples.
+Processed ( 570000 / 4859535 ) image samples.
+Processed ( 580000 / 4859535 ) image samples.
+Processed ( 590000 / 4859535 ) image samples.
+Processed ( 600000 / 4859535 ) image samples.
+Processed ( 610000 / 4859535 ) image samples.
+Processed ( 620000 / 4859535 ) image samples.
+Processed ( 630000 / 4859535 ) image samples.
+Processed ( 640000 / 4859535 ) image samples.
+Processed ( 650000 / 4859535 ) image samples.
+Processed ( 660000 / 4859535 ) image samples.
+Processed ( 670000 / 4859535 ) image samples.
+Processed ( 680000 / 4859535 ) image samples.
+Processed ( 690000 / 4859535 ) image samples.
+Processed ( 700000 / 4859535 ) image samples.
+Processed ( 710000 / 4859535 ) image samples.
+Processed ( 720000 / 4859535 ) image samples.
+Processed ( 730000 / 4859535 ) image samples.
+Processed ( 740000 / 4859535 ) image samples.
+Processed ( 750000 / 4859535 ) image samples.
+Processed ( 760000 / 4859535 ) image samples.
+Processed ( 770000 / 4859535 ) image samples.
+Processed ( 780000 / 4859535 ) image samples.
+Processed ( 790000 / 4859535 ) image samples.
+Processed ( 800000 / 4859535 ) image samples.
+Processed ( 810000 / 4859535 ) image samples.
+Processed ( 820000 / 4859535 ) image samples.
+Processed ( 830000 / 4859535 ) image samples.
+Processed ( 840000 / 4859535 ) image samples.
+Processed ( 850000 / 4859535 ) image samples.
+Processed ( 860000 / 4859535 ) image samples.
+Processed ( 870000 / 4859535 ) image samples.
+Processed ( 880000 / 4859535 ) image samples.
+Processed ( 890000 / 4859535 ) image samples.
+Processed ( 900000 / 4859535 ) image samples.
+Processed ( 910000 / 4859535 ) image samples.
+Processed ( 920000 / 4859535 ) image samples.
+Processed ( 930000 / 4859535 ) image samples.
+Processed ( 940000 / 4859535 ) image samples.
+Processed ( 950000 / 4859535 ) image samples.
+Processed ( 960000 / 4859535 ) image samples.
+Processed ( 970000 / 4859535 ) image samples.
+Processed ( 980000 / 4859535 ) image samples.
+Processed ( 990000 / 4859535 ) image samples.
+Processed ( 1000000 / 4859535 ) image samples.
+Processed ( 1010000 / 4859535 ) image samples.
+Processed ( 1020000 / 4859535 ) image samples.
+Processed ( 1030000 / 4859535 ) image samples.
+Processed ( 1040000 / 4859535 ) image samples.
+Processed ( 1050000 / 4859535 ) image samples.
+Processed ( 1060000 / 4859535 ) image samples.
+Processed ( 1070000 / 4859535 ) image samples.
+Processed ( 1080000 / 4859535 ) image samples.
+Processed ( 1090000 / 4859535 ) image samples.
+Processed ( 1100000 / 4859535 ) image samples.
+Processed ( 1110000 / 4859535 ) image samples.
+Processed ( 1120000 / 4859535 ) image samples.
+Processed ( 1130000 / 4859535 ) image samples.
+Processed ( 1140000 / 4859535 ) image samples.
+Processed ( 1150000 / 4859535 ) image samples.
+Processed ( 1160000 / 4859535 ) image samples.
+Processed ( 1170000 / 4859535 ) image samples.
+Processed ( 1180000 / 4859535 ) image samples.
+Processed ( 1190000 / 4859535 ) image samples.
+Processed ( 1200000 / 4859535 ) image samples.
+Processed ( 1210000 / 4859535 ) image samples.
+Processed ( 1220000 / 4859535 ) image samples.
+Processed ( 1230000 / 4859535 ) image samples.
+Processed ( 1240000 / 4859535 ) image samples.
+Processed ( 1250000 / 4859535 ) image samples.
+Processed ( 1260000 / 4859535 ) image samples.
+Processed ( 1270000 / 4859535 ) image samples.
+Processed ( 1280000 / 4859535 ) image samples.
+Processed ( 1290000 / 4859535 ) image samples.
+Processed ( 1300000 / 4859535 ) image samples.
+Processed ( 1310000 / 4859535 ) image samples.
+Processed ( 1320000 / 4859535 ) image samples.
+Processed ( 1330000 / 4859535 ) image samples.
+Processed ( 1340000 / 4859535 ) image samples.
+Processed ( 1350000 / 4859535 ) image samples.
+Processed ( 1360000 / 4859535 ) image samples.
+Processed ( 1370000 / 4859535 ) image samples.
+Processed ( 1380000 / 4859535 ) image samples.
+Processed ( 1390000 / 4859535 ) image samples.
+Processed ( 1400000 / 4859535 ) image samples.
+Processed ( 1410000 / 4859535 ) image samples.
+Processed ( 1420000 / 4859535 ) image samples.
+Processed ( 1430000 / 4859535 ) image samples.
+Processed ( 1440000 / 4859535 ) image samples.
+Processed ( 1450000 / 4859535 ) image samples.
+Processed ( 1460000 / 4859535 ) image samples.
+Processed ( 1470000 / 4859535 ) image samples.
+Processed ( 1480000 / 4859535 ) image samples.
+Processed ( 1490000 / 4859535 ) image samples.
+Processed ( 1500000 / 4859535 ) image samples.
+Processed ( 1510000 / 4859535 ) image samples.
+Processed ( 1520000 / 4859535 ) image samples.
+Processed ( 1530000 / 4859535 ) image samples.
+Processed ( 1540000 / 4859535 ) image samples.
+Processed ( 1550000 / 4859535 ) image samples.
+Processed ( 1560000 / 4859535 ) image samples.
+Processed ( 1570000 / 4859535 ) image samples.
+Processed ( 1580000 / 4859535 ) image samples.
+Processed ( 1590000 / 4859535 ) image samples.
+Processed ( 1600000 / 4859535 ) image samples.
+Processed ( 1610000 / 4859535 ) image samples.
+Processed ( 1620000 / 4859535 ) image samples.
+Processed ( 1630000 / 4859535 ) image samples.
+Processed ( 1640000 / 4859535 ) image samples.
+Processed ( 1650000 / 4859535 ) image samples.
+Processed ( 1660000 / 4859535 ) image samples.
+Processed ( 1670000 / 4859535 ) image samples.
+Processed ( 1680000 / 4859535 ) image samples.
+Processed ( 1690000 / 4859535 ) image samples.
+Processed ( 1700000 / 4859535 ) image samples.
+Processed ( 1710000 / 4859535 ) image samples.
+Processed ( 1720000 / 4859535 ) image samples.
+Processed ( 1730000 / 4859535 ) image samples.
+Processed ( 1740000 / 4859535 ) image samples.
+Processed ( 1750000 / 4859535 ) image samples.
+Processed ( 1760000 / 4859535 ) image samples.
+Processed ( 1770000 / 4859535 ) image samples.
+Processed ( 1780000 / 4859535 ) image samples.
+Processed ( 1790000 / 4859535 ) image samples.
+Processed ( 1800000 / 4859535 ) image samples.
+Processed ( 1810000 / 4859535 ) image samples.
+Processed ( 1820000 / 4859535 ) image samples.
+Processed ( 1830000 / 4859535 ) image samples.
+Processed ( 1840000 / 4859535 ) image samples.
+Processed ( 1850000 / 4859535 ) image samples.
+Processed ( 1860000 / 4859535 ) image samples.
+Processed ( 1870000 / 4859535 ) image samples.
+Processed ( 1880000 / 4859535 ) image samples.
+Processed ( 1890000 / 4859535 ) image samples.
+Processed ( 1900000 / 4859535 ) image samples.
+Processed ( 1910000 / 4859535 ) image samples.
+Processed ( 1920000 / 4859535 ) image samples.
+Processed ( 1930000 / 4859535 ) image samples.
+Processed ( 1940000 / 4859535 ) image samples.
+Processed ( 1950000 / 4859535 ) image samples.
+Processed ( 1960000 / 4859535 ) image samples.
+Processed ( 1970000 / 4859535 ) image samples.
+Processed ( 1980000 / 4859535 ) image samples.
+Processed ( 1990000 / 4859535 ) image samples.
+Processed ( 2000000 / 4859535 ) image samples.
+Processed ( 2010000 / 4859535 ) image samples.
+Processed ( 2020000 / 4859535 ) image samples.
+Processed ( 2030000 / 4859535 ) image samples.
+Processed ( 2040000 / 4859535 ) image samples.
+Processed ( 2050000 / 4859535 ) image samples.
+Processed ( 2060000 / 4859535 ) image samples.
+Processed ( 2070000 / 4859535 ) image samples.
+Processed ( 2080000 / 4859535 ) image samples.
+Processed ( 2090000 / 4859535 ) image samples.
+Processed ( 2100000 / 4859535 ) image samples.
+Processed ( 2110000 / 4859535 ) image samples.
+Processed ( 2120000 / 4859535 ) image samples.
+Processed ( 2130000 / 4859535 ) image samples.
+Processed ( 2140000 / 4859535 ) image samples.
+Processed ( 2150000 / 4859535 ) image samples.
+Processed ( 2160000 / 4859535 ) image samples.
+Processed ( 2170000 / 4859535 ) image samples.
+Processed ( 2180000 / 4859535 ) image samples.
+Processed ( 2190000 / 4859535 ) image samples.
+Processed ( 2200000 / 4859535 ) image samples.
+Processed ( 2210000 / 4859535 ) image samples.
+Processed ( 2220000 / 4859535 ) image samples.
+Processed ( 2230000 / 4859535 ) image samples.
+Processed ( 2240000 / 4859535 ) image samples.
+Processed ( 2250000 / 4859535 ) image samples.
+Processed ( 2260000 / 4859535 ) image samples.
+Processed ( 2270000 / 4859535 ) image samples.
+Processed ( 2280000 / 4859535 ) image samples.
+Processed ( 2290000 / 4859535 ) image samples.
+Processed ( 2300000 / 4859535 ) image samples.
+Processed ( 2310000 / 4859535 ) image samples.
+Processed ( 2320000 / 4859535 ) image samples.
+Processed ( 2330000 / 4859535 ) image samples.
+Processed ( 2340000 / 4859535 ) image samples.
+Processed ( 2350000 / 4859535 ) image samples.
+Processed ( 2360000 / 4859535 ) image samples.
+Processed ( 2370000 / 4859535 ) image samples.
+Processed ( 2380000 / 4859535 ) image samples.
+Processed ( 2390000 / 4859535 ) image samples.
+Processed ( 2400000 / 4859535 ) image samples.
+Processed ( 2410000 / 4859535 ) image samples.
+Processed ( 2420000 / 4859535 ) image samples.
+Processed ( 2430000 / 4859535 ) image samples.
+Processed ( 2440000 / 4859535 ) image samples.
+Processed ( 2450000 / 4859535 ) image samples.
+Processed ( 2460000 / 4859535 ) image samples.
+Processed ( 2470000 / 4859535 ) image samples.
+Processed ( 2480000 / 4859535 ) image samples.
+Processed ( 2490000 / 4859535 ) image samples.
+Processed ( 2500000 / 4859535 ) image samples.
+Processed ( 2510000 / 4859535 ) image samples.
+Processed ( 2520000 / 4859535 ) image samples.
+Processed ( 2530000 / 4859535 ) image samples.
+Processed ( 2540000 / 4859535 ) image samples.
+Processed ( 2550000 / 4859535 ) image samples.
+Processed ( 2560000 / 4859535 ) image samples.
+Processed ( 2570000 / 4859535 ) image samples.
+Processed ( 2580000 / 4859535 ) image samples.
+Processed ( 2590000 / 4859535 ) image samples.
+Processed ( 2600000 / 4859535 ) image samples.
+Processed ( 2610000 / 4859535 ) image samples.
+Processed ( 2620000 / 4859535 ) image samples.
+Processed ( 2630000 / 4859535 ) image samples.
+Processed ( 2640000 / 4859535 ) image samples.
+Processed ( 2650000 / 4859535 ) image samples.
+Processed ( 2660000 / 4859535 ) image samples.
+Processed ( 2670000 / 4859535 ) image samples.
+Processed ( 2680000 / 4859535 ) image samples.
+Processed ( 2690000 / 4859535 ) image samples.
+Processed ( 2700000 / 4859535 ) image samples.
+Processed ( 2710000 / 4859535 ) image samples.
+Processed ( 2720000 / 4859535 ) image samples.
+Processed ( 2730000 / 4859535 ) image samples.
+Processed ( 2740000 / 4859535 ) image samples.
+Processed ( 2750000 / 4859535 ) image samples.
+Processed ( 2760000 / 4859535 ) image samples.
+Processed ( 2770000 / 4859535 ) image samples.
+Processed ( 2780000 / 4859535 ) image samples.
+Processed ( 2790000 / 4859535 ) image samples.
+Processed ( 2800000 / 4859535 ) image samples.
+Processed ( 2810000 / 4859535 ) image samples.
+Processed ( 2820000 / 4859535 ) image samples.
+Processed ( 2830000 / 4859535 ) image samples.
+Processed ( 2840000 / 4859535 ) image samples.
+Processed ( 2850000 / 4859535 ) image samples.
+Processed ( 2860000 / 4859535 ) image samples.
+Processed ( 2870000 / 4859535 ) image samples.
+Processed ( 2880000 / 4859535 ) image samples.
+Processed ( 2890000 / 4859535 ) image samples.
+Processed ( 2900000 / 4859535 ) image samples.
+Processed ( 2910000 / 4859535 ) image samples.
+Processed ( 2920000 / 4859535 ) image samples.
+Processed ( 2930000 / 4859535 ) image samples.
+Processed ( 2940000 / 4859535 ) image samples.
+Processed ( 2950000 / 4859535 ) image samples.
+Processed ( 2960000 / 4859535 ) image samples.
+Processed ( 2970000 / 4859535 ) image samples.
+Processed ( 2980000 / 4859535 ) image samples.
+Processed ( 2990000 / 4859535 ) image samples.
+Processed ( 3000000 / 4859535 ) image samples.
+Processed ( 3010000 / 4859535 ) image samples.
+Processed ( 3020000 / 4859535 ) image samples.
+Processed ( 3030000 / 4859535 ) image samples.
+Processed ( 3040000 / 4859535 ) image samples.
+Processed ( 3050000 / 4859535 ) image samples.
+Processed ( 3060000 / 4859535 ) image samples.
+Processed ( 3070000 / 4859535 ) image samples.
+Processed ( 3080000 / 4859535 ) image samples.
+Processed ( 3090000 / 4859535 ) image samples.
+Processed ( 3100000 / 4859535 ) image samples.
+Processed ( 3110000 / 4859535 ) image samples.
+Processed ( 3120000 / 4859535 ) image samples.
+Processed ( 3130000 / 4859535 ) image samples.
+Processed ( 3140000 / 4859535 ) image samples.
+Processed ( 3150000 / 4859535 ) image samples.
+Processed ( 3160000 / 4859535 ) image samples.
+Processed ( 3170000 / 4859535 ) image samples.
+Processed ( 3180000 / 4859535 ) image samples.
+Processed ( 3190000 / 4859535 ) image samples.
+Processed ( 3200000 / 4859535 ) image samples.
+Processed ( 3210000 / 4859535 ) image samples.
+Processed ( 3220000 / 4859535 ) image samples.
+Processed ( 3230000 / 4859535 ) image samples.
+Processed ( 3240000 / 4859535 ) image samples.
+Processed ( 3250000 / 4859535 ) image samples.
+Processed ( 3260000 / 4859535 ) image samples.
+Processed ( 3270000 / 4859535 ) image samples.
+Processed ( 3280000 / 4859535 ) image samples.
+Processed ( 3290000 / 4859535 ) image samples.
+Processed ( 3300000 / 4859535 ) image samples.
+Processed ( 3310000 / 4859535 ) image samples.
+Processed ( 3320000 / 4859535 ) image samples.
+Processed ( 3330000 / 4859535 ) image samples.
+Processed ( 3340000 / 4859535 ) image samples.
+Processed ( 3350000 / 4859535 ) image samples.
+Processed ( 3360000 / 4859535 ) image samples.
+Processed ( 3370000 / 4859535 ) image samples.
+Processed ( 3380000 / 4859535 ) image samples.
+Processed ( 3390000 / 4859535 ) image samples.
+Processed ( 3400000 / 4859535 ) image samples.
+Processed ( 3410000 / 4859535 ) image samples.
+Processed ( 3420000 / 4859535 ) image samples.
+Processed ( 3430000 / 4859535 ) image samples.
+Processed ( 3440000 / 4859535 ) image samples.
+Processed ( 3450000 / 4859535 ) image samples.
+Processed ( 3460000 / 4859535 ) image samples.
+Processed ( 3470000 / 4859535 ) image samples.
+Processed ( 3480000 / 4859535 ) image samples.
+Processed ( 3490000 / 4859535 ) image samples.
+Processed ( 3500000 / 4859535 ) image samples.
+Processed ( 3510000 / 4859535 ) image samples.
+Processed ( 3520000 / 4859535 ) image samples.
+Processed ( 3530000 / 4859535 ) image samples.
+Processed ( 3540000 / 4859535 ) image samples.
+Processed ( 3550000 / 4859535 ) image samples.
+Processed ( 3560000 / 4859535 ) image samples.
+Processed ( 3570000 / 4859535 ) image samples.
+Processed ( 3580000 / 4859535 ) image samples.
+Processed ( 3590000 / 4859535 ) image samples.
+Processed ( 3600000 / 4859535 ) image samples.
+Processed ( 3610000 / 4859535 ) image samples.
+Processed ( 3620000 / 4859535 ) image samples.
+Processed ( 3630000 / 4859535 ) image samples.
+Processed ( 3640000 / 4859535 ) image samples.
+Processed ( 3650000 / 4859535 ) image samples.
+Processed ( 3660000 / 4859535 ) image samples.
+Processed ( 3670000 / 4859535 ) image samples.
+Processed ( 3680000 / 4859535 ) image samples.
+Processed ( 3690000 / 4859535 ) image samples.
+Processed ( 3700000 / 4859535 ) image samples.
+Processed ( 3710000 / 4859535 ) image samples.
+Processed ( 3720000 / 4859535 ) image samples.
+Processed ( 3730000 / 4859535 ) image samples.
+Processed ( 3740000 / 4859535 ) image samples.
+Processed ( 3750000 / 4859535 ) image samples.
+Processed ( 3760000 / 4859535 ) image samples.
+Processed ( 3770000 / 4859535 ) image samples.
+Processed ( 3780000 / 4859535 ) image samples.
+Processed ( 3790000 / 4859535 ) image samples.
+Processed ( 3800000 / 4859535 ) image samples.
+Processed ( 3810000 / 4859535 ) image samples.
+Processed ( 3820000 / 4859535 ) image samples.
+Processed ( 3830000 / 4859535 ) image samples.
+Processed ( 3840000 / 4859535 ) image samples.
+Processed ( 3850000 / 4859535 ) image samples.
+Processed ( 3860000 / 4859535 ) image samples.
+Processed ( 3870000 / 4859535 ) image samples.
+Processed ( 3880000 / 4859535 ) image samples.
+Processed ( 3890000 / 4859535 ) image samples.
+Processed ( 3900000 / 4859535 ) image samples.
+Processed ( 3910000 / 4859535 ) image samples.
+Processed ( 3920000 / 4859535 ) image samples.
+Processed ( 3930000 / 4859535 ) image samples.
+Processed ( 3940000 / 4859535 ) image samples.
+Processed ( 3950000 / 4859535 ) image samples.
+Processed ( 3960000 / 4859535 ) image samples.
+Processed ( 3970000 / 4859535 ) image samples.
+Processed ( 3980000 / 4859535 ) image samples.
+Processed ( 3990000 / 4859535 ) image samples.
+Processed ( 4000000 / 4859535 ) image samples.
+Processed ( 4010000 / 4859535 ) image samples.
+Processed ( 4020000 / 4859535 ) image samples.
+Processed ( 4030000 / 4859535 ) image samples.
+Processed ( 4040000 / 4859535 ) image samples.
+Processed ( 4050000 / 4859535 ) image samples.
+Processed ( 4060000 / 4859535 ) image samples.
+Processed ( 4070000 / 4859535 ) image samples.
+Processed ( 4080000 / 4859535 ) image samples.
+Processed ( 4090000 / 4859535 ) image samples.
+Processed ( 4100000 / 4859535 ) image samples.
+Processed ( 4110000 / 4859535 ) image samples.
+Processed ( 4120000 / 4859535 ) image samples.
+Processed ( 4130000 / 4859535 ) image samples.
+Processed ( 4140000 / 4859535 ) image samples.
+Processed ( 4150000 / 4859535 ) image samples.
+Processed ( 4160000 / 4859535 ) image samples.
+Processed ( 4170000 / 4859535 ) image samples.
+Processed ( 4180000 / 4859535 ) image samples.
+Processed ( 4190000 / 4859535 ) image samples.
+Processed ( 4200000 / 4859535 ) image samples.
+Processed ( 4210000 / 4859535 ) image samples.
+Processed ( 4220000 / 4859535 ) image samples.
+Processed ( 4230000 / 4859535 ) image samples.
+Processed ( 4240000 / 4859535 ) image samples.
+Processed ( 4250000 / 4859535 ) image samples.
+Processed ( 4260000 / 4859535 ) image samples.
+Processed ( 4270000 / 4859535 ) image samples.
+Processed ( 4280000 / 4859535 ) image samples.
+Processed ( 4290000 / 4859535 ) image samples.
+Processed ( 4300000 / 4859535 ) image samples.
+Processed ( 4310000 / 4859535 ) image samples.
+Processed ( 4320000 / 4859535 ) image samples.
+Processed ( 4330000 / 4859535 ) image samples.
+Processed ( 4340000 / 4859535 ) image samples.
+Processed ( 4350000 / 4859535 ) image samples.
+Processed ( 4360000 / 4859535 ) image samples.
+Processed ( 4370000 / 4859535 ) image samples.
+Processed ( 4380000 / 4859535 ) image samples.
+Processed ( 4390000 / 4859535 ) image samples.
+Processed ( 4400000 / 4859535 ) image samples.
+Processed ( 4410000 / 4859535 ) image samples.
+Processed ( 4420000 / 4859535 ) image samples.
+Processed ( 4430000 / 4859535 ) image samples.
+Processed ( 4440000 / 4859535 ) image samples.
+Processed ( 4450000 / 4859535 ) image samples.
+Processed ( 4460000 / 4859535 ) image samples.
+Processed ( 4470000 / 4859535 ) image samples.
+Processed ( 4480000 / 4859535 ) image samples.
+Processed ( 4490000 / 4859535 ) image samples.
+Processed ( 4500000 / 4859535 ) image samples.
+Processed ( 4510000 / 4859535 ) image samples.
+Processed ( 4520000 / 4859535 ) image samples.
+Processed ( 4530000 / 4859535 ) image samples.
+Processed ( 4540000 / 4859535 ) image samples.
+Processed ( 4550000 / 4859535 ) image samples.
+Processed ( 4560000 / 4859535 ) image samples.
+Processed ( 4570000 / 4859535 ) image samples.
+Processed ( 4580000 / 4859535 ) image samples.
+Processed ( 4590000 / 4859535 ) image samples.
+Processed ( 4600000 / 4859535 ) image samples.
+Processed ( 4610000 / 4859535 ) image samples.
+Processed ( 4620000 / 4859535 ) image samples.
+Processed ( 4630000 / 4859535 ) image samples.
+Processed ( 4640000 / 4859535 ) image samples.
+Processed ( 4650000 / 4859535 ) image samples.
+Processed ( 4660000 / 4859535 ) image samples.
+Processed ( 4670000 / 4859535 ) image samples.
+Processed ( 4680000 / 4859535 ) image samples.
+Processed ( 4690000 / 4859535 ) image samples.
+Processed ( 4700000 / 4859535 ) image samples.
+Processed ( 4710000 / 4859535 ) image samples.
+Processed ( 4720000 / 4859535 ) image samples.
+Processed ( 4730000 / 4859535 ) image samples.
+Processed ( 4740000 / 4859535 ) image samples.
+Processed ( 4750000 / 4859535 ) image samples.
+Processed ( 4760000 / 4859535 ) image samples.
+Processed ( 4770000 / 4859535 ) image samples.
+Processed ( 4780000 / 4859535 ) image samples.
+Processed ( 4790000 / 4859535 ) image samples.
+Processed ( 4800000 / 4859535 ) image samples.
+Processed ( 4810000 / 4859535 ) image samples.
+Processed ( 4820000 / 4859535 ) image samples.
+Processed ( 4830000 / 4859535 ) image samples.
+Processed ( 4840000 / 4859535 ) image samples.
+Processed ( 4850000 / 4859535 ) image samples.
+Generated TensorFlow dataset.
+PNet dataset is generated at ../data/datasets/mtcnn
+Generated a basic dataset i.e. PNet dataset.
+########################################################################################################################################################################################################
+Train PNet.
+2018-08-26 15:44:55.678788 - step - 3840 accuracy - 0.921659, class loss - 0.319806, bbox loss - 0.072748, landmark loss - 0.039964, L2 loss - 0.016734, lr - 0.010000 
+2018-08-26 15:50:30.809402 - step - 7680 accuracy - 0.944954, class loss - 0.282944, bbox loss - 0.064966, landmark loss - 0.038212, L2 loss - 0.017105, lr - 0.010000 
+2018-08-26 15:56:05.983831 - step - 11520 accuracy - 0.936585, class loss - 0.243911, bbox loss - 0.067258, landmark loss - 0.032983, L2 loss - 0.017732, lr - 0.010000 
+2018-08-26 16:01:41.075419 - step - 15360 accuracy - 0.966184, class loss - 0.141015, bbox loss - 0.055627, landmark loss - 0.034387, L2 loss - 0.018429, lr - 0.010000 
+2018-08-26 16:07:14.995135 - step - 19200 accuracy - 0.951923, class loss - 0.179882, bbox loss - 0.068493, landmark loss - 0.030753, L2 loss - 0.019056, lr - 0.010000 
+2018-08-26 16:12:49.059218 - step - 23040 accuracy - 0.942731, class loss - 0.213536, bbox loss - 0.070564, landmark loss - 0.027732, L2 loss - 0.019492, lr - 0.010000 
+2018-08-26 16:18:23.459440 - step - 26880 accuracy - 0.960526, class loss - 0.133877, bbox loss - 0.066954, landmark loss - 0.032606, L2 loss - 0.019862, lr - 0.010000 
+2018-08-26 16:23:57.421543 - step - 30720 accuracy - 0.957265, class loss - 0.180530, bbox loss - 0.076656, landmark loss - 0.030458, L2 loss - 0.020021, lr - 0.010000 
+2018-08-26 16:29:31.955937 - step - 34560 accuracy - 0.911504, class loss - 0.284916, bbox loss - 0.074865, landmark loss - 0.033605, L2 loss - 0.020217, lr - 0.010000 
+2018-08-26 16:35:06.186181 - step - 38400 accuracy - 0.938095, class loss - 0.222915, bbox loss - 0.068308, landmark loss - 0.028810, L2 loss - 0.020410, lr - 0.010000 
+2018-08-26 16:40:40.090616 - step - 42240 accuracy - 0.969849, class loss - 0.139239, bbox loss - 0.056678, landmark loss - 0.027107, L2 loss - 0.020549, lr - 0.010000 
+2018-08-26 16:46:14.565924 - step - 46080 accuracy - 0.944700, class loss - 0.234268, bbox loss - 0.055116, landmark loss - 0.025228, L2 loss - 0.020676, lr - 0.010000 
+2018-08-26 16:51:48.783606 - step - 49920 accuracy - 0.966346, class loss - 0.198679, bbox loss - 0.075479, landmark loss - 0.032481, L2 loss - 0.020861, lr - 0.010000 
+2018-08-26 16:57:23.415555 - step - 53760 accuracy - 0.945455, class loss - 0.217625, bbox loss - 0.076483, landmark loss - 0.030441, L2 loss - 0.020916, lr - 0.010000 
+2018-08-26 17:02:58.165284 - step - 57600 accuracy - 0.982301, class loss - 0.120378, bbox loss - 0.062675, landmark loss - 0.030833, L2 loss - 0.020997, lr - 0.010000 
+2018-08-26 17:08:32.256519 - step - 61440 accuracy - 0.909524, class loss - 0.321626, bbox loss - 0.069840, landmark loss - 0.030847, L2 loss - 0.020944, lr - 0.010000 
+2018-08-26 17:14:06.348068 - step - 65280 accuracy - 0.961905, class loss - 0.198995, bbox loss - 0.062333, landmark loss - 0.029204, L2 loss - 0.021188, lr - 0.010000 
+2018-08-26 17:19:40.375219 - step - 69120 accuracy - 0.901961, class loss - 0.355047, bbox loss - 0.065965, landmark loss - 0.027477, L2 loss - 0.021174, lr - 0.010000 
+2018-08-26 17:25:14.308246 - step - 72960 accuracy - 0.946188, class loss - 0.168026, bbox loss - 0.063943, landmark loss - 0.034097, L2 loss - 0.021212, lr - 0.010000 
+2018-08-26 17:30:48.534338 - step - 76800 accuracy - 0.958333, class loss - 0.145816, bbox loss - 0.060317, landmark loss - 0.029119, L2 loss - 0.021322, lr - 0.010000 
+2018-08-26 17:36:22.755473 - step - 80640 accuracy - 0.964286, class loss - 0.153664, bbox loss - 0.063312, landmark loss - 0.027491, L2 loss - 0.021184, lr - 0.010000 
+2018-08-26 17:41:57.072491 - step - 84480 accuracy - 0.942982, class loss - 0.195763, bbox loss - 0.067371, landmark loss - 0.026917, L2 loss - 0.021221, lr - 0.010000 
+2018-08-26 17:47:31.102658 - step - 88320 accuracy - 0.937500, class loss - 0.218922, bbox loss - 0.057452, landmark loss - 0.029638, L2 loss - 0.021369, lr - 0.010000 
+2018-08-26 17:53:05.402657 - step - 92160 accuracy - 0.965174, class loss - 0.146915, bbox loss - 0.059722, landmark loss - 0.024114, L2 loss - 0.021435, lr - 0.010000 
+2018-08-26 17:58:39.586569 - step - 96000 accuracy - 0.966184, class loss - 0.159329, bbox loss - 0.067621, landmark loss - 0.026825, L2 loss - 0.021564, lr - 0.010000 
+2018-08-26 18:04:14.167227 - step - 99840 accuracy - 0.965686, class loss - 0.158390, bbox loss - 0.058483, landmark loss - 0.027779, L2 loss - 0.021687, lr - 0.010000 
+2018-08-26 18:09:48.501895 - step - 103680 accuracy - 0.971831, class loss - 0.124209, bbox loss - 0.055948, landmark loss - 0.023399, L2 loss - 0.021553, lr - 0.001000 
+2018-08-26 18:15:22.557529 - step - 107520 accuracy - 0.947368, class loss - 0.186521, bbox loss - 0.052772, landmark loss - 0.024946, L2 loss - 0.021396, lr - 0.001000 
+2018-08-26 18:20:56.383856 - step - 111360 accuracy - 0.968326, class loss - 0.134623, bbox loss - 0.064278, landmark loss - 0.025073, L2 loss - 0.021253, lr - 0.001000 
+2018-08-26 18:26:30.335464 - step - 115200 accuracy - 0.939252, class loss - 0.214646, bbox loss - 0.058273, landmark loss - 0.026912, L2 loss - 0.021113, lr - 0.001000 
+2018-08-26 18:32:04.373059 - step - 119040 accuracy - 0.969565, class loss - 0.142335, bbox loss - 0.064022, landmark loss - 0.024473, L2 loss - 0.020933, lr - 0.001000 
+2018-08-26 18:37:37.439019 - step - 122880 accuracy - 0.957346, class loss - 0.182468, bbox loss - 0.055421, landmark loss - 0.028673, L2 loss - 0.020810, lr - 0.001000 
+2018-08-26 18:43:11.329669 - step - 126720 accuracy - 0.928910, class loss - 0.264823, bbox loss - 0.060064, landmark loss - 0.024766, L2 loss - 0.020705, lr - 0.001000 
+2018-08-26 18:48:45.075845 - step - 130560 accuracy - 0.938095, class loss - 0.182926, bbox loss - 0.067392, landmark loss - 0.022643, L2 loss - 0.020544, lr - 0.001000 
+2018-08-26 18:54:18.887186 - step - 134400 accuracy - 0.954545, class loss - 0.148985, bbox loss - 0.048958, landmark loss - 0.028393, L2 loss - 0.020432, lr - 0.001000 
+2018-08-26 18:59:54.047904 - step - 138240 accuracy - 0.963470, class loss - 0.177768, bbox loss - 0.050978, landmark loss - 0.026929, L2 loss - 0.020356, lr - 0.001000 
+2018-08-26 19:05:29.039749 - step - 142080 accuracy - 0.972973, class loss - 0.147267, bbox loss - 0.063378, landmark loss - 0.023227, L2 loss - 0.020222, lr - 0.001000 
+2018-08-26 19:11:03.820041 - step - 145920 accuracy - 0.966667, class loss - 0.118971, bbox loss - 0.061398, landmark loss - 0.027049, L2 loss - 0.020140, lr - 0.001000 
+2018-08-26 19:16:38.591713 - step - 149760 accuracy - 0.950739, class loss - 0.236454, bbox loss - 0.058907, landmark loss - 0.025581, L2 loss - 0.020086, lr - 0.001000 
+2018-08-26 19:22:13.702852 - step - 153600 accuracy - 0.939252, class loss - 0.217949, bbox loss - 0.066171, landmark loss - 0.029684, L2 loss - 0.020011, lr - 0.001000 
+2018-08-26 19:27:48.430341 - step - 157440 accuracy - 0.941176, class loss - 0.222460, bbox loss - 0.071242, landmark loss - 0.025962, L2 loss - 0.019915, lr - 0.001000 
+2018-08-26 19:33:23.205065 - step - 161280 accuracy - 0.932735, class loss - 0.231642, bbox loss - 0.062052, landmark loss - 0.029803, L2 loss - 0.019843, lr - 0.001000 
+2018-08-26 19:38:57.504111 - step - 165120 accuracy - 0.947115, class loss - 0.156068, bbox loss - 0.060905, landmark loss - 0.027362, L2 loss - 0.019795, lr - 0.001000 
+2018-08-26 19:44:32.289668 - step - 168960 accuracy - 0.962085, class loss - 0.165746, bbox loss - 0.060349, landmark loss - 0.024908, L2 loss - 0.019719, lr - 0.001000 
+2018-08-26 19:50:06.959982 - step - 172800 accuracy - 0.977376, class loss - 0.129793, bbox loss - 0.050774, landmark loss - 0.027675, L2 loss - 0.019660, lr - 0.001000 
+2018-08-26 19:55:41.876705 - step - 176640 accuracy - 0.921739, class loss - 0.259509, bbox loss - 0.054102, landmark loss - 0.023029, L2 loss - 0.019639, lr - 0.001000 
+2018-08-26 20:01:17.329918 - step - 180480 accuracy - 0.948113, class loss - 0.196758, bbox loss - 0.063219, landmark loss - 0.027596, L2 loss - 0.019559, lr - 0.001000 
+2018-08-26 20:06:52.284333 - step - 184320 accuracy - 0.952607, class loss - 0.168529, bbox loss - 0.056293, landmark loss - 0.027512, L2 loss - 0.019505, lr - 0.001000 
+2018-08-26 20:12:27.253336 - step - 188160 accuracy - 0.957547, class loss - 0.160299, bbox loss - 0.061715, landmark loss - 0.027485, L2 loss - 0.019450, lr - 0.001000 
+2018-08-26 20:18:01.879190 - step - 192000 accuracy - 0.971292, class loss - 0.129368, bbox loss - 0.059836, landmark loss - 0.025514, L2 loss - 0.019393, lr - 0.001000 
+2018-08-26 20:23:36.810218 - step - 195840 accuracy - 0.951923, class loss - 0.191635, bbox loss - 0.077910, landmark loss - 0.023750, L2 loss - 0.019347, lr - 0.001000 
+2018-08-26 20:29:11.949804 - step - 199680 accuracy - 0.947598, class loss - 0.169201, bbox loss - 0.052094, landmark loss - 0.025946, L2 loss - 0.019301, lr - 0.001000 
+2018-08-26 20:34:47.408249 - step - 203520 accuracy - 0.962343, class loss - 0.144093, bbox loss - 0.053630, landmark loss - 0.022771, L2 loss - 0.019301, lr - 0.000100 
+2018-08-26 20:40:22.310716 - step - 207360 accuracy - 0.959276, class loss - 0.169263, bbox loss - 0.059953, landmark loss - 0.027022, L2 loss - 0.019293, lr - 0.000100 
+2018-08-26 20:45:57.068112 - step - 211200 accuracy - 0.958716, class loss - 0.166480, bbox loss - 0.067404, landmark loss - 0.027057, L2 loss - 0.019291, lr - 0.000100 
+2018-08-26 20:51:31.975891 - step - 215040 accuracy - 0.933333, class loss - 0.224964, bbox loss - 0.069394, landmark loss - 0.024081, L2 loss - 0.019289, lr - 0.000100 
+2018-08-26 20:57:06.903988 - step - 218880 accuracy - 0.960396, class loss - 0.165353, bbox loss - 0.050540, landmark loss - 0.025373, L2 loss - 0.019282, lr - 0.000100 
+2018-08-26 21:02:42.523659 - step - 222720 accuracy - 0.962617, class loss - 0.152778, bbox loss - 0.067780, landmark loss - 0.024783, L2 loss - 0.019276, lr - 0.000100 
+2018-08-26 21:08:17.309673 - step - 226560 accuracy - 0.962617, class loss - 0.192360, bbox loss - 0.052983, landmark loss - 0.025861, L2 loss - 0.019276, lr - 0.000100 
+2018-08-26 21:13:52.408948 - step - 230400 accuracy - 0.956311, class loss - 0.147736, bbox loss - 0.065860, landmark loss - 0.024732, L2 loss - 0.019269, lr - 0.000100 
+2018-08-26 21:19:27.092693 - step - 234240 accuracy - 0.934579, class loss - 0.199837, bbox loss - 0.070951, landmark loss - 0.025161, L2 loss - 0.019262, lr - 0.000100 
+2018-08-26 21:25:02.156646 - step - 238080 accuracy - 0.941748, class loss - 0.238223, bbox loss - 0.067639, landmark loss - 0.024692, L2 loss - 0.019258, lr - 0.000100 
+2018-08-26 21:30:37.479180 - step - 241920 accuracy - 0.951111, class loss - 0.182326, bbox loss - 0.042542, landmark loss - 0.029241, L2 loss - 0.019253, lr - 0.000100 
+2018-08-26 21:36:12.241159 - step - 245760 accuracy - 0.935323, class loss - 0.241448, bbox loss - 0.064135, landmark loss - 0.024862, L2 loss - 0.019246, lr - 0.000100 
+2018-08-26 21:41:46.948344 - step - 249600 accuracy - 0.924528, class loss - 0.197534, bbox loss - 0.055144, landmark loss - 0.024887, L2 loss - 0.019244, lr - 0.000100 
+2018-08-26 21:47:21.974927 - step - 253440 accuracy - 0.933036, class loss - 0.237923, bbox loss - 0.065903, landmark loss - 0.027324, L2 loss - 0.019238, lr - 0.000100 
+2018-08-26 21:52:57.110479 - step - 257280 accuracy - 0.963134, class loss - 0.153251, bbox loss - 0.060131, landmark loss - 0.030285, L2 loss - 0.019231, lr - 0.000100 
+2018-08-26 21:58:31.842754 - step - 261120 accuracy - 0.944700, class loss - 0.239251, bbox loss - 0.069122, landmark loss - 0.023615, L2 loss - 0.019225, lr - 0.000100 
+2018-08-26 22:04:07.347828 - step - 264960 accuracy - 0.962441, class loss - 0.132280, bbox loss - 0.067240, landmark loss - 0.026854, L2 loss - 0.019221, lr - 0.000100 
+2018-08-26 22:09:42.227834 - step - 268800 accuracy - 0.953704, class loss - 0.178539, bbox loss - 0.061981, landmark loss - 0.024731, L2 loss - 0.019214, lr - 0.000100 
+2018-08-26 22:15:17.206317 - step - 272640 accuracy - 0.945148, class loss - 0.173564, bbox loss - 0.046049, landmark loss - 0.025823, L2 loss - 0.019207, lr - 0.000100 
+2018-08-26 22:20:52.128624 - step - 276480 accuracy - 0.934884, class loss - 0.278484, bbox loss - 0.060535, landmark loss - 0.021364, L2 loss - 0.019203, lr - 0.000100 
+2018-08-26 22:26:27.387634 - step - 280320 accuracy - 0.949541, class loss - 0.205068, bbox loss - 0.053906, landmark loss - 0.023607, L2 loss - 0.019199, lr - 0.000100 
+2018-08-26 22:32:02.568193 - step - 284160 accuracy - 0.916279, class loss - 0.231546, bbox loss - 0.047968, landmark loss - 0.025993, L2 loss - 0.019189, lr - 0.000100 
+2018-08-26 22:37:37.340041 - step - 288000 accuracy - 0.958716, class loss - 0.152595, bbox loss - 0.051626, landmark loss - 0.030915, L2 loss - 0.019184, lr - 0.000100 
+2018-08-26 22:43:12.390252 - step - 291840 accuracy - 0.931035, class loss - 0.233499, bbox loss - 0.061804, landmark loss - 0.026276, L2 loss - 0.019179, lr - 0.000100 
+2018-08-26 22:48:47.263250 - step - 295680 accuracy - 0.938967, class loss - 0.223371, bbox loss - 0.053514, landmark loss - 0.027301, L2 loss - 0.019172, lr - 0.000100 
+2018-08-26 22:54:22.236194 - step - 299520 accuracy - 0.942478, class loss - 0.205091, bbox loss - 0.063303, landmark loss - 0.024188, L2 loss - 0.019169, lr - 0.000100 
+2018-08-26 22:59:57.436692 - step - 303360 accuracy - 0.969298, class loss - 0.135812, bbox loss - 0.071983, landmark loss - 0.023410, L2 loss - 0.019164, lr - 0.000100 
+2018-08-26 23:05:32.022360 - step - 307200 accuracy - 0.945946, class loss - 0.243926, bbox loss - 0.075146, landmark loss - 0.025047, L2 loss - 0.019163, lr - 0.000010 
+2018-08-26 23:11:06.757267 - step - 311040 accuracy - 0.955947, class loss - 0.145378, bbox loss - 0.057451, landmark loss - 0.024180, L2 loss - 0.019162, lr - 0.000010 
+2018-08-26 23:16:41.733099 - step - 314880 accuracy - 0.959799, class loss - 0.164297, bbox loss - 0.052862, landmark loss - 0.023638, L2 loss - 0.019162, lr - 0.000010 
+2018-08-26 23:22:16.495911 - step - 318720 accuracy - 0.949153, class loss - 0.197510, bbox loss - 0.062544, landmark loss - 0.030922, L2 loss - 0.019162, lr - 0.000010 
+2018-08-26 23:27:51.222022 - step - 322560 accuracy - 0.945205, class loss - 0.202684, bbox loss - 0.048336, landmark loss - 0.022679, L2 loss - 0.019161, lr - 0.000010 
+2018-08-26 23:33:26.316963 - step - 326400 accuracy - 0.959091, class loss - 0.143052, bbox loss - 0.050580, landmark loss - 0.025934, L2 loss - 0.019161, lr - 0.000010 
+2018-08-26 23:39:01.289930 - step - 330240 accuracy - 0.965065, class loss - 0.123498, bbox loss - 0.062341, landmark loss - 0.023609, L2 loss - 0.019160, lr - 0.000010 
+2018-08-26 23:44:36.525039 - step - 334080 accuracy - 0.938596, class loss - 0.253736, bbox loss - 0.067852, landmark loss - 0.022936, L2 loss - 0.019160, lr - 0.000010 
+2018-08-26 23:50:11.262263 - step - 337920 accuracy - 0.963636, class loss - 0.173537, bbox loss - 0.069609, landmark loss - 0.027986, L2 loss - 0.019160, lr - 0.000010 
+2018-08-26 23:55:46.177321 - step - 341760 accuracy - 0.961722, class loss - 0.162261, bbox loss - 0.067923, landmark loss - 0.029649, L2 loss - 0.019159, lr - 0.000010 
+2018-08-27 00:01:21.123991 - step - 345600 accuracy - 0.956522, class loss - 0.145695, bbox loss - 0.056787, landmark loss - 0.026509, L2 loss - 0.019159, lr - 0.000010 
+2018-08-27 00:06:56.110398 - step - 349440 accuracy - 0.965347, class loss - 0.148840, bbox loss - 0.053616, landmark loss - 0.023168, L2 loss - 0.019158, lr - 0.000010 
+2018-08-27 00:12:31.428024 - step - 353280 accuracy - 0.943662, class loss - 0.242181, bbox loss - 0.060349, landmark loss - 0.027783, L2 loss - 0.019158, lr - 0.000010 
+2018-08-27 00:18:06.264594 - step - 357120 accuracy - 0.929907, class loss - 0.260407, bbox loss - 0.056638, landmark loss - 0.025138, L2 loss - 0.019157, lr - 0.000010 
+2018-08-27 00:23:41.457899 - step - 360960 accuracy - 0.922705, class loss - 0.252532, bbox loss - 0.057388, landmark loss - 0.025396, L2 loss - 0.019157, lr - 0.000010 
+2018-08-27 00:29:16.423235 - step - 364800 accuracy - 0.932039, class loss - 0.258756, bbox loss - 0.059717, landmark loss - 0.025396, L2 loss - 0.019156, lr - 0.000010 
+2018-08-27 00:34:51.335705 - step - 368640 accuracy - 0.961702, class loss - 0.165730, bbox loss - 0.050103, landmark loss - 0.025479, L2 loss - 0.019156, lr - 0.000010 
+2018-08-27 00:40:26.332335 - step - 372480 accuracy - 0.957547, class loss - 0.195120, bbox loss - 0.061336, landmark loss - 0.025954, L2 loss - 0.019155, lr - 0.000010 
+2018-08-27 00:46:00.792440 - step - 376320 accuracy - 0.946903, class loss - 0.167916, bbox loss - 0.065332, landmark loss - 0.027636, L2 loss - 0.019155, lr - 0.000010 
+2018-08-27 00:51:35.691461 - step - 380160 accuracy - 0.966346, class loss - 0.165726, bbox loss - 0.070827, landmark loss - 0.030810, L2 loss - 0.019155, lr - 0.000010 
+2018-08-27 00:57:10.773735 - step - 384000 accuracy - 0.953704, class loss - 0.190944, bbox loss - 0.065353, landmark loss - 0.026972, L2 loss - 0.019154, lr - 0.000010 
+2018-08-27 01:02:46.226177 - step - 387840 accuracy - 0.946078, class loss - 0.160169, bbox loss - 0.065676, landmark loss - 0.023718, L2 loss - 0.019153, lr - 0.000010 
+2018-08-27 01:08:20.770754 - step - 391680 accuracy - 0.955556, class loss - 0.172331, bbox loss - 0.073833, landmark loss - 0.027464, L2 loss - 0.019153, lr - 0.000010 
+2018-08-27 01:13:55.555278 - step - 395520 accuracy - 0.949495, class loss - 0.188058, bbox loss - 0.059541, landmark loss - 0.024377, L2 loss - 0.019152, lr - 0.000010 
+2018-08-27 01:19:29.954677 - step - 399360 accuracy - 0.931193, class loss - 0.311492, bbox loss - 0.056488, landmark loss - 0.027217, L2 loss - 0.019152, lr - 0.000010 
+2018-08-27 01:25:04.892799 - step - 403200 accuracy - 0.956522, class loss - 0.185006, bbox loss - 0.058482, landmark loss - 0.025619, L2 loss - 0.019151, lr - 0.000010 
+2018-08-27 01:30:40.242424 - step - 407040 accuracy - 0.964758, class loss - 0.107350, bbox loss - 0.062410, landmark loss - 0.028273, L2 loss - 0.019151, lr - 0.000010 
+2018-08-27 01:36:14.841185 - step - 410880 accuracy - 0.957627, class loss - 0.142139, bbox loss - 0.047692, landmark loss - 0.025132, L2 loss - 0.019150, lr - 0.000010 
+2018-08-27 01:41:49.513470 - step - 414720 accuracy - 0.954167, class loss - 0.197644, bbox loss - 0.044315, landmark loss - 0.024664, L2 loss - 0.019150, lr - 0.000010 
+2018-08-27 01:47:24.326590 - step - 418560 accuracy - 0.922078, class loss - 0.226914, bbox loss - 0.049220, landmark loss - 0.031722, L2 loss - 0.019150, lr - 0.000010 
+2018-08-27 01:52:59.119368 - step - 422400 accuracy - 0.957547, class loss - 0.167186, bbox loss - 0.062040, landmark loss - 0.024411, L2 loss - 0.019149, lr - 0.000010 
+2018-08-27 01:58:33.899721 - step - 426240 accuracy - 0.949074, class loss - 0.163264, bbox loss - 0.056539, landmark loss - 0.029893, L2 loss - 0.019149, lr - 0.000010 
+2018-08-27 02:04:09.343417 - step - 430080 accuracy - 0.963964, class loss - 0.137825, bbox loss - 0.052363, landmark loss - 0.028876, L2 loss - 0.019148, lr - 0.000010 
+2018-08-27 02:09:44.101308 - step - 433920 accuracy - 0.953271, class loss - 0.210244, bbox loss - 0.066392, landmark loss - 0.028579, L2 loss - 0.019148, lr - 0.000010 
+2018-08-27 02:15:18.966621 - step - 437760 accuracy - 0.949074, class loss - 0.159874, bbox loss - 0.055822, landmark loss - 0.026483, L2 loss - 0.019147, lr - 0.000010 
+2018-08-27 02:20:53.144636 - step - 441600 accuracy - 0.939252, class loss - 0.222363, bbox loss - 0.059353, landmark loss - 0.025372, L2 loss - 0.019147, lr - 0.000010 
+2018-08-27 02:26:27.645106 - step - 445440 accuracy - 0.940000, class loss - 0.265843, bbox loss - 0.066253, landmark loss - 0.027119, L2 loss - 0.019146, lr - 0.000010 
+2018-08-27 02:32:02.814132 - step - 449280 accuracy - 0.951923, class loss - 0.154771, bbox loss - 0.062915, landmark loss - 0.029594, L2 loss - 0.019146, lr - 0.000010 
+2018-08-27 02:37:37.439099 - step - 453120 accuracy - 0.937799, class loss - 0.171848, bbox loss - 0.059860, landmark loss - 0.025510, L2 loss - 0.019145, lr - 0.000010 
+PNet - network is trained and weights are generated at ../data/models/mtcnn/train
+Trained PNet.
+########################################################################################################################################################################################################
+Generate a hard dataset i.e. RNet dataset.
+Generating image samples.
+64745 faces in  12431 number of images for WIDER Face dataset.
+64745 faces in  12431 number of images for WIDER Face dataset.
+previous_positive_samples 96496 previous_part_samples 273270 previous_negative_samples 549536
+(1000/12431) number of images are done - positive - 105736,  part - 280249, negative - 567183
+(2000/12431) number of images are done - positive - 115086,  part - 287221, negative - 583419
+(3000/12431) number of images are done - positive - 124216,  part - 294179, negative - 601143
+(4000/12431) number of images are done - positive - 133076,  part - 301144, negative - 619457
+(5000/12431) number of images are done - positive - 142036,  part - 308116, negative - 639201
+(6000/12431) number of images are done - positive - 151296,  part - 315109, negative - 655561
+(7000/12431) number of images are done - positive - 160256,  part - 322088, negative - 674030
+(8000/12431) number of images are done - positive - 169766,  part - 329074, negative - 691717
+(9000/12431) number of images are done - positive - 179566,  part - 336067, negative - 708831
+(10000/12431) number of images are done - positive - 189316,  part - 343067, negative - 724676
+(11000/12431) number of images are done - positive - 198976,  part - 350060, negative - 740780
+(12000/12431) number of images are done - positive - 208606,  part - 357060, negative - 757890
+(13000/12431) number of images are done - positive - 217736,  part - 364053, negative - 786458
+(14000/12431) number of images are done - positive - 226376,  part - 371039, negative - 829484
+(15000/12431) number of images are done - positive - 235206,  part - 378025, negative - 861728
+(16000/12431) number of images are done - positive - 243836,  part - 384983, negative - 881651
+(17000/12431) number of images are done - positive - 252716,  part - 391983, negative - 912249
+(18000/12431) number of images are done - positive - 261576,  part - 398941, negative - 930354
+(19000/12431) number of images are done - positive - 270536,  part - 405913, negative - 947529
+(20000/12431) number of images are done - positive - 279396,  part - 412878, negative - 961895
+(21000/12431) number of images are done - positive - 288056,  part - 419850, negative - 976853
+(22000/12431) number of images are done - positive - 297066,  part - 426822, negative - 990352
+(23000/12431) number of images are done - positive - 305776,  part - 433801, negative - 1005944
+(24000/12431) number of images are done - positive - 314626,  part - 440766, negative - 1021053
+(25000/12431) number of images are done - positive - 323516,  part - 447724, negative - 1037974
+(26000/12431) number of images are done - positive - 332386,  part - 454710, negative - 1054390
+(27000/12431) number of images are done - positive - 341406,  part - 461654, negative - 1070046
+(28000/12431) number of images are done - positive - 350756,  part - 468612, negative - 1086750
+(29000/12431) number of images are done - positive - 360606,  part - 475605, negative - 1104603
+(30000/12431) number of images are done - positive - 370156,  part - 482584, negative - 1121353
+(31000/12431) number of images are done - positive - 378966,  part - 489549, negative - 1142418
+(32000/12431) number of images are done - positive - 387386,  part - 496514, negative - 1177112
+(33000/12431) number of images are done - positive - 396316,  part - 503500, negative - 1210956
+(34000/12431) number of images are done - positive - 405366,  part - 510458, negative - 1241602
+(35000/12431) number of images are done - positive - 414466,  part - 517430, negative - 1264591
+(36000/12431) number of images are done - positive - 423316,  part - 524416, negative - 1286974
+(37000/12431) number of images are done - positive - 432396,  part - 531395, negative - 1322597
+(38000/12431) number of images are done - positive - 441236,  part - 538346, negative - 1360675
+(39000/12431) number of images are done - positive - 450316,  part - 545332, negative - 1381951
+(40000/12431) number of images are done - positive - 459256,  part - 552325, negative - 1403260
+(41000/12431) number of images are done - positive - 468366,  part - 559325, negative - 1423360
+(42000/12431) number of images are done - positive - 477406,  part - 566304, negative - 1448546
+(43000/12431) number of images are done - positive - 486916,  part - 573304, negative - 1472699
+(44000/12431) number of images are done - positive - 496176,  part - 580304, negative - 1511204
+(45000/12431) number of images are done - positive - 505096,  part - 587297, negative - 1542893
+(46000/12431) number of images are done - positive - 514566,  part - 594297, negative - 1568572
+(47000/12431) number of images are done - positive - 523976,  part - 601290, negative - 1612638
+(48000/12431) number of images are done - positive - 532856,  part - 608269, negative - 1647565
+(49000/12431) number of images are done - positive - 541926,  part - 615269, negative - 1685965
+(50000/12431) number of images are done - positive - 550996,  part - 622248, negative - 1712823
+(51000/12431) number of images are done - positive - 559616,  part - 629234, negative - 1743804
+(52000/12431) number of images are done - positive - 568506,  part - 636206, negative - 1770583
+(53000/12431) number of images are done - positive - 577666,  part - 643185, negative - 1804276
+(54000/12431) number of images are done - positive - 586466,  part - 650150, negative - 1843396
+(55000/12431) number of images are done - positive - 595676,  part - 657129, negative - 1871841
+(56000/12431) number of images are done - positive - 604856,  part - 664101, negative - 1901141
+(57000/12431) number of images are done - positive - 613196,  part - 671087, negative - 1932899
+(58000/12431) number of images are done - positive - 622576,  part - 678066, negative - 1953514
+(59000/12431) number of images are done - positive - 631486,  part - 685024, negative - 1980978
+(60000/12431) number of images are done - positive - 640636,  part - 692003, negative - 2002053
+(61000/12431) number of images are done - positive - 649386,  part - 698975, negative - 2019402
+(62000/12431) number of images are done - positive - 658316,  part - 705940, negative - 2031391
+(63000/12431) number of images are done - positive - 667356,  part - 712905, negative - 2045006
+(64000/12431) number of images are done - positive - 676456,  part - 719856, negative - 2062347
+Generated image samples.
+Generating landmark samples.
+10000 faces in  10000 number of images for LFWLandmark dataset
+( 5000 / 10000 ) number of input images are processed.
+( 10000 / 10000 ) number of input images are processed.
+Generated landmark samples.
+Generating TensorFlow dataset.
+Generating TensorFlow dataset for positive images.
+Processed ( 10000 / 683166 ) image samples.
+Processed ( 20000 / 683166 ) image samples.
+Processed ( 30000 / 683166 ) image samples.
+Processed ( 40000 / 683166 ) image samples.
+Processed ( 50000 / 683166 ) image samples.
+Processed ( 60000 / 683166 ) image samples.
+Processed ( 70000 / 683166 ) image samples.
+Processed ( 80000 / 683166 ) image samples.
+Processed ( 90000 / 683166 ) image samples.
+Processed ( 100000 / 683166 ) image samples.
+Processed ( 110000 / 683166 ) image samples.
+Processed ( 120000 / 683166 ) image samples.
+Processed ( 130000 / 683166 ) image samples.
+Processed ( 140000 / 683166 ) image samples.
+Processed ( 150000 / 683166 ) image samples.
+Processed ( 160000 / 683166 ) image samples.
+Processed ( 170000 / 683166 ) image samples.
+Processed ( 180000 / 683166 ) image samples.
+Processed ( 190000 / 683166 ) image samples.
+Processed ( 200000 / 683166 ) image samples.
+Processed ( 210000 / 683166 ) image samples.
+Processed ( 220000 / 683166 ) image samples.
+Processed ( 230000 / 683166 ) image samples.
+Processed ( 240000 / 683166 ) image samples.
+Processed ( 250000 / 683166 ) image samples.
+Processed ( 260000 / 683166 ) image samples.
+Processed ( 270000 / 683166 ) image samples.
+Processed ( 280000 / 683166 ) image samples.
+Processed ( 290000 / 683166 ) image samples.
+Processed ( 300000 / 683166 ) image samples.
+Processed ( 310000 / 683166 ) image samples.
+Processed ( 320000 / 683166 ) image samples.
+Processed ( 330000 / 683166 ) image samples.
+Processed ( 340000 / 683166 ) image samples.
+Processed ( 350000 / 683166 ) image samples.
+Processed ( 360000 / 683166 ) image samples.
+Processed ( 370000 / 683166 ) image samples.
+Processed ( 380000 / 683166 ) image samples.
+Processed ( 390000 / 683166 ) image samples.
+Processed ( 400000 / 683166 ) image samples.
+Processed ( 410000 / 683166 ) image samples.
+Processed ( 420000 / 683166 ) image samples.
+Processed ( 430000 / 683166 ) image samples.
+Processed ( 440000 / 683166 ) image samples.
+Processed ( 450000 / 683166 ) image samples.
+Processed ( 460000 / 683166 ) image samples.
+Processed ( 470000 / 683166 ) image samples.
+Processed ( 480000 / 683166 ) image samples.
+Processed ( 490000 / 683166 ) image samples.
+Processed ( 500000 / 683166 ) image samples.
+Processed ( 510000 / 683166 ) image samples.
+Processed ( 520000 / 683166 ) image samples.
+Processed ( 530000 / 683166 ) image samples.
+Processed ( 540000 / 683166 ) image samples.
+Processed ( 550000 / 683166 ) image samples.
+Processed ( 560000 / 683166 ) image samples.
+Processed ( 570000 / 683166 ) image samples.
+Processed ( 580000 / 683166 ) image samples.
+Processed ( 590000 / 683166 ) image samples.
+Processed ( 600000 / 683166 ) image samples.
+Processed ( 610000 / 683166 ) image samples.
+Processed ( 620000 / 683166 ) image samples.
+Processed ( 630000 / 683166 ) image samples.
+Processed ( 640000 / 683166 ) image samples.
+Processed ( 650000 / 683166 ) image samples.
+Processed ( 660000 / 683166 ) image samples.
+Processed ( 670000 / 683166 ) image samples.
+Processed ( 680000 / 683166 ) image samples.
+Generated TensorFlow dataset for positive images.
+Generating TensorFlow dataset for partial images.
+Processed ( 10000 / 725071 ) image samples.
+Processed ( 20000 / 725071 ) image samples.
+Processed ( 30000 / 725071 ) image samples.
+Processed ( 40000 / 725071 ) image samples.
+Processed ( 50000 / 725071 ) image samples.
+Processed ( 60000 / 725071 ) image samples.
+Processed ( 70000 / 725071 ) image samples.
+Processed ( 80000 / 725071 ) image samples.
+Processed ( 90000 / 725071 ) image samples.
+Processed ( 100000 / 725071 ) image samples.
+Processed ( 110000 / 725071 ) image samples.
+Processed ( 120000 / 725071 ) image samples.
+Processed ( 130000 / 725071 ) image samples.
+Processed ( 140000 / 725071 ) image samples.
+Processed ( 150000 / 725071 ) image samples.
+Processed ( 160000 / 725071 ) image samples.
+Processed ( 170000 / 725071 ) image samples.
+Processed ( 180000 / 725071 ) image samples.
+Processed ( 190000 / 725071 ) image samples.
+Processed ( 200000 / 725071 ) image samples.
+Processed ( 210000 / 725071 ) image samples.
+Processed ( 220000 / 725071 ) image samples.
+Processed ( 230000 / 725071 ) image samples.
+Processed ( 240000 / 725071 ) image samples.
+Processed ( 250000 / 725071 ) image samples.
+Processed ( 260000 / 725071 ) image samples.
+Processed ( 270000 / 725071 ) image samples.
+Processed ( 280000 / 725071 ) image samples.
+Processed ( 290000 / 725071 ) image samples.
+Processed ( 300000 / 725071 ) image samples.
+Processed ( 310000 / 725071 ) image samples.
+Processed ( 320000 / 725071 ) image samples.
+Processed ( 330000 / 725071 ) image samples.
+Processed ( 340000 / 725071 ) image samples.
+Processed ( 350000 / 725071 ) image samples.
+Processed ( 360000 / 725071 ) image samples.
+Processed ( 370000 / 725071 ) image samples.
+Processed ( 380000 / 725071 ) image samples.
+Processed ( 390000 / 725071 ) image samples.
+Processed ( 400000 / 725071 ) image samples.
+Processed ( 410000 / 725071 ) image samples.
+Processed ( 420000 / 725071 ) image samples.
+Processed ( 430000 / 725071 ) image samples.
+Processed ( 440000 / 725071 ) image samples.
+Processed ( 450000 / 725071 ) image samples.
+Processed ( 460000 / 725071 ) image samples.
+Processed ( 470000 / 725071 ) image samples.
+Processed ( 480000 / 725071 ) image samples.
+Processed ( 490000 / 725071 ) image samples.
+Processed ( 500000 / 725071 ) image samples.
+Processed ( 510000 / 725071 ) image samples.
+Processed ( 520000 / 725071 ) image samples.
+Processed ( 530000 / 725071 ) image samples.
+Processed ( 540000 / 725071 ) image samples.
+Processed ( 550000 / 725071 ) image samples.
+Processed ( 560000 / 725071 ) image samples.
+Processed ( 570000 / 725071 ) image samples.
+Processed ( 580000 / 725071 ) image samples.
+Processed ( 590000 / 725071 ) image samples.
+Processed ( 600000 / 725071 ) image samples.
+Processed ( 610000 / 725071 ) image samples.
+Processed ( 620000 / 725071 ) image samples.
+Processed ( 630000 / 725071 ) image samples.
+Processed ( 640000 / 725071 ) image samples.
+Processed ( 650000 / 725071 ) image samples.
+Processed ( 660000 / 725071 ) image samples.
+Processed ( 670000 / 725071 ) image samples.
+Processed ( 680000 / 725071 ) image samples.
+Processed ( 690000 / 725071 ) image samples.
+Processed ( 700000 / 725071 ) image samples.
+Processed ( 710000 / 725071 ) image samples.
+Processed ( 720000 / 725071 ) image samples.
+Generated TensorFlow dataset for partial images.
+Generating TensorFlow dataset for negative images.
+Processed ( 10000 / 2094430 ) image samples.
+Processed ( 20000 / 2094430 ) image samples.
+Processed ( 30000 / 2094430 ) image samples.
+Processed ( 40000 / 2094430 ) image samples.
+Processed ( 50000 / 2094430 ) image samples.
+Processed ( 60000 / 2094430 ) image samples.
+Processed ( 70000 / 2094430 ) image samples.
+Processed ( 80000 / 2094430 ) image samples.
+Processed ( 90000 / 2094430 ) image samples.
+Processed ( 100000 / 2094430 ) image samples.
+Processed ( 110000 / 2094430 ) image samples.
+Processed ( 120000 / 2094430 ) image samples.
+Processed ( 130000 / 2094430 ) image samples.
+Processed ( 140000 / 2094430 ) image samples.
+Processed ( 150000 / 2094430 ) image samples.
+Processed ( 160000 / 2094430 ) image samples.
+Processed ( 170000 / 2094430 ) image samples.
+Processed ( 180000 / 2094430 ) image samples.
+Processed ( 190000 / 2094430 ) image samples.
+Processed ( 200000 / 2094430 ) image samples.
+Processed ( 210000 / 2094430 ) image samples.
+Processed ( 220000 / 2094430 ) image samples.
+Processed ( 230000 / 2094430 ) image samples.
+Processed ( 240000 / 2094430 ) image samples.
+Processed ( 250000 / 2094430 ) image samples.
+Processed ( 260000 / 2094430 ) image samples.
+Processed ( 270000 / 2094430 ) image samples.
+Processed ( 280000 / 2094430 ) image samples.
+Processed ( 290000 / 2094430 ) image samples.
+Processed ( 300000 / 2094430 ) image samples.
+Processed ( 310000 / 2094430 ) image samples.
+Processed ( 320000 / 2094430 ) image samples.
+Processed ( 330000 / 2094430 ) image samples.
+Processed ( 340000 / 2094430 ) image samples.
+Processed ( 350000 / 2094430 ) image samples.
+Processed ( 360000 / 2094430 ) image samples.
+Processed ( 370000 / 2094430 ) image samples.
+Processed ( 380000 / 2094430 ) image samples.
+Processed ( 390000 / 2094430 ) image samples.
+Processed ( 400000 / 2094430 ) image samples.
+Processed ( 410000 / 2094430 ) image samples.
+Processed ( 420000 / 2094430 ) image samples.
+Processed ( 430000 / 2094430 ) image samples.
+Processed ( 440000 / 2094430 ) image samples.
+Processed ( 450000 / 2094430 ) image samples.
+Processed ( 460000 / 2094430 ) image samples.
+Processed ( 470000 / 2094430 ) image samples.
+Processed ( 480000 / 2094430 ) image samples.
+Processed ( 490000 / 2094430 ) image samples.
+Processed ( 500000 / 2094430 ) image samples.
+Processed ( 510000 / 2094430 ) image samples.
+Processed ( 520000 / 2094430 ) image samples.
+Processed ( 530000 / 2094430 ) image samples.
+Processed ( 540000 / 2094430 ) image samples.
+Processed ( 550000 / 2094430 ) image samples.
+Processed ( 560000 / 2094430 ) image samples.
+Processed ( 570000 / 2094430 ) image samples.
+Processed ( 580000 / 2094430 ) image samples.
+Processed ( 590000 / 2094430 ) image samples.
+Processed ( 600000 / 2094430 ) image samples.
+Processed ( 610000 / 2094430 ) image samples.
+Processed ( 620000 / 2094430 ) image samples.
+Processed ( 630000 / 2094430 ) image samples.
+Processed ( 640000 / 2094430 ) image samples.
+Processed ( 650000 / 2094430 ) image samples.
+Processed ( 660000 / 2094430 ) image samples.
+Processed ( 670000 / 2094430 ) image samples.
+Processed ( 680000 / 2094430 ) image samples.
+Processed ( 690000 / 2094430 ) image samples.
+Processed ( 700000 / 2094430 ) image samples.
+Processed ( 710000 / 2094430 ) image samples.
+Processed ( 720000 / 2094430 ) image samples.
+Processed ( 730000 / 2094430 ) image samples.
+Processed ( 740000 / 2094430 ) image samples.
+Processed ( 750000 / 2094430 ) image samples.
+Processed ( 760000 / 2094430 ) image samples.
+Processed ( 770000 / 2094430 ) image samples.
+Processed ( 780000 / 2094430 ) image samples.
+Processed ( 790000 / 2094430 ) image samples.
+Processed ( 800000 / 2094430 ) image samples.
+Processed ( 810000 / 2094430 ) image samples.
+Processed ( 820000 / 2094430 ) image samples.
+Processed ( 830000 / 2094430 ) image samples.
+Processed ( 840000 / 2094430 ) image samples.
+Processed ( 850000 / 2094430 ) image samples.
+Processed ( 860000 / 2094430 ) image samples.
+Processed ( 870000 / 2094430 ) image samples.
+Processed ( 880000 / 2094430 ) image samples.
+Processed ( 890000 / 2094430 ) image samples.
+Processed ( 900000 / 2094430 ) image samples.
+Processed ( 910000 / 2094430 ) image samples.
+Processed ( 920000 / 2094430 ) image samples.
+Processed ( 930000 / 2094430 ) image samples.
+Processed ( 940000 / 2094430 ) image samples.
+Processed ( 950000 / 2094430 ) image samples.
+Processed ( 960000 / 2094430 ) image samples.
+Processed ( 970000 / 2094430 ) image samples.
+Processed ( 980000 / 2094430 ) image samples.
+Processed ( 990000 / 2094430 ) image samples.
+Processed ( 1000000 / 2094430 ) image samples.
+Processed ( 1010000 / 2094430 ) image samples.
+Processed ( 1020000 / 2094430 ) image samples.
+Processed ( 1030000 / 2094430 ) image samples.
+Processed ( 1040000 / 2094430 ) image samples.
+Processed ( 1050000 / 2094430 ) image samples.
+Processed ( 1060000 / 2094430 ) image samples.
+Processed ( 1070000 / 2094430 ) image samples.
+Processed ( 1080000 / 2094430 ) image samples.
+Processed ( 1090000 / 2094430 ) image samples.
+Processed ( 1100000 / 2094430 ) image samples.
+Processed ( 1110000 / 2094430 ) image samples.
+Processed ( 1120000 / 2094430 ) image samples.
+Processed ( 1130000 / 2094430 ) image samples.
+Processed ( 1140000 / 2094430 ) image samples.
+Processed ( 1150000 / 2094430 ) image samples.
+Processed ( 1160000 / 2094430 ) image samples.
+Processed ( 1170000 / 2094430 ) image samples.
+Processed ( 1180000 / 2094430 ) image samples.
+Processed ( 1190000 / 2094430 ) image samples.
+Processed ( 1200000 / 2094430 ) image samples.
+Processed ( 1210000 / 2094430 ) image samples.
+Processed ( 1220000 / 2094430 ) image samples.
+Processed ( 1230000 / 2094430 ) image samples.
+Processed ( 1240000 / 2094430 ) image samples.
+Processed ( 1250000 / 2094430 ) image samples.
+Processed ( 1260000 / 2094430 ) image samples.
+Processed ( 1270000 / 2094430 ) image samples.
+Processed ( 1280000 / 2094430 ) image samples.
+Processed ( 1290000 / 2094430 ) image samples.
+Processed ( 1300000 / 2094430 ) image samples.
+Processed ( 1310000 / 2094430 ) image samples.
+Processed ( 1320000 / 2094430 ) image samples.
+Processed ( 1330000 / 2094430 ) image samples.
+Processed ( 1340000 / 2094430 ) image samples.
+Processed ( 1350000 / 2094430 ) image samples.
+Processed ( 1360000 / 2094430 ) image samples.
+Processed ( 1370000 / 2094430 ) image samples.
+Processed ( 1380000 / 2094430 ) image samples.
+Processed ( 1390000 / 2094430 ) image samples.
+Processed ( 1400000 / 2094430 ) image samples.
+Processed ( 1410000 / 2094430 ) image samples.
+Processed ( 1420000 / 2094430 ) image samples.
+Processed ( 1430000 / 2094430 ) image samples.
+Processed ( 1440000 / 2094430 ) image samples.
+Processed ( 1450000 / 2094430 ) image samples.
+Processed ( 1460000 / 2094430 ) image samples.
+Processed ( 1470000 / 2094430 ) image samples.
+Processed ( 1480000 / 2094430 ) image samples.
+Processed ( 1490000 / 2094430 ) image samples.
+Processed ( 1500000 / 2094430 ) image samples.
+Processed ( 1510000 / 2094430 ) image samples.
+Processed ( 1520000 / 2094430 ) image samples.
+Processed ( 1530000 / 2094430 ) image samples.
+Processed ( 1540000 / 2094430 ) image samples.
+Processed ( 1550000 / 2094430 ) image samples.
+Processed ( 1560000 / 2094430 ) image samples.
+Processed ( 1570000 / 2094430 ) image samples.
+Processed ( 1580000 / 2094430 ) image samples.
+Processed ( 1590000 / 2094430 ) image samples.
+Processed ( 1600000 / 2094430 ) image samples.
+Processed ( 1610000 / 2094430 ) image samples.
+Processed ( 1620000 / 2094430 ) image samples.
+Processed ( 1630000 / 2094430 ) image samples.
+Processed ( 1640000 / 2094430 ) image samples.
+Processed ( 1650000 / 2094430 ) image samples.
+Processed ( 1660000 / 2094430 ) image samples.
+Processed ( 1670000 / 2094430 ) image samples.
+Processed ( 1680000 / 2094430 ) image samples.
+Processed ( 1690000 / 2094430 ) image samples.
+Processed ( 1700000 / 2094430 ) image samples.
+Processed ( 1710000 / 2094430 ) image samples.
+Processed ( 1720000 / 2094430 ) image samples.
+Processed ( 1730000 / 2094430 ) image samples.
+Processed ( 1740000 / 2094430 ) image samples.
+Processed ( 1750000 / 2094430 ) image samples.
+Processed ( 1760000 / 2094430 ) image samples.
+Processed ( 1770000 / 2094430 ) image samples.
+Processed ( 1780000 / 2094430 ) image samples.
+Processed ( 1790000 / 2094430 ) image samples.
+Processed ( 1800000 / 2094430 ) image samples.
+Processed ( 1810000 / 2094430 ) image samples.
+Processed ( 1820000 / 2094430 ) image samples.
+Processed ( 1830000 / 2094430 ) image samples.
+Processed ( 1840000 / 2094430 ) image samples.
+Processed ( 1850000 / 2094430 ) image samples.
+Processed ( 1860000 / 2094430 ) image samples.
+Processed ( 1870000 / 2094430 ) image samples.
+Processed ( 1880000 / 2094430 ) image samples.
+Processed ( 1890000 / 2094430 ) image samples.
+Processed ( 1900000 / 2094430 ) image samples.
+Processed ( 1910000 / 2094430 ) image samples.
+Processed ( 1920000 / 2094430 ) image samples.
+Processed ( 1930000 / 2094430 ) image samples.
+Processed ( 1940000 / 2094430 ) image samples.
+Processed ( 1950000 / 2094430 ) image samples.
+Processed ( 1960000 / 2094430 ) image samples.
+Processed ( 1970000 / 2094430 ) image samples.
+Processed ( 1980000 / 2094430 ) image samples.
+Processed ( 1990000 / 2094430 ) image samples.
+Processed ( 2000000 / 2094430 ) image samples.
+Processed ( 2010000 / 2094430 ) image samples.
+Processed ( 2020000 / 2094430 ) image samples.
+Processed ( 2030000 / 2094430 ) image samples.
+Processed ( 2040000 / 2094430 ) image samples.
+Processed ( 2050000 / 2094430 ) image samples.
+Processed ( 2060000 / 2094430 ) image samples.
+Processed ( 2070000 / 2094430 ) image samples.
+Processed ( 2080000 / 2094430 ) image samples.
+Processed ( 2090000 / 2094430 ) image samples.
+Generated TensorFlow dataset for negative images.
+Generating TensorFlow dataset for landmark images.
+Processed ( 10000 / 4902667 ) image samples.
+Processed ( 20000 / 4902667 ) image samples.
+Processed ( 30000 / 4902667 ) image samples.
+Processed ( 40000 / 4902667 ) image samples.
+Processed ( 50000 / 4902667 ) image samples.
+Processed ( 60000 / 4902667 ) image samples.
+Processed ( 70000 / 4902667 ) image samples.
+Processed ( 80000 / 4902667 ) image samples.
+Processed ( 90000 / 4902667 ) image samples.
+Processed ( 100000 / 4902667 ) image samples.
+Processed ( 110000 / 4902667 ) image samples.
+Processed ( 120000 / 4902667 ) image samples.
+Processed ( 130000 / 4902667 ) image samples.
+Processed ( 140000 / 4902667 ) image samples.
+Processed ( 150000 / 4902667 ) image samples.
+Processed ( 160000 / 4902667 ) image samples.
+Processed ( 170000 / 4902667 ) image samples.
+Processed ( 180000 / 4902667 ) image samples.
+Processed ( 190000 / 4902667 ) image samples.
+Processed ( 200000 / 4902667 ) image samples.
+Processed ( 210000 / 4902667 ) image samples.
+Processed ( 220000 / 4902667 ) image samples.
+Processed ( 230000 / 4902667 ) image samples.
+Processed ( 240000 / 4902667 ) image samples.
+Processed ( 250000 / 4902667 ) image samples.
+Processed ( 260000 / 4902667 ) image samples.
+Processed ( 270000 / 4902667 ) image samples.
+Processed ( 280000 / 4902667 ) image samples.
+Processed ( 290000 / 4902667 ) image samples.
+Processed ( 300000 / 4902667 ) image samples.
+Processed ( 310000 / 4902667 ) image samples.
+Processed ( 320000 / 4902667 ) image samples.
+Processed ( 330000 / 4902667 ) image samples.
+Processed ( 340000 / 4902667 ) image samples.
+Processed ( 350000 / 4902667 ) image samples.
+Processed ( 360000 / 4902667 ) image samples.
+Processed ( 370000 / 4902667 ) image samples.
+Processed ( 380000 / 4902667 ) image samples.
+Processed ( 390000 / 4902667 ) image samples.
+Processed ( 400000 / 4902667 ) image samples.
+Processed ( 410000 / 4902667 ) image samples.
+Processed ( 420000 / 4902667 ) image samples.
+Processed ( 430000 / 4902667 ) image samples.
+Processed ( 440000 / 4902667 ) image samples.
+Processed ( 450000 / 4902667 ) image samples.
+Processed ( 460000 / 4902667 ) image samples.
+Processed ( 470000 / 4902667 ) image samples.
+Processed ( 480000 / 4902667 ) image samples.
+Processed ( 490000 / 4902667 ) image samples.
+Processed ( 500000 / 4902667 ) image samples.
+Processed ( 510000 / 4902667 ) image samples.
+Processed ( 520000 / 4902667 ) image samples.
+Processed ( 530000 / 4902667 ) image samples.
+Processed ( 540000 / 4902667 ) image samples.
+Processed ( 550000 / 4902667 ) image samples.
+Processed ( 560000 / 4902667 ) image samples.
+Processed ( 570000 / 4902667 ) image samples.
+Processed ( 580000 / 4902667 ) image samples.
+Processed ( 590000 / 4902667 ) image samples.
+Processed ( 600000 / 4902667 ) image samples.
+Processed ( 610000 / 4902667 ) image samples.
+Processed ( 620000 / 4902667 ) image samples.
+Processed ( 630000 / 4902667 ) image samples.
+Processed ( 640000 / 4902667 ) image samples.
+Processed ( 650000 / 4902667 ) image samples.
+Processed ( 660000 / 4902667 ) image samples.
+Processed ( 670000 / 4902667 ) image samples.
+Processed ( 680000 / 4902667 ) image samples.
+Processed ( 690000 / 4902667 ) image samples.
+Processed ( 700000 / 4902667 ) image samples.
+Processed ( 710000 / 4902667 ) image samples.
+Processed ( 720000 / 4902667 ) image samples.
+Processed ( 730000 / 4902667 ) image samples.
+Processed ( 740000 / 4902667 ) image samples.
+Processed ( 750000 / 4902667 ) image samples.
+Processed ( 760000 / 4902667 ) image samples.
+Processed ( 770000 / 4902667 ) image samples.
+Processed ( 780000 / 4902667 ) image samples.
+Processed ( 790000 / 4902667 ) image samples.
+Processed ( 800000 / 4902667 ) image samples.
+Processed ( 810000 / 4902667 ) image samples.
+Processed ( 820000 / 4902667 ) image samples.
+Processed ( 830000 / 4902667 ) image samples.
+Processed ( 840000 / 4902667 ) image samples.
+Processed ( 850000 / 4902667 ) image samples.
+Processed ( 860000 / 4902667 ) image samples.
+Processed ( 870000 / 4902667 ) image samples.
+Processed ( 880000 / 4902667 ) image samples.
+Processed ( 890000 / 4902667 ) image samples.
+Processed ( 900000 / 4902667 ) image samples.
+Processed ( 910000 / 4902667 ) image samples.
+Processed ( 920000 / 4902667 ) image samples.
+Processed ( 930000 / 4902667 ) image samples.
+Processed ( 940000 / 4902667 ) image samples.
+Processed ( 950000 / 4902667 ) image samples.
+Processed ( 960000 / 4902667 ) image samples.
+Processed ( 970000 / 4902667 ) image samples.
+Processed ( 980000 / 4902667 ) image samples.
+Processed ( 990000 / 4902667 ) image samples.
+Processed ( 1000000 / 4902667 ) image samples.
+Processed ( 1010000 / 4902667 ) image samples.
+Processed ( 1020000 / 4902667 ) image samples.
+Processed ( 1030000 / 4902667 ) image samples.
+Processed ( 1040000 / 4902667 ) image samples.
+Processed ( 1050000 / 4902667 ) image samples.
+Processed ( 1060000 / 4902667 ) image samples.
+Processed ( 1070000 / 4902667 ) image samples.
+Processed ( 1080000 / 4902667 ) image samples.
+Processed ( 1090000 / 4902667 ) image samples.
+Processed ( 1100000 / 4902667 ) image samples.
+Processed ( 1110000 / 4902667 ) image samples.
+Processed ( 1120000 / 4902667 ) image samples.
+Processed ( 1130000 / 4902667 ) image samples.
+Processed ( 1140000 / 4902667 ) image samples.
+Processed ( 1150000 / 4902667 ) image samples.
+Processed ( 1160000 / 4902667 ) image samples.
+Processed ( 1170000 / 4902667 ) image samples.
+Processed ( 1180000 / 4902667 ) image samples.
+Processed ( 1190000 / 4902667 ) image samples.
+Processed ( 1200000 / 4902667 ) image samples.
+Processed ( 1210000 / 4902667 ) image samples.
+Processed ( 1220000 / 4902667 ) image samples.
+Processed ( 1230000 / 4902667 ) image samples.
+Processed ( 1240000 / 4902667 ) image samples.
+Processed ( 1250000 / 4902667 ) image samples.
+Processed ( 1260000 / 4902667 ) image samples.
+Processed ( 1270000 / 4902667 ) image samples.
+Processed ( 1280000 / 4902667 ) image samples.
+Processed ( 1290000 / 4902667 ) image samples.
+Processed ( 1300000 / 4902667 ) image samples.
+Processed ( 1310000 / 4902667 ) image samples.
+Processed ( 1320000 / 4902667 ) image samples.
+Processed ( 1330000 / 4902667 ) image samples.
+Processed ( 1340000 / 4902667 ) image samples.
+Processed ( 1350000 / 4902667 ) image samples.
+Processed ( 1360000 / 4902667 ) image samples.
+Processed ( 1370000 / 4902667 ) image samples.
+Processed ( 1380000 / 4902667 ) image samples.
+Processed ( 1390000 / 4902667 ) image samples.
+Processed ( 1400000 / 4902667 ) image samples.
+Processed ( 1410000 / 4902667 ) image samples.
+Processed ( 1420000 / 4902667 ) image samples.
+Processed ( 1430000 / 4902667 ) image samples.
+Processed ( 1440000 / 4902667 ) image samples.
+Processed ( 1450000 / 4902667 ) image samples.
+Processed ( 1460000 / 4902667 ) image samples.
+Processed ( 1470000 / 4902667 ) image samples.
+Processed ( 1480000 / 4902667 ) image samples.
+Processed ( 1490000 / 4902667 ) image samples.
+Processed ( 1500000 / 4902667 ) image samples.
+Processed ( 1510000 / 4902667 ) image samples.
+Processed ( 1520000 / 4902667 ) image samples.
+Processed ( 1530000 / 4902667 ) image samples.
+Processed ( 1540000 / 4902667 ) image samples.
+Processed ( 1550000 / 4902667 ) image samples.
+Processed ( 1560000 / 4902667 ) image samples.
+Processed ( 1570000 / 4902667 ) image samples.
+Processed ( 1580000 / 4902667 ) image samples.
+Processed ( 1590000 / 4902667 ) image samples.
+Processed ( 1600000 / 4902667 ) image samples.
+Processed ( 1610000 / 4902667 ) image samples.
+Processed ( 1620000 / 4902667 ) image samples.
+Processed ( 1630000 / 4902667 ) image samples.
+Processed ( 1640000 / 4902667 ) image samples.
+Processed ( 1650000 / 4902667 ) image samples.
+Processed ( 1660000 / 4902667 ) image samples.
+Processed ( 1670000 / 4902667 ) image samples.
+Processed ( 1680000 / 4902667 ) image samples.
+Processed ( 1690000 / 4902667 ) image samples.
+Processed ( 1700000 / 4902667 ) image samples.
+Processed ( 1710000 / 4902667 ) image samples.
+Processed ( 1720000 / 4902667 ) image samples.
+Processed ( 1730000 / 4902667 ) image samples.
+Processed ( 1740000 / 4902667 ) image samples.
+Processed ( 1750000 / 4902667 ) image samples.
+Processed ( 1760000 / 4902667 ) image samples.
+Processed ( 1770000 / 4902667 ) image samples.
+Processed ( 1780000 / 4902667 ) image samples.
+Processed ( 1790000 / 4902667 ) image samples.
+Processed ( 1800000 / 4902667 ) image samples.
+Processed ( 1810000 / 4902667 ) image samples.
+Processed ( 1820000 / 4902667 ) image samples.
+Processed ( 1830000 / 4902667 ) image samples.
+Processed ( 1840000 / 4902667 ) image samples.
+Processed ( 1850000 / 4902667 ) image samples.
+Processed ( 1860000 / 4902667 ) image samples.
+Processed ( 1870000 / 4902667 ) image samples.
+Processed ( 1880000 / 4902667 ) image samples.
+Processed ( 1890000 / 4902667 ) image samples.
+Processed ( 1900000 / 4902667 ) image samples.
+Processed ( 1910000 / 4902667 ) image samples.
+Processed ( 1920000 / 4902667 ) image samples.
+Processed ( 1930000 / 4902667 ) image samples.
+Processed ( 1940000 / 4902667 ) image samples.
+Processed ( 1950000 / 4902667 ) image samples.
+Processed ( 1960000 / 4902667 ) image samples.
+Processed ( 1970000 / 4902667 ) image samples.
+Processed ( 1980000 / 4902667 ) image samples.
+Processed ( 1990000 / 4902667 ) image samples.
+Processed ( 2000000 / 4902667 ) image samples.
+Processed ( 2010000 / 4902667 ) image samples.
+Processed ( 2020000 / 4902667 ) image samples.
+Processed ( 2030000 / 4902667 ) image samples.
+Processed ( 2040000 / 4902667 ) image samples.
+Processed ( 2050000 / 4902667 ) image samples.
+Processed ( 2060000 / 4902667 ) image samples.
+Processed ( 2070000 / 4902667 ) image samples.
+Processed ( 2080000 / 4902667 ) image samples.
+Processed ( 2090000 / 4902667 ) image samples.
+Processed ( 2100000 / 4902667 ) image samples.
+Processed ( 2110000 / 4902667 ) image samples.
+Processed ( 2120000 / 4902667 ) image samples.
+Processed ( 2130000 / 4902667 ) image samples.
+Processed ( 2140000 / 4902667 ) image samples.
+Processed ( 2150000 / 4902667 ) image samples.
+Processed ( 2160000 / 4902667 ) image samples.
+Processed ( 2170000 / 4902667 ) image samples.
+Processed ( 2180000 / 4902667 ) image samples.
+Processed ( 2190000 / 4902667 ) image samples.
+Processed ( 2200000 / 4902667 ) image samples.
+Processed ( 2210000 / 4902667 ) image samples.
+Processed ( 2220000 / 4902667 ) image samples.
+Processed ( 2230000 / 4902667 ) image samples.
+Processed ( 2240000 / 4902667 ) image samples.
+Processed ( 2250000 / 4902667 ) image samples.
+Processed ( 2260000 / 4902667 ) image samples.
+Processed ( 2270000 / 4902667 ) image samples.
+Processed ( 2280000 / 4902667 ) image samples.
+Processed ( 2290000 / 4902667 ) image samples.
+Processed ( 2300000 / 4902667 ) image samples.
+Processed ( 2310000 / 4902667 ) image samples.
+Processed ( 2320000 / 4902667 ) image samples.
+Processed ( 2330000 / 4902667 ) image samples.
+Processed ( 2340000 / 4902667 ) image samples.
+Processed ( 2350000 / 4902667 ) image samples.
+Processed ( 2360000 / 4902667 ) image samples.
+Processed ( 2370000 / 4902667 ) image samples.
+Processed ( 2380000 / 4902667 ) image samples.
+Processed ( 2390000 / 4902667 ) image samples.
+Processed ( 2400000 / 4902667 ) image samples.
+Processed ( 2410000 / 4902667 ) image samples.
+Processed ( 2420000 / 4902667 ) image samples.
+Processed ( 2430000 / 4902667 ) image samples.
+Processed ( 2440000 / 4902667 ) image samples.
+Processed ( 2450000 / 4902667 ) image samples.
+Processed ( 2460000 / 4902667 ) image samples.
+Processed ( 2470000 / 4902667 ) image samples.
+Processed ( 2480000 / 4902667 ) image samples.
+Processed ( 2490000 / 4902667 ) image samples.
+Processed ( 2500000 / 4902667 ) image samples.
+Processed ( 2510000 / 4902667 ) image samples.
+Processed ( 2520000 / 4902667 ) image samples.
+Processed ( 2530000 / 4902667 ) image samples.
+Processed ( 2540000 / 4902667 ) image samples.
+Processed ( 2550000 / 4902667 ) image samples.
+Processed ( 2560000 / 4902667 ) image samples.
+Processed ( 2570000 / 4902667 ) image samples.
+Processed ( 2580000 / 4902667 ) image samples.
+Processed ( 2590000 / 4902667 ) image samples.
+Processed ( 2600000 / 4902667 ) image samples.
+Processed ( 2610000 / 4902667 ) image samples.
+Processed ( 2620000 / 4902667 ) image samples.
+Processed ( 2630000 / 4902667 ) image samples.
+Processed ( 2640000 / 4902667 ) image samples.
+Processed ( 2650000 / 4902667 ) image samples.
+Processed ( 2660000 / 4902667 ) image samples.
+Processed ( 2670000 / 4902667 ) image samples.
+Processed ( 2680000 / 4902667 ) image samples.
+Processed ( 2690000 / 4902667 ) image samples.
+Processed ( 2700000 / 4902667 ) image samples.
+Processed ( 2710000 / 4902667 ) image samples.
+Processed ( 2720000 / 4902667 ) image samples.
+Processed ( 2730000 / 4902667 ) image samples.
+Processed ( 2740000 / 4902667 ) image samples.
+Processed ( 2750000 / 4902667 ) image samples.
+Processed ( 2760000 / 4902667 ) image samples.
+Processed ( 2770000 / 4902667 ) image samples.
+Processed ( 2780000 / 4902667 ) image samples.
+Processed ( 2790000 / 4902667 ) image samples.
+Processed ( 2800000 / 4902667 ) image samples.
+Processed ( 2810000 / 4902667 ) image samples.
+Processed ( 2820000 / 4902667 ) image samples.
+Processed ( 2830000 / 4902667 ) image samples.
+Processed ( 2840000 / 4902667 ) image samples.
+Processed ( 2850000 / 4902667 ) image samples.
+Processed ( 2860000 / 4902667 ) image samples.
+Processed ( 2870000 / 4902667 ) image samples.
+Processed ( 2880000 / 4902667 ) image samples.
+Processed ( 2890000 / 4902667 ) image samples.
+Processed ( 2900000 / 4902667 ) image samples.
+Processed ( 2910000 / 4902667 ) image samples.
+Processed ( 2920000 / 4902667 ) image samples.
+Processed ( 2930000 / 4902667 ) image samples.
+Processed ( 2940000 / 4902667 ) image samples.
+Processed ( 2950000 / 4902667 ) image samples.
+Processed ( 2960000 / 4902667 ) image samples.
+Processed ( 2970000 / 4902667 ) image samples.
+Processed ( 2980000 / 4902667 ) image samples.
+Processed ( 2990000 / 4902667 ) image samples.
+Processed ( 3000000 / 4902667 ) image samples.
+Processed ( 3010000 / 4902667 ) image samples.
+Processed ( 3020000 / 4902667 ) image samples.
+Processed ( 3030000 / 4902667 ) image samples.
+Processed ( 3040000 / 4902667 ) image samples.
+Processed ( 3050000 / 4902667 ) image samples.
+Processed ( 3060000 / 4902667 ) image samples.
+Processed ( 3070000 / 4902667 ) image samples.
+Processed ( 3080000 / 4902667 ) image samples.
+Processed ( 3090000 / 4902667 ) image samples.
+Processed ( 3100000 / 4902667 ) image samples.
+Processed ( 3110000 / 4902667 ) image samples.
+Processed ( 3120000 / 4902667 ) image samples.
+Processed ( 3130000 / 4902667 ) image samples.
+Processed ( 3140000 / 4902667 ) image samples.
+Processed ( 3150000 / 4902667 ) image samples.
+Processed ( 3160000 / 4902667 ) image samples.
+Processed ( 3170000 / 4902667 ) image samples.
+Processed ( 3180000 / 4902667 ) image samples.
+Processed ( 3190000 / 4902667 ) image samples.
+Processed ( 3200000 / 4902667 ) image samples.
+Processed ( 3210000 / 4902667 ) image samples.
+Processed ( 3220000 / 4902667 ) image samples.
+Processed ( 3230000 / 4902667 ) image samples.
+Processed ( 3240000 / 4902667 ) image samples.
+Processed ( 3250000 / 4902667 ) image samples.
+Processed ( 3260000 / 4902667 ) image samples.
+Processed ( 3270000 / 4902667 ) image samples.
+Processed ( 3280000 / 4902667 ) image samples.
+Processed ( 3290000 / 4902667 ) image samples.
+Processed ( 3300000 / 4902667 ) image samples.
+Processed ( 3310000 / 4902667 ) image samples.
+Processed ( 3320000 / 4902667 ) image samples.
+Processed ( 3330000 / 4902667 ) image samples.
+Processed ( 3340000 / 4902667 ) image samples.
+Processed ( 3350000 / 4902667 ) image samples.
+Processed ( 3360000 / 4902667 ) image samples.
+Processed ( 3370000 / 4902667 ) image samples.
+Processed ( 3380000 / 4902667 ) image samples.
+Processed ( 3390000 / 4902667 ) image samples.
+Processed ( 3400000 / 4902667 ) image samples.
+Processed ( 3410000 / 4902667 ) image samples.
+Processed ( 3420000 / 4902667 ) image samples.
+Processed ( 3430000 / 4902667 ) image samples.
+Processed ( 3440000 / 4902667 ) image samples.
+Processed ( 3450000 / 4902667 ) image samples.
+Processed ( 3460000 / 4902667 ) image samples.
+Processed ( 3470000 / 4902667 ) image samples.
+Processed ( 3480000 / 4902667 ) image samples.
+Processed ( 3490000 / 4902667 ) image samples.
+Processed ( 3500000 / 4902667 ) image samples.
+Processed ( 3510000 / 4902667 ) image samples.
+Processed ( 3520000 / 4902667 ) image samples.
+Processed ( 3530000 / 4902667 ) image samples.
+Processed ( 3540000 / 4902667 ) image samples.
+Processed ( 3550000 / 4902667 ) image samples.
+Processed ( 3560000 / 4902667 ) image samples.
+Processed ( 3570000 / 4902667 ) image samples.
+Processed ( 3580000 / 4902667 ) image samples.
+Processed ( 3590000 / 4902667 ) image samples.
+Processed ( 3600000 / 4902667 ) image samples.
+Processed ( 3610000 / 4902667 ) image samples.
+Processed ( 3620000 / 4902667 ) image samples.
+Processed ( 3630000 / 4902667 ) image samples.
+Processed ( 3640000 / 4902667 ) image samples.
+Processed ( 3650000 / 4902667 ) image samples.
+Processed ( 3660000 / 4902667 ) image samples.
+Processed ( 3670000 / 4902667 ) image samples.
+Processed ( 3680000 / 4902667 ) image samples.
+Processed ( 3690000 / 4902667 ) image samples.
+Processed ( 3700000 / 4902667 ) image samples.
+Processed ( 3710000 / 4902667 ) image samples.
+Processed ( 3720000 / 4902667 ) image samples.
+Processed ( 3730000 / 4902667 ) image samples.
+Processed ( 3740000 / 4902667 ) image samples.
+Processed ( 3750000 / 4902667 ) image samples.
+Processed ( 3760000 / 4902667 ) image samples.
+Processed ( 3770000 / 4902667 ) image samples.
+Processed ( 3780000 / 4902667 ) image samples.
+Processed ( 3790000 / 4902667 ) image samples.
+Processed ( 3800000 / 4902667 ) image samples.
+Processed ( 3810000 / 4902667 ) image samples.
+Processed ( 3820000 / 4902667 ) image samples.
+Processed ( 3830000 / 4902667 ) image samples.
+Processed ( 3840000 / 4902667 ) image samples.
+Processed ( 3850000 / 4902667 ) image samples.
+Processed ( 3860000 / 4902667 ) image samples.
+Processed ( 3870000 / 4902667 ) image samples.
+Processed ( 3880000 / 4902667 ) image samples.
+Processed ( 3890000 / 4902667 ) image samples.
+Processed ( 3900000 / 4902667 ) image samples.
+Processed ( 3910000 / 4902667 ) image samples.
+Processed ( 3920000 / 4902667 ) image samples.
+Processed ( 3930000 / 4902667 ) image samples.
+Processed ( 3940000 / 4902667 ) image samples.
+Processed ( 3950000 / 4902667 ) image samples.
+Processed ( 3960000 / 4902667 ) image samples.
+Processed ( 3970000 / 4902667 ) image samples.
+Processed ( 3980000 / 4902667 ) image samples.
+Processed ( 3990000 / 4902667 ) image samples.
+Processed ( 4000000 / 4902667 ) image samples.
+Processed ( 4010000 / 4902667 ) image samples.
+Processed ( 4020000 / 4902667 ) image samples.
+Processed ( 4030000 / 4902667 ) image samples.
+Processed ( 4040000 / 4902667 ) image samples.
+Processed ( 4050000 / 4902667 ) image samples.
+Processed ( 4060000 / 4902667 ) image samples.
+Processed ( 4070000 / 4902667 ) image samples.
+Processed ( 4080000 / 4902667 ) image samples.
+Processed ( 4090000 / 4902667 ) image samples.
+Processed ( 4100000 / 4902667 ) image samples.
+Processed ( 4110000 / 4902667 ) image samples.
+Processed ( 4120000 / 4902667 ) image samples.
+Processed ( 4130000 / 4902667 ) image samples.
+Processed ( 4140000 / 4902667 ) image samples.
+Processed ( 4150000 / 4902667 ) image samples.
+Processed ( 4160000 / 4902667 ) image samples.
+Processed ( 4170000 / 4902667 ) image samples.
+Processed ( 4180000 / 4902667 ) image samples.
+Processed ( 4190000 / 4902667 ) image samples.
+Processed ( 4200000 / 4902667 ) image samples.
+Processed ( 4210000 / 4902667 ) image samples.
+Processed ( 4220000 / 4902667 ) image samples.
+Processed ( 4230000 / 4902667 ) image samples.
+Processed ( 4240000 / 4902667 ) image samples.
+Processed ( 4250000 / 4902667 ) image samples.
+Processed ( 4260000 / 4902667 ) image samples.
+Processed ( 4270000 / 4902667 ) image samples.
+Processed ( 4280000 / 4902667 ) image samples.
+Processed ( 4290000 / 4902667 ) image samples.
+Processed ( 4300000 / 4902667 ) image samples.
+Processed ( 4310000 / 4902667 ) image samples.
+Processed ( 4320000 / 4902667 ) image samples.
+Processed ( 4330000 / 4902667 ) image samples.
+Processed ( 4340000 / 4902667 ) image samples.
+Processed ( 4350000 / 4902667 ) image samples.
+Processed ( 4360000 / 4902667 ) image samples.
+Processed ( 4370000 / 4902667 ) image samples.
+Processed ( 4380000 / 4902667 ) image samples.
+Processed ( 4390000 / 4902667 ) image samples.
+Processed ( 4400000 / 4902667 ) image samples.
+Processed ( 4410000 / 4902667 ) image samples.
+Processed ( 4420000 / 4902667 ) image samples.
+Processed ( 4430000 / 4902667 ) image samples.
+Processed ( 4440000 / 4902667 ) image samples.
+Processed ( 4450000 / 4902667 ) image samples.
+Processed ( 4460000 / 4902667 ) image samples.
+Processed ( 4470000 / 4902667 ) image samples.
+Processed ( 4480000 / 4902667 ) image samples.
+Processed ( 4490000 / 4902667 ) image samples.
+Processed ( 4500000 / 4902667 ) image samples.
+Processed ( 4510000 / 4902667 ) image samples.
+Processed ( 4520000 / 4902667 ) image samples.
+Processed ( 4530000 / 4902667 ) image samples.
+Processed ( 4540000 / 4902667 ) image samples.
+Processed ( 4550000 / 4902667 ) image samples.
+Processed ( 4560000 / 4902667 ) image samples.
+Processed ( 4570000 / 4902667 ) image samples.
+Processed ( 4580000 / 4902667 ) image samples.
+Processed ( 4590000 / 4902667 ) image samples.
+Processed ( 4600000 / 4902667 ) image samples.
+Processed ( 4610000 / 4902667 ) image samples.
+Processed ( 4620000 / 4902667 ) image samples.
+Processed ( 4630000 / 4902667 ) image samples.
+Processed ( 4640000 / 4902667 ) image samples.
+Processed ( 4650000 / 4902667 ) image samples.
+Processed ( 4660000 / 4902667 ) image samples.
+Processed ( 4670000 / 4902667 ) image samples.
+Processed ( 4680000 / 4902667 ) image samples.
+Processed ( 4690000 / 4902667 ) image samples.
+Processed ( 4700000 / 4902667 ) image samples.
+Processed ( 4710000 / 4902667 ) image samples.
+Processed ( 4720000 / 4902667 ) image samples.
+Processed ( 4730000 / 4902667 ) image samples.
+Processed ( 4740000 / 4902667 ) image samples.
+Processed ( 4750000 / 4902667 ) image samples.
+Processed ( 4760000 / 4902667 ) image samples.
+Processed ( 4770000 / 4902667 ) image samples.
+Processed ( 4780000 / 4902667 ) image samples.
+Processed ( 4790000 / 4902667 ) image samples.
+Processed ( 4800000 / 4902667 ) image samples.
+Processed ( 4810000 / 4902667 ) image samples.
+Processed ( 4820000 / 4902667 ) image samples.
+Processed ( 4830000 / 4902667 ) image samples.
+Processed ( 4840000 / 4902667 ) image samples.
+Processed ( 4850000 / 4902667 ) image samples.
+Processed ( 4860000 / 4902667 ) image samples.
+Processed ( 4870000 / 4902667 ) image samples.
+Processed ( 4880000 / 4902667 ) image samples.
+Processed ( 4890000 / 4902667 ) image samples.
+Processed ( 4900000 / 4902667 ) image samples.
+Generated TensorFlow dataset for landmark images.
+Generated TensorFlow dataset.
+RNet network dataset is generated at ../data/datasets/mtcnn
+Generated a hard dataset i.e. RNet dataset.
+########################################################################################################################################################################################################
+Train RNet.
+2018-08-30 19:44:35.802575 - step - 3840 accuracy - 0.916955, class loss - 0.275937, bbox loss - 0.074381, landmark loss - 0.022050, L2 loss - 0.025477, lr - 0.010000 
+2018-08-30 19:50:32.226619 - step - 7680 accuracy - 0.924658, class loss - 0.251208, bbox loss - 0.062166, landmark loss - 0.016387, L2 loss - 0.026629, lr - 0.010000 
+2018-08-30 19:56:29.693843 - step - 11520 accuracy - 0.947735, class loss - 0.217822, bbox loss - 0.063724, landmark loss - 0.017814, L2 loss - 0.027283, lr - 0.010000 
+2018-08-30 20:02:26.673156 - step - 15360 accuracy - 0.954704, class loss - 0.196066, bbox loss - 0.058316, landmark loss - 0.019750, L2 loss - 0.027698, lr - 0.010000 
+2018-08-30 20:08:23.286638 - step - 19200 accuracy - 0.949324, class loss - 0.183421, bbox loss - 0.050836, landmark loss - 0.011783, L2 loss - 0.027990, lr - 0.010000 
+2018-08-30 20:14:20.242732 - step - 23040 accuracy - 0.954861, class loss - 0.190873, bbox loss - 0.057410, landmark loss - 0.012854, L2 loss - 0.028357, lr - 0.010000 
+2018-08-30 20:20:16.974485 - step - 26880 accuracy - 0.949324, class loss - 0.218082, bbox loss - 0.053736, landmark loss - 0.011971, L2 loss - 0.028557, lr - 0.010000 
+2018-08-30 20:26:13.935664 - step - 30720 accuracy - 0.959459, class loss - 0.160933, bbox loss - 0.067880, landmark loss - 0.014934, L2 loss - 0.028623, lr - 0.010000 
+2018-08-30 20:32:10.685751 - step - 34560 accuracy - 0.955782, class loss - 0.180209, bbox loss - 0.061846, landmark loss - 0.010270, L2 loss - 0.028677, lr - 0.010000 
+2018-08-30 20:38:07.064017 - step - 38400 accuracy - 0.959732, class loss - 0.167432, bbox loss - 0.054279, landmark loss - 0.015973, L2 loss - 0.028747, lr - 0.010000 
+2018-08-30 20:44:03.805877 - step - 42240 accuracy - 0.975945, class loss - 0.149541, bbox loss - 0.051223, landmark loss - 0.016064, L2 loss - 0.028726, lr - 0.010000 
+2018-08-30 20:50:00.564658 - step - 46080 accuracy - 0.944637, class loss - 0.159912, bbox loss - 0.045821, landmark loss - 0.009855, L2 loss - 0.028629, lr - 0.010000 
+2018-08-30 20:55:57.597671 - step - 49920 accuracy - 0.946488, class loss - 0.196042, bbox loss - 0.054018, landmark loss - 0.016659, L2 loss - 0.028645, lr - 0.010000 
+2018-08-30 21:01:54.722405 - step - 53760 accuracy - 0.962069, class loss - 0.139974, bbox loss - 0.060857, landmark loss - 0.011319, L2 loss - 0.028706, lr - 0.010000 
+2018-08-30 21:07:51.181885 - step - 57600 accuracy - 0.949495, class loss - 0.165289, bbox loss - 0.045971, landmark loss - 0.019598, L2 loss - 0.028494, lr - 0.010000 
+2018-08-30 21:13:47.770660 - step - 61440 accuracy - 0.944828, class loss - 0.170307, bbox loss - 0.052302, landmark loss - 0.014311, L2 loss - 0.028494, lr - 0.010000 
+2018-08-30 21:19:44.227502 - step - 65280 accuracy - 0.953901, class loss - 0.207948, bbox loss - 0.051190, landmark loss - 0.008887, L2 loss - 0.028424, lr - 0.010000 
+2018-08-30 21:25:41.196976 - step - 69120 accuracy - 0.959044, class loss - 0.180058, bbox loss - 0.055696, landmark loss - 0.009449, L2 loss - 0.028350, lr - 0.010000 
+2018-08-30 21:31:38.244137 - step - 72960 accuracy - 0.955172, class loss - 0.170530, bbox loss - 0.053339, landmark loss - 0.012775, L2 loss - 0.028338, lr - 0.010000 
+2018-08-30 21:37:34.729790 - step - 76800 accuracy - 0.962199, class loss - 0.162977, bbox loss - 0.049247, landmark loss - 0.013898, L2 loss - 0.028404, lr - 0.010000 
+2018-08-30 21:43:31.521493 - step - 80640 accuracy - 0.914384, class loss - 0.260346, bbox loss - 0.066407, landmark loss - 0.008769, L2 loss - 0.028236, lr - 0.010000 
+2018-08-30 21:49:27.973343 - step - 84480 accuracy - 0.965398, class loss - 0.161389, bbox loss - 0.053489, landmark loss - 0.011047, L2 loss - 0.028365, lr - 0.010000 
+2018-08-30 21:55:24.875599 - step - 88320 accuracy - 0.948276, class loss - 0.169119, bbox loss - 0.061981, landmark loss - 0.009732, L2 loss - 0.028341, lr - 0.010000 
+2018-08-30 22:01:22.756515 - step - 92160 accuracy - 0.939068, class loss - 0.183200, bbox loss - 0.049417, landmark loss - 0.013600, L2 loss - 0.028368, lr - 0.010000 
+2018-08-30 22:07:19.427506 - step - 96000 accuracy - 0.949664, class loss - 0.148426, bbox loss - 0.055826, landmark loss - 0.007138, L2 loss - 0.028367, lr - 0.010000 
+2018-08-30 22:13:16.111135 - step - 99840 accuracy - 0.918644, class loss - 0.216854, bbox loss - 0.059495, landmark loss - 0.010334, L2 loss - 0.028371, lr - 0.010000 
+2018-08-30 22:19:12.800470 - step - 103680 accuracy - 0.941581, class loss - 0.181309, bbox loss - 0.054878, landmark loss - 0.016644, L2 loss - 0.028341, lr - 0.010000 
+2018-08-30 22:25:09.514279 - step - 107520 accuracy - 0.972414, class loss - 0.122141, bbox loss - 0.045607, landmark loss - 0.010442, L2 loss - 0.028260, lr - 0.010000 
+2018-08-30 22:31:06.551479 - step - 111360 accuracy - 0.941781, class loss - 0.184051, bbox loss - 0.046607, landmark loss - 0.012340, L2 loss - 0.028319, lr - 0.010000 
+2018-08-30 22:37:03.260487 - step - 115200 accuracy - 0.943522, class loss - 0.168438, bbox loss - 0.060285, landmark loss - 0.014717, L2 loss - 0.028440, lr - 0.010000 
+2018-08-30 22:43:00.083158 - step - 119040 accuracy - 0.965517, class loss - 0.156853, bbox loss - 0.067564, landmark loss - 0.012158, L2 loss - 0.028412, lr - 0.010000 
+2018-08-30 22:48:56.608747 - step - 122880 accuracy - 0.959184, class loss - 0.159045, bbox loss - 0.057866, landmark loss - 0.011835, L2 loss - 0.028233, lr - 0.010000 
+2018-08-30 22:54:53.234387 - step - 126720 accuracy - 0.954861, class loss - 0.171349, bbox loss - 0.050050, landmark loss - 0.008230, L2 loss - 0.028231, lr - 0.010000 
+2018-08-30 23:00:50.339890 - step - 130560 accuracy - 0.961938, class loss - 0.112365, bbox loss - 0.061603, landmark loss - 0.011325, L2 loss - 0.028272, lr - 0.010000 
+2018-08-30 23:06:47.320130 - step - 134400 accuracy - 0.969178, class loss - 0.108229, bbox loss - 0.051943, landmark loss - 0.009190, L2 loss - 0.028184, lr - 0.010000 
+2018-08-30 23:12:43.939781 - step - 138240 accuracy - 0.944828, class loss - 0.200853, bbox loss - 0.052856, landmark loss - 0.012429, L2 loss - 0.028299, lr - 0.010000 
+2018-08-30 23:18:40.525133 - step - 142080 accuracy - 0.951557, class loss - 0.170380, bbox loss - 0.066183, landmark loss - 0.011880, L2 loss - 0.028213, lr - 0.010000 
+2018-08-30 23:24:37.261337 - step - 145920 accuracy - 0.962069, class loss - 0.182107, bbox loss - 0.062439, landmark loss - 0.011120, L2 loss - 0.028181, lr - 0.010000 
+2018-08-30 23:30:34.239685 - step - 149760 accuracy - 0.958042, class loss - 0.177704, bbox loss - 0.061649, landmark loss - 0.010611, L2 loss - 0.028237, lr - 0.010000 
+2018-08-30 23:36:30.901251 - step - 153600 accuracy - 0.968966, class loss - 0.106488, bbox loss - 0.051008, landmark loss - 0.010815, L2 loss - 0.028262, lr - 0.010000 
+2018-08-30 23:42:27.745678 - step - 157440 accuracy - 0.934708, class loss - 0.210545, bbox loss - 0.059743, landmark loss - 0.010300, L2 loss - 0.028332, lr - 0.010000 
+2018-08-30 23:48:24.274699 - step - 161280 accuracy - 0.969388, class loss - 0.123600, bbox loss - 0.053101, landmark loss - 0.010092, L2 loss - 0.028305, lr - 0.010000 
+2018-08-30 23:54:21.377599 - step - 165120 accuracy - 0.952862, class loss - 0.184306, bbox loss - 0.047690, landmark loss - 0.008944, L2 loss - 0.028303, lr - 0.010000 
+2018-08-31 00:00:19.476443 - step - 168960 accuracy - 0.959322, class loss - 0.159233, bbox loss - 0.058265, landmark loss - 0.011021, L2 loss - 0.028352, lr - 0.010000 
+2018-08-31 00:06:16.496299 - step - 172800 accuracy - 0.962585, class loss - 0.136468, bbox loss - 0.060156, landmark loss - 0.013602, L2 loss - 0.028500, lr - 0.010000 
+2018-08-31 00:12:13.548843 - step - 176640 accuracy - 0.976027, class loss - 0.123795, bbox loss - 0.042391, landmark loss - 0.007191, L2 loss - 0.028089, lr - 0.001000 
+2018-08-31 00:18:09.996317 - step - 180480 accuracy - 0.949495, class loss - 0.156317, bbox loss - 0.044843, landmark loss - 0.008592, L2 loss - 0.027521, lr - 0.001000 
+2018-08-31 00:24:06.615699 - step - 184320 accuracy - 0.959322, class loss - 0.146786, bbox loss - 0.059218, landmark loss - 0.012397, L2 loss - 0.027038, lr - 0.001000 
+2018-08-31 00:30:03.294630 - step - 188160 accuracy - 0.962069, class loss - 0.149297, bbox loss - 0.053246, landmark loss - 0.009432, L2 loss - 0.026572, lr - 0.001000 
+2018-08-31 00:35:59.760019 - step - 192000 accuracy - 0.976271, class loss - 0.089007, bbox loss - 0.039631, landmark loss - 0.010791, L2 loss - 0.026135, lr - 0.001000 
+2018-08-31 00:41:56.588475 - step - 195840 accuracy - 0.962069, class loss - 0.135005, bbox loss - 0.047673, landmark loss - 0.016688, L2 loss - 0.025763, lr - 0.001000 
+2018-08-31 00:47:53.262836 - step - 199680 accuracy - 0.965636, class loss - 0.106959, bbox loss - 0.048906, landmark loss - 0.009535, L2 loss - 0.025380, lr - 0.001000 
+2018-08-31 00:53:50.109282 - step - 203520 accuracy - 0.969283, class loss - 0.116910, bbox loss - 0.049248, landmark loss - 0.007343, L2 loss - 0.025049, lr - 0.001000 
+2018-08-31 00:59:47.375765 - step - 207360 accuracy - 0.976351, class loss - 0.123623, bbox loss - 0.051204, landmark loss - 0.008856, L2 loss - 0.024775, lr - 0.001000 
+2018-08-31 01:05:44.413695 - step - 211200 accuracy - 0.976109, class loss - 0.104517, bbox loss - 0.049605, landmark loss - 0.007602, L2 loss - 0.024489, lr - 0.001000 
+2018-08-31 01:11:41.386683 - step - 215040 accuracy - 0.983165, class loss - 0.100530, bbox loss - 0.044623, landmark loss - 0.008662, L2 loss - 0.024222, lr - 0.001000 
+2018-08-31 01:17:37.819913 - step - 218880 accuracy - 0.976667, class loss - 0.120289, bbox loss - 0.053022, landmark loss - 0.010747, L2 loss - 0.023972, lr - 0.001000 
+2018-08-31 01:23:34.605528 - step - 222720 accuracy - 0.972414, class loss - 0.088239, bbox loss - 0.061587, landmark loss - 0.008397, L2 loss - 0.023722, lr - 0.001000 
+2018-08-31 01:29:31.680638 - step - 226560 accuracy - 0.986111, class loss - 0.081966, bbox loss - 0.053181, landmark loss - 0.007328, L2 loss - 0.023497, lr - 0.001000 
+2018-08-31 01:35:28.225879 - step - 230400 accuracy - 0.955932, class loss - 0.152669, bbox loss - 0.051201, landmark loss - 0.011354, L2 loss - 0.023300, lr - 0.001000 
+2018-08-31 01:41:24.676729 - step - 234240 accuracy - 0.979592, class loss - 0.109239, bbox loss - 0.048473, landmark loss - 0.005946, L2 loss - 0.023079, lr - 0.001000 
+2018-08-31 01:47:21.290357 - step - 238080 accuracy - 0.955631, class loss - 0.149110, bbox loss - 0.052463, landmark loss - 0.007833, L2 loss - 0.022902, lr - 0.001000 
+2018-08-31 01:53:17.940356 - step - 241920 accuracy - 0.962838, class loss - 0.145039, bbox loss - 0.050735, landmark loss - 0.010752, L2 loss - 0.022723, lr - 0.001000 
+2018-08-31 01:59:14.939201 - step - 245760 accuracy - 0.969697, class loss - 0.102156, bbox loss - 0.060978, landmark loss - 0.009492, L2 loss - 0.022555, lr - 0.001000 
+2018-08-31 02:05:11.741232 - step - 249600 accuracy - 0.959184, class loss - 0.166426, bbox loss - 0.048543, landmark loss - 0.009001, L2 loss - 0.022397, lr - 0.001000 
+2018-08-31 02:11:08.392811 - step - 253440 accuracy - 0.961672, class loss - 0.128243, bbox loss - 0.057717, landmark loss - 0.009857, L2 loss - 0.022232, lr - 0.001000 
+2018-08-31 02:17:04.906716 - step - 257280 accuracy - 0.982394, class loss - 0.089575, bbox loss - 0.048542, landmark loss - 0.011719, L2 loss - 0.022090, lr - 0.001000 
+2018-08-31 02:23:01.564193 - step - 261120 accuracy - 0.986348, class loss - 0.074292, bbox loss - 0.046283, landmark loss - 0.008913, L2 loss - 0.021961, lr - 0.001000 
+2018-08-31 02:28:58.883801 - step - 264960 accuracy - 0.965753, class loss - 0.106916, bbox loss - 0.053254, landmark loss - 0.008442, L2 loss - 0.021828, lr - 0.001000 
+2018-08-31 02:34:55.338373 - step - 268800 accuracy - 0.976027, class loss - 0.109774, bbox loss - 0.053388, landmark loss - 0.010762, L2 loss - 0.021702, lr - 0.001000 
+2018-08-31 02:40:51.912166 - step - 272640 accuracy - 0.971731, class loss - 0.106557, bbox loss - 0.056238, landmark loss - 0.009430, L2 loss - 0.021573, lr - 0.001000 
+2018-08-31 02:46:48.681002 - step - 276480 accuracy - 0.948454, class loss - 0.221755, bbox loss - 0.045085, landmark loss - 0.006181, L2 loss - 0.021445, lr - 0.001000 
+2018-08-31 02:52:45.114611 - step - 280320 accuracy - 0.951724, class loss - 0.151890, bbox loss - 0.046434, landmark loss - 0.010629, L2 loss - 0.021342, lr - 0.001000 
+2018-08-31 02:58:41.923608 - step - 284160 accuracy - 0.965986, class loss - 0.104724, bbox loss - 0.055891, landmark loss - 0.012750, L2 loss - 0.021250, lr - 0.001000 
+2018-08-31 03:04:38.861007 - step - 288000 accuracy - 0.972696, class loss - 0.104113, bbox loss - 0.041816, landmark loss - 0.010782, L2 loss - 0.021150, lr - 0.001000 
+2018-08-31 03:10:36.551926 - step - 291840 accuracy - 0.983444, class loss - 0.091862, bbox loss - 0.046410, landmark loss - 0.008855, L2 loss - 0.021038, lr - 0.001000 
+2018-08-31 03:16:40.066479 - step - 295680 accuracy - 0.958904, class loss - 0.137179, bbox loss - 0.043859, landmark loss - 0.008584, L2 loss - 0.020940, lr - 0.001000 
+2018-08-31 03:22:44.776051 - step - 299520 accuracy - 0.958621, class loss - 0.125047, bbox loss - 0.042090, landmark loss - 0.009441, L2 loss - 0.020826, lr - 0.001000 
+2018-08-31 03:28:48.895545 - step - 303360 accuracy - 0.955326, class loss - 0.154387, bbox loss - 0.056518, landmark loss - 0.011329, L2 loss - 0.020744, lr - 0.001000 
+2018-08-31 03:34:47.662129 - step - 307200 accuracy - 0.952381, class loss - 0.161421, bbox loss - 0.052432, landmark loss - 0.009721, L2 loss - 0.020646, lr - 0.001000 
+2018-08-31 03:40:43.930089 - step - 311040 accuracy - 0.978947, class loss - 0.109299, bbox loss - 0.050478, landmark loss - 0.007581, L2 loss - 0.020565, lr - 0.001000 
+2018-08-31 03:46:40.225811 - step - 314880 accuracy - 0.949664, class loss - 0.139764, bbox loss - 0.055152, landmark loss - 0.009304, L2 loss - 0.020498, lr - 0.001000 
+2018-08-31 03:52:36.979875 - step - 318720 accuracy - 0.965870, class loss - 0.125611, bbox loss - 0.038576, landmark loss - 0.007371, L2 loss - 0.020436, lr - 0.001000 
+2018-08-31 03:58:33.848687 - step - 322560 accuracy - 0.948276, class loss - 0.162122, bbox loss - 0.042478, landmark loss - 0.006195, L2 loss - 0.020354, lr - 0.001000 
+2018-08-31 04:04:31.608004 - step - 326400 accuracy - 0.986111, class loss - 0.068396, bbox loss - 0.036679, landmark loss - 0.008367, L2 loss - 0.020295, lr - 0.001000 
+2018-08-31 04:10:28.690300 - step - 330240 accuracy - 0.968421, class loss - 0.101438, bbox loss - 0.061808, landmark loss - 0.007332, L2 loss - 0.020239, lr - 0.001000 
+2018-08-31 04:16:25.839666 - step - 334080 accuracy - 0.956081, class loss - 0.147008, bbox loss - 0.055062, landmark loss - 0.009894, L2 loss - 0.020169, lr - 0.001000 
+2018-08-31 04:22:22.788714 - step - 337920 accuracy - 0.965870, class loss - 0.117274, bbox loss - 0.051189, landmark loss - 0.006564, L2 loss - 0.020119, lr - 0.001000 
+2018-08-31 04:28:20.183579 - step - 341760 accuracy - 0.965517, class loss - 0.159220, bbox loss - 0.054368, landmark loss - 0.012399, L2 loss - 0.020053, lr - 0.001000 
+2018-08-31 04:34:17.329282 - step - 345600 accuracy - 0.969072, class loss - 0.103807, bbox loss - 0.046353, landmark loss - 0.009683, L2 loss - 0.019979, lr - 0.001000 
+2018-08-31 04:40:14.120873 - step - 349440 accuracy - 0.969492, class loss - 0.127720, bbox loss - 0.048756, landmark loss - 0.012260, L2 loss - 0.019928, lr - 0.001000 
+2018-08-31 04:46:10.966002 - step - 353280 accuracy - 0.955631, class loss - 0.179422, bbox loss - 0.050688, landmark loss - 0.006970, L2 loss - 0.019903, lr - 0.000100 
+2018-08-31 04:52:07.565364 - step - 357120 accuracy - 0.969072, class loss - 0.132859, bbox loss - 0.054476, landmark loss - 0.006676, L2 loss - 0.019880, lr - 0.000100 
+2018-08-31 04:58:04.683643 - step - 360960 accuracy - 0.965753, class loss - 0.115380, bbox loss - 0.040545, landmark loss - 0.010066, L2 loss - 0.019866, lr - 0.000100 
+2018-08-31 05:04:01.613513 - step - 364800 accuracy - 0.975694, class loss - 0.104858, bbox loss - 0.057636, landmark loss - 0.008716, L2 loss - 0.019844, lr - 0.000100 
+2018-08-31 05:09:58.157330 - step - 368640 accuracy - 0.960000, class loss - 0.132875, bbox loss - 0.054997, landmark loss - 0.006619, L2 loss - 0.019823, lr - 0.000100 
+2018-08-31 05:15:55.186814 - step - 372480 accuracy - 0.968966, class loss - 0.153139, bbox loss - 0.044585, landmark loss - 0.010276, L2 loss - 0.019806, lr - 0.000100 
+2018-08-31 05:21:52.263672 - step - 376320 accuracy - 0.962457, class loss - 0.109476, bbox loss - 0.054595, landmark loss - 0.009244, L2 loss - 0.019786, lr - 0.000100 
+2018-08-31 05:27:49.401667 - step - 380160 accuracy - 0.976109, class loss - 0.090688, bbox loss - 0.055177, landmark loss - 0.010385, L2 loss - 0.019768, lr - 0.000100 
+2018-08-31 05:33:46.346800 - step - 384000 accuracy - 0.966216, class loss - 0.148909, bbox loss - 0.045703, landmark loss - 0.012236, L2 loss - 0.019753, lr - 0.000100 
+2018-08-31 05:39:43.199740 - step - 387840 accuracy - 0.963455, class loss - 0.140815, bbox loss - 0.053884, landmark loss - 0.009703, L2 loss - 0.019735, lr - 0.000100 
+2018-08-31 05:45:39.815203 - step - 391680 accuracy - 0.966102, class loss - 0.163933, bbox loss - 0.041643, landmark loss - 0.011247, L2 loss - 0.019716, lr - 0.000100 
+2018-08-31 05:51:38.035498 - step - 395520 accuracy - 0.959459, class loss - 0.116342, bbox loss - 0.047722, landmark loss - 0.007161, L2 loss - 0.019702, lr - 0.000100 
+2018-08-31 05:57:35.074701 - step - 399360 accuracy - 0.968531, class loss - 0.110203, bbox loss - 0.052075, landmark loss - 0.009336, L2 loss - 0.019684, lr - 0.000100 
+2018-08-31 06:03:31.980175 - step - 403200 accuracy - 0.962199, class loss - 0.151581, bbox loss - 0.057739, landmark loss - 0.009988, L2 loss - 0.019668, lr - 0.000100 
+2018-08-31 06:09:28.614638 - step - 407040 accuracy - 0.979167, class loss - 0.082986, bbox loss - 0.053633, landmark loss - 0.010017, L2 loss - 0.019652, lr - 0.000100 
+2018-08-31 06:15:25.521150 - step - 410880 accuracy - 0.945392, class loss - 0.185360, bbox loss - 0.063923, landmark loss - 0.007277, L2 loss - 0.019633, lr - 0.000100 
+2018-08-31 06:21:22.815550 - step - 414720 accuracy - 0.952703, class loss - 0.200371, bbox loss - 0.053907, landmark loss - 0.009125, L2 loss - 0.019619, lr - 0.000100 
+2018-08-31 06:27:19.964705 - step - 418560 accuracy - 0.969178, class loss - 0.078192, bbox loss - 0.043336, landmark loss - 0.007447, L2 loss - 0.019604, lr - 0.000100 
+2018-08-31 06:33:17.154154 - step - 422400 accuracy - 0.958621, class loss - 0.167578, bbox loss - 0.050462, landmark loss - 0.008544, L2 loss - 0.019584, lr - 0.000100 
+2018-08-31 06:39:14.190205 - step - 426240 accuracy - 0.972789, class loss - 0.125938, bbox loss - 0.061750, landmark loss - 0.009806, L2 loss - 0.019571, lr - 0.000100 
+2018-08-31 06:45:11.151577 - step - 430080 accuracy - 0.976431, class loss - 0.126271, bbox loss - 0.057806, landmark loss - 0.012408, L2 loss - 0.019552, lr - 0.000100 
+2018-08-31 06:51:08.209903 - step - 433920 accuracy - 0.968858, class loss - 0.110113, bbox loss - 0.053253, landmark loss - 0.008266, L2 loss - 0.019535, lr - 0.000100 
+2018-08-31 06:57:05.481083 - step - 437760 accuracy - 0.975694, class loss - 0.132181, bbox loss - 0.044170, landmark loss - 0.008727, L2 loss - 0.019523, lr - 0.000100 
+2018-08-31 07:03:03.172238 - step - 441600 accuracy - 0.961806, class loss - 0.143569, bbox loss - 0.050644, landmark loss - 0.008310, L2 loss - 0.019506, lr - 0.000100 
+2018-08-31 07:08:59.695661 - step - 445440 accuracy - 0.965753, class loss - 0.128295, bbox loss - 0.061485, landmark loss - 0.009100, L2 loss - 0.019488, lr - 0.000100 
+2018-08-31 07:14:56.483652 - step - 449280 accuracy - 0.962712, class loss - 0.134316, bbox loss - 0.050315, landmark loss - 0.012810, L2 loss - 0.019476, lr - 0.000100 
+2018-08-31 07:20:53.346947 - step - 453120 accuracy - 0.972509, class loss - 0.118778, bbox loss - 0.057953, landmark loss - 0.006898, L2 loss - 0.019461, lr - 0.000100 
+2018-08-31 07:26:50.593224 - step - 456960 accuracy - 0.952218, class loss - 0.145504, bbox loss - 0.052532, landmark loss - 0.005064, L2 loss - 0.019446, lr - 0.000100 
+2018-08-31 07:32:48.062938 - step - 460800 accuracy - 0.969072, class loss - 0.123792, bbox loss - 0.041949, landmark loss - 0.009396, L2 loss - 0.019432, lr - 0.000100 
+2018-08-31 07:38:44.781300 - step - 464640 accuracy - 0.959044, class loss - 0.126080, bbox loss - 0.052208, landmark loss - 0.007261, L2 loss - 0.019417, lr - 0.000100 
+2018-08-31 07:44:41.850824 - step - 468480 accuracy - 0.975862, class loss - 0.096259, bbox loss - 0.047192, landmark loss - 0.007957, L2 loss - 0.019401, lr - 0.000100 
+2018-08-31 07:50:38.417316 - step - 472320 accuracy - 0.955631, class loss - 0.157751, bbox loss - 0.060320, landmark loss - 0.008280, L2 loss - 0.019389, lr - 0.000100 
+2018-08-31 07:56:35.540327 - step - 476160 accuracy - 0.949153, class loss - 0.178452, bbox loss - 0.052499, landmark loss - 0.012598, L2 loss - 0.019373, lr - 0.000100 
+2018-08-31 08:02:32.935214 - step - 480000 accuracy - 0.983108, class loss - 0.077721, bbox loss - 0.042164, landmark loss - 0.007479, L2 loss - 0.019360, lr - 0.000100 
+2018-08-31 08:08:29.685342 - step - 483840 accuracy - 0.965986, class loss - 0.130819, bbox loss - 0.060392, landmark loss - 0.010083, L2 loss - 0.019347, lr - 0.000100 
+2018-08-31 08:14:26.727623 - step - 487680 accuracy - 0.963087, class loss - 0.152496, bbox loss - 0.048571, landmark loss - 0.019320, L2 loss - 0.019332, lr - 0.000100 
+2018-08-31 08:20:23.369428 - step - 491520 accuracy - 0.965870, class loss - 0.115272, bbox loss - 0.048083, landmark loss - 0.010713, L2 loss - 0.019319, lr - 0.000100 
+2018-08-31 08:26:20.399469 - step - 495360 accuracy - 0.959732, class loss - 0.203635, bbox loss - 0.049876, landmark loss - 0.014045, L2 loss - 0.019307, lr - 0.000100 
+2018-08-31 08:32:17.421091 - step - 499200 accuracy - 0.972125, class loss - 0.120642, bbox loss - 0.044429, landmark loss - 0.007444, L2 loss - 0.019292, lr - 0.000100 
+2018-08-31 08:38:14.295015 - step - 503040 accuracy - 0.979452, class loss - 0.099996, bbox loss - 0.054135, landmark loss - 0.008667, L2 loss - 0.019280, lr - 0.000100 
+2018-08-31 08:44:11.095331 - step - 506880 accuracy - 0.965157, class loss - 0.142831, bbox loss - 0.040896, landmark loss - 0.007869, L2 loss - 0.019262, lr - 0.000100 
+2018-08-31 08:50:07.943678 - step - 510720 accuracy - 0.972414, class loss - 0.097699, bbox loss - 0.053634, landmark loss - 0.006728, L2 loss - 0.019247, lr - 0.000100 
+2018-08-31 08:56:04.921393 - step - 514560 accuracy - 0.969492, class loss - 0.111268, bbox loss - 0.053947, landmark loss - 0.009216, L2 loss - 0.019236, lr - 0.000100 
+2018-08-31 09:02:02.253304 - step - 518400 accuracy - 0.973154, class loss - 0.100573, bbox loss - 0.039403, landmark loss - 0.009054, L2 loss - 0.019223, lr - 0.000100 
+2018-08-31 09:07:59.392988 - step - 522240 accuracy - 0.965517, class loss - 0.115318, bbox loss - 0.059409, landmark loss - 0.007369, L2 loss - 0.019208, lr - 0.000100 
+2018-08-31 09:13:56.889371 - step - 526080 accuracy - 0.961938, class loss - 0.137961, bbox loss - 0.050789, landmark loss - 0.010029, L2 loss - 0.019199, lr - 0.000010 
+2018-08-31 09:19:53.255766 - step - 529920 accuracy - 0.989691, class loss - 0.075125, bbox loss - 0.050251, landmark loss - 0.008846, L2 loss - 0.019197, lr - 0.000010 
+2018-08-31 09:25:50.377689 - step - 533760 accuracy - 0.973064, class loss - 0.117506, bbox loss - 0.051384, landmark loss - 0.006411, L2 loss - 0.019195, lr - 0.000010 
+2018-08-31 09:31:47.608925 - step - 537600 accuracy - 0.969283, class loss - 0.127582, bbox loss - 0.041675, landmark loss - 0.009409, L2 loss - 0.019194, lr - 0.000010 
+2018-08-31 09:37:44.432657 - step - 541440 accuracy - 0.982818, class loss - 0.111726, bbox loss - 0.039467, landmark loss - 0.012138, L2 loss - 0.019192, lr - 0.000010 
+2018-08-31 09:43:41.608949 - step - 545280 accuracy - 0.973510, class loss - 0.107668, bbox loss - 0.047737, landmark loss - 0.011786, L2 loss - 0.019191, lr - 0.000010 
+2018-08-31 09:49:38.404862 - step - 549120 accuracy - 0.962963, class loss - 0.129071, bbox loss - 0.036080, landmark loss - 0.007952, L2 loss - 0.019190, lr - 0.000010 
+2018-08-31 09:55:35.107966 - step - 552960 accuracy - 0.982517, class loss - 0.075813, bbox loss - 0.059647, landmark loss - 0.007623, L2 loss - 0.019188, lr - 0.000010 
+2018-08-31 10:01:58.009983 - step - 556800 accuracy - 0.989933, class loss - 0.072747, bbox loss - 0.048259, landmark loss - 0.011544, L2 loss - 0.019187, lr - 0.000010 
+2018-08-31 10:08:19.096034 - step - 560640 accuracy - 0.969283, class loss - 0.107845, bbox loss - 0.054392, landmark loss - 0.009964, L2 loss - 0.019186, lr - 0.000010 
+2018-08-31 10:14:40.144310 - step - 564480 accuracy - 0.952862, class loss - 0.195212, bbox loss - 0.055757, landmark loss - 0.012573, L2 loss - 0.019184, lr - 0.000010 
+2018-08-31 10:21:01.255630 - step - 568320 accuracy - 0.946996, class loss - 0.145588, bbox loss - 0.050689, landmark loss - 0.010459, L2 loss - 0.019182, lr - 0.000010 
+2018-08-31 10:27:23.038932 - step - 572160 accuracy - 0.958904, class loss - 0.102086, bbox loss - 0.044485, landmark loss - 0.010580, L2 loss - 0.019181, lr - 0.000010 
+2018-08-31 10:33:44.938991 - step - 576000 accuracy - 0.959732, class loss - 0.144916, bbox loss - 0.050063, landmark loss - 0.008332, L2 loss - 0.019179, lr - 0.000010 
+2018-08-31 10:40:06.158566 - step - 579840 accuracy - 0.976351, class loss - 0.089676, bbox loss - 0.050925, landmark loss - 0.006865, L2 loss - 0.019178, lr - 0.000010 
+2018-08-31 10:46:27.307287 - step - 583680 accuracy - 0.956229, class loss - 0.164617, bbox loss - 0.047223, landmark loss - 0.008144, L2 loss - 0.019176, lr - 0.000010 
+2018-08-31 10:52:48.411151 - step - 587520 accuracy - 0.962838, class loss - 0.127690, bbox loss - 0.051163, landmark loss - 0.009941, L2 loss - 0.019175, lr - 0.000010 
+2018-08-31 10:59:10.216152 - step - 591360 accuracy - 0.972028, class loss - 0.106496, bbox loss - 0.045340, landmark loss - 0.009100, L2 loss - 0.019174, lr - 0.000010 
+2018-08-31 11:05:31.394568 - step - 595200 accuracy - 0.968966, class loss - 0.119054, bbox loss - 0.043855, landmark loss - 0.008278, L2 loss - 0.019172, lr - 0.000010 
+2018-08-31 11:11:52.379486 - step - 599040 accuracy - 0.952862, class loss - 0.165957, bbox loss - 0.054174, landmark loss - 0.007549, L2 loss - 0.019171, lr - 0.000010 
+2018-08-31 11:18:17.947005 - step - 602880 accuracy - 0.969283, class loss - 0.129803, bbox loss - 0.047210, landmark loss - 0.006171, L2 loss - 0.019170, lr - 0.000010 
+2018-08-31 11:24:46.291543 - step - 606720 accuracy - 0.979167, class loss - 0.073963, bbox loss - 0.048710, landmark loss - 0.007980, L2 loss - 0.019168, lr - 0.000010 
+2018-08-31 11:31:25.796425 - step - 610560 accuracy - 0.979452, class loss - 0.123278, bbox loss - 0.039369, landmark loss - 0.009465, L2 loss - 0.019167, lr - 0.000010 
+2018-08-31 11:37:55.399535 - step - 614400 accuracy - 0.976027, class loss - 0.121308, bbox loss - 0.047683, landmark loss - 0.006736, L2 loss - 0.019165, lr - 0.000010 
+2018-08-31 11:44:23.977451 - step - 618240 accuracy - 0.972222, class loss - 0.095383, bbox loss - 0.050335, landmark loss - 0.010439, L2 loss - 0.019164, lr - 0.000010 
+2018-08-31 11:50:51.755233 - step - 622080 accuracy - 0.983051, class loss - 0.091039, bbox loss - 0.051161, landmark loss - 0.005696, L2 loss - 0.019163, lr - 0.000010 
+2018-08-31 11:57:20.866587 - step - 625920 accuracy - 0.976431, class loss - 0.094112, bbox loss - 0.040292, landmark loss - 0.009553, L2 loss - 0.019161, lr - 0.000010 
+2018-08-31 12:03:52.870130 - step - 629760 accuracy - 0.968750, class loss - 0.112026, bbox loss - 0.042537, landmark loss - 0.012518, L2 loss - 0.019160, lr - 0.000010 
+2018-08-31 12:10:23.981850 - step - 633600 accuracy - 0.969492, class loss - 0.141782, bbox loss - 0.057842, landmark loss - 0.011343, L2 loss - 0.019159, lr - 0.000010 
+2018-08-31 12:16:50.967826 - step - 637440 accuracy - 0.976431, class loss - 0.120131, bbox loss - 0.053726, landmark loss - 0.009004, L2 loss - 0.019157, lr - 0.000010 
+2018-08-31 12:23:19.654102 - step - 641280 accuracy - 0.962838, class loss - 0.125446, bbox loss - 0.045095, landmark loss - 0.013984, L2 loss - 0.019155, lr - 0.000010 
+2018-08-31 12:29:49.857328 - step - 645120 accuracy - 0.945946, class loss - 0.179536, bbox loss - 0.062013, landmark loss - 0.006358, L2 loss - 0.019154, lr - 0.000010 
+Model is restored from model path - ../data/models/mtcnn/train/RNet/RNet-700448 with global step - 700448.
+2018-08-31 16:42:41.266121 - step - 702720 accuracy - 0.955782, class loss - 0.172753, bbox loss - 0.051989, landmark loss - 0.009737, L2 loss - 0.019132, lr - 0.000010 
+2018-08-31 16:48:44.491029 - step - 706560 accuracy - 0.958621, class loss - 0.150107, bbox loss - 0.048791, landmark loss - 0.010553, L2 loss - 0.019130, lr - 0.000010 
+2018-08-31 16:54:47.406410 - step - 710400 accuracy - 0.962963, class loss - 0.134902, bbox loss - 0.046428, landmark loss - 0.011083, L2 loss - 0.019129, lr - 0.000010 
+2018-08-31 17:00:50.388892 - step - 714240 accuracy - 0.982993, class loss - 0.079506, bbox loss - 0.049962, landmark loss - 0.007935, L2 loss - 0.019128, lr - 0.000010 
+2018-08-31 17:06:52.538503 - step - 718080 accuracy - 0.975862, class loss - 0.105686, bbox loss - 0.046225, landmark loss - 0.007882, L2 loss - 0.019126, lr - 0.000010 
+2018-08-31 17:12:54.032613 - step - 721920 accuracy - 0.962069, class loss - 0.120575, bbox loss - 0.048634, landmark loss - 0.008506, L2 loss - 0.019124, lr - 0.000010 
+2018-08-31 17:18:54.496745 - step - 725760 accuracy - 0.958763, class loss - 0.139585, bbox loss - 0.046483, landmark loss - 0.011618, L2 loss - 0.019123, lr - 0.000010 
+2018-08-31 17:24:55.081157 - step - 729600 accuracy - 0.948980, class loss - 0.188849, bbox loss - 0.053916, landmark loss - 0.005506, L2 loss - 0.019121, lr - 0.000010 
+2018-08-31 17:30:55.877502 - step - 733440 accuracy - 0.959866, class loss - 0.132012, bbox loss - 0.055483, landmark loss - 0.015144, L2 loss - 0.019120, lr - 0.000010 
+2018-08-31 17:36:56.345263 - step - 737280 accuracy - 0.983051, class loss - 0.083483, bbox loss - 0.057434, landmark loss - 0.008155, L2 loss - 0.019119, lr - 0.000010 
+2018-08-31 17:42:56.723570 - step - 741120 accuracy - 0.956229, class loss - 0.162429, bbox loss - 0.057999, landmark loss - 0.010293, L2 loss - 0.019117, lr - 0.000010 
+2018-08-31 17:48:56.726231 - step - 744960 accuracy - 0.979866, class loss - 0.117951, bbox loss - 0.049508, landmark loss - 0.008141, L2 loss - 0.019116, lr - 0.000010 
+2018-08-31 17:54:57.032392 - step - 748800 accuracy - 0.972603, class loss - 0.107933, bbox loss - 0.049564, landmark loss - 0.011322, L2 loss - 0.019114, lr - 0.000010 
+2018-08-31 18:00:57.512786 - step - 752640 accuracy - 0.972318, class loss - 0.105798, bbox loss - 0.051885, landmark loss - 0.007689, L2 loss - 0.019112, lr - 0.000010 
+2018-08-31 18:06:57.901106 - step - 756480 accuracy - 0.972696, class loss - 0.095569, bbox loss - 0.056484, landmark loss - 0.007755, L2 loss - 0.019111, lr - 0.000010 
+2018-08-31 18:12:58.317818 - step - 760320 accuracy - 0.965870, class loss - 0.126056, bbox loss - 0.054764, landmark loss - 0.006239, L2 loss - 0.019110, lr - 0.000010 
+2018-08-31 18:18:58.577661 - step - 764160 accuracy - 0.979730, class loss - 0.070663, bbox loss - 0.049029, landmark loss - 0.010810, L2 loss - 0.019108, lr - 0.000010 
+2018-08-31 18:24:58.897414 - step - 768000 accuracy - 0.958763, class loss - 0.128748, bbox loss - 0.050929, landmark loss - 0.009141, L2 loss - 0.019107, lr - 0.000010 
+2018-08-31 18:30:59.605747 - step - 771840 accuracy - 0.962329, class loss - 0.100945, bbox loss - 0.043082, landmark loss - 0.010627, L2 loss - 0.019106, lr - 0.000010 
+2018-08-31 18:36:59.862594 - step - 775680 accuracy - 0.958763, class loss - 0.137748, bbox loss - 0.047691, landmark loss - 0.010782, L2 loss - 0.019104, lr - 0.000010 
+2018-08-31 18:43:00.321601 - step - 779520 accuracy - 0.957597, class loss - 0.154633, bbox loss - 0.039773, landmark loss - 0.009442, L2 loss - 0.019103, lr - 0.000010 
+2018-08-31 18:49:00.484142 - step - 783360 accuracy - 0.956522, class loss - 0.161391, bbox loss - 0.045712, landmark loss - 0.010626, L2 loss - 0.019101, lr - 0.000010 
+2018-08-31 18:55:00.904703 - step - 787200 accuracy - 0.972696, class loss - 0.118394, bbox loss - 0.057018, landmark loss - 0.008116, L2 loss - 0.019100, lr - 0.000010 
+RNet - network is trained and weights are generated at ../data/models/mtcnn/train
+Trained RNet.
+########################################################################################################################################################################################################
+Generate a hard dataset i.e. ONet dataset.
+Generating image samples.
+64745 faces in  12431 number of images for WIDER Face dataset.
+64745 faces in  12431 number of images for WIDER Face dataset.
+previous_positive_samples 111417 previous_part_samples 67049 previous_negative_samples 95501
+(1000/12431) number of images are done - positive - 120657,  part - 77019, negative - 118860
+(2000/12431) number of images are done - positive - 130007,  part - 86979, negative - 140388
+(3000/12431) number of images are done - positive - 139137,  part - 96919, negative - 163786
+(4000/12431) number of images are done - positive - 147997,  part - 106869, negative - 187969
+(5000/12431) number of images are done - positive - 156957,  part - 116829, negative - 214024
+(6000/12431) number of images are done - positive - 166217,  part - 126819, negative - 235740
+(7000/12431) number of images are done - positive - 175177,  part - 136789, negative - 260113
+(8000/12431) number of images are done - positive - 184687,  part - 146769, negative - 283559
+(9000/12431) number of images are done - positive - 194487,  part - 156759, negative - 306282
+(10000/12431) number of images are done - positive - 204237,  part - 166759, negative - 327372
+(11000/12431) number of images are done - positive - 213897,  part - 176749, negative - 348770
+(12000/12431) number of images are done - positive - 223527,  part - 186749, negative - 371489
+(13000/12431) number of images are done - positive - 232657,  part - 196739, negative - 408981
+(14000/12431) number of images are done - positive - 241297,  part - 206719, negative - 465056
+(15000/12431) number of images are done - positive - 250127,  part - 216699, negative - 507198
+(16000/12431) number of images are done - positive - 258757,  part - 226639, negative - 533492
+(17000/12431) number of images are done - positive - 267637,  part - 236639, negative - 573559
+(18000/12431) number of images are done - positive - 276497,  part - 246579, negative - 597368
+(19000/12431) number of images are done - positive - 285457,  part - 256539, negative - 619760
+(20000/12431) number of images are done - positive - 294317,  part - 266489, negative - 638757
+(21000/12431) number of images are done - positive - 302977,  part - 276449, negative - 658382
+(22000/12431) number of images are done - positive - 311987,  part - 286409, negative - 676207
+(23000/12431) number of images are done - positive - 320697,  part - 296379, negative - 696679
+(24000/12431) number of images are done - positive - 329547,  part - 306329, negative - 716695
+(25000/12431) number of images are done - positive - 338437,  part - 316269, negative - 738972
+(26000/12431) number of images are done - positive - 347307,  part - 326249, negative - 760496
+(27000/12431) number of images are done - positive - 356327,  part - 336169, negative - 781001
+(28000/12431) number of images are done - positive - 365677,  part - 346109, negative - 803108
+(29000/12431) number of images are done - positive - 375527,  part - 356099, negative - 826805
+(30000/12431) number of images are done - positive - 385077,  part - 366069, negative - 849017
+(31000/12431) number of images are done - positive - 393887,  part - 376019, negative - 876545
+(32000/12431) number of images are done - positive - 402307,  part - 385969, negative - 921838
+(33000/12431) number of images are done - positive - 411237,  part - 395949, negative - 966078
+(34000/12431) number of images are done - positive - 420287,  part - 405889, negative - 1006108
+(35000/12431) number of images are done - positive - 429387,  part - 415849, negative - 1036343
+(36000/12431) number of images are done - positive - 438237,  part - 425829, negative - 1065793
+(37000/12431) number of images are done - positive - 447317,  part - 435799, negative - 1112333
+(38000/12431) number of images are done - positive - 456157,  part - 445729, negative - 1162013
+(39000/12431) number of images are done - positive - 465237,  part - 455709, negative - 1190008
+(40000/12431) number of images are done - positive - 474177,  part - 465699, negative - 1218029
+(41000/12431) number of images are done - positive - 483287,  part - 475699, negative - 1244439
+(42000/12431) number of images are done - positive - 492327,  part - 485669, negative - 1277486
+(43000/12431) number of images are done - positive - 501837,  part - 495669, negative - 1309263
+(44000/12431) number of images are done - positive - 511097,  part - 505669, negative - 1359512
+(45000/12431) number of images are done - positive - 520017,  part - 515659, negative - 1401015
+(46000/12431) number of images are done - positive - 529487,  part - 525659, negative - 1434762
+(47000/12431) number of images are done - positive - 538897,  part - 535649, negative - 1492223
+(48000/12431) number of images are done - positive - 547777,  part - 545619, negative - 1537838
+(49000/12431) number of images are done - positive - 556847,  part - 555619, negative - 1587937
+(50000/12431) number of images are done - positive - 565917,  part - 565589, negative - 1623113
+(51000/12431) number of images are done - positive - 574537,  part - 575569, negative - 1663638
+(52000/12431) number of images are done - positive - 583427,  part - 585529, negative - 1698759
+(53000/12431) number of images are done - positive - 592587,  part - 595499, negative - 1742759
+(54000/12431) number of images are done - positive - 601387,  part - 605449, negative - 1793761
+(55000/12431) number of images are done - positive - 610597,  part - 615419, negative - 1831014
+(56000/12431) number of images are done - positive - 619777,  part - 625379, negative - 1869338
+(57000/12431) number of images are done - positive - 628117,  part - 635359, negative - 1910927
+(58000/12431) number of images are done - positive - 637497,  part - 645329, negative - 1938102
+(59000/12431) number of images are done - positive - 646407,  part - 655269, negative - 1974080
+(60000/12431) number of images are done - positive - 655557,  part - 665239, negative - 2001813
+(61000/12431) number of images are done - positive - 664307,  part - 675199, negative - 2024680
+(62000/12431) number of images are done - positive - 673237,  part - 685149, negative - 2040709
+(63000/12431) number of images are done - positive - 682277,  part - 695099, negative - 2058703
+(64000/12431) number of images are done - positive - 691377,  part - 705029, negative - 2081598
+Generated image samples.
+Generating landmark samples.
+10000 faces in  10000 number of images for LFWLandmark dataset
+( 5000 / 10000 ) number of input images are processed.
+( 10000 / 10000 ) number of input images are processed.
+Generated landmark samples.
+Generating TensorFlow dataset.
+Generating TensorFlow dataset for positive images.
+Generated TensorFlow dataset for positive images.
+Generating TensorFlow dataset for partial images.
+Generated TensorFlow dataset for partial images.
+Generating TensorFlow dataset for negative images.
+Generated TensorFlow dataset for negative images.
+Generating TensorFlow dataset for landmark images.
+Processed ( 10000 / 4933947 ) image samples.
+Processed ( 20000 / 4933947 ) image samples.
+Processed ( 30000 / 4933947 ) image samples.
+Processed ( 40000 / 4933947 ) image samples.
+Processed ( 50000 / 4933947 ) image samples.
+Processed ( 60000 / 4933947 ) image samples.
+Processed ( 70000 / 4933947 ) image samples.
+Processed ( 80000 / 4933947 ) image samples.
+Processed ( 90000 / 4933947 ) image samples.
+Processed ( 100000 / 4933947 ) image samples.
+Processed ( 110000 / 4933947 ) image samples.
+Processed ( 120000 / 4933947 ) image samples.
+Processed ( 130000 / 4933947 ) image samples.
+Processed ( 140000 / 4933947 ) image samples.
+Processed ( 150000 / 4933947 ) image samples.
+Processed ( 160000 / 4933947 ) image samples.
+Processed ( 170000 / 4933947 ) image samples.
+Processed ( 180000 / 4933947 ) image samples.
+Processed ( 190000 / 4933947 ) image samples.
+Processed ( 200000 / 4933947 ) image samples.
+Processed ( 210000 / 4933947 ) image samples.
+Processed ( 220000 / 4933947 ) image samples.
+Processed ( 230000 / 4933947 ) image samples.
+Processed ( 240000 / 4933947 ) image samples.
+Processed ( 250000 / 4933947 ) image samples.
+Processed ( 260000 / 4933947 ) image samples.
+Processed ( 270000 / 4933947 ) image samples.
+Processed ( 280000 / 4933947 ) image samples.
+Processed ( 290000 / 4933947 ) image samples.
+Processed ( 300000 / 4933947 ) image samples.
+Processed ( 310000 / 4933947 ) image samples.
+Processed ( 320000 / 4933947 ) image samples.
+Processed ( 330000 / 4933947 ) image samples.
+Processed ( 340000 / 4933947 ) image samples.
+Processed ( 350000 / 4933947 ) image samples.
+Processed ( 360000 / 4933947 ) image samples.
+Processed ( 370000 / 4933947 ) image samples.
+Processed ( 380000 / 4933947 ) image samples.
+Processed ( 390000 / 4933947 ) image samples.
+Processed ( 400000 / 4933947 ) image samples.
+Processed ( 410000 / 4933947 ) image samples.
+Processed ( 420000 / 4933947 ) image samples.
+Processed ( 430000 / 4933947 ) image samples.
+Processed ( 440000 / 4933947 ) image samples.
+Processed ( 450000 / 4933947 ) image samples.
+Processed ( 460000 / 4933947 ) image samples.
+Processed ( 470000 / 4933947 ) image samples.
+Processed ( 480000 / 4933947 ) image samples.
+Processed ( 490000 / 4933947 ) image samples.
+Processed ( 500000 / 4933947 ) image samples.
+Processed ( 510000 / 4933947 ) image samples.
+Processed ( 520000 / 4933947 ) image samples.
+Processed ( 530000 / 4933947 ) image samples.
+Processed ( 540000 / 4933947 ) image samples.
+Processed ( 550000 / 4933947 ) image samples.
+Processed ( 560000 / 4933947 ) image samples.
+Processed ( 570000 / 4933947 ) image samples.
+Processed ( 580000 / 4933947 ) image samples.
+Processed ( 590000 / 4933947 ) image samples.
+Processed ( 600000 / 4933947 ) image samples.
+Processed ( 610000 / 4933947 ) image samples.
+Processed ( 620000 / 4933947 ) image samples.
+Processed ( 630000 / 4933947 ) image samples.
+Processed ( 640000 / 4933947 ) image samples.
+Processed ( 650000 / 4933947 ) image samples.
+Processed ( 660000 / 4933947 ) image samples.
+Processed ( 670000 / 4933947 ) image samples.
+Processed ( 680000 / 4933947 ) image samples.
+Processed ( 690000 / 4933947 ) image samples.
+Processed ( 700000 / 4933947 ) image samples.
+Processed ( 710000 / 4933947 ) image samples.
+Processed ( 720000 / 4933947 ) image samples.
+Processed ( 730000 / 4933947 ) image samples.
+Processed ( 740000 / 4933947 ) image samples.
+Processed ( 750000 / 4933947 ) image samples.
+Processed ( 760000 / 4933947 ) image samples.
+Processed ( 770000 / 4933947 ) image samples.
+Processed ( 780000 / 4933947 ) image samples.
+Processed ( 790000 / 4933947 ) image samples.
+Processed ( 800000 / 4933947 ) image samples.
+Processed ( 810000 / 4933947 ) image samples.
+Processed ( 820000 / 4933947 ) image samples.
+Processed ( 830000 / 4933947 ) image samples.
+Processed ( 840000 / 4933947 ) image samples.
+Processed ( 850000 / 4933947 ) image samples.
+Processed ( 860000 / 4933947 ) image samples.
+Processed ( 870000 / 4933947 ) image samples.
+Processed ( 880000 / 4933947 ) image samples.
+Processed ( 890000 / 4933947 ) image samples.
+Processed ( 900000 / 4933947 ) image samples.
+Processed ( 910000 / 4933947 ) image samples.
+Processed ( 920000 / 4933947 ) image samples.
+Processed ( 930000 / 4933947 ) image samples.
+Processed ( 940000 / 4933947 ) image samples.
+Processed ( 950000 / 4933947 ) image samples.
+Processed ( 960000 / 4933947 ) image samples.
+Processed ( 970000 / 4933947 ) image samples.
+Processed ( 980000 / 4933947 ) image samples.
+Processed ( 990000 / 4933947 ) image samples.
+Processed ( 1000000 / 4933947 ) image samples.
+Processed ( 1010000 / 4933947 ) image samples.
+Processed ( 1020000 / 4933947 ) image samples.
+Processed ( 1030000 / 4933947 ) image samples.
+Processed ( 1040000 / 4933947 ) image samples.
+Processed ( 1050000 / 4933947 ) image samples.
+Processed ( 1060000 / 4933947 ) image samples.
+Processed ( 1070000 / 4933947 ) image samples.
+Processed ( 1080000 / 4933947 ) image samples.
+Processed ( 1090000 / 4933947 ) image samples.
+Processed ( 1100000 / 4933947 ) image samples.
+Processed ( 1110000 / 4933947 ) image samples.
+Processed ( 1120000 / 4933947 ) image samples.
+Processed ( 1130000 / 4933947 ) image samples.
+Processed ( 1140000 / 4933947 ) image samples.
+Processed ( 1150000 / 4933947 ) image samples.
+Processed ( 1160000 / 4933947 ) image samples.
+Processed ( 1170000 / 4933947 ) image samples.
+Processed ( 1180000 / 4933947 ) image samples.
+Processed ( 1190000 / 4933947 ) image samples.
+Processed ( 1200000 / 4933947 ) image samples.
+Processed ( 1210000 / 4933947 ) image samples.
+Processed ( 1220000 / 4933947 ) image samples.
+Processed ( 1230000 / 4933947 ) image samples.
+Processed ( 1240000 / 4933947 ) image samples.
+Processed ( 1250000 / 4933947 ) image samples.
+Processed ( 1260000 / 4933947 ) image samples.
+Processed ( 1270000 / 4933947 ) image samples.
+Processed ( 1280000 / 4933947 ) image samples.
+Processed ( 1290000 / 4933947 ) image samples.
+Processed ( 1300000 / 4933947 ) image samples.
+Processed ( 1310000 / 4933947 ) image samples.
+Processed ( 1320000 / 4933947 ) image samples.
+Processed ( 1330000 / 4933947 ) image samples.
+Processed ( 1340000 / 4933947 ) image samples.
+Processed ( 1350000 / 4933947 ) image samples.
+Processed ( 1360000 / 4933947 ) image samples.
+Processed ( 1370000 / 4933947 ) image samples.
+Processed ( 1380000 / 4933947 ) image samples.
+Processed ( 1390000 / 4933947 ) image samples.
+Processed ( 1400000 / 4933947 ) image samples.
+Processed ( 1410000 / 4933947 ) image samples.
+Processed ( 1420000 / 4933947 ) image samples.
+Processed ( 1430000 / 4933947 ) image samples.
+Processed ( 1440000 / 4933947 ) image samples.
+Processed ( 1450000 / 4933947 ) image samples.
+Processed ( 1460000 / 4933947 ) image samples.
+Processed ( 1470000 / 4933947 ) image samples.
+Processed ( 1480000 / 4933947 ) image samples.
+Processed ( 1490000 / 4933947 ) image samples.
+Processed ( 1500000 / 4933947 ) image samples.
+Processed ( 1510000 / 4933947 ) image samples.
+Processed ( 1520000 / 4933947 ) image samples.
+Processed ( 1530000 / 4933947 ) image samples.
+Processed ( 1540000 / 4933947 ) image samples.
+Processed ( 1550000 / 4933947 ) image samples.
+Processed ( 1560000 / 4933947 ) image samples.
+Processed ( 1570000 / 4933947 ) image samples.
+Processed ( 1580000 / 4933947 ) image samples.
+Processed ( 1590000 / 4933947 ) image samples.
+Processed ( 1600000 / 4933947 ) image samples.
+Processed ( 1610000 / 4933947 ) image samples.
+Processed ( 1620000 / 4933947 ) image samples.
+Processed ( 1630000 / 4933947 ) image samples.
+Processed ( 1640000 / 4933947 ) image samples.
+Processed ( 1650000 / 4933947 ) image samples.
+Processed ( 1660000 / 4933947 ) image samples.
+Processed ( 1670000 / 4933947 ) image samples.
+Processed ( 1680000 / 4933947 ) image samples.
+Processed ( 1690000 / 4933947 ) image samples.
+Processed ( 1700000 / 4933947 ) image samples.
+Processed ( 1710000 / 4933947 ) image samples.
+Processed ( 1720000 / 4933947 ) image samples.
+Processed ( 1730000 / 4933947 ) image samples.
+Processed ( 1740000 / 4933947 ) image samples.
+Processed ( 1750000 / 4933947 ) image samples.
+Processed ( 1760000 / 4933947 ) image samples.
+Processed ( 1770000 / 4933947 ) image samples.
+Processed ( 1780000 / 4933947 ) image samples.
+Processed ( 1790000 / 4933947 ) image samples.
+Processed ( 1800000 / 4933947 ) image samples.
+Processed ( 1810000 / 4933947 ) image samples.
+Processed ( 1820000 / 4933947 ) image samples.
+Processed ( 1830000 / 4933947 ) image samples.
+Processed ( 1840000 / 4933947 ) image samples.
+Processed ( 1850000 / 4933947 ) image samples.
+Processed ( 1860000 / 4933947 ) image samples.
+Processed ( 1870000 / 4933947 ) image samples.
+Processed ( 1880000 / 4933947 ) image samples.
+Processed ( 1890000 / 4933947 ) image samples.
+Processed ( 1900000 / 4933947 ) image samples.
+Processed ( 1910000 / 4933947 ) image samples.
+Processed ( 1920000 / 4933947 ) image samples.
+Processed ( 1930000 / 4933947 ) image samples.
+Processed ( 1940000 / 4933947 ) image samples.
+Processed ( 1950000 / 4933947 ) image samples.
+Processed ( 1960000 / 4933947 ) image samples.
+Processed ( 1970000 / 4933947 ) image samples.
+Processed ( 1980000 / 4933947 ) image samples.
+Processed ( 1990000 / 4933947 ) image samples.
+Processed ( 2000000 / 4933947 ) image samples.
+Processed ( 2010000 / 4933947 ) image samples.
+Processed ( 2020000 / 4933947 ) image samples.
+Processed ( 2030000 / 4933947 ) image samples.
+Processed ( 2040000 / 4933947 ) image samples.
+Processed ( 2050000 / 4933947 ) image samples.
+Processed ( 2060000 / 4933947 ) image samples.
+Processed ( 2070000 / 4933947 ) image samples.
+Processed ( 2080000 / 4933947 ) image samples.
+Processed ( 2090000 / 4933947 ) image samples.
+Processed ( 2100000 / 4933947 ) image samples.
+Processed ( 2110000 / 4933947 ) image samples.
+Processed ( 2120000 / 4933947 ) image samples.
+Processed ( 2130000 / 4933947 ) image samples.
+Processed ( 2140000 / 4933947 ) image samples.
+Processed ( 2150000 / 4933947 ) image samples.
+Processed ( 2160000 / 4933947 ) image samples.
+Processed ( 2170000 / 4933947 ) image samples.
+Processed ( 2180000 / 4933947 ) image samples.
+Processed ( 2190000 / 4933947 ) image samples.
+Processed ( 2200000 / 4933947 ) image samples.
+Processed ( 2210000 / 4933947 ) image samples.
+Processed ( 2220000 / 4933947 ) image samples.
+Processed ( 2230000 / 4933947 ) image samples.
+Processed ( 2240000 / 4933947 ) image samples.
+Processed ( 2250000 / 4933947 ) image samples.
+Processed ( 2260000 / 4933947 ) image samples.
+Processed ( 2270000 / 4933947 ) image samples.
+Processed ( 2280000 / 4933947 ) image samples.
+Processed ( 2290000 / 4933947 ) image samples.
+Processed ( 2300000 / 4933947 ) image samples.
+Processed ( 2310000 / 4933947 ) image samples.
+Processed ( 2320000 / 4933947 ) image samples.
+Processed ( 2330000 / 4933947 ) image samples.
+Processed ( 2340000 / 4933947 ) image samples.
+Processed ( 2350000 / 4933947 ) image samples.
+Processed ( 2360000 / 4933947 ) image samples.
+Processed ( 2370000 / 4933947 ) image samples.
+Processed ( 2380000 / 4933947 ) image samples.
+Processed ( 2390000 / 4933947 ) image samples.
+Processed ( 2400000 / 4933947 ) image samples.
+Processed ( 2410000 / 4933947 ) image samples.
+Processed ( 2420000 / 4933947 ) image samples.
+Processed ( 2430000 / 4933947 ) image samples.
+Processed ( 2440000 / 4933947 ) image samples.
+Processed ( 2450000 / 4933947 ) image samples.
+Processed ( 2460000 / 4933947 ) image samples.
+Processed ( 2470000 / 4933947 ) image samples.
+Processed ( 2480000 / 4933947 ) image samples.
+Processed ( 2490000 / 4933947 ) image samples.
+Processed ( 2500000 / 4933947 ) image samples.
+Processed ( 2510000 / 4933947 ) image samples.
+Processed ( 2520000 / 4933947 ) image samples.
+Processed ( 2530000 / 4933947 ) image samples.
+Processed ( 2540000 / 4933947 ) image samples.
+Processed ( 2550000 / 4933947 ) image samples.
+Processed ( 2560000 / 4933947 ) image samples.
+Processed ( 2570000 / 4933947 ) image samples.
+Processed ( 2580000 / 4933947 ) image samples.
+Processed ( 2590000 / 4933947 ) image samples.
+Processed ( 2600000 / 4933947 ) image samples.
+Processed ( 2610000 / 4933947 ) image samples.
+Processed ( 2620000 / 4933947 ) image samples.
+Processed ( 2630000 / 4933947 ) image samples.
+Processed ( 2640000 / 4933947 ) image samples.
+Processed ( 2650000 / 4933947 ) image samples.
+Processed ( 2660000 / 4933947 ) image samples.
+Processed ( 2670000 / 4933947 ) image samples.
+Processed ( 2680000 / 4933947 ) image samples.
+Processed ( 2690000 / 4933947 ) image samples.
+Processed ( 2700000 / 4933947 ) image samples.
+Processed ( 2710000 / 4933947 ) image samples.
+Processed ( 2720000 / 4933947 ) image samples.
+Processed ( 2730000 / 4933947 ) image samples.
+Processed ( 2740000 / 4933947 ) image samples.
+Processed ( 2750000 / 4933947 ) image samples.
+Processed ( 2760000 / 4933947 ) image samples.
+Processed ( 2770000 / 4933947 ) image samples.
+Processed ( 2780000 / 4933947 ) image samples.
+Processed ( 2790000 / 4933947 ) image samples.
+Processed ( 2800000 / 4933947 ) image samples.
+Processed ( 2810000 / 4933947 ) image samples.
+Processed ( 2820000 / 4933947 ) image samples.
+Processed ( 2830000 / 4933947 ) image samples.
+Processed ( 2840000 / 4933947 ) image samples.
+Processed ( 2850000 / 4933947 ) image samples.
+Processed ( 2860000 / 4933947 ) image samples.
+Processed ( 2870000 / 4933947 ) image samples.
+Processed ( 2880000 / 4933947 ) image samples.
+Processed ( 2890000 / 4933947 ) image samples.
+Processed ( 2900000 / 4933947 ) image samples.
+Processed ( 2910000 / 4933947 ) image samples.
+Processed ( 2920000 / 4933947 ) image samples.
+Processed ( 2930000 / 4933947 ) image samples.
+Processed ( 2940000 / 4933947 ) image samples.
+Processed ( 2950000 / 4933947 ) image samples.
+Processed ( 2960000 / 4933947 ) image samples.
+Processed ( 2970000 / 4933947 ) image samples.
+Processed ( 2980000 / 4933947 ) image samples.
+Processed ( 2990000 / 4933947 ) image samples.
+Processed ( 3000000 / 4933947 ) image samples.
+Processed ( 3010000 / 4933947 ) image samples.
+Processed ( 3020000 / 4933947 ) image samples.
+Processed ( 3030000 / 4933947 ) image samples.
+Processed ( 3040000 / 4933947 ) image samples.
+Processed ( 3050000 / 4933947 ) image samples.
+Processed ( 3060000 / 4933947 ) image samples.
+Processed ( 3070000 / 4933947 ) image samples.
+Processed ( 3080000 / 4933947 ) image samples.
+Processed ( 3090000 / 4933947 ) image samples.
+Processed ( 3100000 / 4933947 ) image samples.
+Processed ( 3110000 / 4933947 ) image samples.
+Processed ( 3120000 / 4933947 ) image samples.
+Processed ( 3130000 / 4933947 ) image samples.
+Processed ( 3140000 / 4933947 ) image samples.
+Processed ( 3150000 / 4933947 ) image samples.
+Processed ( 3160000 / 4933947 ) image samples.
+Processed ( 3170000 / 4933947 ) image samples.
+Processed ( 3180000 / 4933947 ) image samples.
+Processed ( 3190000 / 4933947 ) image samples.
+Processed ( 3200000 / 4933947 ) image samples.
+Processed ( 3210000 / 4933947 ) image samples.
+Processed ( 3220000 / 4933947 ) image samples.
+Processed ( 3230000 / 4933947 ) image samples.
+Processed ( 3240000 / 4933947 ) image samples.
+Processed ( 3250000 / 4933947 ) image samples.
+Processed ( 3260000 / 4933947 ) image samples.
+Processed ( 3270000 / 4933947 ) image samples.
+Processed ( 3280000 / 4933947 ) image samples.
+Processed ( 3290000 / 4933947 ) image samples.
+Processed ( 3300000 / 4933947 ) image samples.
+Processed ( 3310000 / 4933947 ) image samples.
+Processed ( 3320000 / 4933947 ) image samples.
+Processed ( 3330000 / 4933947 ) image samples.
+Processed ( 3340000 / 4933947 ) image samples.
+Processed ( 3350000 / 4933947 ) image samples.
+Processed ( 3360000 / 4933947 ) image samples.
+Processed ( 3370000 / 4933947 ) image samples.
+Processed ( 3380000 / 4933947 ) image samples.
+Processed ( 3390000 / 4933947 ) image samples.
+Processed ( 3400000 / 4933947 ) image samples.
+Processed ( 3410000 / 4933947 ) image samples.
+Processed ( 3420000 / 4933947 ) image samples.
+Processed ( 3430000 / 4933947 ) image samples.
+Processed ( 3440000 / 4933947 ) image samples.
+Processed ( 3450000 / 4933947 ) image samples.
+Processed ( 3460000 / 4933947 ) image samples.
+Processed ( 3470000 / 4933947 ) image samples.
+Processed ( 3480000 / 4933947 ) image samples.
+Processed ( 3490000 / 4933947 ) image samples.
+Processed ( 3500000 / 4933947 ) image samples.
+Processed ( 3510000 / 4933947 ) image samples.
+Processed ( 3520000 / 4933947 ) image samples.
+Processed ( 3530000 / 4933947 ) image samples.
+Processed ( 3540000 / 4933947 ) image samples.
+Processed ( 3550000 / 4933947 ) image samples.
+Processed ( 3560000 / 4933947 ) image samples.
+Processed ( 3570000 / 4933947 ) image samples.
+Processed ( 3580000 / 4933947 ) image samples.
+Processed ( 3590000 / 4933947 ) image samples.
+Processed ( 3600000 / 4933947 ) image samples.
+Processed ( 3610000 / 4933947 ) image samples.
+Processed ( 3620000 / 4933947 ) image samples.
+Processed ( 3630000 / 4933947 ) image samples.
+Processed ( 3640000 / 4933947 ) image samples.
+Processed ( 3650000 / 4933947 ) image samples.
+Processed ( 3660000 / 4933947 ) image samples.
+Processed ( 3670000 / 4933947 ) image samples.
+Processed ( 3680000 / 4933947 ) image samples.
+Processed ( 3690000 / 4933947 ) image samples.
+Processed ( 3700000 / 4933947 ) image samples.
+Processed ( 3710000 / 4933947 ) image samples.
+Processed ( 3720000 / 4933947 ) image samples.
+Processed ( 3730000 / 4933947 ) image samples.
+Processed ( 3740000 / 4933947 ) image samples.
+Processed ( 3750000 / 4933947 ) image samples.
+Processed ( 3760000 / 4933947 ) image samples.
+Processed ( 3770000 / 4933947 ) image samples.
+Processed ( 3780000 / 4933947 ) image samples.
+Processed ( 3790000 / 4933947 ) image samples.
+Processed ( 3800000 / 4933947 ) image samples.
+Processed ( 3810000 / 4933947 ) image samples.
+Processed ( 3820000 / 4933947 ) image samples.
+Processed ( 3830000 / 4933947 ) image samples.
+Processed ( 3840000 / 4933947 ) image samples.
+Processed ( 3850000 / 4933947 ) image samples.
+Processed ( 3860000 / 4933947 ) image samples.
+Processed ( 3870000 / 4933947 ) image samples.
+Processed ( 3880000 / 4933947 ) image samples.
+Processed ( 3890000 / 4933947 ) image samples.
+Processed ( 3900000 / 4933947 ) image samples.
+Processed ( 3910000 / 4933947 ) image samples.
+Processed ( 3920000 / 4933947 ) image samples.
+Processed ( 3930000 / 4933947 ) image samples.
+Processed ( 3940000 / 4933947 ) image samples.
+Processed ( 3950000 / 4933947 ) image samples.
+Processed ( 3960000 / 4933947 ) image samples.
+Processed ( 3970000 / 4933947 ) image samples.
+Processed ( 3980000 / 4933947 ) image samples.
+Processed ( 3990000 / 4933947 ) image samples.
+Processed ( 4000000 / 4933947 ) image samples.
+Processed ( 4010000 / 4933947 ) image samples.
+Processed ( 4020000 / 4933947 ) image samples.
+Processed ( 4030000 / 4933947 ) image samples.
+Processed ( 4040000 / 4933947 ) image samples.
+Processed ( 4050000 / 4933947 ) image samples.
+Processed ( 4060000 / 4933947 ) image samples.
+Processed ( 4070000 / 4933947 ) image samples.
+Processed ( 4080000 / 4933947 ) image samples.
+Processed ( 4090000 / 4933947 ) image samples.
+Processed ( 4100000 / 4933947 ) image samples.
+Processed ( 4110000 / 4933947 ) image samples.
+Processed ( 4120000 / 4933947 ) image samples.
+Processed ( 4130000 / 4933947 ) image samples.
+Processed ( 4140000 / 4933947 ) image samples.
+Processed ( 4150000 / 4933947 ) image samples.
+Processed ( 4160000 / 4933947 ) image samples.
+Processed ( 4170000 / 4933947 ) image samples.
+Processed ( 4180000 / 4933947 ) image samples.
+Processed ( 4190000 / 4933947 ) image samples.
+Processed ( 4200000 / 4933947 ) image samples.
+Processed ( 4210000 / 4933947 ) image samples.
+Processed ( 4220000 / 4933947 ) image samples.
+Processed ( 4230000 / 4933947 ) image samples.
+Processed ( 4240000 / 4933947 ) image samples.
+Processed ( 4250000 / 4933947 ) image samples.
+Processed ( 4260000 / 4933947 ) image samples.
+Processed ( 4270000 / 4933947 ) image samples.
+Processed ( 4280000 / 4933947 ) image samples.
+Processed ( 4290000 / 4933947 ) image samples.
+Processed ( 4300000 / 4933947 ) image samples.
+Processed ( 4310000 / 4933947 ) image samples.
+Processed ( 4320000 / 4933947 ) image samples.
+Processed ( 4330000 / 4933947 ) image samples.
+Processed ( 4340000 / 4933947 ) image samples.
+Processed ( 4350000 / 4933947 ) image samples.
+Processed ( 4360000 / 4933947 ) image samples.
+Processed ( 4370000 / 4933947 ) image samples.
+Processed ( 4380000 / 4933947 ) image samples.
+Processed ( 4390000 / 4933947 ) image samples.
+Processed ( 4400000 / 4933947 ) image samples.
+Processed ( 4410000 / 4933947 ) image samples.
+Processed ( 4420000 / 4933947 ) image samples.
+Processed ( 4430000 / 4933947 ) image samples.
+Processed ( 4440000 / 4933947 ) image samples.
+Processed ( 4450000 / 4933947 ) image samples.
+Processed ( 4460000 / 4933947 ) image samples.
+Processed ( 4470000 / 4933947 ) image samples.
+Processed ( 4480000 / 4933947 ) image samples.
+Processed ( 4490000 / 4933947 ) image samples.
+Processed ( 4500000 / 4933947 ) image samples.
+Processed ( 4510000 / 4933947 ) image samples.
+Processed ( 4520000 / 4933947 ) image samples.
+Processed ( 4530000 / 4933947 ) image samples.
+Processed ( 4540000 / 4933947 ) image samples.
+Processed ( 4550000 / 4933947 ) image samples.
+Processed ( 4560000 / 4933947 ) image samples.
+Processed ( 4570000 / 4933947 ) image samples.
+Processed ( 4580000 / 4933947 ) image samples.
+Processed ( 4590000 / 4933947 ) image samples.
+Processed ( 4600000 / 4933947 ) image samples.
+Processed ( 4610000 / 4933947 ) image samples.
+Processed ( 4620000 / 4933947 ) image samples.
+Processed ( 4630000 / 4933947 ) image samples.
+Processed ( 4640000 / 4933947 ) image samples.
+Processed ( 4650000 / 4933947 ) image samples.
+Processed ( 4660000 / 4933947 ) image samples.
+Processed ( 4670000 / 4933947 ) image samples.
+Processed ( 4680000 / 4933947 ) image samples.
+Processed ( 4690000 / 4933947 ) image samples.
+Processed ( 4700000 / 4933947 ) image samples.
+Processed ( 4710000 / 4933947 ) image samples.
+Processed ( 4720000 / 4933947 ) image samples.
+Processed ( 4730000 / 4933947 ) image samples.
+Processed ( 4740000 / 4933947 ) image samples.
+Processed ( 4750000 / 4933947 ) image samples.
+Processed ( 4760000 / 4933947 ) image samples.
+Processed ( 4770000 / 4933947 ) image samples.
+Processed ( 4780000 / 4933947 ) image samples.
+Processed ( 4790000 / 4933947 ) image samples.
+Processed ( 4800000 / 4933947 ) image samples.
+Processed ( 4810000 / 4933947 ) image samples.
+Processed ( 4820000 / 4933947 ) image samples.
+Processed ( 4830000 / 4933947 ) image samples.
+Processed ( 4840000 / 4933947 ) image samples.
+Processed ( 4850000 / 4933947 ) image samples.
+Processed ( 4860000 / 4933947 ) image samples.
+Processed ( 4870000 / 4933947 ) image samples.
+Processed ( 4880000 / 4933947 ) image samples.
+Processed ( 4890000 / 4933947 ) image samples.
+Processed ( 4900000 / 4933947 ) image samples.
+Processed ( 4910000 / 4933947 ) image samples.
+Processed ( 4920000 / 4933947 ) image samples.
+Processed ( 4930000 / 4933947 ) image samples.
+Generated TensorFlow dataset for landmark images.
+Generated TensorFlow dataset.
+ONet network dataset is generated at ../data/datasets/mtcnn
+Generated a hard dataset i.e. ONet dataset.
+########################################################################################################################################################################################################
+Train ONet.
+2018-09-06 20:46:22.566124 - step - 3840 accuracy - 0.951389, class loss - 0.146617, bbox loss - 0.067382, landmark loss - 0.017136, L2 loss - 0.041476, lr - 0.010000 
+2018-09-06 20:59:03.809166 - step - 7680 accuracy - 0.942177, class loss - 0.193191, bbox loss - 0.062549, landmark loss - 0.011118, L2 loss - 0.035392, lr - 0.010000 
+2018-09-06 21:11:41.838434 - step - 11520 accuracy - 0.982818, class loss - 0.121240, bbox loss - 0.049220, landmark loss - 0.008118, L2 loss - 0.031690, lr - 0.010000 
+2018-09-06 21:24:21.836519 - step - 15360 accuracy - 0.968858, class loss - 0.098261, bbox loss - 0.042411, landmark loss - 0.007437, L2 loss - 0.029439, lr - 0.010000 
+2018-09-06 21:37:01.974203 - step - 19200 accuracy - 0.962963, class loss - 0.106136, bbox loss - 0.051717, landmark loss - 0.010038, L2 loss - 0.028267, lr - 0.010000 
+2018-09-06 21:49:41.808241 - step - 23040 accuracy - 0.955932, class loss - 0.182024, bbox loss - 0.043012, landmark loss - 0.010200, L2 loss - 0.027519, lr - 0.010000 
+2018-09-06 22:02:22.761254 - step - 26880 accuracy - 0.975265, class loss - 0.083264, bbox loss - 0.043844, landmark loss - 0.005871, L2 loss - 0.027316, lr - 0.010000 
+2018-09-06 22:15:01.900133 - step - 30720 accuracy - 0.946128, class loss - 0.148518, bbox loss - 0.044274, landmark loss - 0.007863, L2 loss - 0.027272, lr - 0.010000 
+2018-09-06 22:27:41.849663 - step - 34560 accuracy - 0.955479, class loss - 0.132153, bbox loss - 0.043177, landmark loss - 0.004486, L2 loss - 0.027430, lr - 0.010000 
+2018-09-06 22:40:22.537438 - step - 38400 accuracy - 0.968858, class loss - 0.127762, bbox loss - 0.054152, landmark loss - 0.008106, L2 loss - 0.027580, lr - 0.010000 
+2018-09-06 22:53:02.457838 - step - 42240 accuracy - 0.969283, class loss - 0.116345, bbox loss - 0.049321, landmark loss - 0.010198, L2 loss - 0.027775, lr - 0.010000 
+2018-09-06 23:05:44.144658 - step - 46080 accuracy - 0.969388, class loss - 0.120856, bbox loss - 0.036359, landmark loss - 0.006127, L2 loss - 0.027951, lr - 0.010000 
+2018-09-06 23:18:22.834384 - step - 49920 accuracy - 0.968750, class loss - 0.128084, bbox loss - 0.053707, landmark loss - 0.006887, L2 loss - 0.028176, lr - 0.010000 
+2018-09-06 23:31:02.806620 - step - 53760 accuracy - 0.979866, class loss - 0.074213, bbox loss - 0.048932, landmark loss - 0.006186, L2 loss - 0.028385, lr - 0.010000 
+2018-09-06 23:43:40.949467 - step - 57600 accuracy - 0.962585, class loss - 0.129946, bbox loss - 0.055925, landmark loss - 0.009751, L2 loss - 0.028392, lr - 0.010000 
+2018-09-06 23:56:21.421655 - step - 61440 accuracy - 0.959459, class loss - 0.155382, bbox loss - 0.054672, landmark loss - 0.005087, L2 loss - 0.028630, lr - 0.010000 
+2018-09-07 00:09:02.886448 - step - 65280 accuracy - 0.959184, class loss - 0.136228, bbox loss - 0.039956, landmark loss - 0.006401, L2 loss - 0.028774, lr - 0.010000 
+2018-09-07 00:21:40.979851 - step - 69120 accuracy - 0.969072, class loss - 0.117051, bbox loss - 0.057140, landmark loss - 0.004485, L2 loss - 0.028876, lr - 0.010000 
+2018-09-07 00:34:20.020596 - step - 72960 accuracy - 0.982993, class loss - 0.076598, bbox loss - 0.042784, landmark loss - 0.005377, L2 loss - 0.028938, lr - 0.010000 
+2018-09-07 00:46:58.187951 - step - 76800 accuracy - 0.963333, class loss - 0.115897, bbox loss - 0.046306, landmark loss - 0.003810, L2 loss - 0.029012, lr - 0.010000 
+2018-09-07 00:59:39.322748 - step - 80640 accuracy - 0.978648, class loss - 0.072082, bbox loss - 0.051814, landmark loss - 0.005335, L2 loss - 0.029082, lr - 0.010000 
+2018-09-07 01:12:19.132269 - step - 84480 accuracy - 0.948980, class loss - 0.142759, bbox loss - 0.059567, landmark loss - 0.004065, L2 loss - 0.029116, lr - 0.010000 
+2018-09-07 01:24:59.261343 - step - 88320 accuracy - 0.982578, class loss - 0.082285, bbox loss - 0.054313, landmark loss - 0.005069, L2 loss - 0.029162, lr - 0.010000 
+2018-09-07 01:37:39.483421 - step - 92160 accuracy - 0.979239, class loss - 0.083534, bbox loss - 0.047509, landmark loss - 0.008648, L2 loss - 0.029097, lr - 0.010000 
+2018-09-07 01:50:18.535300 - step - 96000 accuracy - 0.982993, class loss - 0.077375, bbox loss - 0.052908, landmark loss - 0.006102, L2 loss - 0.029156, lr - 0.010000 
+2018-09-07 02:02:59.646130 - step - 99840 accuracy - 0.961806, class loss - 0.153423, bbox loss - 0.038890, landmark loss - 0.006636, L2 loss - 0.029272, lr - 0.010000 
+2018-09-07 02:15:39.450812 - step - 103680 accuracy - 0.969178, class loss - 0.105291, bbox loss - 0.047442, landmark loss - 0.006387, L2 loss - 0.029364, lr - 0.010000 
+2018-09-07 02:28:21.859702 - step - 107520 accuracy - 0.958904, class loss - 0.137935, bbox loss - 0.051872, landmark loss - 0.006231, L2 loss - 0.029311, lr - 0.010000 
+2018-09-07 02:41:02.079183 - step - 111360 accuracy - 0.968858, class loss - 0.116302, bbox loss - 0.039270, landmark loss - 0.004982, L2 loss - 0.029356, lr - 0.010000 
+2018-09-07 02:53:40.744438 - step - 115200 accuracy - 0.972881, class loss - 0.084176, bbox loss - 0.047102, landmark loss - 0.005619, L2 loss - 0.029348, lr - 0.010000 
+2018-09-07 03:06:19.822179 - step - 119040 accuracy - 0.956811, class loss - 0.197142, bbox loss - 0.048352, landmark loss - 0.005242, L2 loss - 0.029446, lr - 0.010000 
+2018-09-07 03:19:43.230223 - step - 122880 accuracy - 0.979094, class loss - 0.105368, bbox loss - 0.037231, landmark loss - 0.005414, L2 loss - 0.029551, lr - 0.010000 
+2018-09-07 03:36:32.968619 - step - 126720 accuracy - 0.982993, class loss - 0.076920, bbox loss - 0.049264, landmark loss - 0.005473, L2 loss - 0.029623, lr - 0.010000 
+2018-09-07 03:49:39.424371 - step - 130560 accuracy - 0.972973, class loss - 0.095390, bbox loss - 0.040437, landmark loss - 0.005344, L2 loss - 0.029619, lr - 0.010000 
+2018-09-07 04:02:26.860036 - step - 134400 accuracy - 0.982699, class loss - 0.091881, bbox loss - 0.061502, landmark loss - 0.004896, L2 loss - 0.029637, lr - 0.010000 
+2018-09-07 04:15:04.991267 - step - 138240 accuracy - 0.979239, class loss - 0.106566, bbox loss - 0.039830, landmark loss - 0.004571, L2 loss - 0.029679, lr - 0.010000 
+2018-09-07 04:27:45.864905 - step - 142080 accuracy - 0.983108, class loss - 0.073992, bbox loss - 0.034084, landmark loss - 0.006212, L2 loss - 0.029726, lr - 0.010000 
+2018-09-07 04:40:26.396136 - step - 145920 accuracy - 0.983108, class loss - 0.062327, bbox loss - 0.043201, landmark loss - 0.005901, L2 loss - 0.029752, lr - 0.010000 
+2018-09-07 04:53:05.401846 - step - 149760 accuracy - 0.972973, class loss - 0.099135, bbox loss - 0.041572, landmark loss - 0.006297, L2 loss - 0.029851, lr - 0.010000 
+2018-09-07 05:05:44.262541 - step - 153600 accuracy - 0.969388, class loss - 0.113804, bbox loss - 0.051045, landmark loss - 0.005260, L2 loss - 0.029859, lr - 0.010000 
+2018-09-07 05:18:25.526300 - step - 157440 accuracy - 0.983389, class loss - 0.069948, bbox loss - 0.044908, landmark loss - 0.004334, L2 loss - 0.029838, lr - 0.010000 
+2018-09-07 05:31:06.316375 - step - 161280 accuracy - 0.983278, class loss - 0.085446, bbox loss - 0.053296, landmark loss - 0.004701, L2 loss - 0.029876, lr - 0.010000 
+2018-09-07 05:43:46.633283 - step - 165120 accuracy - 0.968750, class loss - 0.118553, bbox loss - 0.047196, landmark loss - 0.005886, L2 loss - 0.029810, lr - 0.010000 
+2018-09-07 05:56:28.389016 - step - 168960 accuracy - 0.979310, class loss - 0.107023, bbox loss - 0.042116, landmark loss - 0.004681, L2 loss - 0.029801, lr - 0.010000 
+2018-09-07 06:09:08.136897 - step - 172800 accuracy - 0.965753, class loss - 0.085104, bbox loss - 0.046757, landmark loss - 0.006420, L2 loss - 0.029893, lr - 0.010000 
+2018-09-07 06:21:49.688646 - step - 176640 accuracy - 0.957096, class loss - 0.149386, bbox loss - 0.046572, landmark loss - 0.004725, L2 loss - 0.029977, lr - 0.001000 
+2018-09-07 06:34:29.723560 - step - 180480 accuracy - 0.983221, class loss - 0.060990, bbox loss - 0.048021, landmark loss - 0.004127, L2 loss - 0.029449, lr - 0.001000 
+2018-09-07 06:47:09.977324 - step - 184320 accuracy - 0.962069, class loss - 0.146673, bbox loss - 0.047757, landmark loss - 0.004465, L2 loss - 0.028925, lr - 0.001000 
+2018-09-07 06:59:48.571700 - step - 188160 accuracy - 0.993197, class loss - 0.040549, bbox loss - 0.040023, landmark loss - 0.003996, L2 loss - 0.028515, lr - 0.001000 
+2018-09-07 07:12:28.340861 - step - 192000 accuracy - 0.979381, class loss - 0.100656, bbox loss - 0.035645, landmark loss - 0.006869, L2 loss - 0.028081, lr - 0.001000 
+2018-09-07 07:25:09.564767 - step - 195840 accuracy - 0.962199, class loss - 0.114613, bbox loss - 0.046144, landmark loss - 0.004318, L2 loss - 0.027742, lr - 0.001000 
+2018-09-07 07:37:50.230258 - step - 199680 accuracy - 0.972696, class loss - 0.081155, bbox loss - 0.042987, landmark loss - 0.004442, L2 loss - 0.027412, lr - 0.001000 
+2018-09-07 07:50:29.471987 - step - 203520 accuracy - 0.975610, class loss - 0.086479, bbox loss - 0.037982, landmark loss - 0.004237, L2 loss - 0.027097, lr - 0.001000 
+2018-09-07 08:03:09.327766 - step - 207360 accuracy - 0.982639, class loss - 0.073862, bbox loss - 0.034681, landmark loss - 0.004375, L2 loss - 0.026838, lr - 0.001000 
+2018-09-07 08:15:49.300979 - step - 211200 accuracy - 0.980132, class loss - 0.076194, bbox loss - 0.037307, landmark loss - 0.004769, L2 loss - 0.026583, lr - 0.001000 
+2018-09-07 08:28:31.993935 - step - 215040 accuracy - 0.972509, class loss - 0.085640, bbox loss - 0.037250, landmark loss - 0.003166, L2 loss - 0.026362, lr - 0.001000 
+2018-09-07 08:41:11.698869 - step - 218880 accuracy - 0.989691, class loss - 0.053754, bbox loss - 0.042504, landmark loss - 0.004415, L2 loss - 0.026180, lr - 0.001000 
+2018-09-07 08:53:51.143094 - step - 222720 accuracy - 0.989547, class loss - 0.065459, bbox loss - 0.040248, landmark loss - 0.005071, L2 loss - 0.025966, lr - 0.001000 
+2018-09-07 09:06:30.595282 - step - 226560 accuracy - 0.993174, class loss - 0.046368, bbox loss - 0.046004, landmark loss - 0.004479, L2 loss - 0.025791, lr - 0.001000 
+2018-09-07 09:19:10.064376 - step - 230400 accuracy - 0.969283, class loss - 0.094819, bbox loss - 0.040999, landmark loss - 0.005860, L2 loss - 0.025653, lr - 0.001000 
+2018-09-07 09:31:49.551762 - step - 234240 accuracy - 0.972509, class loss - 0.091950, bbox loss - 0.044354, landmark loss - 0.005212, L2 loss - 0.025481, lr - 0.001000 
+2018-09-07 09:44:28.639845 - step - 238080 accuracy - 0.996610, class loss - 0.053675, bbox loss - 0.038219, landmark loss - 0.005534, L2 loss - 0.025351, lr - 0.001000 
+2018-09-07 09:57:08.655697 - step - 241920 accuracy - 0.979381, class loss - 0.097494, bbox loss - 0.045025, landmark loss - 0.005244, L2 loss - 0.025244, lr - 0.001000 
+2018-09-07 10:09:47.715846 - step - 245760 accuracy - 0.986348, class loss - 0.071495, bbox loss - 0.039157, landmark loss - 0.005319, L2 loss - 0.025083, lr - 0.001000 
+2018-09-07 10:22:46.787559 - step - 249600 accuracy - 0.972973, class loss - 0.092609, bbox loss - 0.048281, landmark loss - 0.005284, L2 loss - 0.024978, lr - 0.001000 
+2018-09-07 10:35:29.423582 - step - 253440 accuracy - 0.962963, class loss - 0.117322, bbox loss - 0.040894, landmark loss - 0.003533, L2 loss - 0.024904, lr - 0.001000 
+2018-09-07 10:48:09.632870 - step - 257280 accuracy - 0.976351, class loss - 0.085239, bbox loss - 0.037964, landmark loss - 0.005539, L2 loss - 0.024803, lr - 0.001000 
+2018-09-07 11:00:51.823387 - step - 261120 accuracy - 0.972125, class loss - 0.119068, bbox loss - 0.039678, landmark loss - 0.004803, L2 loss - 0.024709, lr - 0.001000 
+2018-09-07 11:13:32.946524 - step - 264960 accuracy - 0.965278, class loss - 0.098496, bbox loss - 0.035737, landmark loss - 0.003908, L2 loss - 0.024659, lr - 0.001000 
+2018-09-07 11:26:10.749380 - step - 268800 accuracy - 0.972881, class loss - 0.098695, bbox loss - 0.034568, landmark loss - 0.004111, L2 loss - 0.024559, lr - 0.001000 
+2018-09-07 11:38:48.979251 - step - 272640 accuracy - 0.993127, class loss - 0.053612, bbox loss - 0.034817, landmark loss - 0.003624, L2 loss - 0.024498, lr - 0.001000 
+2018-09-07 11:51:27.295453 - step - 276480 accuracy - 0.986486, class loss - 0.061929, bbox loss - 0.038501, landmark loss - 0.004500, L2 loss - 0.024422, lr - 0.001000 
+########################################################################################################################################################################################################
+Train ONet.
+Model is restored from model path - ../data/models/mtcnn/train/ONet/ONet-308728 with global step - 308728.
+2018-09-07 14:22:20.376590 - step - 311040 accuracy - 0.979592, class loss - 0.060369, bbox loss - 0.034727, landmark loss - 0.003975, L2 loss - 0.023981, lr - 0.001000 
+2018-09-07 14:35:07.234590 - step - 314880 accuracy - 0.964539, class loss - 0.094837, bbox loss - 0.044931, landmark loss - 0.004290, L2 loss - 0.023935, lr - 0.001000 
+2018-09-07 14:47:52.066838 - step - 318720 accuracy - 0.962838, class loss - 0.113852, bbox loss - 0.036686, landmark loss - 0.004882, L2 loss - 0.023921, lr - 0.001000 
+2018-09-07 15:00:38.062090 - step - 322560 accuracy - 0.986111, class loss - 0.068285, bbox loss - 0.041102, landmark loss - 0.004014, L2 loss - 0.023878, lr - 0.001000 
+2018-09-07 15:13:19.794936 - step - 326400 accuracy - 0.976027, class loss - 0.084707, bbox loss - 0.042775, landmark loss - 0.003975, L2 loss - 0.023857, lr - 0.001000 
+2018-09-07 15:26:03.391749 - step - 330240 accuracy - 0.985866, class loss - 0.089219, bbox loss - 0.035406, landmark loss - 0.004118, L2 loss - 0.023853, lr - 0.001000 
+2018-09-07 15:38:44.559292 - step - 334080 accuracy - 0.989583, class loss - 0.061898, bbox loss - 0.033888, landmark loss - 0.004102, L2 loss - 0.023831, lr - 0.001000 
+2018-09-07 15:51:27.258939 - step - 337920 accuracy - 0.979798, class loss - 0.081572, bbox loss - 0.042948, landmark loss - 0.003939, L2 loss - 0.023797, lr - 0.001000 
+2018-09-07 16:04:08.837362 - step - 341760 accuracy - 0.989510, class loss - 0.043352, bbox loss - 0.037969, landmark loss - 0.003713, L2 loss - 0.023794, lr - 0.001000 
+2018-09-07 16:16:51.245360 - step - 345600 accuracy - 0.986486, class loss - 0.064910, bbox loss - 0.043685, landmark loss - 0.003618, L2 loss - 0.023755, lr - 0.001000 
+2018-09-07 16:29:36.283905 - step - 349440 accuracy - 0.968198, class loss - 0.106009, bbox loss - 0.035533, landmark loss - 0.004471, L2 loss - 0.023731, lr - 0.001000 
+2018-09-07 16:42:17.931003 - step - 353280 accuracy - 0.989726, class loss - 0.033968, bbox loss - 0.042295, landmark loss - 0.006849, L2 loss - 0.023724, lr - 0.000100 
+2018-09-07 16:55:00.277983 - step - 357120 accuracy - 0.976109, class loss - 0.064674, bbox loss - 0.044382, landmark loss - 0.003569, L2 loss - 0.023706, lr - 0.000100 
+2018-09-07 17:07:44.379207 - step - 360960 accuracy - 0.979310, class loss - 0.062861, bbox loss - 0.041022, landmark loss - 0.003792, L2 loss - 0.023692, lr - 0.000100 
+2018-09-07 17:20:26.353137 - step - 364800 accuracy - 0.976271, class loss - 0.057958, bbox loss - 0.038944, landmark loss - 0.003759, L2 loss - 0.023680, lr - 0.000100 
+2018-09-07 17:33:11.361917 - step - 368640 accuracy - 0.986486, class loss - 0.057725, bbox loss - 0.036443, landmark loss - 0.003659, L2 loss - 0.023661, lr - 0.000100 
+2018-09-07 17:45:48.226809 - step - 372480 accuracy - 0.976027, class loss - 0.084868, bbox loss - 0.035734, landmark loss - 0.005492, L2 loss - 0.023648, lr - 0.000100 
+2018-09-07 17:58:29.046584 - step - 376320 accuracy - 0.976351, class loss - 0.087845, bbox loss - 0.036792, landmark loss - 0.005469, L2 loss - 0.023634, lr - 0.000100 
+2018-09-07 18:11:06.528406 - step - 380160 accuracy - 0.975862, class loss - 0.083022, bbox loss - 0.045642, landmark loss - 0.004818, L2 loss - 0.023618, lr - 0.000100 
+2018-09-07 18:23:43.913588 - step - 384000 accuracy - 0.972696, class loss - 0.110105, bbox loss - 0.038286, landmark loss - 0.003329, L2 loss - 0.023605, lr - 0.000100 
+2018-09-07 18:36:22.120583 - step - 387840 accuracy - 0.969178, class loss - 0.081275, bbox loss - 0.040167, landmark loss - 0.004372, L2 loss - 0.023591, lr - 0.000100 
+2018-09-07 18:49:00.432192 - step - 391680 accuracy - 0.986301, class loss - 0.065436, bbox loss - 0.040622, landmark loss - 0.003126, L2 loss - 0.023578, lr - 0.000100 
+2018-09-07 19:01:38.695087 - step - 395520 accuracy - 0.963087, class loss - 0.103824, bbox loss - 0.036219, landmark loss - 0.005409, L2 loss - 0.023568, lr - 0.000100 
+2018-09-07 19:14:17.507009 - step - 399360 accuracy - 0.979310, class loss - 0.079713, bbox loss - 0.042104, landmark loss - 0.003521, L2 loss - 0.023553, lr - 0.000100 
+2018-09-07 19:26:56.414967 - step - 403200 accuracy - 0.986014, class loss - 0.060629, bbox loss - 0.045456, landmark loss - 0.004066, L2 loss - 0.023539, lr - 0.000100 
+2018-09-07 19:39:35.782797 - step - 407040 accuracy - 0.989761, class loss - 0.050797, bbox loss - 0.035383, landmark loss - 0.006121, L2 loss - 0.023530, lr - 0.000100 
+2018-09-07 19:52:13.995602 - step - 410880 accuracy - 0.983108, class loss - 0.097894, bbox loss - 0.031698, landmark loss - 0.004695, L2 loss - 0.023515, lr - 0.000100 
+2018-09-07 20:04:53.671470 - step - 414720 accuracy - 0.986207, class loss - 0.047392, bbox loss - 0.040620, landmark loss - 0.003659, L2 loss - 0.023502, lr - 0.000100 
+2018-09-07 20:17:31.908482 - step - 418560 accuracy - 0.958477, class loss - 0.144687, bbox loss - 0.039083, landmark loss - 0.003600, L2 loss - 0.023492, lr - 0.000100 
+2018-09-07 20:30:10.629605 - step - 422400 accuracy - 0.986348, class loss - 0.083570, bbox loss - 0.043889, landmark loss - 0.004842, L2 loss - 0.023479, lr - 0.000100 
+2018-09-07 20:42:48.918868 - step - 426240 accuracy - 0.975945, class loss - 0.071556, bbox loss - 0.044307, landmark loss - 0.003988, L2 loss - 0.023465, lr - 0.000100 
+2018-09-07 20:55:28.824787 - step - 430080 accuracy - 0.979661, class loss - 0.062031, bbox loss - 0.040090, landmark loss - 0.003958, L2 loss - 0.023457, lr - 0.000100 
+2018-09-07 21:08:07.590260 - step - 433920 accuracy - 0.982578, class loss - 0.069911, bbox loss - 0.038030, landmark loss - 0.003922, L2 loss - 0.023441, lr - 0.000100 
+2018-09-07 21:20:46.930539 - step - 437760 accuracy - 0.989761, class loss - 0.055734, bbox loss - 0.038812, landmark loss - 0.013604, L2 loss - 0.023429, lr - 0.000100 
+2018-09-07 21:33:25.263096 - step - 441600 accuracy - 0.976351, class loss - 0.072190, bbox loss - 0.036075, landmark loss - 0.003232, L2 loss - 0.023420, lr - 0.000100 
+2018-09-07 21:46:04.495525 - step - 445440 accuracy - 0.986486, class loss - 0.071719, bbox loss - 0.038104, landmark loss - 0.004812, L2 loss - 0.023406, lr - 0.000100 
+2018-09-07 21:58:42.356957 - step - 449280 accuracy - 0.972222, class loss - 0.086761, bbox loss - 0.038409, landmark loss - 0.003643, L2 loss - 0.023394, lr - 0.000100 
+2018-09-07 22:11:19.964673 - step - 453120 accuracy - 0.979310, class loss - 0.077995, bbox loss - 0.046952, landmark loss - 0.004343, L2 loss - 0.023386, lr - 0.000100 
+2018-09-07 22:23:58.240799 - step - 456960 accuracy - 0.969697, class loss - 0.112661, bbox loss - 0.038194, landmark loss - 0.003841, L2 loss - 0.023374, lr - 0.000100 
+2018-09-07 22:36:37.346899 - step - 460800 accuracy - 0.989726, class loss - 0.057938, bbox loss - 0.036952, landmark loss - 0.004723, L2 loss - 0.023364, lr - 0.000100 
+2018-09-07 22:49:16.426165 - step - 464640 accuracy - 0.983165, class loss - 0.057139, bbox loss - 0.035287, landmark loss - 0.005798, L2 loss - 0.023353, lr - 0.000100 
+2018-09-07 23:01:54.450675 - step - 468480 accuracy - 0.982877, class loss - 0.066775, bbox loss - 0.044604, landmark loss - 0.004435, L2 loss - 0.023344, lr - 0.000100 
+2018-09-07 23:14:34.518506 - step - 472320 accuracy - 0.979094, class loss - 0.073194, bbox loss - 0.050188, landmark loss - 0.004700, L2 loss - 0.023336, lr - 0.000100 
+2018-09-07 23:27:14.409173 - step - 476160 accuracy - 0.979592, class loss - 0.103329, bbox loss - 0.037509, landmark loss - 0.006537, L2 loss - 0.023325, lr - 0.000100 
+2018-09-07 23:39:53.392166 - step - 480000 accuracy - 0.993080, class loss - 0.049582, bbox loss - 0.038622, landmark loss - 0.004191, L2 loss - 0.023318, lr - 0.000100 
+2018-09-07 23:52:33.222029 - step - 483840 accuracy - 0.983221, class loss - 0.054734, bbox loss - 0.034313, landmark loss - 0.003850, L2 loss - 0.023309, lr - 0.000100 
+2018-09-08 00:05:12.017604 - step - 487680 accuracy - 0.979381, class loss - 0.071788, bbox loss - 0.040553, landmark loss - 0.004103, L2 loss - 0.023299, lr - 0.000100 
+2018-09-08 00:17:51.322354 - step - 491520 accuracy - 0.996599, class loss - 0.040359, bbox loss - 0.049139, landmark loss - 0.004377, L2 loss - 0.023290, lr - 0.000100 
+2018-09-08 00:30:31.633874 - step - 495360 accuracy - 0.986348, class loss - 0.066338, bbox loss - 0.035396, landmark loss - 0.005132, L2 loss - 0.023285, lr - 0.000100 
+2018-09-08 00:43:10.273813 - step - 499200 accuracy - 0.989865, class loss - 0.035957, bbox loss - 0.042103, landmark loss - 0.003444, L2 loss - 0.023274, lr - 0.000100 
+2018-09-08 00:55:49.622456 - step - 503040 accuracy - 0.986441, class loss - 0.044782, bbox loss - 0.039326, landmark loss - 0.003614, L2 loss - 0.023264, lr - 0.000100 
+2018-09-08 01:08:27.901272 - step - 506880 accuracy - 0.979798, class loss - 0.069495, bbox loss - 0.032101, landmark loss - 0.004012, L2 loss - 0.023259, lr - 0.000100 
+2018-09-08 01:21:08.790592 - step - 510720 accuracy - 0.989796, class loss - 0.049398, bbox loss - 0.043285, landmark loss - 0.005696, L2 loss - 0.023248, lr - 0.000100 
+2018-09-08 01:33:48.043339 - step - 514560 accuracy - 0.979730, class loss - 0.063130, bbox loss - 0.032235, landmark loss - 0.002967, L2 loss - 0.023236, lr - 0.000100 
+2018-09-08 01:46:26.896150 - step - 518400 accuracy - 0.975945, class loss - 0.077338, bbox loss - 0.033895, landmark loss - 0.006778, L2 loss - 0.023231, lr - 0.000100 
+2018-09-08 01:59:06.256408 - step - 522240 accuracy - 0.986395, class loss - 0.061094, bbox loss - 0.039602, landmark loss - 0.005089, L2 loss - 0.023221, lr - 0.000100 
+2018-09-08 02:11:44.564342 - step - 526080 accuracy - 0.973770, class loss - 0.081323, bbox loss - 0.038012, landmark loss - 0.003887, L2 loss - 0.023211, lr - 0.000100 
+2018-09-08 02:24:24.079322 - step - 529920 accuracy - 0.986348, class loss - 0.044298, bbox loss - 0.046033, landmark loss - 0.004759, L2 loss - 0.023208, lr - 0.000010 
+2018-09-08 02:37:02.636638 - step - 533760 accuracy - 0.975945, class loss - 0.076939, bbox loss - 0.040908, landmark loss - 0.005825, L2 loss - 0.023207, lr - 0.000010 
+2018-09-08 02:49:39.910592 - step - 537600 accuracy - 0.979381, class loss - 0.078733, bbox loss - 0.043865, landmark loss - 0.003692, L2 loss - 0.023206, lr - 0.000010 
+2018-09-08 03:02:18.834900 - step - 541440 accuracy - 0.982639, class loss - 0.053116, bbox loss - 0.038139, landmark loss - 0.004488, L2 loss - 0.023205, lr - 0.000010 
+2018-09-08 03:14:58.693064 - step - 545280 accuracy - 0.978723, class loss - 0.075950, bbox loss - 0.048729, landmark loss - 0.004178, L2 loss - 0.023204, lr - 0.000010 
+2018-09-08 03:28:38.705474 - step - 549120 accuracy - 0.983108, class loss - 0.077731, bbox loss - 0.044511, landmark loss - 0.003788, L2 loss - 0.023203, lr - 0.000010 
+2018-09-08 03:45:07.835229 - step - 552960 accuracy - 0.979661, class loss - 0.070459, bbox loss - 0.046526, landmark loss - 0.004146, L2 loss - 0.023202, lr - 0.000010 
+2018-09-08 03:58:02.900709 - step - 556800 accuracy - 0.982699, class loss - 0.064931, bbox loss - 0.034357, landmark loss - 0.003578, L2 loss - 0.023201, lr - 0.000010 
+2018-09-08 04:10:41.393512 - step - 560640 accuracy - 0.982639, class loss - 0.047535, bbox loss - 0.035991, landmark loss - 0.003675, L2 loss - 0.023200, lr - 0.000010 
+2018-09-08 04:23:21.131946 - step - 564480 accuracy - 0.976190, class loss - 0.071820, bbox loss - 0.033972, landmark loss - 0.004084, L2 loss - 0.023199, lr - 0.000010 
+2018-09-08 04:36:01.142800 - step - 568320 accuracy - 0.979592, class loss - 0.079127, bbox loss - 0.047290, landmark loss - 0.003961, L2 loss - 0.023198, lr - 0.000010 
+2018-09-08 04:48:40.366538 - step - 572160 accuracy - 0.982818, class loss - 0.067626, bbox loss - 0.036796, landmark loss - 0.003986, L2 loss - 0.023198, lr - 0.000010 
+2018-09-08 05:01:21.742111 - step - 576000 accuracy - 0.989655, class loss - 0.042605, bbox loss - 0.033537, landmark loss - 0.005583, L2 loss - 0.023196, lr - 0.000010 
+2018-09-08 05:14:00.151519 - step - 579840 accuracy - 0.989830, class loss - 0.047117, bbox loss - 0.041813, landmark loss - 0.003763, L2 loss - 0.023195, lr - 0.000010 
+2018-09-08 05:26:41.189997 - step - 583680 accuracy - 0.983165, class loss - 0.060124, bbox loss - 0.049581, landmark loss - 0.003862, L2 loss - 0.023195, lr - 0.000010 
+2018-09-08 05:39:20.431782 - step - 587520 accuracy - 0.979661, class loss - 0.053724, bbox loss - 0.035853, landmark loss - 0.002807, L2 loss - 0.023193, lr - 0.000010 
+2018-09-08 05:52:00.275102 - step - 591360 accuracy - 0.975862, class loss - 0.065354, bbox loss - 0.050984, landmark loss - 0.004415, L2 loss - 0.023193, lr - 0.000010 
+2018-09-08 06:04:39.144458 - step - 595200 accuracy - 0.980066, class loss - 0.062190, bbox loss - 0.035306, landmark loss - 0.003931, L2 loss - 0.023192, lr - 0.000010 
+2018-09-08 06:17:18.228720 - step - 599040 accuracy - 0.983278, class loss - 0.051334, bbox loss - 0.032236, landmark loss - 0.005189, L2 loss - 0.023191, lr - 0.000010 
+2018-09-08 06:29:59.302091 - step - 602880 accuracy - 0.979310, class loss - 0.072758, bbox loss - 0.045208, landmark loss - 0.003466, L2 loss - 0.023189, lr - 0.000010 
+2018-09-08 06:42:36.499211 - step - 606720 accuracy - 0.979522, class loss - 0.056884, bbox loss - 0.032135, landmark loss - 0.004503, L2 loss - 0.023189, lr - 0.000010 
+2018-09-08 06:55:17.104050 - step - 610560 accuracy - 0.965753, class loss - 0.106138, bbox loss - 0.038414, landmark loss - 0.003951, L2 loss - 0.023188, lr - 0.000010 
+2018-09-08 07:07:56.129967 - step - 614400 accuracy - 0.986395, class loss - 0.046864, bbox loss - 0.044602, landmark loss - 0.003977, L2 loss - 0.023187, lr - 0.000010 
+2018-09-08 07:20:35.583009 - step - 618240 accuracy - 0.986486, class loss - 0.046297, bbox loss - 0.033020, landmark loss - 0.004311, L2 loss - 0.023186, lr - 0.000010 
+2018-09-08 07:33:17.410782 - step - 622080 accuracy - 0.993243, class loss - 0.067140, bbox loss - 0.037931, landmark loss - 0.003106, L2 loss - 0.023185, lr - 0.000010 
+2018-09-08 07:45:57.716648 - step - 625920 accuracy - 0.989726, class loss - 0.063210, bbox loss - 0.047453, landmark loss - 0.004529, L2 loss - 0.023184, lr - 0.000010 
+2018-09-08 07:58:37.627011 - step - 629760 accuracy - 0.982993, class loss - 0.062766, bbox loss - 0.042434, landmark loss - 0.005748, L2 loss - 0.023183, lr - 0.000010 
+2018-09-08 08:11:16.879038 - step - 633600 accuracy - 0.976109, class loss - 0.089059, bbox loss - 0.039901, landmark loss - 0.004295, L2 loss - 0.023182, lr - 0.000010 
+2018-09-08 08:23:55.499341 - step - 637440 accuracy - 0.979452, class loss - 0.062607, bbox loss - 0.035410, landmark loss - 0.003722, L2 loss - 0.023181, lr - 0.000010 
+2018-09-08 08:36:35.299912 - step - 641280 accuracy - 0.989691, class loss - 0.058122, bbox loss - 0.043212, landmark loss - 0.003864, L2 loss - 0.023180, lr - 0.000010 
+2018-09-08 08:49:14.844755 - step - 645120 accuracy - 0.996564, class loss - 0.032252, bbox loss - 0.047162, landmark loss - 0.004263, L2 loss - 0.023180, lr - 0.000010 
+2018-09-08 09:01:53.381103 - step - 648960 accuracy - 0.989865, class loss - 0.056961, bbox loss - 0.046565, landmark loss - 0.004668, L2 loss - 0.023179, lr - 0.000010 
+2018-09-08 09:14:32.523743 - step - 652800 accuracy - 0.993243, class loss - 0.033212, bbox loss - 0.044123, landmark loss - 0.004787, L2 loss - 0.023178, lr - 0.000010 
+2018-09-08 09:27:12.565603 - step - 656640 accuracy - 0.972318, class loss - 0.104437, bbox loss - 0.039011, landmark loss - 0.006286, L2 loss - 0.023177, lr - 0.000010 
+2018-09-08 09:39:50.242797 - step - 660480 accuracy - 0.972603, class loss - 0.106500, bbox loss - 0.034201, landmark loss - 0.004645, L2 loss - 0.023176, lr - 0.000010 
+2018-09-08 09:52:30.271333 - step - 664320 accuracy - 0.975779, class loss - 0.124351, bbox loss - 0.048610, landmark loss - 0.003378, L2 loss - 0.023175, lr - 0.000010 
+2018-09-08 10:05:10.149702 - step - 668160 accuracy - 0.989655, class loss - 0.056342, bbox loss - 0.049120, landmark loss - 0.004453, L2 loss - 0.023174, lr - 0.000010 
+2018-09-08 10:17:49.586458 - step - 672000 accuracy - 0.986254, class loss - 0.074089, bbox loss - 0.040361, landmark loss - 0.005198, L2 loss - 0.023173, lr - 0.000010 
+2018-09-08 10:30:30.155079 - step - 675840 accuracy - 0.993197, class loss - 0.038194, bbox loss - 0.058939, landmark loss - 0.005936, L2 loss - 0.023172, lr - 0.000010 
+2018-09-08 10:43:11.468032 - step - 679680 accuracy - 0.973244, class loss - 0.074369, bbox loss - 0.028997, landmark loss - 0.003121, L2 loss - 0.023171, lr - 0.000010 
+2018-09-08 10:55:50.583897 - step - 683520 accuracy - 0.982759, class loss - 0.066501, bbox loss - 0.038232, landmark loss - 0.004370, L2 loss - 0.023170, lr - 0.000010 
+2018-09-08 11:08:28.833978 - step - 687360 accuracy - 0.989899, class loss - 0.041002, bbox loss - 0.036488, landmark loss - 0.004112, L2 loss - 0.023169, lr - 0.000010 
+2018-09-08 11:21:06.928252 - step - 691200 accuracy - 0.979167, class loss - 0.099262, bbox loss - 0.046992, landmark loss - 0.004819, L2 loss - 0.023168, lr - 0.000010 
+2018-09-08 11:33:47.660188 - step - 695040 accuracy - 0.972414, class loss - 0.079912, bbox loss - 0.042599, landmark loss - 0.005048, L2 loss - 0.023167, lr - 0.000010 
+2018-09-08 11:46:27.643919 - step - 698880 accuracy - 0.969388, class loss - 0.087848, bbox loss - 0.037535, landmark loss - 0.003969, L2 loss - 0.023166, lr - 0.000010 
+2018-09-08 11:59:08.159924 - step - 702720 accuracy - 0.986667, class loss - 0.054064, bbox loss - 0.030921, landmark loss - 0.003484, L2 loss - 0.023165, lr - 0.000010 
+2018-09-08 12:11:47.214286 - step - 706560 accuracy - 0.993311, class loss - 0.046988, bbox loss - 0.038169, landmark loss - 0.003981, L2 loss - 0.023164, lr - 0.000010 
+2018-09-08 12:24:25.767518 - step - 710400 accuracy - 0.979522, class loss - 0.067022, bbox loss - 0.040171, landmark loss - 0.006257, L2 loss - 0.023164, lr - 0.000010 
+2018-09-08 12:37:06.086678 - step - 714240 accuracy - 0.993197, class loss - 0.050712, bbox loss - 0.040531, landmark loss - 0.005031, L2 loss - 0.023162, lr - 0.000010 
+2018-09-08 12:49:46.885351 - step - 718080 accuracy - 0.982935, class loss - 0.063801, bbox loss - 0.049383, landmark loss - 0.004421, L2 loss - 0.023162, lr - 0.000010 
+2018-09-08 13:02:25.923844 - step - 721920 accuracy - 0.980000, class loss - 0.083204, bbox loss - 0.047428, landmark loss - 0.004194, L2 loss - 0.023161, lr - 0.000010 
+2018-09-08 13:15:06.442151 - step - 725760 accuracy - 0.979933, class loss - 0.055635, bbox loss - 0.045406, landmark loss - 0.005746, L2 loss - 0.023160, lr - 0.000010 
+2018-09-08 13:27:47.241012 - step - 729600 accuracy - 0.975945, class loss - 0.076120, bbox loss - 0.032900, landmark loss - 0.004968, L2 loss - 0.023159, lr - 0.000010 
+2018-09-08 13:40:27.821227 - step - 733440 accuracy - 0.973064, class loss - 0.068070, bbox loss - 0.032988, landmark loss - 0.004215, L2 loss - 0.023158, lr - 0.000010 
+2018-09-08 13:53:07.974350 - step - 737280 accuracy - 0.962585, class loss - 0.088394, bbox loss - 0.031154, landmark loss - 0.005381, L2 loss - 0.023157, lr - 0.000010 
+2018-09-08 14:05:48.033659 - step - 741120 accuracy - 0.982993, class loss - 0.079494, bbox loss - 0.037025, landmark loss - 0.003035, L2 loss - 0.023156, lr - 0.000010 
+2018-09-08 14:18:28.248708 - step - 744960 accuracy - 0.975945, class loss - 0.137694, bbox loss - 0.053947, landmark loss - 0.004176, L2 loss - 0.023155, lr - 0.000010 
+2018-09-08 14:31:07.495930 - step - 748800 accuracy - 0.993007, class loss - 0.040880, bbox loss - 0.042575, landmark loss - 0.005907, L2 loss - 0.023154, lr - 0.000010 
+2018-09-08 14:43:46.372321 - step - 752640 accuracy - 0.983221, class loss - 0.063177, bbox loss - 0.043425, landmark loss - 0.004943, L2 loss - 0.023153, lr - 0.000010 
+2018-09-08 14:56:27.454136 - step - 756480 accuracy - 0.985915, class loss - 0.059683, bbox loss - 0.039000, landmark loss - 0.004928, L2 loss - 0.023152, lr - 0.000010 
+2018-09-08 15:09:06.691346 - step - 760320 accuracy - 0.979592, class loss - 0.077685, bbox loss - 0.050458, landmark loss - 0.003760, L2 loss - 0.023151, lr - 0.000010 
+2018-09-08 15:21:44.534729 - step - 764160 accuracy - 0.993103, class loss - 0.038084, bbox loss - 0.034110, landmark loss - 0.004264, L2 loss - 0.023150, lr - 0.000010 
+2018-09-08 15:34:24.540336 - step - 768000 accuracy - 0.989796, class loss - 0.042599, bbox loss - 0.033823, landmark loss - 0.003718, L2 loss - 0.023149, lr - 0.000010 
+2018-09-08 15:47:04.573639 - step - 771840 accuracy - 0.986207, class loss - 0.063786, bbox loss - 0.046956, landmark loss - 0.004952, L2 loss - 0.023149, lr - 0.000010 
+2018-09-08 15:59:45.850105 - step - 775680 accuracy - 0.986254, class loss - 0.054912, bbox loss - 0.038727, landmark loss - 0.003570, L2 loss - 0.023147, lr - 0.000010 
+2018-09-08 16:12:23.576981 - step - 779520 accuracy - 0.993056, class loss - 0.062260, bbox loss - 0.041818, landmark loss - 0.004670, L2 loss - 0.023147, lr - 0.000010 
+2018-09-08 16:25:02.393930 - step - 783360 accuracy - 0.986441, class loss - 0.060378, bbox loss - 0.038669, landmark loss - 0.006709, L2 loss - 0.023146, lr - 0.000010 
+2018-09-08 16:37:41.830417 - step - 787200 accuracy - 0.982935, class loss - 0.045954, bbox loss - 0.051539, landmark loss - 0.006781, L2 loss - 0.023145, lr - 0.000010 
+2018-09-08 16:50:20.431965 - step - 791040 accuracy - 0.979522, class loss - 0.065965, bbox loss - 0.038962, landmark loss - 0.004082, L2 loss - 0.023144, lr - 0.000010 
+ONet - network is trained and weights are generated at ../data/models/mtcnn/train
+Trained ONet.
+########################################################################################################################################################################################################

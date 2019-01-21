@@ -1,6 +1,8 @@
-CelebA dataset is used for landmark detection. 
+# CelebA dataset - Landmark detection
 
-1 - Download CelebA dataset from official website (http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html).
-2 - Create data/CelebA/images directory.
-3 - Unzip the downloaded dataset in data/CelebA/images directory to have CelebA dataset images within this directory.
+CelebA dataset is used for landmark detection. 
+- Download CelebA dataset from official website (http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html).
+- Create <MTCNN_ROOT>/data/CelebA/images directory.
+- Unzip the downloaded dataset in <MTCNN_ROOT>/data/CelebA/images directory to have CelebA dataset images within this directory.
+
 
