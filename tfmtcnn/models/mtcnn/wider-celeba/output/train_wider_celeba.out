@@ -564,343 +564,347 @@ PNet dataset is generated at /scratch/ppshete/workspace/tfmtcnn/data/datasets/mt
 Generated a basic dataset i.e. PNet dataset.
 ########################################################################################################################################################################################################
 Train PNet.
+/usr/lib64/python2.7/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
 508 faces in  290 number of images for FDDB dataset.
-(epoch - 1, step - 3840) - (accuracy - 0.937500, class loss - 0.271249, bbox loss - 0.070677, landmark loss - 0.033861, L2 loss - 0.001778, lr - 0.001000 )
-(epoch - 1, step - 7680) - (accuracy - 0.933921, class loss - 0.211409, bbox loss - 0.051814, landmark loss - 0.030793, L2 loss - 0.001998, lr - 0.001000 )
-(epoch - 1, step - 11520) - (accuracy - 0.954545, class loss - 0.231022, bbox loss - 0.078699, landmark loss - 0.018746, L2 loss - 0.002227, lr - 0.001000 )
-epoch - 1, step - 12172
-Positive faces       -  293
-Partial faces        -  176
-Total detected faces -  469
-Ground truth faces   -  508
-Positive accuracy    -  0.576771653543
-Detection accuracy   -  0.923228346457
-Accuracy             -  0.618394364085
-(epoch - 2, step - 15360) - (accuracy - 0.927602, class loss - 0.266486, bbox loss - 0.067310, landmark loss - 0.019996, L2 loss - 0.002410, lr - 0.001000 )
-(epoch - 2, step - 19200) - (accuracy - 0.940639, class loss - 0.250400, bbox loss - 0.082101, landmark loss - 0.031771, L2 loss - 0.002580, lr - 0.001000 )
-(epoch - 2, step - 23040) - (accuracy - 0.932735, class loss - 0.242537, bbox loss - 0.061327, landmark loss - 0.024390, L2 loss - 0.002719, lr - 0.001000 )
-epoch - 2, step - 24344
-Positive faces       -  291
-Partial faces        -  188
-Total detected faces -  479
-Ground truth faces   -  508
-Positive accuracy    -  0.572834645669
-Detection accuracy   -  0.942913385827
-Accuracy             -  0.632878318526
-(epoch - 3, step - 26880) - (accuracy - 0.963964, class loss - 0.161946, bbox loss - 0.055732, landmark loss - 0.020433, L2 loss - 0.002845, lr - 0.000940 )
-(epoch - 3, step - 30720) - (accuracy - 0.941964, class loss - 0.205429, bbox loss - 0.068894, landmark loss - 0.027697, L2 loss - 0.002945, lr - 0.000940 )
-(epoch - 3, step - 34560) - (accuracy - 0.943925, class loss - 0.202870, bbox loss - 0.053552, landmark loss - 0.020627, L2 loss - 0.003041, lr - 0.000940 )
-epoch - 3, step - 36516
-Positive faces       -  284
-Partial faces        -  198
-Total detected faces -  482
-Ground truth faces   -  508
-Positive accuracy    -  0.55905511811
-Detection accuracy   -  0.948818897638
-Accuracy             -  0.631482775551
-(epoch - 4, step - 38400) - (accuracy - 0.959459, class loss - 0.184589, bbox loss - 0.085683, landmark loss - 0.019726, L2 loss - 0.003113, lr - 0.000940 )
-(epoch - 4, step - 42240) - (accuracy - 0.951542, class loss - 0.209118, bbox loss - 0.064386, landmark loss - 0.022791, L2 loss - 0.003195, lr - 0.000940 )
-(epoch - 4, step - 46080) - (accuracy - 0.930435, class loss - 0.203337, bbox loss - 0.059586, landmark loss - 0.019962, L2 loss - 0.003250, lr - 0.000940 )
-epoch - 4, step - 48688
-Positive faces       -  290
-Partial faces        -  194
-Total detected faces -  484
-Ground truth faces   -  508
-Positive accuracy    -  0.570866141732
-Detection accuracy   -  0.952755905512
-Accuracy             -  0.630259918009
-(epoch - 5, step - 49920) - (accuracy - 0.976077, class loss - 0.131133, bbox loss - 0.059809, landmark loss - 0.021994, L2 loss - 0.003308, lr - 0.000884 )
-(epoch - 5, step - 53760) - (accuracy - 0.935185, class loss - 0.203371, bbox loss - 0.072896, landmark loss - 0.025349, L2 loss - 0.003375, lr - 0.000884 )
-(epoch - 5, step - 57600) - (accuracy - 0.938053, class loss - 0.227592, bbox loss - 0.067563, landmark loss - 0.020521, L2 loss - 0.003417, lr - 0.000884 )
-epoch - 5, step - 60860
-Positive faces       -  292
-Partial faces        -  191
-Total detected faces -  483
-Ground truth faces   -  508
-Positive accuracy    -  0.574803149606
-Detection accuracy   -  0.950787401575
-Accuracy             -  0.634277841048
-(epoch - 6, step - 61440) - (accuracy - 0.964444, class loss - 0.152885, bbox loss - 0.065101, landmark loss - 0.021841, L2 loss - 0.003462, lr - 0.000884 )
-(epoch - 6, step - 65280) - (accuracy - 0.941704, class loss - 0.208902, bbox loss - 0.066140, landmark loss - 0.021030, L2 loss - 0.003504, lr - 0.000884 )
-(epoch - 6, step - 69120) - (accuracy - 0.934156, class loss - 0.282635, bbox loss - 0.058035, landmark loss - 0.017253, L2 loss - 0.003542, lr - 0.000884 )
-(epoch - 6, step - 72960) - (accuracy - 0.953587, class loss - 0.136426, bbox loss - 0.061011, landmark loss - 0.017622, L2 loss - 0.003598, lr - 0.000884 )
-epoch - 6, step - 73032
-Positive faces       -  287
-Partial faces        -  196
-Total detected faces -  483
-Ground truth faces   -  508
-Positive accuracy    -  0.564960629921
-Detection accuracy   -  0.950787401575
-Accuracy             -  0.63142920012
-(epoch - 7, step - 76800) - (accuracy - 0.983264, class loss - 0.113224, bbox loss - 0.067328, landmark loss - 0.025049, L2 loss - 0.003617, lr - 0.000831 )
-(epoch - 7, step - 80640) - (accuracy - 0.954751, class loss - 0.153238, bbox loss - 0.052871, landmark loss - 0.030959, L2 loss - 0.003663, lr - 0.000831 )
-(epoch - 7, step - 84480) - (accuracy - 0.936652, class loss - 0.219304, bbox loss - 0.075115, landmark loss - 0.026462, L2 loss - 0.003705, lr - 0.000831 )
-epoch - 7, step - 85204
-Positive faces       -  308
-Partial faces        -  174
-Total detected faces -  482
-Ground truth faces   -  508
-Positive accuracy    -  0.606299212598
-Detection accuracy   -  0.948818897638
-Accuracy             -  0.63801037706
-(epoch - 8, step - 88320) - (accuracy - 0.952991, class loss - 0.189452, bbox loss - 0.066868, landmark loss - 0.025779, L2 loss - 0.003736, lr - 0.000831 )
-(epoch - 8, step - 92160) - (accuracy - 0.948276, class loss - 0.216866, bbox loss - 0.053745, landmark loss - 0.020872, L2 loss - 0.003786, lr - 0.000831 )
-(epoch - 8, step - 96000) - (accuracy - 0.932432, class loss - 0.280006, bbox loss - 0.064122, landmark loss - 0.024258, L2 loss - 0.003815, lr - 0.000831 )
-epoch - 8, step - 97376
-Positive faces       -  294
-Partial faces        -  185
-Total detected faces -  479
-Ground truth faces   -  508
-Positive accuracy    -  0.57874015748
-Detection accuracy   -  0.942913385827
-Accuracy             -  0.631018027418
-(epoch - 9, step - 99840) - (accuracy - 0.942731, class loss - 0.200185, bbox loss - 0.054609, landmark loss - 0.019086, L2 loss - 0.003841, lr - 0.000781 )
-(epoch - 9, step - 103680) - (accuracy - 0.948276, class loss - 0.205702, bbox loss - 0.057397, landmark loss - 0.020998, L2 loss - 0.003874, lr - 0.000781 )
-(epoch - 9, step - 107520) - (accuracy - 0.965368, class loss - 0.151993, bbox loss - 0.064152, landmark loss - 0.025848, L2 loss - 0.003892, lr - 0.000781 )
-epoch - 9, step - 109548
-Positive faces       -  286
-Partial faces        -  186
-Total detected faces -  472
-Ground truth faces   -  508
-Positive accuracy    -  0.562992125984
-Detection accuracy   -  0.929133858268
-Accuracy             -  0.627698077218
-(epoch - 10, step - 111360) - (accuracy - 0.939914, class loss - 0.203818, bbox loss - 0.048592, landmark loss - 0.019946, L2 loss - 0.003914, lr - 0.000781 )
-(epoch - 10, step - 115200) - (accuracy - 0.948837, class loss - 0.193425, bbox loss - 0.070388, landmark loss - 0.015658, L2 loss - 0.003943, lr - 0.000781 )
-(epoch - 10, step - 119040) - (accuracy - 0.955556, class loss - 0.176921, bbox loss - 0.061072, landmark loss - 0.017041, L2 loss - 0.003961, lr - 0.000781 )
-epoch - 10, step - 121720
-Positive faces       -  302
-Partial faces        -  174
-Total detected faces -  476
-Ground truth faces   -  508
-Positive accuracy    -  0.594488188976
-Detection accuracy   -  0.937007874016
-Accuracy             -  0.634205870887
-(epoch - 11, step - 122880) - (accuracy - 0.960352, class loss - 0.157654, bbox loss - 0.068044, landmark loss - 0.017616, L2 loss - 0.003981, lr - 0.000734 )
-(epoch - 11, step - 126720) - (accuracy - 0.960526, class loss - 0.185001, bbox loss - 0.052170, landmark loss - 0.018039, L2 loss - 0.004003, lr - 0.000734 )
-(epoch - 11, step - 130560) - (accuracy - 0.966387, class loss - 0.174396, bbox loss - 0.058728, landmark loss - 0.024291, L2 loss - 0.004009, lr - 0.000734 )
-epoch - 11, step - 133892
+(epoch - 1, step - 3840) - (accuracy - 0.951923, class loss - 0.215307, bbox loss - 0.063786, landmark loss - 0.039291, L2 loss - 0.002106, lr - 0.001000 )
+(epoch - 1, step - 7680) - (accuracy - 0.932203, class loss - 0.254493, bbox loss - 0.066247, landmark loss - 0.025923, L2 loss - 0.002291, lr - 0.001000 )
+(epoch - 1, step - 11520) - (accuracy - 0.945378, class loss - 0.222348, bbox loss - 0.075398, landmark loss - 0.018108, L2 loss - 0.002531, lr - 0.001000 )
+epoch - 1, step - 12437
 Positive faces       -  289
-Partial faces        -  188
-Total detected faces -  477
+Partial faces        -  183
+Total detected faces -  472
 Ground truth faces   -  508
 Positive accuracy    -  0.568897637795
-Detection accuracy   -  0.938976377953
-Accuracy             -  0.631192836117
-(epoch - 12, step - 134400) - (accuracy - 0.931330, class loss - 0.188385, bbox loss - 0.065778, landmark loss - 0.023929, L2 loss - 0.004034, lr - 0.000734 )
-(epoch - 12, step - 138240) - (accuracy - 0.961864, class loss - 0.159077, bbox loss - 0.063293, landmark loss - 0.021355, L2 loss - 0.004036, lr - 0.000734 )
-(epoch - 12, step - 142080) - (accuracy - 0.948498, class loss - 0.205164, bbox loss - 0.049850, landmark loss - 0.028955, L2 loss - 0.004065, lr - 0.000734 )
-(epoch - 12, step - 145920) - (accuracy - 0.940367, class loss - 0.214278, bbox loss - 0.059627, landmark loss - 0.024569, L2 loss - 0.004091, lr - 0.000734 )
-epoch - 12, step - 146064
-Positive faces       -  292
-Partial faces        -  185
-Total detected faces -  477
+Detection accuracy   -  0.929133858268
+Accuracy             -  0.6210583147419806
+(epoch - 2, step - 15360) - (accuracy - 0.924171, class loss - 0.246933, bbox loss - 0.074964, landmark loss - 0.024397, L2 loss - 0.002751, lr - 0.001000 )
+(epoch - 2, step - 19200) - (accuracy - 0.957447, class loss - 0.169066, bbox loss - 0.062077, landmark loss - 0.020797, L2 loss - 0.002931, lr - 0.001000 )
+(epoch - 2, step - 23040) - (accuracy - 0.938679, class loss - 0.187212, bbox loss - 0.057924, landmark loss - 0.023640, L2 loss - 0.003039, lr - 0.001000 )
+epoch - 2, step - 24874
+Positive faces       -  301
+Partial faces        -  173
+Total detected faces -  474
 Ground truth faces   -  508
-Positive accuracy    -  0.574803149606
-Detection accuracy   -  0.938976377953
-Accuracy             -  0.627903066398
-(epoch - 13, step - 149760) - (accuracy - 0.956897, class loss - 0.194758, bbox loss - 0.063222, landmark loss - 0.026894, L2 loss - 0.004095, lr - 0.000690 )
-(epoch - 13, step - 153600) - (accuracy - 0.956140, class loss - 0.164054, bbox loss - 0.061291, landmark loss - 0.021722, L2 loss - 0.004117, lr - 0.000690 )
-(epoch - 13, step - 157440) - (accuracy - 0.950207, class loss - 0.196444, bbox loss - 0.060819, landmark loss - 0.021539, L2 loss - 0.004117, lr - 0.000690 )
-epoch - 13, step - 158236
-Positive faces       -  290
-Partial faces        -  180
-Total detected faces -  470
-Ground truth faces   -  508
-Positive accuracy    -  0.570866141732
-Detection accuracy   -  0.925196850394
-Accuracy             -  0.627417281929
-(epoch - 14, step - 161280) - (accuracy - 0.968326, class loss - 0.127599, bbox loss - 0.055867, landmark loss - 0.020151, L2 loss - 0.004138, lr - 0.000690 )
-(epoch - 14, step - 165120) - (accuracy - 0.959821, class loss - 0.161489, bbox loss - 0.058791, landmark loss - 0.020135, L2 loss - 0.004146, lr - 0.000690 )
-(epoch - 14, step - 168960) - (accuracy - 0.956897, class loss - 0.175365, bbox loss - 0.079018, landmark loss - 0.019359, L2 loss - 0.004164, lr - 0.000690 )
-epoch - 14, step - 170408
-Positive faces       -  296
-Partial faces        -  177
-Total detected faces -  473
-Ground truth faces   -  508
-Positive accuracy    -  0.582677165354
-Detection accuracy   -  0.931102362205
-Accuracy             -  0.628620431369
-(epoch - 15, step - 172800) - (accuracy - 0.947598, class loss - 0.230284, bbox loss - 0.067625, landmark loss - 0.025135, L2 loss - 0.004164, lr - 0.000648 )
-(epoch - 15, step - 176640) - (accuracy - 0.961039, class loss - 0.186462, bbox loss - 0.060258, landmark loss - 0.023465, L2 loss - 0.004177, lr - 0.000648 )
-(epoch - 15, step - 180480) - (accuracy - 0.939655, class loss - 0.206157, bbox loss - 0.058958, landmark loss - 0.026352, L2 loss - 0.004183, lr - 0.000648 )
-epoch - 15, step - 182580
-Positive faces       -  304
-Partial faces        -  172
+Positive accuracy    -  0.592519685039
+Detection accuracy   -  0.933070866142
+Accuracy             -  0.6270216247157219
+(epoch - 3, step - 26880) - (accuracy - 0.951754, class loss - 0.217115, bbox loss - 0.069522, landmark loss - 0.022308, L2 loss - 0.003155, lr - 0.000940 )
+(epoch - 3, step - 30720) - (accuracy - 0.947137, class loss - 0.204039, bbox loss - 0.063125, landmark loss - 0.031415, L2 loss - 0.003273, lr - 0.000940 )
+(epoch - 3, step - 34560) - (accuracy - 0.924370, class loss - 0.287564, bbox loss - 0.062078, landmark loss - 0.018543, L2 loss - 0.003366, lr - 0.000940 )
+epoch - 3, step - 37311
+Positive faces       -  301
+Partial faces        -  175
 Total detected faces -  476
 Ground truth faces   -  508
-Positive accuracy    -  0.59842519685
+Positive accuracy    -  0.592519685039
 Detection accuracy   -  0.937007874016
-Accuracy             -  0.632765856226
-(epoch - 16, step - 184320) - (accuracy - 0.940426, class loss - 0.188630, bbox loss - 0.076580, landmark loss - 0.027554, L2 loss - 0.004181, lr - 0.000648 )
-(epoch - 16, step - 188160) - (accuracy - 0.972222, class loss - 0.179687, bbox loss - 0.057649, landmark loss - 0.020717, L2 loss - 0.004191, lr - 0.000648 )
-(epoch - 16, step - 192000) - (accuracy - 0.947368, class loss - 0.210069, bbox loss - 0.069342, landmark loss - 0.020855, L2 loss - 0.004215, lr - 0.000648 )
-epoch - 16, step - 194752
-Positive faces       -  297
-Partial faces        -  178
-Total detected faces -  475
-Ground truth faces   -  508
-Positive accuracy    -  0.584645669291
-Detection accuracy   -  0.935039370079
-Accuracy             -  0.631014331882
-(epoch - 17, step - 195840) - (accuracy - 0.947368, class loss - 0.205264, bbox loss - 0.061226, landmark loss - 0.021976, L2 loss - 0.004206, lr - 0.000610 )
-(epoch - 17, step - 199680) - (accuracy - 0.977679, class loss - 0.106628, bbox loss - 0.065292, landmark loss - 0.018291, L2 loss - 0.004211, lr - 0.000610 )
-(epoch - 17, step - 203520) - (accuracy - 0.953271, class loss - 0.168059, bbox loss - 0.064107, landmark loss - 0.030192, L2 loss - 0.004217, lr - 0.000610 )
-epoch - 17, step - 206924
-Positive faces       -  297
-Partial faces        -  177
-Total detected faces -  474
-Ground truth faces   -  508
-Positive accuracy    -  0.584645669291
-Detection accuracy   -  0.933070866142
-Accuracy             -  0.629004847575
-(epoch - 18, step - 207360) - (accuracy - 0.930876, class loss - 0.246024, bbox loss - 0.061441, landmark loss - 0.020603, L2 loss - 0.004224, lr - 0.000610 )
-(epoch - 18, step - 211200) - (accuracy - 0.956140, class loss - 0.163953, bbox loss - 0.064896, landmark loss - 0.019563, L2 loss - 0.004222, lr - 0.000610 )
-(epoch - 18, step - 215040) - (accuracy - 0.962617, class loss - 0.211461, bbox loss - 0.059289, landmark loss - 0.029839, L2 loss - 0.004235, lr - 0.000610 )
-(epoch - 18, step - 218880) - (accuracy - 0.941176, class loss - 0.254053, bbox loss - 0.057317, landmark loss - 0.019446, L2 loss - 0.004237, lr - 0.000610 )
-epoch - 18, step - 219096
-Positive faces       -  296
-Partial faces        -  177
-Total detected faces -  473
-Ground truth faces   -  508
-Positive accuracy    -  0.582677165354
-Detection accuracy   -  0.931102362205
-Accuracy             -  0.632428479893
-(epoch - 19, step - 222720) - (accuracy - 0.913876, class loss - 0.322725, bbox loss - 0.058185, landmark loss - 0.023707, L2 loss - 0.004224, lr - 0.000573 )
-(epoch - 19, step - 226560) - (accuracy - 0.948598, class loss - 0.204447, bbox loss - 0.055038, landmark loss - 0.018845, L2 loss - 0.004233, lr - 0.000573 )
-(epoch - 19, step - 230400) - (accuracy - 0.968889, class loss - 0.142318, bbox loss - 0.066128, landmark loss - 0.017826, L2 loss - 0.004246, lr - 0.000573 )
-epoch - 19, step - 231268
-Positive faces       -  290
-Partial faces        -  184
-Total detected faces -  474
-Ground truth faces   -  508
-Positive accuracy    -  0.570866141732
-Detection accuracy   -  0.933070866142
-Accuracy             -  0.63427201333
-(epoch - 20, step - 234240) - (accuracy - 0.947826, class loss - 0.206778, bbox loss - 0.069356, landmark loss - 0.030569, L2 loss - 0.004243, lr - 0.000573 )
-(epoch - 20, step - 238080) - (accuracy - 0.931035, class loss - 0.210753, bbox loss - 0.061577, landmark loss - 0.020018, L2 loss - 0.004245, lr - 0.000573 )
-(epoch - 20, step - 241920) - (accuracy - 0.963470, class loss - 0.169727, bbox loss - 0.052374, landmark loss - 0.023806, L2 loss - 0.004252, lr - 0.000573 )
-epoch - 20, step - 243440
+Accuracy             -  0.6315370291314516
+(epoch - 4, step - 38400) - (accuracy - 0.952174, class loss - 0.203468, bbox loss - 0.074847, landmark loss - 0.021492, L2 loss - 0.003463, lr - 0.000940 )
+(epoch - 4, step - 42240) - (accuracy - 0.934783, class loss - 0.195290, bbox loss - 0.066839, landmark loss - 0.019152, L2 loss - 0.003551, lr - 0.000940 )
+(epoch - 4, step - 46080) - (accuracy - 0.949772, class loss - 0.204973, bbox loss - 0.067766, landmark loss - 0.019197, L2 loss - 0.003631, lr - 0.000940 )
+epoch - 4, step - 49748
 Positive faces       -  311
-Partial faces        -  167
-Total detected faces -  478
-Ground truth faces   -  508
-Positive accuracy    -  0.612204724409
-Detection accuracy   -  0.94094488189
-Accuracy             -  0.635627734121
-(epoch - 21, step - 245760) - (accuracy - 0.960177, class loss - 0.172071, bbox loss - 0.067033, landmark loss - 0.020523, L2 loss - 0.004248, lr - 0.000539 )
-(epoch - 21, step - 249600) - (accuracy - 0.963636, class loss - 0.184975, bbox loss - 0.055423, landmark loss - 0.018150, L2 loss - 0.004251, lr - 0.000539 )
-(epoch - 21, step - 253440) - (accuracy - 0.946602, class loss - 0.225362, bbox loss - 0.052696, landmark loss - 0.022941, L2 loss - 0.004254, lr - 0.000539 )
-epoch - 21, step - 255612
-Positive faces       -  299
-Partial faces        -  180
+Partial faces        -  168
 Total detected faces -  479
 Ground truth faces   -  508
-Positive accuracy    -  0.588582677165
+Positive accuracy    -  0.612204724409
 Detection accuracy   -  0.942913385827
-Accuracy             -  0.634917656384
-(epoch - 22, step - 257280) - (accuracy - 0.948837, class loss - 0.189479, bbox loss - 0.063477, landmark loss - 0.025214, L2 loss - 0.004247, lr - 0.000539 )
-(epoch - 22, step - 261120) - (accuracy - 0.951965, class loss - 0.182853, bbox loss - 0.055975, landmark loss - 0.028123, L2 loss - 0.004252, lr - 0.000539 )
-(epoch - 22, step - 264960) - (accuracy - 0.972093, class loss - 0.124390, bbox loss - 0.066488, landmark loss - 0.016062, L2 loss - 0.004262, lr - 0.000539 )
-epoch - 22, step - 267784
-Positive faces       -  298
-Partial faces        -  177
-Total detected faces -  475
+Accuracy             -  0.6361702288551356
+(epoch - 5, step - 49920) - (accuracy - 0.959091, class loss - 0.162467, bbox loss - 0.064973, landmark loss - 0.029011, L2 loss - 0.003700, lr - 0.000884 )
+(epoch - 5, step - 53760) - (accuracy - 0.942982, class loss - 0.202051, bbox loss - 0.065382, landmark loss - 0.018204, L2 loss - 0.003810, lr - 0.000884 )
+(epoch - 5, step - 57600) - (accuracy - 0.940928, class loss - 0.177934, bbox loss - 0.061818, landmark loss - 0.015268, L2 loss - 0.003899, lr - 0.000884 )
+(epoch - 5, step - 61440) - (accuracy - 0.929577, class loss - 0.245322, bbox loss - 0.076741, landmark loss - 0.022616, L2 loss - 0.003954, lr - 0.000884 )
+epoch - 5, step - 62185
+Positive faces       -  301
+Partial faces        -  179
+Total detected faces -  480
 Ground truth faces   -  508
-Positive accuracy    -  0.586614173228
-Detection accuracy   -  0.935039370079
-Accuracy             -  0.6342556014
-(epoch - 23, step - 268800) - (accuracy - 0.939252, class loss - 0.198204, bbox loss - 0.058239, landmark loss - 0.020545, L2 loss - 0.004247, lr - 0.000506 )
-(epoch - 23, step - 272640) - (accuracy - 0.961207, class loss - 0.153883, bbox loss - 0.066457, landmark loss - 0.017319, L2 loss - 0.004252, lr - 0.000506 )
-(epoch - 23, step - 276480) - (accuracy - 0.958848, class loss - 0.163146, bbox loss - 0.056349, landmark loss - 0.025003, L2 loss - 0.004243, lr - 0.000506 )
-epoch - 23, step - 279956
-Positive faces       -  294
-Partial faces        -  183
-Total detected faces -  477
-Ground truth faces   -  508
-Positive accuracy    -  0.57874015748
-Detection accuracy   -  0.938976377953
-Accuracy             -  0.633562611075
-(epoch - 24, step - 280320) - (accuracy - 0.943231, class loss - 0.242624, bbox loss - 0.056657, landmark loss - 0.022414, L2 loss - 0.004238, lr - 0.000506 )
-(epoch - 24, step - 284160) - (accuracy - 0.958678, class loss - 0.160889, bbox loss - 0.070031, landmark loss - 0.019141, L2 loss - 0.004247, lr - 0.000506 )
-(epoch - 24, step - 288000) - (accuracy - 0.947368, class loss - 0.188786, bbox loss - 0.071217, landmark loss - 0.018437, L2 loss - 0.004237, lr - 0.000506 )
-(epoch - 24, step - 291840) - (accuracy - 0.937778, class loss - 0.223288, bbox loss - 0.062763, landmark loss - 0.022989, L2 loss - 0.004243, lr - 0.000506 )
-epoch - 24, step - 292128
-Positive faces       -  306
-Partial faces        -  171
-Total detected faces -  477
-Ground truth faces   -  508
-Positive accuracy    -  0.602362204724
-Detection accuracy   -  0.938976377953
-Accuracy             -  0.635760615822
-(epoch - 25, step - 295680) - (accuracy - 0.926407, class loss - 0.268777, bbox loss - 0.044569, landmark loss - 0.017925, L2 loss - 0.004235, lr - 0.000476 )
-(epoch - 25, step - 299520) - (accuracy - 0.929825, class loss - 0.310623, bbox loss - 0.053397, landmark loss - 0.017180, L2 loss - 0.004233, lr - 0.000476 )
-(epoch - 25, step - 303360) - (accuracy - 0.960699, class loss - 0.207224, bbox loss - 0.063346, landmark loss - 0.016496, L2 loss - 0.004236, lr - 0.000476 )
-epoch - 25, step - 304300
-Positive faces       -  303
-Partial faces        -  173
-Total detected faces -  476
-Ground truth faces   -  508
-Positive accuracy    -  0.596456692913
-Detection accuracy   -  0.937007874016
-Accuracy             -  0.633859324338
-(epoch - 26, step - 307200) - (accuracy - 0.933333, class loss - 0.224274, bbox loss - 0.063959, landmark loss - 0.017114, L2 loss - 0.004236, lr - 0.000476 )
-(epoch - 26, step - 311040) - (accuracy - 0.964758, class loss - 0.192677, bbox loss - 0.059638, landmark loss - 0.024941, L2 loss - 0.004235, lr - 0.000476 )
-(epoch - 26, step - 314880) - (accuracy - 0.952381, class loss - 0.178258, bbox loss - 0.061087, landmark loss - 0.023159, L2 loss - 0.004228, lr - 0.000476 )
-epoch - 26, step - 316472
-Positive faces       -  297
-Partial faces        -  178
-Total detected faces -  475
-Ground truth faces   -  508
-Positive accuracy    -  0.584645669291
-Detection accuracy   -  0.935039370079
-Accuracy             -  0.631432555864
-(epoch - 27, step - 318720) - (accuracy - 0.956332, class loss - 0.128072, bbox loss - 0.052566, landmark loss - 0.028354, L2 loss - 0.004231, lr - 0.000447 )
-(epoch - 27, step - 322560) - (accuracy - 0.953052, class loss - 0.165485, bbox loss - 0.050249, landmark loss - 0.022693, L2 loss - 0.004225, lr - 0.000447 )
-(epoch - 27, step - 326400) - (accuracy - 0.943662, class loss - 0.228196, bbox loss - 0.053123, landmark loss - 0.024933, L2 loss - 0.004233, lr - 0.000447 )
-epoch - 27, step - 328644
-Positive faces       -  302
-Partial faces        -  170
-Total detected faces -  472
-Ground truth faces   -  508
-Positive accuracy    -  0.594488188976
-Detection accuracy   -  0.929133858268
-Accuracy             -  0.631138465656
-(epoch - 28, step - 330240) - (accuracy - 0.949309, class loss - 0.202225, bbox loss - 0.055807, landmark loss - 0.022427, L2 loss - 0.004224, lr - 0.000447 )
-(epoch - 28, step - 334080) - (accuracy - 0.946667, class loss - 0.181348, bbox loss - 0.093177, landmark loss - 0.026499, L2 loss - 0.004227, lr - 0.000447 )
-(epoch - 28, step - 337920) - (accuracy - 0.952153, class loss - 0.298495, bbox loss - 0.053641, landmark loss - 0.020388, L2 loss - 0.004230, lr - 0.000447 )
-epoch - 28, step - 340816
-Positive faces       -  296
-Partial faces        -  178
+Positive accuracy    -  0.592519685039
+Detection accuracy   -  0.944881889764
+Accuracy             -  0.635216548403129
+(epoch - 6, step - 65280) - (accuracy - 0.951613, class loss - 0.198934, bbox loss - 0.055492, landmark loss - 0.019184, L2 loss - 0.004062, lr - 0.000884 )
+(epoch - 6, step - 69120) - (accuracy - 0.956140, class loss - 0.185806, bbox loss - 0.063622, landmark loss - 0.019177, L2 loss - 0.004142, lr - 0.000884 )
+(epoch - 6, step - 72960) - (accuracy - 0.953271, class loss - 0.210281, bbox loss - 0.066134, landmark loss - 0.020839, L2 loss - 0.004198, lr - 0.000884 )
+epoch - 6, step - 74622
+Positive faces       -  287
+Partial faces        -  187
 Total detected faces -  474
 Ground truth faces   -  508
-Positive accuracy    -  0.582677165354
-Detection accuracy   -  0.933070866142
-Accuracy             -  0.632373731685
-(epoch - 29, step - 341760) - (accuracy - 0.970588, class loss - 0.115541, bbox loss - 0.065622, landmark loss - 0.024998, L2 loss - 0.004217, lr - 0.000421 )
-(epoch - 29, step - 345600) - (accuracy - 0.951754, class loss - 0.180837, bbox loss - 0.058079, landmark loss - 0.022186, L2 loss - 0.004221, lr - 0.000421 )
-(epoch - 29, step - 349440) - (accuracy - 0.931330, class loss - 0.210219, bbox loss - 0.068783, landmark loss - 0.017689, L2 loss - 0.004219, lr - 0.000421 )
-epoch - 29, step - 352988
-Positive faces       -  294
-Partial faces        -  178
-Total detected faces -  472
-Ground truth faces   -  508
-Positive accuracy    -  0.57874015748
-Detection accuracy   -  0.929133858268
-Accuracy             -  0.630201052781
-(epoch - 30, step - 353280) - (accuracy - 0.937220, class loss - 0.233971, bbox loss - 0.070832, landmark loss - 0.021278, L2 loss - 0.004216, lr - 0.000421 )
-(epoch - 30, step - 357120) - (accuracy - 0.923404, class loss - 0.267948, bbox loss - 0.060559, landmark loss - 0.019431, L2 loss - 0.004208, lr - 0.000421 )
-(epoch - 30, step - 360960) - (accuracy - 0.940171, class loss - 0.260770, bbox loss - 0.052894, landmark loss - 0.022983, L2 loss - 0.004201, lr - 0.000421 )
-(epoch - 30, step - 364800) - (accuracy - 0.966346, class loss - 0.185533, bbox loss - 0.044659, landmark loss - 0.021789, L2 loss - 0.004204, lr - 0.000421 )
-epoch - 30, step - 365160
-Positive faces       -  287
-Partial faces        -  185
-Total detected faces -  472
-Ground truth faces   -  508
 Positive accuracy    -  0.564960629921
-Detection accuracy   -  0.929133858268
-Accuracy             -  0.629401020219
-PNet - network is trained and weights are generated at ../data/models/mtcnn/train
+Detection accuracy   -  0.933070866142
+Accuracy             -  0.6286740127074105
+(epoch - 7, step - 76800) - (accuracy - 0.937500, class loss - 0.199005, bbox loss - 0.053950, landmark loss - 0.014163, L2 loss - 0.004286, lr - 0.000831 )
+(epoch - 7, step - 80640) - (accuracy - 0.933333, class loss - 0.299279, bbox loss - 0.069804, landmark loss - 0.018360, L2 loss - 0.004364, lr - 0.000831 )
+(epoch - 7, step - 84480) - (accuracy - 0.933921, class loss - 0.295820, bbox loss - 0.062354, landmark loss - 0.018818, L2 loss - 0.004397, lr - 0.000831 )
+epoch - 7, step - 87059
+Positive faces       -  285
+Partial faces        -  188
+Total detected faces -  473
+Ground truth faces   -  508
+Positive accuracy    -  0.561023622047
+Detection accuracy   -  0.931102362205
+Accuracy             -  0.6290859447114634
+(epoch - 8, step - 88320) - (accuracy - 0.947368, class loss - 0.178971, bbox loss - 0.062863, landmark loss - 0.019698, L2 loss - 0.004465, lr - 0.000831 )
+(epoch - 8, step - 92160) - (accuracy - 0.925311, class loss - 0.217862, bbox loss - 0.072971, landmark loss - 0.023218, L2 loss - 0.004520, lr - 0.000831 )
+(epoch - 8, step - 96000) - (accuracy - 0.974359, class loss - 0.142831, bbox loss - 0.048141, landmark loss - 0.020014, L2 loss - 0.004588, lr - 0.000831 )
+epoch - 8, step - 99496
+Positive faces       -  302
+Partial faces        -  173
+Total detected faces -  475
+Ground truth faces   -  508
+Positive accuracy    -  0.594488188976
+Detection accuracy   -  0.935039370079
+Accuracy             -  0.6306067891667658
+(epoch - 9, step - 99840) - (accuracy - 0.949153, class loss - 0.206373, bbox loss - 0.047794, landmark loss - 0.024852, L2 loss - 0.004611, lr - 0.000781 )
+(epoch - 9, step - 103680) - (accuracy - 0.952381, class loss - 0.167374, bbox loss - 0.066419, landmark loss - 0.019190, L2 loss - 0.004682, lr - 0.000781 )
+(epoch - 9, step - 107520) - (accuracy - 0.950000, class loss - 0.198750, bbox loss - 0.067635, landmark loss - 0.023806, L2 loss - 0.004727, lr - 0.000781 )
+(epoch - 9, step - 111360) - (accuracy - 0.932432, class loss - 0.247730, bbox loss - 0.062445, landmark loss - 0.025707, L2 loss - 0.004795, lr - 0.000781 )
+epoch - 9, step - 111933
+Positive faces       -  299
+Partial faces        -  171
+Total detected faces -  470
+Ground truth faces   -  508
+Positive accuracy    -  0.588582677165
+Detection accuracy   -  0.925196850394
+Accuracy             -  0.625672681459489
+(epoch - 10, step - 115200) - (accuracy - 0.951111, class loss - 0.174157, bbox loss - 0.067556, landmark loss - 0.019940, L2 loss - 0.004841, lr - 0.000781 )
+(epoch - 10, step - 119040) - (accuracy - 0.944223, class loss - 0.216067, bbox loss - 0.059410, landmark loss - 0.016224, L2 loss - 0.004843, lr - 0.000781 )
+(epoch - 10, step - 122880) - (accuracy - 0.921739, class loss - 0.221735, bbox loss - 0.068318, landmark loss - 0.026262, L2 loss - 0.004895, lr - 0.000781 )
+epoch - 10, step - 124370
+Positive faces       -  299
+Partial faces        -  169
+Total detected faces -  468
+Ground truth faces   -  508
+Positive accuracy    -  0.588582677165
+Detection accuracy   -  0.92125984252
+Accuracy             -  0.6218388822121634
+(epoch - 11, step - 126720) - (accuracy - 0.948498, class loss - 0.188918, bbox loss - 0.076026, landmark loss - 0.032421, L2 loss - 0.004931, lr - 0.000734 )
+(epoch - 11, step - 130560) - (accuracy - 0.948718, class loss - 0.195140, bbox loss - 0.066186, landmark loss - 0.019139, L2 loss - 0.004971, lr - 0.000734 )
+(epoch - 11, step - 134400) - (accuracy - 0.961864, class loss - 0.155074, bbox loss - 0.067607, landmark loss - 0.018065, L2 loss - 0.005012, lr - 0.000734 )
+epoch - 11, step - 136807
+Positive faces       -  296
+Partial faces        -  173
+Total detected faces -  469
+Ground truth faces   -  508
+Positive accuracy    -  0.582677165354
+Detection accuracy   -  0.923228346457
+Accuracy             -  0.6233548640978516
+(epoch - 12, step - 138240) - (accuracy - 0.968468, class loss - 0.143071, bbox loss - 0.075990, landmark loss - 0.021220, L2 loss - 0.005028, lr - 0.000734 )
+(epoch - 12, step - 142080) - (accuracy - 0.935897, class loss - 0.231419, bbox loss - 0.057160, landmark loss - 0.021733, L2 loss - 0.005074, lr - 0.000734 )
+(epoch - 12, step - 145920) - (accuracy - 0.967890, class loss - 0.157668, bbox loss - 0.064616, landmark loss - 0.025052, L2 loss - 0.005096, lr - 0.000734 )
+epoch - 12, step - 149244
+Positive faces       -  289
+Partial faces        -  179
+Total detected faces -  468
+Ground truth faces   -  508
+Positive accuracy    -  0.568897637795
+Detection accuracy   -  0.92125984252
+Accuracy             -  0.6237784247768848
+(epoch - 13, step - 149760) - (accuracy - 0.932203, class loss - 0.256704, bbox loss - 0.069969, landmark loss - 0.019182, L2 loss - 0.005097, lr - 0.000690 )
+(epoch - 13, step - 153600) - (accuracy - 0.954338, class loss - 0.176846, bbox loss - 0.081000, landmark loss - 0.033328, L2 loss - 0.005137, lr - 0.000690 )
+(epoch - 13, step - 157440) - (accuracy - 0.972477, class loss - 0.152178, bbox loss - 0.056791, landmark loss - 0.020652, L2 loss - 0.005172, lr - 0.000690 )
+(epoch - 13, step - 161280) - (accuracy - 0.946188, class loss - 0.179014, bbox loss - 0.071898, landmark loss - 0.017713, L2 loss - 0.005199, lr - 0.000690 )
+epoch - 13, step - 161681
+Positive faces       -  293
+Partial faces        -  175
+Total detected faces -  468
+Ground truth faces   -  508
+Positive accuracy    -  0.576771653543
+Detection accuracy   -  0.92125984252
+Accuracy             -  0.6242793915378891
+(epoch - 14, step - 165120) - (accuracy - 0.945205, class loss - 0.208755, bbox loss - 0.065535, landmark loss - 0.017372, L2 loss - 0.005230, lr - 0.000690 )
+(epoch - 14, step - 168960) - (accuracy - 0.953781, class loss - 0.202493, bbox loss - 0.055236, landmark loss - 0.013751, L2 loss - 0.005243, lr - 0.000690 )
+(epoch - 14, step - 172800) - (accuracy - 0.947791, class loss - 0.218452, bbox loss - 0.057251, landmark loss - 0.017725, L2 loss - 0.005279, lr - 0.000690 )
+epoch - 14, step - 174118
+Positive faces       -  307
+Partial faces        -  159
+Total detected faces -  466
+Ground truth faces   -  508
+Positive accuracy    -  0.604330708661
+Detection accuracy   -  0.917322834646
+Accuracy             -  0.6266726569674813
+(epoch - 15, step - 176640) - (accuracy - 0.969298, class loss - 0.173439, bbox loss - 0.060353, landmark loss - 0.019714, L2 loss - 0.005282, lr - 0.000648 )
+(epoch - 15, step - 180480) - (accuracy - 0.955357, class loss - 0.186153, bbox loss - 0.058153, landmark loss - 0.032683, L2 loss - 0.005311, lr - 0.000648 )
+(epoch - 15, step - 184320) - (accuracy - 0.968610, class loss - 0.173954, bbox loss - 0.070864, landmark loss - 0.015463, L2 loss - 0.005338, lr - 0.000648 )
+epoch - 15, step - 186555
+Positive faces       -  314
+Partial faces        -  154
+Total detected faces -  468
+Ground truth faces   -  508
+Positive accuracy    -  0.61811023622
+Detection accuracy   -  0.92125984252
+Accuracy             -  0.6327957540696437
+(epoch - 16, step - 188160) - (accuracy - 0.957447, class loss - 0.178028, bbox loss - 0.064968, landmark loss - 0.024985, L2 loss - 0.005353, lr - 0.000648 )
+(epoch - 16, step - 192000) - (accuracy - 0.979424, class loss - 0.112047, bbox loss - 0.064735, landmark loss - 0.025743, L2 loss - 0.005402, lr - 0.000648 )
+(epoch - 16, step - 195840) - (accuracy - 0.973451, class loss - 0.130292, bbox loss - 0.052834, landmark loss - 0.020779, L2 loss - 0.005405, lr - 0.000648 )
+epoch - 16, step - 198992
+Positive faces       -  318
+Partial faces        -  159
+Total detected faces -  477
+Ground truth faces   -  508
+Positive accuracy    -  0.625984251969
+Detection accuracy   -  0.938976377953
+Accuracy             -  0.6363289516193712
+(epoch - 17, step - 199680) - (accuracy - 0.972222, class loss - 0.167000, bbox loss - 0.063342, landmark loss - 0.018632, L2 loss - 0.005405, lr - 0.000610 )
+(epoch - 17, step - 203520) - (accuracy - 0.951754, class loss - 0.140131, bbox loss - 0.057060, landmark loss - 0.022320, L2 loss - 0.005457, lr - 0.000610 )
+(epoch - 17, step - 207360) - (accuracy - 0.932735, class loss - 0.224765, bbox loss - 0.054963, landmark loss - 0.027934, L2 loss - 0.005482, lr - 0.000610 )
+(epoch - 17, step - 211200) - (accuracy - 0.931915, class loss - 0.207251, bbox loss - 0.058310, landmark loss - 0.021423, L2 loss - 0.005478, lr - 0.000610 )
+epoch - 17, step - 211429
+Positive faces       -  333
+Partial faces        -  150
+Total detected faces -  483
+Ground truth faces   -  508
+Positive accuracy    -  0.655511811024
+Detection accuracy   -  0.950787401575
+Accuracy             -  0.6472616938928306
+(epoch - 18, step - 215040) - (accuracy - 0.972727, class loss - 0.118129, bbox loss - 0.051422, landmark loss - 0.015957, L2 loss - 0.005521, lr - 0.000610 )
+(epoch - 18, step - 218880) - (accuracy - 0.930556, class loss - 0.250728, bbox loss - 0.092497, landmark loss - 0.019868, L2 loss - 0.005524, lr - 0.000610 )
+(epoch - 18, step - 222720) - (accuracy - 0.949309, class loss - 0.168710, bbox loss - 0.060093, landmark loss - 0.021951, L2 loss - 0.005563, lr - 0.000610 )
+epoch - 18, step - 223866
+Positive faces       -  331
+Partial faces        -  153
+Total detected faces -  484
+Ground truth faces   -  508
+Positive accuracy    -  0.65157480315
+Detection accuracy   -  0.952755905512
+Accuracy             -  0.6473361843021107
+(epoch - 19, step - 226560) - (accuracy - 0.943925, class loss - 0.225314, bbox loss - 0.053946, landmark loss - 0.016583, L2 loss - 0.005589, lr - 0.000573 )
+(epoch - 19, step - 230400) - (accuracy - 0.952790, class loss - 0.180785, bbox loss - 0.055779, landmark loss - 0.027339, L2 loss - 0.005591, lr - 0.000573 )
+(epoch - 19, step - 234240) - (accuracy - 0.942982, class loss - 0.229177, bbox loss - 0.054585, landmark loss - 0.020514, L2 loss - 0.005600, lr - 0.000573 )
+epoch - 19, step - 236303
+Positive faces       -  338
+Partial faces        -  151
+Total detected faces -  489
+Ground truth faces   -  508
+Positive accuracy    -  0.665354330709
+Detection accuracy   -  0.962598425197
+Accuracy             -  0.6531136645719238
+(epoch - 20, step - 238080) - (accuracy - 0.941667, class loss - 0.255024, bbox loss - 0.047372, landmark loss - 0.030437, L2 loss - 0.005623, lr - 0.000573 )
+(epoch - 20, step - 241920) - (accuracy - 0.944915, class loss - 0.181007, bbox loss - 0.050524, landmark loss - 0.020293, L2 loss - 0.005648, lr - 0.000573 )
+(epoch - 20, step - 245760) - (accuracy - 0.947137, class loss - 0.230140, bbox loss - 0.068919, landmark loss - 0.016994, L2 loss - 0.005657, lr - 0.000573 )
+epoch - 20, step - 248740
+Positive faces       -  338
+Partial faces        -  151
+Total detected faces -  489
+Ground truth faces   -  508
+Positive accuracy    -  0.665354330709
+Detection accuracy   -  0.962598425197
+Accuracy             -  0.653013648603968
+(epoch - 21, step - 249600) - (accuracy - 0.914163, class loss - 0.274170, bbox loss - 0.052756, landmark loss - 0.021459, L2 loss - 0.005675, lr - 0.000539 )
+(epoch - 21, step - 253440) - (accuracy - 0.930435, class loss - 0.253283, bbox loss - 0.066184, landmark loss - 0.023424, L2 loss - 0.005703, lr - 0.000539 )
+(epoch - 21, step - 257280) - (accuracy - 0.962500, class loss - 0.168477, bbox loss - 0.057109, landmark loss - 0.022818, L2 loss - 0.005722, lr - 0.000539 )
+(epoch - 21, step - 261120) - (accuracy - 0.945205, class loss - 0.172280, bbox loss - 0.071899, landmark loss - 0.028361, L2 loss - 0.005711, lr - 0.000539 )
+epoch - 21, step - 261177
+Positive faces       -  337
+Partial faces        -  152
+Total detected faces -  489
+Ground truth faces   -  508
+Positive accuracy    -  0.663385826772
+Detection accuracy   -  0.962598425197
+Accuracy             -  0.6531484547420497
+(epoch - 22, step - 264960) - (accuracy - 0.953917, class loss - 0.145868, bbox loss - 0.075265, landmark loss - 0.026476, L2 loss - 0.005745, lr - 0.000539 )
+(epoch - 22, step - 268800) - (accuracy - 0.962810, class loss - 0.155881, bbox loss - 0.070108, landmark loss - 0.021134, L2 loss - 0.005745, lr - 0.000539 )
+(epoch - 22, step - 272640) - (accuracy - 0.934579, class loss - 0.214628, bbox loss - 0.046754, landmark loss - 0.018464, L2 loss - 0.005764, lr - 0.000539 )
+epoch - 22, step - 273614
+Positive faces       -  335
+Partial faces        -  154
+Total detected faces -  489
+Ground truth faces   -  508
+Positive accuracy    -  0.659448818898
+Detection accuracy   -  0.962598425197
+Accuracy             -  0.6532402268255474
+(epoch - 23, step - 276480) - (accuracy - 0.945378, class loss - 0.239575, bbox loss - 0.059510, landmark loss - 0.019919, L2 loss - 0.005785, lr - 0.000506 )
+(epoch - 23, step - 280320) - (accuracy - 0.929825, class loss - 0.203102, bbox loss - 0.063686, landmark loss - 0.019454, L2 loss - 0.005800, lr - 0.000506 )
+(epoch - 23, step - 284160) - (accuracy - 0.925439, class loss - 0.246274, bbox loss - 0.061854, landmark loss - 0.021946, L2 loss - 0.005822, lr - 0.000506 )
+epoch - 23, step - 286051
+Positive faces       -  331
+Partial faces        -  158
+Total detected faces -  489
+Ground truth faces   -  508
+Positive accuracy    -  0.65157480315
+Detection accuracy   -  0.962598425197
+Accuracy             -  0.6522426802694683
+(epoch - 24, step - 288000) - (accuracy - 0.969163, class loss - 0.115577, bbox loss - 0.057104, landmark loss - 0.020863, L2 loss - 0.005842, lr - 0.000506 )
+(epoch - 24, step - 291840) - (accuracy - 0.942731, class loss - 0.175245, bbox loss - 0.060675, landmark loss - 0.025175, L2 loss - 0.005859, lr - 0.000506 )
+(epoch - 24, step - 295680) - (accuracy - 0.952153, class loss - 0.167245, bbox loss - 0.061938, landmark loss - 0.018255, L2 loss - 0.005868, lr - 0.000506 )
+epoch - 24, step - 298488
+Positive faces       -  321
+Partial faces        -  167
+Total detected faces -  488
+Ground truth faces   -  508
+Positive accuracy    -  0.63188976378
+Detection accuracy   -  0.96062992126
+Accuracy             -  0.6521484512636967
+(epoch - 25, step - 299520) - (accuracy - 0.982143, class loss - 0.126617, bbox loss - 0.073844, landmark loss - 0.020065, L2 loss - 0.005872, lr - 0.000476 )
+(epoch - 25, step - 303360) - (accuracy - 0.951542, class loss - 0.225790, bbox loss - 0.052827, landmark loss - 0.019973, L2 loss - 0.005885, lr - 0.000476 )
+(epoch - 25, step - 307200) - (accuracy - 0.951111, class loss - 0.194129, bbox loss - 0.061039, landmark loss - 0.022549, L2 loss - 0.005902, lr - 0.000476 )
+epoch - 25, step - 310925
+Positive faces       -  311
+Partial faces        -  178
+Total detected faces -  489
+Ground truth faces   -  508
+Positive accuracy    -  0.612204724409
+Detection accuracy   -  0.962598425197
+Accuracy             -  0.6469163326164122
+(epoch - 26, step - 311040) - (accuracy - 0.950000, class loss - 0.169093, bbox loss - 0.064327, landmark loss - 0.018123, L2 loss - 0.005899, lr - 0.000476 )
+(epoch - 26, step - 314880) - (accuracy - 0.962963, class loss - 0.175742, bbox loss - 0.067495, landmark loss - 0.026878, L2 loss - 0.005920, lr - 0.000476 )
+(epoch - 26, step - 318720) - (accuracy - 0.953781, class loss - 0.169943, bbox loss - 0.059529, landmark loss - 0.019589, L2 loss - 0.005929, lr - 0.000476 )
+(epoch - 26, step - 322560) - (accuracy - 0.940426, class loss - 0.217118, bbox loss - 0.069757, landmark loss - 0.021809, L2 loss - 0.005940, lr - 0.000476 )
+epoch - 26, step - 323362
+Positive faces       -  297
+Partial faces        -  174
+Total detected faces -  471
+Ground truth faces   -  508
+Positive accuracy    -  0.584645669291
+Detection accuracy   -  0.927165354331
+Accuracy             -  0.6330791971350062
+(epoch - 27, step - 326400) - (accuracy - 0.937500, class loss - 0.251575, bbox loss - 0.054186, landmark loss - 0.026580, L2 loss - 0.005964, lr - 0.000447 )
+(epoch - 27, step - 330240) - (accuracy - 0.960699, class loss - 0.176242, bbox loss - 0.056800, landmark loss - 0.019215, L2 loss - 0.005961, lr - 0.000447 )
+(epoch - 27, step - 334080) - (accuracy - 0.941176, class loss - 0.210685, bbox loss - 0.060859, landmark loss - 0.021571, L2 loss - 0.005963, lr - 0.000447 )
+epoch - 27, step - 335799
+Positive faces       -  289
+Partial faces        -  185
+Total detected faces -  474
+Ground truth faces   -  508
+Positive accuracy    -  0.568897637795
+Detection accuracy   -  0.933070866142
+Accuracy             -  0.6283952307702145
+(epoch - 28, step - 337920) - (accuracy - 0.939655, class loss - 0.258674, bbox loss - 0.070647, landmark loss - 0.016860, L2 loss - 0.006009, lr - 0.000447 )
+(epoch - 28, step - 341760) - (accuracy - 0.961864, class loss - 0.178550, bbox loss - 0.052682, landmark loss - 0.026602, L2 loss - 0.005992, lr - 0.000447 )
+(epoch - 28, step - 345600) - (accuracy - 0.928251, class loss - 0.242862, bbox loss - 0.058349, landmark loss - 0.021764, L2 loss - 0.005998, lr - 0.000447 )
+epoch - 28, step - 348236
+Positive faces       -  297
+Partial faces        -  168
+Total detected faces -  465
+Ground truth faces   -  508
+Positive accuracy    -  0.584645669291
+Detection accuracy   -  0.915354330709
+Accuracy             -  0.6225276545032478
+(epoch - 29, step - 349440) - (accuracy - 0.959641, class loss - 0.157099, bbox loss - 0.070265, landmark loss - 0.031219, L2 loss - 0.006023, lr - 0.000421 )
+(epoch - 29, step - 353280) - (accuracy - 0.969298, class loss - 0.128221, bbox loss - 0.054761, landmark loss - 0.023779, L2 loss - 0.006028, lr - 0.000421 )
+(epoch - 29, step - 357120) - (accuracy - 0.945455, class loss - 0.208527, bbox loss - 0.065446, landmark loss - 0.018675, L2 loss - 0.006038, lr - 0.000421 )
+epoch - 29, step - 360673
+Positive faces       -  292
+Partial faces        -  163
+Total detected faces -  455
+Ground truth faces   -  508
+Positive accuracy    -  0.574803149606
+Detection accuracy   -  0.895669291339
+Accuracy             -  0.6156953675638677
+(epoch - 30, step - 360960) - (accuracy - 0.957082, class loss - 0.181786, bbox loss - 0.052088, landmark loss - 0.019866, L2 loss - 0.006027, lr - 0.000421 )
+(epoch - 30, step - 364800) - (accuracy - 0.934211, class loss - 0.276381, bbox loss - 0.064844, landmark loss - 0.018236, L2 loss - 0.006085, lr - 0.000421 )
+(epoch - 30, step - 368640) - (accuracy - 0.948936, class loss - 0.200728, bbox loss - 0.073175, landmark loss - 0.022938, L2 loss - 0.006073, lr - 0.000421 )
+(epoch - 30, step - 372480) - (accuracy - 0.938053, class loss - 0.186936, bbox loss - 0.057590, landmark loss - 0.022686, L2 loss - 0.006081, lr - 0.000421 )
+epoch - 30, step - 373110
+Positive faces       -  293
+Partial faces        -  167
+Total detected faces -  460
+Ground truth faces   -  508
+Positive accuracy    -  0.576771653543
+Detection accuracy   -  0.905511811024
+Accuracy             -  0.6143156520473474
+PNet - network is trained and weights are generated at /scratch/ppshete/workspace/tfmtcnn/data/models/mtcnn/train1
 Trained PNet.
 ########################################################################################################################################################################################################
 Generate a hard dataset i.e. RNet dataset.
@@ -1813,416 +1817,417 @@ RNet network dataset is generated at /scratch/ppshete/workspace/tfmtcnn/data/dat
 Generated a hard dataset i.e. RNet dataset.
 ########################################################################################################################################################################################################
 Train RNet.
+/usr/lib64/python2.7/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
 508 faces in  290 number of images for FDDB dataset.
-(epoch - 1, step - 3840) - (accuracy - 0.932886, class loss - 0.302854, bbox loss - 0.068172, landmark loss - 0.014585, L2 loss - 0.003143, lr - 0.001000 )
-(epoch - 1, step - 7680) - (accuracy - 0.939597, class loss - 0.218728, bbox loss - 0.060225, landmark loss - 0.019757, L2 loss - 0.004261, lr - 0.001000 )
-(epoch - 1, step - 11520) - (accuracy - 0.931035, class loss - 0.236861, bbox loss - 0.064504, landmark loss - 0.010088, L2 loss - 0.005196, lr - 0.001000 )
-(epoch - 1, step - 15360) - (accuracy - 0.946128, class loss - 0.226775, bbox loss - 0.053370, landmark loss - 0.025240, L2 loss - 0.005986, lr - 0.001000 )
-(epoch - 1, step - 19200) - (accuracy - 0.968966, class loss - 0.138310, bbox loss - 0.070857, landmark loss - 0.007163, L2 loss - 0.006686, lr - 0.001000 )
-epoch - 1, step - 21594
-Positive faces       -  359
-Partial faces        -  109
-Total detected faces -  468
+(epoch - 1, step - 3840) - (accuracy - 0.931507, class loss - 0.221907, bbox loss - 0.072275, landmark loss - 0.011794, L2 loss - 0.003803, lr - 0.001000 )
+(epoch - 1, step - 7680) - (accuracy - 0.943894, class loss - 0.188348, bbox loss - 0.062430, landmark loss - 0.008873, L2 loss - 0.005011, lr - 0.001000 )
+(epoch - 1, step - 11520) - (accuracy - 0.955631, class loss - 0.204525, bbox loss - 0.052330, landmark loss - 0.008624, L2 loss - 0.006056, lr - 0.001000 )
+(epoch - 1, step - 15360) - (accuracy - 0.942177, class loss - 0.169037, bbox loss - 0.045265, landmark loss - 0.016726, L2 loss - 0.006924, lr - 0.001000 )
+(epoch - 1, step - 19200) - (accuracy - 0.946128, class loss - 0.222447, bbox loss - 0.062430, landmark loss - 0.011907, L2 loss - 0.007688, lr - 0.001000 )
+epoch - 1, step - 21436
+Positive faces       -  374
+Partial faces        -  106
+Total detected faces -  480
 Ground truth faces   -  508
-Positive accuracy    -  0.706692913386
-Detection accuracy   -  0.92125984252
-Accuracy             -  0.640233094139
-(epoch - 2, step - 23040) - (accuracy - 0.949833, class loss - 0.182638, bbox loss - 0.068575, landmark loss - 0.006627, L2 loss - 0.007243, lr - 0.001000 )
-(epoch - 2, step - 26880) - (accuracy - 0.920000, class loss - 0.298349, bbox loss - 0.072069, landmark loss - 0.015853, L2 loss - 0.007741, lr - 0.001000 )
-(epoch - 2, step - 30720) - (accuracy - 0.969697, class loss - 0.108493, bbox loss - 0.060098, landmark loss - 0.020080, L2 loss - 0.008194, lr - 0.001000 )
-(epoch - 2, step - 34560) - (accuracy - 0.967105, class loss - 0.138348, bbox loss - 0.044496, landmark loss - 0.008821, L2 loss - 0.008553, lr - 0.001000 )
-(epoch - 2, step - 38400) - (accuracy - 0.962457, class loss - 0.144069, bbox loss - 0.049839, landmark loss - 0.011020, L2 loss - 0.008905, lr - 0.001000 )
-(epoch - 2, step - 42240) - (accuracy - 0.938776, class loss - 0.194823, bbox loss - 0.051365, landmark loss - 0.022840, L2 loss - 0.009170, lr - 0.001000 )
-epoch - 2, step - 43188
-Positive faces       -  336
-Partial faces        -  130
-Total detected faces -  466
-Ground truth faces   -  508
-Positive accuracy    -  0.661417322835
-Detection accuracy   -  0.917322834646
-Accuracy             -  0.629628035432
-(epoch - 3, step - 46080) - (accuracy - 0.939799, class loss - 0.177350, bbox loss - 0.055722, landmark loss - 0.018729, L2 loss - 0.009401, lr - 0.000940 )
-(epoch - 3, step - 49920) - (accuracy - 0.958763, class loss - 0.156307, bbox loss - 0.059820, landmark loss - 0.012042, L2 loss - 0.009575, lr - 0.000940 )
-(epoch - 3, step - 53760) - (accuracy - 0.955932, class loss - 0.190614, bbox loss - 0.045766, landmark loss - 0.006026, L2 loss - 0.009746, lr - 0.000940 )
-(epoch - 3, step - 57600) - (accuracy - 0.955631, class loss - 0.184360, bbox loss - 0.063463, landmark loss - 0.010072, L2 loss - 0.009886, lr - 0.000940 )
-(epoch - 3, step - 61440) - (accuracy - 0.966887, class loss - 0.132214, bbox loss - 0.057721, landmark loss - 0.015210, L2 loss - 0.010038, lr - 0.000940 )
-epoch - 3, step - 64782
-Positive faces       -  326
-Partial faces        -  139
-Total detected faces -  465
-Ground truth faces   -  508
-Positive accuracy    -  0.641732283465
-Detection accuracy   -  0.915354330709
-Accuracy             -  0.628841032351
-(epoch - 4, step - 65280) - (accuracy - 0.941980, class loss - 0.200816, bbox loss - 0.056948, landmark loss - 0.015554, L2 loss - 0.010133, lr - 0.000940 )
-(epoch - 4, step - 69120) - (accuracy - 0.919580, class loss - 0.305274, bbox loss - 0.055498, landmark loss - 0.009547, L2 loss - 0.010221, lr - 0.000940 )
-(epoch - 4, step - 72960) - (accuracy - 0.945763, class loss - 0.203832, bbox loss - 0.067467, landmark loss - 0.027839, L2 loss - 0.010305, lr - 0.000940 )
-(epoch - 4, step - 76800) - (accuracy - 0.962963, class loss - 0.149533, bbox loss - 0.053133, landmark loss - 0.038496, L2 loss - 0.010398, lr - 0.000940 )
-(epoch - 4, step - 80640) - (accuracy - 0.958333, class loss - 0.150513, bbox loss - 0.053971, landmark loss - 0.016485, L2 loss - 0.010484, lr - 0.000940 )
-(epoch - 4, step - 84480) - (accuracy - 0.934932, class loss - 0.208635, bbox loss - 0.052192, landmark loss - 0.014697, L2 loss - 0.010585, lr - 0.000940 )
-epoch - 4, step - 86376
-Positive faces       -  359
-Partial faces        -  113
-Total detected faces -  472
-Ground truth faces   -  508
-Positive accuracy    -  0.706692913386
-Detection accuracy   -  0.929133858268
-Accuracy             -  0.644197478735
-(epoch - 5, step - 88320) - (accuracy - 0.965986, class loss - 0.130301, bbox loss - 0.060024, landmark loss - 0.015566, L2 loss - 0.010610, lr - 0.000884 )
-(epoch - 5, step - 92160) - (accuracy - 0.976109, class loss - 0.112446, bbox loss - 0.058347, landmark loss - 0.008792, L2 loss - 0.010629, lr - 0.000884 )
-(epoch - 5, step - 96000) - (accuracy - 0.946309, class loss - 0.169064, bbox loss - 0.059071, landmark loss - 0.028006, L2 loss - 0.010690, lr - 0.000884 )
-(epoch - 5, step - 99840) - (accuracy - 0.965986, class loss - 0.116709, bbox loss - 0.050786, landmark loss - 0.022581, L2 loss - 0.010743, lr - 0.000884 )
-(epoch - 5, step - 103680) - (accuracy - 0.931035, class loss - 0.204658, bbox loss - 0.060495, landmark loss - 0.026923, L2 loss - 0.010768, lr - 0.000884 )
-(epoch - 5, step - 107520) - (accuracy - 0.962712, class loss - 0.163493, bbox loss - 0.057003, landmark loss - 0.009765, L2 loss - 0.010819, lr - 0.000884 )
-epoch - 5, step - 107970
-Positive faces       -  347
-Partial faces        -  125
-Total detected faces -  472
-Ground truth faces   -  508
-Positive accuracy    -  0.683070866142
-Detection accuracy   -  0.929133858268
-Accuracy             -  0.639372293733
-(epoch - 6, step - 111360) - (accuracy - 0.962329, class loss - 0.144342, bbox loss - 0.063739, landmark loss - 0.014612, L2 loss - 0.010865, lr - 0.000884 )
-(epoch - 6, step - 115200) - (accuracy - 0.949833, class loss - 0.170223, bbox loss - 0.056178, landmark loss - 0.013439, L2 loss - 0.010920, lr - 0.000884 )
-(epoch - 6, step - 119040) - (accuracy - 0.955479, class loss - 0.177988, bbox loss - 0.063681, landmark loss - 0.027649, L2 loss - 0.010983, lr - 0.000884 )
-(epoch - 6, step - 122880) - (accuracy - 0.976351, class loss - 0.114489, bbox loss - 0.060490, landmark loss - 0.017321, L2 loss - 0.011012, lr - 0.000884 )
-(epoch - 6, step - 126720) - (accuracy - 0.969492, class loss - 0.144995, bbox loss - 0.061698, landmark loss - 0.010250, L2 loss - 0.011050, lr - 0.000884 )
-epoch - 6, step - 129564
-Positive faces       -  350
-Partial faces        -  124
-Total detected faces -  474
-Ground truth faces   -  508
-Positive accuracy    -  0.688976377953
-Detection accuracy   -  0.933070866142
-Accuracy             -  0.640574002252
-(epoch - 7, step - 130560) - (accuracy - 0.962069, class loss - 0.137496, bbox loss - 0.066807, landmark loss - 0.009689, L2 loss - 0.011073, lr - 0.000831 )
-(epoch - 7, step - 134400) - (accuracy - 0.942177, class loss - 0.247484, bbox loss - 0.052229, landmark loss - 0.019372, L2 loss - 0.011083, lr - 0.000831 )
-(epoch - 7, step - 138240) - (accuracy - 0.979798, class loss - 0.110678, bbox loss - 0.057537, landmark loss - 0.010956, L2 loss - 0.011100, lr - 0.000831 )
-(epoch - 7, step - 142080) - (accuracy - 0.965986, class loss - 0.175371, bbox loss - 0.064417, landmark loss - 0.015613, L2 loss - 0.011089, lr - 0.000831 )
-(epoch - 7, step - 145920) - (accuracy - 0.965870, class loss - 0.168744, bbox loss - 0.057965, landmark loss - 0.011001, L2 loss - 0.011118, lr - 0.000831 )
-(epoch - 7, step - 149760) - (accuracy - 0.976974, class loss - 0.106641, bbox loss - 0.060849, landmark loss - 0.072628, L2 loss - 0.011140, lr - 0.000831 )
-epoch - 7, step - 151158
-Positive faces       -  343
-Partial faces        -  135
-Total detected faces -  478
-Ground truth faces   -  508
-Positive accuracy    -  0.675196850394
-Detection accuracy   -  0.94094488189
-Accuracy             -  0.64231017175
-(epoch - 8, step - 153600) - (accuracy - 0.976510, class loss - 0.121137, bbox loss - 0.054366, landmark loss - 0.012941, L2 loss - 0.011147, lr - 0.000831 )
-(epoch - 8, step - 157440) - (accuracy - 0.941781, class loss - 0.233694, bbox loss - 0.052513, landmark loss - 0.009868, L2 loss - 0.011120, lr - 0.000831 )
-(epoch - 8, step - 161280) - (accuracy - 0.993127, class loss - 0.059449, bbox loss - 0.053801, landmark loss - 0.010018, L2 loss - 0.011169, lr - 0.000831 )
-(epoch - 8, step - 165120) - (accuracy - 0.962838, class loss - 0.157683, bbox loss - 0.057892, landmark loss - 0.018081, L2 loss - 0.011169, lr - 0.000831 )
-(epoch - 8, step - 168960) - (accuracy - 0.945392, class loss - 0.212020, bbox loss - 0.052581, landmark loss - 0.006132, L2 loss - 0.011197, lr - 0.000831 )
-epoch - 8, step - 172752
-Positive faces       -  342
-Partial faces        -  133
-Total detected faces -  475
-Ground truth faces   -  508
-Positive accuracy    -  0.673228346457
-Detection accuracy   -  0.935039370079
-Accuracy             -  0.641459914317
-(epoch - 9, step - 172800) - (accuracy - 0.979866, class loss - 0.072742, bbox loss - 0.053074, landmark loss - 0.012232, L2 loss - 0.011236, lr - 0.000781 )
-(epoch - 9, step - 176640) - (accuracy - 0.979239, class loss - 0.091843, bbox loss - 0.064188, landmark loss - 0.010461, L2 loss - 0.011194, lr - 0.000781 )
-(epoch - 9, step - 180480) - (accuracy - 0.962199, class loss - 0.166955, bbox loss - 0.046834, landmark loss - 0.013583, L2 loss - 0.011190, lr - 0.000781 )
-(epoch - 9, step - 184320) - (accuracy - 0.939394, class loss - 0.214813, bbox loss - 0.051831, landmark loss - 0.022743, L2 loss - 0.011188, lr - 0.000781 )
-(epoch - 9, step - 188160) - (accuracy - 0.965636, class loss - 0.169261, bbox loss - 0.060530, landmark loss - 0.013613, L2 loss - 0.011202, lr - 0.000781 )
-(epoch - 9, step - 192000) - (accuracy - 0.933110, class loss - 0.172214, bbox loss - 0.051258, landmark loss - 0.007920, L2 loss - 0.011203, lr - 0.000781 )
-epoch - 9, step - 194346
-Positive faces       -  344
-Partial faces        -  129
-Total detected faces -  473
-Ground truth faces   -  508
-Positive accuracy    -  0.677165354331
-Detection accuracy   -  0.931102362205
-Accuracy             -  0.636647257841
-(epoch - 10, step - 195840) - (accuracy - 0.965517, class loss - 0.157824, bbox loss - 0.051525, landmark loss - 0.008474, L2 loss - 0.011193, lr - 0.000781 )
-(epoch - 10, step - 199680) - (accuracy - 0.966102, class loss - 0.144110, bbox loss - 0.053690, landmark loss - 0.009017, L2 loss - 0.011190, lr - 0.000781 )
-(epoch - 10, step - 203520) - (accuracy - 0.965517, class loss - 0.122865, bbox loss - 0.046215, landmark loss - 0.009844, L2 loss - 0.011213, lr - 0.000781 )
-(epoch - 10, step - 207360) - (accuracy - 0.952055, class loss - 0.178335, bbox loss - 0.049044, landmark loss - 0.013708, L2 loss - 0.011215, lr - 0.000781 )
-(epoch - 10, step - 211200) - (accuracy - 0.969492, class loss - 0.091729, bbox loss - 0.057266, landmark loss - 0.011696, L2 loss - 0.011209, lr - 0.000781 )
-(epoch - 10, step - 215040) - (accuracy - 0.965636, class loss - 0.158257, bbox loss - 0.060641, landmark loss - 0.022821, L2 loss - 0.011210, lr - 0.000781 )
-epoch - 10, step - 215940
-Positive faces       -  354
-Partial faces        -  122
-Total detected faces -  476
-Ground truth faces   -  508
-Positive accuracy    -  0.696850393701
-Detection accuracy   -  0.937007874016
-Accuracy             -  0.642193405975
-(epoch - 11, step - 218880) - (accuracy - 0.983165, class loss - 0.060707, bbox loss - 0.050956, landmark loss - 0.017370, L2 loss - 0.011185, lr - 0.000734 )
-(epoch - 11, step - 222720) - (accuracy - 0.982699, class loss - 0.107348, bbox loss - 0.060646, landmark loss - 0.011221, L2 loss - 0.011183, lr - 0.000734 )
-(epoch - 11, step - 226560) - (accuracy - 0.955017, class loss - 0.162698, bbox loss - 0.067439, landmark loss - 0.014704, L2 loss - 0.011186, lr - 0.000734 )
-(epoch - 11, step - 230400) - (accuracy - 0.986207, class loss - 0.066915, bbox loss - 0.054716, landmark loss - 0.010096, L2 loss - 0.011191, lr - 0.000734 )
-(epoch - 11, step - 234240) - (accuracy - 0.948980, class loss - 0.191852, bbox loss - 0.051984, landmark loss - 0.017656, L2 loss - 0.011141, lr - 0.000734 )
-epoch - 11, step - 237534
-Positive faces       -  335
-Partial faces        -  138
-Total detected faces -  473
-Ground truth faces   -  508
-Positive accuracy    -  0.659448818898
-Detection accuracy   -  0.931102362205
-Accuracy             -  0.637978712143
-(epoch - 12, step - 238080) - (accuracy - 0.965753, class loss - 0.091940, bbox loss - 0.059166, landmark loss - 0.020523, L2 loss - 0.011149, lr - 0.000734 )
-(epoch - 12, step - 241920) - (accuracy - 0.975945, class loss - 0.155697, bbox loss - 0.045407, landmark loss - 0.012584, L2 loss - 0.011144, lr - 0.000734 )
-(epoch - 12, step - 245760) - (accuracy - 0.969900, class loss - 0.122658, bbox loss - 0.052388, landmark loss - 0.009856, L2 loss - 0.011133, lr - 0.000734 )
-(epoch - 12, step - 249600) - (accuracy - 0.941781, class loss - 0.197080, bbox loss - 0.062374, landmark loss - 0.012264, L2 loss - 0.011139, lr - 0.000734 )
-(epoch - 12, step - 253440) - (accuracy - 0.989899, class loss - 0.054550, bbox loss - 0.054673, landmark loss - 0.019688, L2 loss - 0.011135, lr - 0.000734 )
-(epoch - 12, step - 257280) - (accuracy - 0.969799, class loss - 0.124086, bbox loss - 0.050772, landmark loss - 0.016393, L2 loss - 0.011131, lr - 0.000734 )
-epoch - 12, step - 259128
-Positive faces       -  352
-Partial faces        -  126
-Total detected faces -  478
-Ground truth faces   -  508
-Positive accuracy    -  0.692913385827
-Detection accuracy   -  0.94094488189
-Accuracy             -  0.643043372121
-(epoch - 13, step - 261120) - (accuracy - 0.963455, class loss - 0.106598, bbox loss - 0.059916, landmark loss - 0.010850, L2 loss - 0.011137, lr - 0.000690 )
-(epoch - 13, step - 264960) - (accuracy - 0.966443, class loss - 0.126652, bbox loss - 0.060383, landmark loss - 0.019212, L2 loss - 0.011119, lr - 0.000690 )
-(epoch - 13, step - 268800) - (accuracy - 0.954861, class loss - 0.165446, bbox loss - 0.053571, landmark loss - 0.015084, L2 loss - 0.011095, lr - 0.000690 )
-(epoch - 13, step - 272640) - (accuracy - 0.979522, class loss - 0.076510, bbox loss - 0.053685, landmark loss - 0.013509, L2 loss - 0.011086, lr - 0.000690 )
-(epoch - 13, step - 276480) - (accuracy - 0.955782, class loss - 0.139954, bbox loss - 0.050421, landmark loss - 0.012609, L2 loss - 0.011079, lr - 0.000690 )
-(epoch - 13, step - 280320) - (accuracy - 0.973597, class loss - 0.106982, bbox loss - 0.063496, landmark loss - 0.011643, L2 loss - 0.011079, lr - 0.000690 )
-epoch - 13, step - 280722
-Positive faces       -  348
-Partial faces        -  129
-Total detected faces -  477
-Ground truth faces   -  508
-Positive accuracy    -  0.685039370079
-Detection accuracy   -  0.938976377953
-Accuracy             -  0.642245162117
-(epoch - 14, step - 284160) - (accuracy - 0.960133, class loss - 0.200204, bbox loss - 0.062840, landmark loss - 0.010719, L2 loss - 0.011071, lr - 0.000690 )
-(epoch - 14, step - 288000) - (accuracy - 0.970588, class loss - 0.086053, bbox loss - 0.054751, landmark loss - 0.009583, L2 loss - 0.011070, lr - 0.000690 )
-(epoch - 14, step - 291840) - (accuracy - 0.956229, class loss - 0.167574, bbox loss - 0.050898, landmark loss - 0.011081, L2 loss - 0.011065, lr - 0.000690 )
-(epoch - 14, step - 295680) - (accuracy - 0.962963, class loss - 0.175800, bbox loss - 0.055258, landmark loss - 0.010265, L2 loss - 0.011055, lr - 0.000690 )
-(epoch - 14, step - 299520) - (accuracy - 0.973597, class loss - 0.097521, bbox loss - 0.048261, landmark loss - 0.014217, L2 loss - 0.011044, lr - 0.000690 )
-epoch - 14, step - 302316
-Positive faces       -  341
-Partial faces        -  137
-Total detected faces -  478
-Ground truth faces   -  508
-Positive accuracy    -  0.67125984252
-Detection accuracy   -  0.94094488189
-Accuracy             -  0.643444158766
-(epoch - 15, step - 303360) - (accuracy - 0.963333, class loss - 0.112152, bbox loss - 0.058623, landmark loss - 0.010888, L2 loss - 0.011022, lr - 0.000648 )
-(epoch - 15, step - 307200) - (accuracy - 0.939597, class loss - 0.197968, bbox loss - 0.047428, landmark loss - 0.007374, L2 loss - 0.010996, lr - 0.000648 )
-(epoch - 15, step - 311040) - (accuracy - 0.979522, class loss - 0.084203, bbox loss - 0.060275, landmark loss - 0.008120, L2 loss - 0.010968, lr - 0.000648 )
-(epoch - 15, step - 314880) - (accuracy - 0.949495, class loss - 0.184771, bbox loss - 0.046597, landmark loss - 0.009140, L2 loss - 0.010966, lr - 0.000648 )
-(epoch - 15, step - 318720) - (accuracy - 0.979522, class loss - 0.082728, bbox loss - 0.048335, landmark loss - 0.014682, L2 loss - 0.010939, lr - 0.000648 )
-(epoch - 15, step - 322560) - (accuracy - 0.986441, class loss - 0.071415, bbox loss - 0.052685, landmark loss - 0.023834, L2 loss - 0.010937, lr - 0.000648 )
-epoch - 15, step - 323910
-Positive faces       -  331
-Partial faces        -  139
-Total detected faces -  470
-Ground truth faces   -  508
-Positive accuracy    -  0.65157480315
-Detection accuracy   -  0.925196850394
-Accuracy             -  0.632334920502
-(epoch - 16, step - 326400) - (accuracy - 0.965870, class loss - 0.127689, bbox loss - 0.066176, landmark loss - 0.075674, L2 loss - 0.010926, lr - 0.000648 )
-(epoch - 16, step - 330240) - (accuracy - 0.959184, class loss - 0.167478, bbox loss - 0.050802, landmark loss - 0.013685, L2 loss - 0.010928, lr - 0.000648 )
-(epoch - 16, step - 334080) - (accuracy - 0.966443, class loss - 0.159667, bbox loss - 0.047028, landmark loss - 0.011476, L2 loss - 0.010922, lr - 0.000648 )
-(epoch - 16, step - 337920) - (accuracy - 0.975945, class loss - 0.106675, bbox loss - 0.056458, landmark loss - 0.016786, L2 loss - 0.010913, lr - 0.000648 )
-(epoch - 16, step - 341760) - (accuracy - 0.959044, class loss - 0.145246, bbox loss - 0.062061, landmark loss - 0.014951, L2 loss - 0.010924, lr - 0.000648 )
-epoch - 16, step - 345504
-Positive faces       -  345
-Partial faces        -  130
-Total detected faces -  475
-Ground truth faces   -  508
-Positive accuracy    -  0.679133858268
-Detection accuracy   -  0.935039370079
-Accuracy             -  0.640270038051
-(epoch - 17, step - 345600) - (accuracy - 0.973154, class loss - 0.091322, bbox loss - 0.062503, landmark loss - 0.008990, L2 loss - 0.010902, lr - 0.000610 )
-(epoch - 17, step - 349440) - (accuracy - 0.980000, class loss - 0.118824, bbox loss - 0.056180, landmark loss - 0.012344, L2 loss - 0.010891, lr - 0.000610 )
-(epoch - 17, step - 353280) - (accuracy - 0.940767, class loss - 0.180349, bbox loss - 0.054983, landmark loss - 0.061836, L2 loss - 0.010867, lr - 0.000610 )
-(epoch - 17, step - 357120) - (accuracy - 0.952542, class loss - 0.197938, bbox loss - 0.050772, landmark loss - 0.008516, L2 loss - 0.010840, lr - 0.000610 )
-(epoch - 17, step - 360960) - (accuracy - 0.959322, class loss - 0.162640, bbox loss - 0.053695, landmark loss - 0.009578, L2 loss - 0.010836, lr - 0.000610 )
-(epoch - 17, step - 364800) - (accuracy - 0.990033, class loss - 0.090107, bbox loss - 0.055391, landmark loss - 0.009289, L2 loss - 0.010820, lr - 0.000610 )
-epoch - 17, step - 367098
-Positive faces       -  345
-Partial faces        -  133
-Total detected faces -  478
-Ground truth faces   -  508
-Positive accuracy    -  0.679133858268
-Detection accuracy   -  0.94094488189
-Accuracy             -  0.640788343884
-(epoch - 18, step - 368640) - (accuracy - 0.989865, class loss - 0.080198, bbox loss - 0.055660, landmark loss - 0.013062, L2 loss - 0.010816, lr - 0.000610 )
-(epoch - 18, step - 372480) - (accuracy - 0.959184, class loss - 0.174985, bbox loss - 0.053145, landmark loss - 0.013163, L2 loss - 0.010805, lr - 0.000610 )
-(epoch - 18, step - 376320) - (accuracy - 0.969697, class loss - 0.158534, bbox loss - 0.044200, landmark loss - 0.008256, L2 loss - 0.010793, lr - 0.000610 )
-(epoch - 18, step - 380160) - (accuracy - 0.939394, class loss - 0.221344, bbox loss - 0.057415, landmark loss - 0.017580, L2 loss - 0.010787, lr - 0.000610 )
-(epoch - 18, step - 384000) - (accuracy - 0.976109, class loss - 0.112286, bbox loss - 0.050762, landmark loss - 0.011570, L2 loss - 0.010795, lr - 0.000610 )
-(epoch - 18, step - 387840) - (accuracy - 0.962838, class loss - 0.126169, bbox loss - 0.042512, landmark loss - 0.009909, L2 loss - 0.010784, lr - 0.000610 )
-epoch - 18, step - 388692
-Positive faces       -  348
-Partial faces        -  127
-Total detected faces -  475
-Ground truth faces   -  508
-Positive accuracy    -  0.685039370079
-Detection accuracy   -  0.935039370079
-Accuracy             -  0.641079299729
-(epoch - 19, step - 391680) - (accuracy - 0.979094, class loss - 0.097608, bbox loss - 0.051429, landmark loss - 0.008305, L2 loss - 0.010769, lr - 0.000573 )
-(epoch - 19, step - 395520) - (accuracy - 0.993266, class loss - 0.038856, bbox loss - 0.048414, landmark loss - 0.012136, L2 loss - 0.010735, lr - 0.000573 )
-(epoch - 19, step - 399360) - (accuracy - 0.954704, class loss - 0.206166, bbox loss - 0.050428, landmark loss - 0.012785, L2 loss - 0.010725, lr - 0.000573 )
-(epoch - 19, step - 403200) - (accuracy - 0.965157, class loss - 0.101787, bbox loss - 0.053538, landmark loss - 0.011377, L2 loss - 0.010714, lr - 0.000573 )
-(epoch - 19, step - 407040) - (accuracy - 0.949664, class loss - 0.197456, bbox loss - 0.059421, landmark loss - 0.018700, L2 loss - 0.010687, lr - 0.000573 )
-epoch - 19, step - 410286
-Positive faces       -  340
-Partial faces        -  137
-Total detected faces -  477
-Ground truth faces   -  508
-Positive accuracy    -  0.669291338583
-Detection accuracy   -  0.938976377953
-Accuracy             -  0.638308950114
-(epoch - 20, step - 410880) - (accuracy - 0.972696, class loss - 0.115000, bbox loss - 0.055535, landmark loss - 0.019501, L2 loss - 0.010673, lr - 0.000573 )
-(epoch - 20, step - 414720) - (accuracy - 0.960396, class loss - 0.144518, bbox loss - 0.062503, landmark loss - 0.014861, L2 loss - 0.010661, lr - 0.000573 )
-(epoch - 20, step - 418560) - (accuracy - 0.958904, class loss - 0.169792, bbox loss - 0.051658, landmark loss - 0.009771, L2 loss - 0.010661, lr - 0.000573 )
-(epoch - 20, step - 422400) - (accuracy - 0.972509, class loss - 0.122183, bbox loss - 0.049083, landmark loss - 0.008596, L2 loss - 0.010668, lr - 0.000573 )
-(epoch - 20, step - 426240) - (accuracy - 0.993151, class loss - 0.071758, bbox loss - 0.054639, landmark loss - 0.008780, L2 loss - 0.010649, lr - 0.000573 )
-(epoch - 20, step - 430080) - (accuracy - 0.952218, class loss - 0.186772, bbox loss - 0.051443, landmark loss - 0.005921, L2 loss - 0.010644, lr - 0.000573 )
-epoch - 20, step - 431880
-Positive faces       -  350
-Partial faces        -  127
-Total detected faces -  477
-Ground truth faces   -  508
-Positive accuracy    -  0.688976377953
-Detection accuracy   -  0.938976377953
-Accuracy             -  0.643075461599
-(epoch - 21, step - 433920) - (accuracy - 0.945017, class loss - 0.163744, bbox loss - 0.051719, landmark loss - 0.010046, L2 loss - 0.010622, lr - 0.000539 )
-(epoch - 21, step - 437760) - (accuracy - 0.957096, class loss - 0.171172, bbox loss - 0.049787, landmark loss - 0.010666, L2 loss - 0.010604, lr - 0.000539 )
-(epoch - 21, step - 441600) - (accuracy - 0.972696, class loss - 0.110504, bbox loss - 0.065886, landmark loss - 0.012076, L2 loss - 0.010588, lr - 0.000539 )
-(epoch - 21, step - 445440) - (accuracy - 0.962329, class loss - 0.152846, bbox loss - 0.049660, landmark loss - 0.014910, L2 loss - 0.010563, lr - 0.000539 )
-(epoch - 21, step - 449280) - (accuracy - 0.953947, class loss - 0.204634, bbox loss - 0.048066, landmark loss - 0.009689, L2 loss - 0.010554, lr - 0.000539 )
-(epoch - 21, step - 453120) - (accuracy - 0.993031, class loss - 0.060155, bbox loss - 0.062073, landmark loss - 0.012274, L2 loss - 0.010532, lr - 0.000539 )
-epoch - 21, step - 453474
-Positive faces       -  354
-Partial faces        -  120
-Total detected faces -  474
-Ground truth faces   -  508
-Positive accuracy    -  0.696850393701
-Detection accuracy   -  0.933070866142
-Accuracy             -  0.640844725067
-(epoch - 22, step - 456960) - (accuracy - 0.955326, class loss - 0.170633, bbox loss - 0.051498, landmark loss - 0.006802, L2 loss - 0.010528, lr - 0.000539 )
-(epoch - 22, step - 460800) - (accuracy - 0.959044, class loss - 0.128395, bbox loss - 0.047570, landmark loss - 0.014637, L2 loss - 0.010519, lr - 0.000539 )
-(epoch - 22, step - 464640) - (accuracy - 0.983108, class loss - 0.071969, bbox loss - 0.061293, landmark loss - 0.008788, L2 loss - 0.010503, lr - 0.000539 )
-(epoch - 22, step - 468480) - (accuracy - 0.955782, class loss - 0.149111, bbox loss - 0.049911, landmark loss - 0.007629, L2 loss - 0.010489, lr - 0.000539 )
-(epoch - 22, step - 472320) - (accuracy - 0.975352, class loss - 0.081443, bbox loss - 0.064614, landmark loss - 0.011203, L2 loss - 0.010480, lr - 0.000539 )
-epoch - 22, step - 475068
+Positive accuracy    -  0.736220472441
+Detection accuracy   -  0.944881889764
+Accuracy             -  0.652716261678541
+(epoch - 2, step - 23040) - (accuracy - 0.942373, class loss - 0.169366, bbox loss - 0.051998, landmark loss - 0.006795, L2 loss - 0.008357, lr - 0.001000 )
+(epoch - 2, step - 26880) - (accuracy - 0.962069, class loss - 0.182564, bbox loss - 0.054713, landmark loss - 0.021448, L2 loss - 0.008911, lr - 0.001000 )
+(epoch - 2, step - 30720) - (accuracy - 0.954704, class loss - 0.242145, bbox loss - 0.048116, landmark loss - 0.009029, L2 loss - 0.009351, lr - 0.001000 )
+(epoch - 2, step - 34560) - (accuracy - 0.972414, class loss - 0.149545, bbox loss - 0.063823, landmark loss - 0.007143, L2 loss - 0.009768, lr - 0.001000 )
+(epoch - 2, step - 38400) - (accuracy - 0.962457, class loss - 0.133713, bbox loss - 0.043390, landmark loss - 0.014031, L2 loss - 0.010155, lr - 0.001000 )
+(epoch - 2, step - 42240) - (accuracy - 0.982935, class loss - 0.091337, bbox loss - 0.050113, landmark loss - 0.007131, L2 loss - 0.010459, lr - 0.001000 )
+epoch - 2, step - 42872
 Positive faces       -  349
-Partial faces        -  128
-Total detected faces -  477
+Partial faces        -  125
+Total detected faces -  474
 Ground truth faces   -  508
 Positive accuracy    -  0.687007874016
+Detection accuracy   -  0.933070866142
+Accuracy             -  0.6392853475051652
+(epoch - 3, step - 46080) - (accuracy - 0.955782, class loss - 0.181185, bbox loss - 0.060541, landmark loss - 0.010069, L2 loss - 0.010692, lr - 0.000940 )
+(epoch - 3, step - 49920) - (accuracy - 0.969388, class loss - 0.142699, bbox loss - 0.051812, landmark loss - 0.012926, L2 loss - 0.010962, lr - 0.000940 )
+(epoch - 3, step - 53760) - (accuracy - 0.952542, class loss - 0.159439, bbox loss - 0.056068, landmark loss - 0.007127, L2 loss - 0.011160, lr - 0.000940 )
+(epoch - 3, step - 57600) - (accuracy - 0.955631, class loss - 0.148914, bbox loss - 0.045018, landmark loss - 0.044670, L2 loss - 0.011389, lr - 0.000940 )
+(epoch - 3, step - 61440) - (accuracy - 0.976109, class loss - 0.125724, bbox loss - 0.050235, landmark loss - 0.008556, L2 loss - 0.011491, lr - 0.000940 )
+epoch - 3, step - 64308
+Positive faces       -  374
+Partial faces        -  105
+Total detected faces -  479
+Ground truth faces   -  508
+Positive accuracy    -  0.736220472441
+Detection accuracy   -  0.942913385827
+Accuracy             -  0.652431661172045
+(epoch - 4, step - 65280) - (accuracy - 0.963333, class loss - 0.163322, bbox loss - 0.051715, landmark loss - 0.004477, L2 loss - 0.011661, lr - 0.000940 )
+(epoch - 4, step - 69120) - (accuracy - 0.969283, class loss - 0.130838, bbox loss - 0.063273, landmark loss - 0.007450, L2 loss - 0.011802, lr - 0.000940 )
+(epoch - 4, step - 72960) - (accuracy - 0.966216, class loss - 0.133655, bbox loss - 0.061201, landmark loss - 0.006737, L2 loss - 0.011930, lr - 0.000940 )
+(epoch - 4, step - 76800) - (accuracy - 0.976271, class loss - 0.109454, bbox loss - 0.056079, landmark loss - 0.006840, L2 loss - 0.012055, lr - 0.000940 )
+(epoch - 4, step - 80640) - (accuracy - 0.956081, class loss - 0.150683, bbox loss - 0.072933, landmark loss - 0.007280, L2 loss - 0.012173, lr - 0.000940 )
+(epoch - 4, step - 84480) - (accuracy - 0.958621, class loss - 0.156891, bbox loss - 0.048228, landmark loss - 0.022118, L2 loss - 0.012249, lr - 0.000940 )
+epoch - 4, step - 85744
+Positive faces       -  353
+Partial faces        -  120
+Total detected faces -  473
+Ground truth faces   -  508
+Positive accuracy    -  0.694881889764
+Detection accuracy   -  0.931102362205
+Accuracy             -  0.6416800982278343
+(epoch - 5, step - 88320) - (accuracy - 0.976351, class loss - 0.126757, bbox loss - 0.059683, landmark loss - 0.007871, L2 loss - 0.012339, lr - 0.000884 )
+(epoch - 5, step - 92160) - (accuracy - 0.982818, class loss - 0.096941, bbox loss - 0.051400, landmark loss - 0.011106, L2 loss - 0.012419, lr - 0.000884 )
+(epoch - 5, step - 96000) - (accuracy - 0.952542, class loss - 0.172507, bbox loss - 0.058769, landmark loss - 0.015880, L2 loss - 0.012506, lr - 0.000884 )
+(epoch - 5, step - 99840) - (accuracy - 0.969492, class loss - 0.123403, bbox loss - 0.049163, landmark loss - 0.012191, L2 loss - 0.012558, lr - 0.000884 )
+(epoch - 5, step - 103680) - (accuracy - 0.965753, class loss - 0.134142, bbox loss - 0.062135, landmark loss - 0.010502, L2 loss - 0.012647, lr - 0.000884 )
+epoch - 5, step - 107180
+Positive faces       -  363
+Partial faces        -  115
+Total detected faces -  478
+Ground truth faces   -  508
+Positive accuracy    -  0.714566929134
+Detection accuracy   -  0.94094488189
+Accuracy             -  0.6507604903227615
+(epoch - 6, step - 107520) - (accuracy - 0.959322, class loss - 0.170956, bbox loss - 0.064554, landmark loss - 0.011341, L2 loss - 0.012645, lr - 0.000884 )
+(epoch - 6, step - 111360) - (accuracy - 0.965636, class loss - 0.128887, bbox loss - 0.048205, landmark loss - 0.007023, L2 loss - 0.012703, lr - 0.000884 )
+(epoch - 6, step - 115200) - (accuracy - 0.962329, class loss - 0.184954, bbox loss - 0.055403, landmark loss - 0.011262, L2 loss - 0.012795, lr - 0.000884 )
+(epoch - 6, step - 119040) - (accuracy - 0.976190, class loss - 0.100000, bbox loss - 0.057447, landmark loss - 0.003445, L2 loss - 0.012828, lr - 0.000884 )
+(epoch - 6, step - 122880) - (accuracy - 0.962585, class loss - 0.127470, bbox loss - 0.059922, landmark loss - 0.006455, L2 loss - 0.012838, lr - 0.000884 )
+(epoch - 6, step - 126720) - (accuracy - 0.969595, class loss - 0.161321, bbox loss - 0.063848, landmark loss - 0.011785, L2 loss - 0.012888, lr - 0.000884 )
+epoch - 6, step - 128616
+Positive faces       -  350
+Partial faces        -  128
+Total detected faces -  478
+Ground truth faces   -  508
+Positive accuracy    -  0.688976377953
+Detection accuracy   -  0.94094488189
+Accuracy             -  0.645863790307251
+(epoch - 7, step - 130560) - (accuracy - 0.959044, class loss - 0.159865, bbox loss - 0.050093, landmark loss - 0.021206, L2 loss - 0.012943, lr - 0.000831 )
+(epoch - 7, step - 134400) - (accuracy - 0.976589, class loss - 0.089119, bbox loss - 0.052708, landmark loss - 0.010992, L2 loss - 0.012963, lr - 0.000831 )
+(epoch - 7, step - 138240) - (accuracy - 0.969072, class loss - 0.139330, bbox loss - 0.051760, landmark loss - 0.008935, L2 loss - 0.012991, lr - 0.000831 )
+(epoch - 7, step - 142080) - (accuracy - 0.972789, class loss - 0.102752, bbox loss - 0.046780, landmark loss - 0.009466, L2 loss - 0.013004, lr - 0.000831 )
+(epoch - 7, step - 145920) - (accuracy - 0.972318, class loss - 0.146232, bbox loss - 0.042592, landmark loss - 0.008247, L2 loss - 0.013045, lr - 0.000831 )
+(epoch - 7, step - 149760) - (accuracy - 0.969697, class loss - 0.102488, bbox loss - 0.044775, landmark loss - 0.009756, L2 loss - 0.013080, lr - 0.000831 )
+epoch - 7, step - 150052
+Positive faces       -  376
+Partial faces        -  104
+Total detected faces -  480
+Ground truth faces   -  508
+Positive accuracy    -  0.740157480315
+Detection accuracy   -  0.944881889764
+Accuracy             -  0.6538669410821405
+(epoch - 8, step - 153600) - (accuracy - 0.959732, class loss - 0.159148, bbox loss - 0.059881, landmark loss - 0.012301, L2 loss - 0.013078, lr - 0.000831 )
+(epoch - 8, step - 157440) - (accuracy - 0.945392, class loss - 0.178934, bbox loss - 0.040091, landmark loss - 0.007382, L2 loss - 0.013154, lr - 0.000831 )
+(epoch - 8, step - 161280) - (accuracy - 0.972696, class loss - 0.086466, bbox loss - 0.049767, landmark loss - 0.013208, L2 loss - 0.013178, lr - 0.000831 )
+(epoch - 8, step - 165120) - (accuracy - 0.986111, class loss - 0.071065, bbox loss - 0.058947, landmark loss - 0.017910, L2 loss - 0.013191, lr - 0.000831 )
+(epoch - 8, step - 168960) - (accuracy - 0.955631, class loss - 0.174922, bbox loss - 0.048989, landmark loss - 0.025104, L2 loss - 0.013186, lr - 0.000831 )
+epoch - 8, step - 171488
+Positive faces       -  358
+Partial faces        -  122
+Total detected faces -  480
+Ground truth faces   -  508
+Positive accuracy    -  0.704724409449
+Detection accuracy   -  0.944881889764
+Accuracy             -  0.6489293170904616
+(epoch - 9, step - 172800) - (accuracy - 0.954861, class loss - 0.200144, bbox loss - 0.051149, landmark loss - 0.010488, L2 loss - 0.013213, lr - 0.000781 )
+(epoch - 9, step - 176640) - (accuracy - 0.972603, class loss - 0.107980, bbox loss - 0.063371, landmark loss - 0.007731, L2 loss - 0.013263, lr - 0.000781 )
+(epoch - 9, step - 180480) - (accuracy - 0.952055, class loss - 0.219944, bbox loss - 0.054700, landmark loss - 0.011965, L2 loss - 0.013313, lr - 0.000781 )
+(epoch - 9, step - 184320) - (accuracy - 0.968531, class loss - 0.107346, bbox loss - 0.057567, landmark loss - 0.016088, L2 loss - 0.013341, lr - 0.000781 )
+(epoch - 9, step - 188160) - (accuracy - 0.993056, class loss - 0.068503, bbox loss - 0.056678, landmark loss - 0.007126, L2 loss - 0.013353, lr - 0.000781 )
+(epoch - 9, step - 192000) - (accuracy - 0.979592, class loss - 0.090290, bbox loss - 0.057829, landmark loss - 0.020359, L2 loss - 0.013391, lr - 0.000781 )
+epoch - 9, step - 192924
+Positive faces       -  372
+Partial faces        -  105
+Total detected faces -  477
+Ground truth faces   -  508
+Positive accuracy    -  0.732283464567
 Detection accuracy   -  0.938976377953
-Accuracy             -  0.643286896769
-(epoch - 23, step - 476160) - (accuracy - 0.979522, class loss - 0.090064, bbox loss - 0.045829, landmark loss - 0.027557, L2 loss - 0.010461, lr - 0.000506 )
-(epoch - 23, step - 480000) - (accuracy - 0.986532, class loss - 0.078893, bbox loss - 0.044693, landmark loss - 0.008483, L2 loss - 0.010450, lr - 0.000506 )
-(epoch - 23, step - 483840) - (accuracy - 0.969799, class loss - 0.104778, bbox loss - 0.049840, landmark loss - 0.012608, L2 loss - 0.010436, lr - 0.000506 )
-(epoch - 23, step - 487680) - (accuracy - 0.982877, class loss - 0.057486, bbox loss - 0.047300, landmark loss - 0.013982, L2 loss - 0.010423, lr - 0.000506 )
-(epoch - 23, step - 491520) - (accuracy - 0.986159, class loss - 0.085742, bbox loss - 0.061069, landmark loss - 0.007299, L2 loss - 0.010406, lr - 0.000506 )
-(epoch - 23, step - 495360) - (accuracy - 0.975862, class loss - 0.099669, bbox loss - 0.060404, landmark loss - 0.016305, L2 loss - 0.010398, lr - 0.000506 )
-epoch - 23, step - 496662
+Accuracy             -  0.6497217445898241
+(epoch - 10, step - 195840) - (accuracy - 0.979381, class loss - 0.087094, bbox loss - 0.050542, landmark loss - 0.014673, L2 loss - 0.013400, lr - 0.000781 )
+(epoch - 10, step - 199680) - (accuracy - 0.952381, class loss - 0.160040, bbox loss - 0.056501, landmark loss - 0.010946, L2 loss - 0.013398, lr - 0.000781 )
+(epoch - 10, step - 203520) - (accuracy - 0.962329, class loss - 0.148014, bbox loss - 0.057403, landmark loss - 0.010111, L2 loss - 0.013390, lr - 0.000781 )
+(epoch - 10, step - 207360) - (accuracy - 0.972881, class loss - 0.121123, bbox loss - 0.056979, landmark loss - 0.009000, L2 loss - 0.013471, lr - 0.000781 )
+(epoch - 10, step - 211200) - (accuracy - 0.982818, class loss - 0.073038, bbox loss - 0.051758, landmark loss - 0.013186, L2 loss - 0.013481, lr - 0.000781 )
+epoch - 10, step - 214360
+Positive faces       -  363
+Partial faces        -  117
+Total detected faces -  480
+Ground truth faces   -  508
+Positive accuracy    -  0.714566929134
+Detection accuracy   -  0.944881889764
+Accuracy             -  0.6507125301149235
+(epoch - 11, step - 215040) - (accuracy - 0.982639, class loss - 0.071704, bbox loss - 0.054101, landmark loss - 0.008620, L2 loss - 0.013495, lr - 0.000734 )
+(epoch - 11, step - 218880) - (accuracy - 0.949833, class loss - 0.192997, bbox loss - 0.051468, landmark loss - 0.010057, L2 loss - 0.013539, lr - 0.000734 )
+(epoch - 11, step - 222720) - (accuracy - 0.973333, class loss - 0.112133, bbox loss - 0.056209, landmark loss - 0.010637, L2 loss - 0.013553, lr - 0.000734 )
+(epoch - 11, step - 226560) - (accuracy - 0.965398, class loss - 0.121336, bbox loss - 0.048635, landmark loss - 0.011614, L2 loss - 0.013607, lr - 0.000734 )
+(epoch - 11, step - 230400) - (accuracy - 0.961672, class loss - 0.155714, bbox loss - 0.058464, landmark loss - 0.008808, L2 loss - 0.013591, lr - 0.000734 )
+(epoch - 11, step - 234240) - (accuracy - 0.929293, class loss - 0.215511, bbox loss - 0.059271, landmark loss - 0.009507, L2 loss - 0.013612, lr - 0.000734 )
+epoch - 11, step - 235796
+Positive faces       -  365
+Partial faces        -  111
+Total detected faces -  476
+Ground truth faces   -  508
+Positive accuracy    -  0.718503937008
+Detection accuracy   -  0.937007874016
+Accuracy             -  0.6483671640118343
+(epoch - 12, step - 238080) - (accuracy - 0.975862, class loss - 0.088859, bbox loss - 0.048849, landmark loss - 0.010318, L2 loss - 0.013640, lr - 0.000734 )
+(epoch - 12, step - 241920) - (accuracy - 0.958763, class loss - 0.160762, bbox loss - 0.053623, landmark loss - 0.008303, L2 loss - 0.013640, lr - 0.000734 )
+(epoch - 12, step - 245760) - (accuracy - 0.982699, class loss - 0.069442, bbox loss - 0.057232, landmark loss - 0.011613, L2 loss - 0.013660, lr - 0.000734 )
+(epoch - 12, step - 249600) - (accuracy - 0.979730, class loss - 0.093792, bbox loss - 0.044479, landmark loss - 0.004111, L2 loss - 0.013667, lr - 0.000734 )
+(epoch - 12, step - 253440) - (accuracy - 0.968750, class loss - 0.110898, bbox loss - 0.056542, landmark loss - 0.007623, L2 loss - 0.013675, lr - 0.000734 )
+epoch - 12, step - 257232
+Positive faces       -  369
+Partial faces        -  113
+Total detected faces -  482
+Ground truth faces   -  508
+Positive accuracy    -  0.726377952756
+Detection accuracy   -  0.948818897638
+Accuracy             -  0.652999126632535
+(epoch - 13, step - 257280) - (accuracy - 0.962199, class loss - 0.135955, bbox loss - 0.048366, landmark loss - 0.010313, L2 loss - 0.013715, lr - 0.000690 )
+(epoch - 13, step - 261120) - (accuracy - 0.989691, class loss - 0.075409, bbox loss - 0.048260, landmark loss - 0.006222, L2 loss - 0.013692, lr - 0.000690 )
+(epoch - 13, step - 264960) - (accuracy - 0.958477, class loss - 0.143566, bbox loss - 0.048548, landmark loss - 0.013773, L2 loss - 0.013715, lr - 0.000690 )
+(epoch - 13, step - 268800) - (accuracy - 0.979381, class loss - 0.097686, bbox loss - 0.049846, landmark loss - 0.010695, L2 loss - 0.013728, lr - 0.000690 )
+(epoch - 13, step - 272640) - (accuracy - 0.965753, class loss - 0.135755, bbox loss - 0.056150, landmark loss - 0.010192, L2 loss - 0.013731, lr - 0.000690 )
+(epoch - 13, step - 276480) - (accuracy - 0.969178, class loss - 0.082490, bbox loss - 0.046885, landmark loss - 0.003481, L2 loss - 0.013732, lr - 0.000690 )
+epoch - 13, step - 278668
+Positive faces       -  362
+Partial faces        -  119
+Total detected faces -  481
+Ground truth faces   -  508
+Positive accuracy    -  0.712598425197
+Detection accuracy   -  0.946850393701
+Accuracy             -  0.6516087533560361
+(epoch - 14, step - 280320) - (accuracy - 0.976027, class loss - 0.114259, bbox loss - 0.045699, landmark loss - 0.010047, L2 loss - 0.013739, lr - 0.000690 )
+(epoch - 14, step - 284160) - (accuracy - 0.976431, class loss - 0.105252, bbox loss - 0.053327, landmark loss - 0.006845, L2 loss - 0.013770, lr - 0.000690 )
+(epoch - 14, step - 288000) - (accuracy - 0.975610, class loss - 0.084732, bbox loss - 0.065080, landmark loss - 0.009213, L2 loss - 0.013780, lr - 0.000690 )
+(epoch - 14, step - 291840) - (accuracy - 0.965636, class loss - 0.114446, bbox loss - 0.052233, landmark loss - 0.011901, L2 loss - 0.013741, lr - 0.000690 )
+(epoch - 14, step - 295680) - (accuracy - 0.979094, class loss - 0.082309, bbox loss - 0.039357, landmark loss - 0.016350, L2 loss - 0.013794, lr - 0.000690 )
+(epoch - 14, step - 299520) - (accuracy - 0.968750, class loss - 0.150304, bbox loss - 0.045799, landmark loss - 0.007829, L2 loss - 0.013799, lr - 0.000690 )
+epoch - 14, step - 300104
+Positive faces       -  366
+Partial faces        -  119
+Total detected faces -  485
+Ground truth faces   -  508
+Positive accuracy    -  0.720472440945
+Detection accuracy   -  0.954724409449
+Accuracy             -  0.6541178677176429
+(epoch - 15, step - 303360) - (accuracy - 0.969492, class loss - 0.117391, bbox loss - 0.052114, landmark loss - 0.007952, L2 loss - 0.013788, lr - 0.000648 )
+(epoch - 15, step - 307200) - (accuracy - 0.948630, class loss - 0.166822, bbox loss - 0.046004, landmark loss - 0.014479, L2 loss - 0.013834, lr - 0.000648 )
+(epoch - 15, step - 311040) - (accuracy - 0.953177, class loss - 0.144462, bbox loss - 0.048891, landmark loss - 0.009555, L2 loss - 0.013812, lr - 0.000648 )
+(epoch - 15, step - 314880) - (accuracy - 0.950000, class loss - 0.183113, bbox loss - 0.050197, landmark loss - 0.008224, L2 loss - 0.013830, lr - 0.000648 )
+(epoch - 15, step - 318720) - (accuracy - 0.968750, class loss - 0.120007, bbox loss - 0.055533, landmark loss - 0.011104, L2 loss - 0.013860, lr - 0.000648 )
+epoch - 15, step - 321540
+Positive faces       -  346
+Partial faces        -  129
+Total detected faces -  475
+Ground truth faces   -  508
+Positive accuracy    -  0.681102362205
+Detection accuracy   -  0.935039370079
+Accuracy             -  0.6416582561163431
+(epoch - 16, step - 322560) - (accuracy - 0.965517, class loss - 0.131123, bbox loss - 0.057387, landmark loss - 0.007308, L2 loss - 0.013853, lr - 0.000648 )
+(epoch - 16, step - 326400) - (accuracy - 0.993289, class loss - 0.056202, bbox loss - 0.047411, landmark loss - 0.006154, L2 loss - 0.013881, lr - 0.000648 )
+(epoch - 16, step - 330240) - (accuracy - 0.965753, class loss - 0.114038, bbox loss - 0.052722, landmark loss - 0.024045, L2 loss - 0.013895, lr - 0.000648 )
+(epoch - 16, step - 334080) - (accuracy - 0.972973, class loss - 0.086324, bbox loss - 0.055525, landmark loss - 0.009622, L2 loss - 0.013913, lr - 0.000648 )
+(epoch - 16, step - 337920) - (accuracy - 0.966102, class loss - 0.120036, bbox loss - 0.050832, landmark loss - 0.016651, L2 loss - 0.013885, lr - 0.000648 )
+(epoch - 16, step - 341760) - (accuracy - 0.962329, class loss - 0.117681, bbox loss - 0.052338, landmark loss - 0.006807, L2 loss - 0.013864, lr - 0.000648 )
+epoch - 16, step - 342976
+Positive faces       -  366
+Partial faces        -  115
+Total detected faces -  481
+Ground truth faces   -  508
+Positive accuracy    -  0.720472440945
+Detection accuracy   -  0.946850393701
+Accuracy             -  0.6490787276599101
+(epoch - 17, step - 345600) - (accuracy - 0.963211, class loss - 0.163319, bbox loss - 0.041200, landmark loss - 0.016499, L2 loss - 0.013897, lr - 0.000610 )
+(epoch - 17, step - 349440) - (accuracy - 0.959459, class loss - 0.171443, bbox loss - 0.049789, landmark loss - 0.015274, L2 loss - 0.013905, lr - 0.000610 )
+(epoch - 17, step - 353280) - (accuracy - 0.951724, class loss - 0.189923, bbox loss - 0.053741, landmark loss - 0.009316, L2 loss - 0.013908, lr - 0.000610 )
+(epoch - 17, step - 357120) - (accuracy - 0.979661, class loss - 0.108009, bbox loss - 0.057054, landmark loss - 0.012540, L2 loss - 0.013919, lr - 0.000610 )
+(epoch - 17, step - 360960) - (accuracy - 0.976190, class loss - 0.074746, bbox loss - 0.056228, landmark loss - 0.013788, L2 loss - 0.013920, lr - 0.000610 )
+epoch - 17, step - 364412
+Positive faces       -  357
+Partial faces        -  130
+Total detected faces -  487
+Ground truth faces   -  508
+Positive accuracy    -  0.702755905512
+Detection accuracy   -  0.958661417323
+Accuracy             -  0.6564590024901636
+(epoch - 18, step - 364800) - (accuracy - 0.968858, class loss - 0.085899, bbox loss - 0.051344, landmark loss - 0.008031, L2 loss - 0.013910, lr - 0.000610 )
+(epoch - 18, step - 368640) - (accuracy - 0.966443, class loss - 0.121681, bbox loss - 0.051833, landmark loss - 0.013307, L2 loss - 0.013916, lr - 0.000610 )
+(epoch - 18, step - 372480) - (accuracy - 0.979661, class loss - 0.106100, bbox loss - 0.058275, landmark loss - 0.008537, L2 loss - 0.013917, lr - 0.000610 )
+(epoch - 18, step - 376320) - (accuracy - 0.986577, class loss - 0.049411, bbox loss - 0.052328, landmark loss - 0.004348, L2 loss - 0.013944, lr - 0.000610 )
+(epoch - 18, step - 380160) - (accuracy - 0.969595, class loss - 0.084186, bbox loss - 0.053702, landmark loss - 0.008989, L2 loss - 0.013889, lr - 0.000610 )
+(epoch - 18, step - 384000) - (accuracy - 0.946128, class loss - 0.177062, bbox loss - 0.048900, landmark loss - 0.076466, L2 loss - 0.013874, lr - 0.000610 )
+epoch - 18, step - 385848
+Positive faces       -  368
+Partial faces        -  115
+Total detected faces -  483
+Ground truth faces   -  508
+Positive accuracy    -  0.724409448819
+Detection accuracy   -  0.950787401575
+Accuracy             -  0.6557107494187705
+(epoch - 19, step - 387840) - (accuracy - 0.975945, class loss - 0.120902, bbox loss - 0.045678, landmark loss - 0.010315, L2 loss - 0.013952, lr - 0.000573 )
+(epoch - 19, step - 391680) - (accuracy - 0.959866, class loss - 0.144105, bbox loss - 0.058095, landmark loss - 0.008655, L2 loss - 0.013966, lr - 0.000573 )
+(epoch - 19, step - 395520) - (accuracy - 0.979592, class loss - 0.113311, bbox loss - 0.055126, landmark loss - 0.008299, L2 loss - 0.013966, lr - 0.000573 )
+(epoch - 19, step - 399360) - (accuracy - 0.952055, class loss - 0.144230, bbox loss - 0.051802, landmark loss - 0.011937, L2 loss - 0.013974, lr - 0.000573 )
+(epoch - 19, step - 403200) - (accuracy - 0.955326, class loss - 0.129120, bbox loss - 0.044717, landmark loss - 0.017724, L2 loss - 0.013911, lr - 0.000573 )
+(epoch - 19, step - 407040) - (accuracy - 0.979239, class loss - 0.088502, bbox loss - 0.049920, landmark loss - 0.008037, L2 loss - 0.013938, lr - 0.000573 )
+epoch - 19, step - 407284
+Positive faces       -  351
+Partial faces        -  132
+Total detected faces -  483
+Ground truth faces   -  508
+Positive accuracy    -  0.69094488189
+Detection accuracy   -  0.950787401575
+Accuracy             -  0.6510964224485287
+(epoch - 20, step - 410880) - (accuracy - 0.989655, class loss - 0.062600, bbox loss - 0.052770, landmark loss - 0.009053, L2 loss - 0.013944, lr - 0.000573 )
+(epoch - 20, step - 414720) - (accuracy - 0.952703, class loss - 0.154810, bbox loss - 0.045867, landmark loss - 0.016861, L2 loss - 0.013945, lr - 0.000573 )
+(epoch - 20, step - 418560) - (accuracy - 0.973154, class loss - 0.110841, bbox loss - 0.045972, landmark loss - 0.008103, L2 loss - 0.013957, lr - 0.000573 )
+(epoch - 20, step - 422400) - (accuracy - 0.972696, class loss - 0.104351, bbox loss - 0.059057, landmark loss - 0.006112, L2 loss - 0.013983, lr - 0.000573 )
+(epoch - 20, step - 426240) - (accuracy - 0.972973, class loss - 0.099813, bbox loss - 0.058768, landmark loss - 0.009821, L2 loss - 0.014000, lr - 0.000573 )
+epoch - 20, step - 428720
+Positive faces       -  364
+Partial faces        -  117
+Total detected faces -  481
+Ground truth faces   -  508
+Positive accuracy    -  0.716535433071
+Detection accuracy   -  0.946850393701
+Accuracy             -  0.6540334282394487
+(epoch - 21, step - 430080) - (accuracy - 0.979730, class loss - 0.080779, bbox loss - 0.054401, landmark loss - 0.010628, L2 loss - 0.014004, lr - 0.000539 )
+(epoch - 21, step - 433920) - (accuracy - 0.965986, class loss - 0.168553, bbox loss - 0.057827, landmark loss - 0.008724, L2 loss - 0.013985, lr - 0.000539 )
+(epoch - 21, step - 437760) - (accuracy - 0.976190, class loss - 0.100661, bbox loss - 0.057567, landmark loss - 0.004863, L2 loss - 0.014019, lr - 0.000539 )
+(epoch - 21, step - 441600) - (accuracy - 0.972318, class loss - 0.087081, bbox loss - 0.066994, landmark loss - 0.011024, L2 loss - 0.014018, lr - 0.000539 )
+(epoch - 21, step - 445440) - (accuracy - 0.956376, class loss - 0.148450, bbox loss - 0.057154, landmark loss - 0.005919, L2 loss - 0.013997, lr - 0.000539 )
+(epoch - 21, step - 449280) - (accuracy - 0.973154, class loss - 0.094973, bbox loss - 0.047058, landmark loss - 0.011160, L2 loss - 0.014052, lr - 0.000539 )
+epoch - 21, step - 450156
+Positive faces       -  359
+Partial faces        -  123
+Total detected faces -  482
+Ground truth faces   -  508
+Positive accuracy    -  0.706692913386
+Detection accuracy   -  0.948818897638
+Accuracy             -  0.6535428315952566
+(epoch - 22, step - 453120) - (accuracy - 0.982877, class loss - 0.069066, bbox loss - 0.049537, landmark loss - 0.010571, L2 loss - 0.014053, lr - 0.000539 )
+(epoch - 22, step - 456960) - (accuracy - 0.982877, class loss - 0.087640, bbox loss - 0.053864, landmark loss - 0.006473, L2 loss - 0.014063, lr - 0.000539 )
+(epoch - 22, step - 460800) - (accuracy - 0.970000, class loss - 0.091706, bbox loss - 0.056776, landmark loss - 0.016448, L2 loss - 0.014068, lr - 0.000539 )
+(epoch - 22, step - 464640) - (accuracy - 0.975694, class loss - 0.105508, bbox loss - 0.053927, landmark loss - 0.011500, L2 loss - 0.014039, lr - 0.000539 )
+(epoch - 22, step - 468480) - (accuracy - 0.955782, class loss - 0.121252, bbox loss - 0.049899, landmark loss - 0.010416, L2 loss - 0.014047, lr - 0.000539 )
+epoch - 22, step - 471592
+Positive faces       -  363
+Partial faces        -  124
+Total detected faces -  487
+Ground truth faces   -  508
+Positive accuracy    -  0.714566929134
+Detection accuracy   -  0.958661417323
+Accuracy             -  0.6582555617913838
+(epoch - 23, step - 472320) - (accuracy - 0.969388, class loss - 0.133411, bbox loss - 0.050556, landmark loss - 0.041810, L2 loss - 0.014077, lr - 0.000506 )
+(epoch - 23, step - 476160) - (accuracy - 0.955932, class loss - 0.165527, bbox loss - 0.054792, landmark loss - 0.008012, L2 loss - 0.014037, lr - 0.000506 )
+(epoch - 23, step - 480000) - (accuracy - 0.966216, class loss - 0.110065, bbox loss - 0.051347, landmark loss - 0.006690, L2 loss - 0.014039, lr - 0.000506 )
+(epoch - 23, step - 483840) - (accuracy - 0.979866, class loss - 0.065412, bbox loss - 0.057400, landmark loss - 0.013683, L2 loss - 0.014085, lr - 0.000506 )
+(epoch - 23, step - 487680) - (accuracy - 0.969178, class loss - 0.092849, bbox loss - 0.049430, landmark loss - 0.009906, L2 loss - 0.014082, lr - 0.000506 )
+(epoch - 23, step - 491520) - (accuracy - 0.976589, class loss - 0.098380, bbox loss - 0.045499, landmark loss - 0.035074, L2 loss - 0.014110, lr - 0.000506 )
+epoch - 23, step - 493028
+Positive faces       -  355
+Partial faces        -  132
+Total detected faces -  487
+Ground truth faces   -  508
+Positive accuracy    -  0.698818897638
+Detection accuracy   -  0.958661417323
+Accuracy             -  0.6551099820034104
+(epoch - 24, step - 495360) - (accuracy - 0.955932, class loss - 0.151732, bbox loss - 0.046589, landmark loss - 0.018835, L2 loss - 0.014069, lr - 0.000506 )
+(epoch - 24, step - 499200) - (accuracy - 0.976510, class loss - 0.102178, bbox loss - 0.068753, landmark loss - 0.011871, L2 loss - 0.014132, lr - 0.000506 )
+(epoch - 24, step - 503040) - (accuracy - 0.986577, class loss - 0.069540, bbox loss - 0.060520, landmark loss - 0.006784, L2 loss - 0.014108, lr - 0.000506 )
+(epoch - 24, step - 506880) - (accuracy - 0.936027, class loss - 0.180411, bbox loss - 0.057429, landmark loss - 0.011685, L2 loss - 0.014106, lr - 0.000506 )
+(epoch - 24, step - 510720) - (accuracy - 0.969178, class loss - 0.102825, bbox loss - 0.045734, landmark loss - 0.006152, L2 loss - 0.014112, lr - 0.000506 )
+epoch - 24, step - 514464
+Positive faces       -  357
+Partial faces        -  127
+Total detected faces -  484
+Ground truth faces   -  508
+Positive accuracy    -  0.702755905512
+Detection accuracy   -  0.952755905512
+Accuracy             -  0.6519807682732865
+(epoch - 25, step - 514560) - (accuracy - 0.972789, class loss - 0.119660, bbox loss - 0.051595, landmark loss - 0.010043, L2 loss - 0.014119, lr - 0.000476 )
+(epoch - 25, step - 518400) - (accuracy - 0.972696, class loss - 0.093243, bbox loss - 0.048168, landmark loss - 0.006703, L2 loss - 0.014105, lr - 0.000476 )
+(epoch - 25, step - 522240) - (accuracy - 0.961938, class loss - 0.157217, bbox loss - 0.061173, landmark loss - 0.007679, L2 loss - 0.014121, lr - 0.000476 )
+(epoch - 25, step - 526080) - (accuracy - 0.966555, class loss - 0.135313, bbox loss - 0.056568, landmark loss - 0.015707, L2 loss - 0.014113, lr - 0.000476 )
+(epoch - 25, step - 529920) - (accuracy - 0.962585, class loss - 0.131289, bbox loss - 0.042822, landmark loss - 0.006120, L2 loss - 0.014147, lr - 0.000476 )
+(epoch - 25, step - 533760) - (accuracy - 0.942177, class loss - 0.196711, bbox loss - 0.050474, landmark loss - 0.005878, L2 loss - 0.014130, lr - 0.000476 )
+epoch - 25, step - 535900
+Positive faces       -  359
+Partial faces        -  128
+Total detected faces -  487
+Ground truth faces   -  508
+Positive accuracy    -  0.706692913386
+Detection accuracy   -  0.958661417323
+Accuracy             -  0.6534321233512014
+(epoch - 26, step - 537600) - (accuracy - 0.966443, class loss - 0.117867, bbox loss - 0.047749, landmark loss - 0.007178, L2 loss - 0.014127, lr - 0.000476 )
+(epoch - 26, step - 541440) - (accuracy - 0.982699, class loss - 0.076790, bbox loss - 0.061167, landmark loss - 0.010433, L2 loss - 0.014154, lr - 0.000476 )
+(epoch - 26, step - 545280) - (accuracy - 0.986395, class loss - 0.058519, bbox loss - 0.047985, landmark loss - 0.009398, L2 loss - 0.014101, lr - 0.000476 )
+(epoch - 26, step - 549120) - (accuracy - 0.959732, class loss - 0.168360, bbox loss - 0.054029, landmark loss - 0.007714, L2 loss - 0.014134, lr - 0.000476 )
+(epoch - 26, step - 552960) - (accuracy - 0.959732, class loss - 0.150215, bbox loss - 0.055953, landmark loss - 0.008732, L2 loss - 0.014140, lr - 0.000476 )
+(epoch - 26, step - 556800) - (accuracy - 0.982699, class loss - 0.115214, bbox loss - 0.052938, landmark loss - 0.012009, L2 loss - 0.014109, lr - 0.000476 )
+epoch - 26, step - 557336
+Positive faces       -  365
+Partial faces        -  119
+Total detected faces -  484
+Ground truth faces   -  508
+Positive accuracy    -  0.718503937008
+Detection accuracy   -  0.952755905512
+Accuracy             -  0.6542319366617241
+(epoch - 27, step - 560640) - (accuracy - 0.979592, class loss - 0.081933, bbox loss - 0.051544, landmark loss - 0.028346, L2 loss - 0.014175, lr - 0.000447 )
+(epoch - 27, step - 564480) - (accuracy - 0.972696, class loss - 0.078696, bbox loss - 0.051216, landmark loss - 0.016442, L2 loss - 0.014172, lr - 0.000447 )
+(epoch - 27, step - 568320) - (accuracy - 0.973064, class loss - 0.114774, bbox loss - 0.050716, landmark loss - 0.010280, L2 loss - 0.014119, lr - 0.000447 )
+(epoch - 27, step - 572160) - (accuracy - 0.966330, class loss - 0.135979, bbox loss - 0.054526, landmark loss - 0.021853, L2 loss - 0.014176, lr - 0.000447 )
+(epoch - 27, step - 576000) - (accuracy - 0.979592, class loss - 0.086082, bbox loss - 0.042069, landmark loss - 0.009751, L2 loss - 0.014178, lr - 0.000447 )
+epoch - 27, step - 578772
+Positive faces       -  368
+Partial faces        -  116
+Total detected faces -  484
+Ground truth faces   -  508
+Positive accuracy    -  0.724409448819
+Detection accuracy   -  0.952755905512
+Accuracy             -  0.6581145777846585
+(epoch - 28, step - 579840) - (accuracy - 0.990033, class loss - 0.113974, bbox loss - 0.051748, landmark loss - 0.011495, L2 loss - 0.014192, lr - 0.000447 )
+(epoch - 28, step - 583680) - (accuracy - 0.979522, class loss - 0.067526, bbox loss - 0.044263, landmark loss - 0.016263, L2 loss - 0.014196, lr - 0.000447 )
+(epoch - 28, step - 587520) - (accuracy - 0.976271, class loss - 0.108857, bbox loss - 0.058909, landmark loss - 0.016802, L2 loss - 0.014178, lr - 0.000447 )
+(epoch - 28, step - 591360) - (accuracy - 0.946844, class loss - 0.133407, bbox loss - 0.049496, landmark loss - 0.007987, L2 loss - 0.014173, lr - 0.000447 )
+(epoch - 28, step - 595200) - (accuracy - 0.959596, class loss - 0.129591, bbox loss - 0.052267, landmark loss - 0.007919, L2 loss - 0.014178, lr - 0.000447 )
+(epoch - 28, step - 599040) - (accuracy - 0.963455, class loss - 0.161772, bbox loss - 0.052204, landmark loss - 0.006129, L2 loss - 0.014216, lr - 0.000447 )
+epoch - 28, step - 600208
+Positive faces       -  365
+Partial faces        -  121
+Total detected faces -  486
+Ground truth faces   -  508
+Positive accuracy    -  0.718503937008
+Detection accuracy   -  0.956692913386
+Accuracy             -  0.655558152784628
+(epoch - 29, step - 602880) - (accuracy - 0.982818, class loss - 0.103231, bbox loss - 0.041973, landmark loss - 0.012590, L2 loss - 0.014188, lr - 0.000421 )
+(epoch - 29, step - 606720) - (accuracy - 0.964664, class loss - 0.127905, bbox loss - 0.054348, landmark loss - 0.051212, L2 loss - 0.014161, lr - 0.000421 )
+(epoch - 29, step - 610560) - (accuracy - 0.983607, class loss - 0.085016, bbox loss - 0.059215, landmark loss - 0.013278, L2 loss - 0.014153, lr - 0.000421 )
+(epoch - 29, step - 614400) - (accuracy - 0.973064, class loss - 0.105170, bbox loss - 0.067388, landmark loss - 0.016056, L2 loss - 0.014182, lr - 0.000421 )
+(epoch - 29, step - 618240) - (accuracy - 0.961268, class loss - 0.142748, bbox loss - 0.055696, landmark loss - 0.021060, L2 loss - 0.014196, lr - 0.000421 )
+epoch - 29, step - 621644
+Positive faces       -  366
+Partial faces        -  118
+Total detected faces -  484
+Ground truth faces   -  508
+Positive accuracy    -  0.720472440945
+Detection accuracy   -  0.952755905512
+Accuracy             -  0.655259288639759
+(epoch - 30, step - 622080) - (accuracy - 0.993266, class loss - 0.041197, bbox loss - 0.041589, landmark loss - 0.009142, L2 loss - 0.014175, lr - 0.000421 )
+(epoch - 30, step - 625920) - (accuracy - 0.972973, class loss - 0.122174, bbox loss - 0.063143, landmark loss - 0.015427, L2 loss - 0.014224, lr - 0.000421 )
+(epoch - 30, step - 629760) - (accuracy - 0.986301, class loss - 0.052886, bbox loss - 0.046475, landmark loss - 0.009140, L2 loss - 0.014182, lr - 0.000421 )
+(epoch - 30, step - 633600) - (accuracy - 0.952218, class loss - 0.173390, bbox loss - 0.048912, landmark loss - 0.010963, L2 loss - 0.014181, lr - 0.000421 )
+(epoch - 30, step - 637440) - (accuracy - 0.969900, class loss - 0.132196, bbox loss - 0.055018, landmark loss - 0.007614, L2 loss - 0.014216, lr - 0.000421 )
+(epoch - 30, step - 641280) - (accuracy - 0.962712, class loss - 0.174553, bbox loss - 0.045618, landmark loss - 0.005878, L2 loss - 0.014206, lr - 0.000421 )
+epoch - 30, step - 643080
 Positive faces       -  357
 Partial faces        -  123
 Total detected faces -  480
 Ground truth faces   -  508
 Positive accuracy    -  0.702755905512
 Detection accuracy   -  0.944881889764
-Accuracy             -  0.649793004643
-(epoch - 24, step - 499200) - (accuracy - 0.955932, class loss - 0.186421, bbox loss - 0.042270, landmark loss - 0.007409, L2 loss - 0.010391, lr - 0.000506 )
-(epoch - 24, step - 503040) - (accuracy - 0.969178, class loss - 0.101439, bbox loss - 0.059082, landmark loss - 0.008639, L2 loss - 0.010375, lr - 0.000506 )
-(epoch - 24, step - 506880) - (accuracy - 0.986577, class loss - 0.059699, bbox loss - 0.058134, landmark loss - 0.011550, L2 loss - 0.010363, lr - 0.000506 )
-(epoch - 24, step - 510720) - (accuracy - 0.933566, class loss - 0.208363, bbox loss - 0.055251, landmark loss - 0.007309, L2 loss - 0.010358, lr - 0.000506 )
-(epoch - 24, step - 514560) - (accuracy - 0.957747, class loss - 0.157482, bbox loss - 0.056222, landmark loss - 0.008231, L2 loss - 0.010343, lr - 0.000506 )
-epoch - 24, step - 518256
-Positive faces       -  358
-Partial faces        -  121
-Total detected faces -  479
-Ground truth faces   -  508
-Positive accuracy    -  0.704724409449
-Detection accuracy   -  0.942913385827
-Accuracy             -  0.646937543
-(epoch - 25, step - 518400) - (accuracy - 0.972973, class loss - 0.109046, bbox loss - 0.055819, landmark loss - 0.023051, L2 loss - 0.010333, lr - 0.000476 )
-(epoch - 25, step - 522240) - (accuracy - 0.949153, class loss - 0.129466, bbox loss - 0.058809, landmark loss - 0.022118, L2 loss - 0.010316, lr - 0.000476 )
-(epoch - 25, step - 526080) - (accuracy - 0.951890, class loss - 0.200270, bbox loss - 0.054194, landmark loss - 0.007224, L2 loss - 0.010302, lr - 0.000476 )
-(epoch - 25, step - 529920) - (accuracy - 0.986207, class loss - 0.060496, bbox loss - 0.054443, landmark loss - 0.013231, L2 loss - 0.010284, lr - 0.000476 )
-(epoch - 25, step - 533760) - (accuracy - 0.986486, class loss - 0.096847, bbox loss - 0.049875, landmark loss - 0.011533, L2 loss - 0.010253, lr - 0.000476 )
-(epoch - 25, step - 537600) - (accuracy - 0.976190, class loss - 0.076615, bbox loss - 0.055372, landmark loss - 0.013016, L2 loss - 0.010241, lr - 0.000476 )
-epoch - 25, step - 539850
-Positive faces       -  359
-Partial faces        -  118
-Total detected faces -  477
-Ground truth faces   -  508
-Positive accuracy    -  0.706692913386
-Detection accuracy   -  0.938976377953
-Accuracy             -  0.645197720188
-(epoch - 26, step - 541440) - (accuracy - 0.979452, class loss - 0.092444, bbox loss - 0.054940, landmark loss - 0.009742, L2 loss - 0.010234, lr - 0.000476 )
-(epoch - 26, step - 545280) - (accuracy - 0.962838, class loss - 0.138587, bbox loss - 0.048836, landmark loss - 0.009293, L2 loss - 0.010220, lr - 0.000476 )
-(epoch - 26, step - 549120) - (accuracy - 0.962329, class loss - 0.135288, bbox loss - 0.048128, landmark loss - 0.017439, L2 loss - 0.010219, lr - 0.000476 )
-(epoch - 26, step - 552960) - (accuracy - 0.962712, class loss - 0.100879, bbox loss - 0.063913, landmark loss - 0.008466, L2 loss - 0.010202, lr - 0.000476 )
-(epoch - 26, step - 556800) - (accuracy - 0.969595, class loss - 0.132534, bbox loss - 0.053806, landmark loss - 0.012108, L2 loss - 0.010195, lr - 0.000476 )
-(epoch - 26, step - 560640) - (accuracy - 0.976109, class loss - 0.085760, bbox loss - 0.059623, landmark loss - 0.037223, L2 loss - 0.010190, lr - 0.000476 )
-epoch - 26, step - 561444
-Positive faces       -  352
-Partial faces        -  124
-Total detected faces -  476
-Ground truth faces   -  508
-Positive accuracy    -  0.692913385827
-Detection accuracy   -  0.937007874016
-Accuracy             -  0.644003418645
-(epoch - 27, step - 564480) - (accuracy - 0.966667, class loss - 0.105560, bbox loss - 0.047333, landmark loss - 0.025490, L2 loss - 0.010181, lr - 0.000447 )
-(epoch - 27, step - 568320) - (accuracy - 0.939189, class loss - 0.176329, bbox loss - 0.054950, landmark loss - 0.014314, L2 loss - 0.010167, lr - 0.000447 )
-(epoch - 27, step - 572160) - (accuracy - 0.966667, class loss - 0.134539, bbox loss - 0.045735, landmark loss - 0.005116, L2 loss - 0.010141, lr - 0.000447 )
-(epoch - 27, step - 576000) - (accuracy - 0.966555, class loss - 0.120761, bbox loss - 0.066289, landmark loss - 0.006261, L2 loss - 0.010126, lr - 0.000447 )
-(epoch - 27, step - 579840) - (accuracy - 0.980328, class loss - 0.081765, bbox loss - 0.061495, landmark loss - 0.013354, L2 loss - 0.010116, lr - 0.000447 )
-epoch - 27, step - 583038
-Positive faces       -  348
-Partial faces        -  131
-Total detected faces -  479
-Ground truth faces   -  508
-Positive accuracy    -  0.685039370079
-Detection accuracy   -  0.942913385827
-Accuracy             -  0.642238007828
-(epoch - 28, step - 583680) - (accuracy - 0.982877, class loss - 0.068652, bbox loss - 0.047462, landmark loss - 0.018255, L2 loss - 0.010096, lr - 0.000447 )
-(epoch - 28, step - 587520) - (accuracy - 0.982818, class loss - 0.077423, bbox loss - 0.051670, landmark loss - 0.009318, L2 loss - 0.010088, lr - 0.000447 )
-(epoch - 28, step - 591360) - (accuracy - 0.979452, class loss - 0.106777, bbox loss - 0.052231, landmark loss - 0.007465, L2 loss - 0.010082, lr - 0.000447 )
-(epoch - 28, step - 595200) - (accuracy - 0.965636, class loss - 0.144816, bbox loss - 0.057086, landmark loss - 0.011929, L2 loss - 0.010066, lr - 0.000447 )
-(epoch - 28, step - 599040) - (accuracy - 0.945946, class loss - 0.151439, bbox loss - 0.045094, landmark loss - 0.011224, L2 loss - 0.010063, lr - 0.000447 )
-(epoch - 28, step - 602880) - (accuracy - 0.949664, class loss - 0.154907, bbox loss - 0.048465, landmark loss - 0.011383, L2 loss - 0.010057, lr - 0.000447 )
-epoch - 28, step - 604632
-Positive faces       -  352
-Partial faces        -  126
-Total detected faces -  478
-Ground truth faces   -  508
-Positive accuracy    -  0.692913385827
-Detection accuracy   -  0.94094488189
-Accuracy             -  0.644920070055
-(epoch - 29, step - 606720) - (accuracy - 0.982818, class loss - 0.088538, bbox loss - 0.052955, landmark loss - 0.011280, L2 loss - 0.010038, lr - 0.000421 )
-(epoch - 29, step - 610560) - (accuracy - 0.949324, class loss - 0.137456, bbox loss - 0.050645, landmark loss - 0.018784, L2 loss - 0.010015, lr - 0.000421 )
-(epoch - 29, step - 614400) - (accuracy - 0.951890, class loss - 0.185147, bbox loss - 0.043598, landmark loss - 0.013042, L2 loss - 0.010004, lr - 0.000421 )
-(epoch - 29, step - 618240) - (accuracy - 0.949153, class loss - 0.163593, bbox loss - 0.051076, landmark loss - 0.010531, L2 loss - 0.009990, lr - 0.000421 )
-(epoch - 29, step - 622080) - (accuracy - 0.979239, class loss - 0.074904, bbox loss - 0.047291, landmark loss - 0.015830, L2 loss - 0.009981, lr - 0.000421 )
-(epoch - 29, step - 625920) - (accuracy - 0.956376, class loss - 0.180629, bbox loss - 0.047145, landmark loss - 0.021328, L2 loss - 0.009964, lr - 0.000421 )
-epoch - 29, step - 626226
-Positive faces       -  351
-Partial faces        -  122
-Total detected faces -  473
-Ground truth faces   -  508
-Positive accuracy    -  0.69094488189
-Detection accuracy   -  0.931102362205
-Accuracy             -  0.641493883323
-(epoch - 30, step - 629760) - (accuracy - 0.962712, class loss - 0.137239, bbox loss - 0.057906, landmark loss - 0.010066, L2 loss - 0.009948, lr - 0.000421 )
-(epoch - 30, step - 633600) - (accuracy - 0.989726, class loss - 0.048061, bbox loss - 0.053631, landmark loss - 0.010836, L2 loss - 0.009931, lr - 0.000421 )
-(epoch - 30, step - 637440) - (accuracy - 0.979730, class loss - 0.078639, bbox loss - 0.054992, landmark loss - 0.009079, L2 loss - 0.009922, lr - 0.000421 )
-(epoch - 30, step - 641280) - (accuracy - 0.979522, class loss - 0.049110, bbox loss - 0.061374, landmark loss - 0.014904, L2 loss - 0.009910, lr - 0.000421 )
-(epoch - 30, step - 645120) - (accuracy - 0.951557, class loss - 0.171083, bbox loss - 0.050627, landmark loss - 0.018547, L2 loss - 0.009895, lr - 0.000421 )
-epoch - 30, step - 647820
-Positive faces       -  360
-Partial faces        -  116
-Total detected faces -  476
-Ground truth faces   -  508
-Positive accuracy    -  0.708661417323
-Detection accuracy   -  0.937007874016
-Accuracy             -  0.645328464163
-RNet - network is trained and weights are generated at ../data/models/mtcnn/train
+Accuracy             -  0.6464639604492909
+RNet - network is trained and weights are generated at /scratch/ppshete/workspace/tfmtcnn/data/models/mtcnn/train1
 Trained RNet.
 ########################################################################################################################################################################################################
 Generate a hard dataset i.e. ONet dataset.
@@ -3138,415 +3143,416 @@ ONet network dataset is generated at /scratch/ppshete/workspace/tfmtcnn/data/dat
 Generated a hard dataset i.e. ONet dataset.
 ########################################################################################################################################################################################################
 Train ONet.
+/usr/lib64/python2.7/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
 508 faces in  290 number of images for FDDB dataset.
-(epoch - 1, step - 3840) - (accuracy - 0.965753, class loss - 0.131812, bbox loss - 0.045035, landmark loss - 0.007344, L2 loss - 0.006055, lr - 0.001000 )
-(epoch - 1, step - 7680) - (accuracy - 0.962069, class loss - 0.136672, bbox loss - 0.049320, landmark loss - 0.009290, L2 loss - 0.008394, lr - 0.001000 )
-(epoch - 1, step - 11520) - (accuracy - 0.966330, class loss - 0.145666, bbox loss - 0.044957, landmark loss - 0.006319, L2 loss - 0.010478, lr - 0.001000 )
-(epoch - 1, step - 15360) - (accuracy - 0.955631, class loss - 0.197438, bbox loss - 0.051563, landmark loss - 0.006191, L2 loss - 0.012106, lr - 0.001000 )
-(epoch - 1, step - 19200) - (accuracy - 0.959459, class loss - 0.168364, bbox loss - 0.034791, landmark loss - 0.006387, L2 loss - 0.013307, lr - 0.001000 )
-epoch - 1, step - 21584
-Positive faces       -  306
-Partial faces        -  156
-Total detected faces -  462
-Ground truth faces   -  508
-Positive accuracy    -  0.602362204724
-Detection accuracy   -  0.909448818898
-Accuracy             -  0.613068677459
-(epoch - 2, step - 23040) - (accuracy - 0.958904, class loss - 0.144328, bbox loss - 0.044403, landmark loss - 0.005807, L2 loss - 0.014306, lr - 0.001000 )
-(epoch - 2, step - 26880) - (accuracy - 0.962838, class loss - 0.130269, bbox loss - 0.042703, landmark loss - 0.004633, L2 loss - 0.015065, lr - 0.001000 )
-(epoch - 2, step - 30720) - (accuracy - 0.965398, class loss - 0.160387, bbox loss - 0.049516, landmark loss - 0.004725, L2 loss - 0.015664, lr - 0.001000 )
-(epoch - 2, step - 34560) - (accuracy - 0.972509, class loss - 0.102489, bbox loss - 0.032220, landmark loss - 0.005810, L2 loss - 0.016209, lr - 0.001000 )
-(epoch - 2, step - 38400) - (accuracy - 0.986395, class loss - 0.069836, bbox loss - 0.047222, landmark loss - 0.003271, L2 loss - 0.016552, lr - 0.001000 )
-(epoch - 2, step - 42240) - (accuracy - 0.986667, class loss - 0.063091, bbox loss - 0.033128, landmark loss - 0.003861, L2 loss - 0.016918, lr - 0.001000 )
-epoch - 2, step - 43168
-Positive faces       -  298
-Partial faces        -  171
-Total detected faces -  469
-Ground truth faces   -  508
-Positive accuracy    -  0.586614173228
-Detection accuracy   -  0.923228346457
-Accuracy             -  0.619659484038
-(epoch - 3, step - 46080) - (accuracy - 0.972318, class loss - 0.073580, bbox loss - 0.046504, landmark loss - 0.004133, L2 loss - 0.017061, lr - 0.000940 )
-(epoch - 3, step - 49920) - (accuracy - 0.959184, class loss - 0.174714, bbox loss - 0.070513, landmark loss - 0.006278, L2 loss - 0.017160, lr - 0.000940 )
-(epoch - 3, step - 53760) - (accuracy - 0.972973, class loss - 0.104409, bbox loss - 0.048677, landmark loss - 0.005042, L2 loss - 0.017343, lr - 0.000940 )
-(epoch - 3, step - 57600) - (accuracy - 0.965035, class loss - 0.097980, bbox loss - 0.053938, landmark loss - 0.006072, L2 loss - 0.017476, lr - 0.000940 )
-(epoch - 3, step - 61440) - (accuracy - 0.962069, class loss - 0.112119, bbox loss - 0.042480, landmark loss - 0.003197, L2 loss - 0.017589, lr - 0.000940 )
-epoch - 3, step - 64752
-Positive faces       -  332
-Partial faces        -  136
-Total detected faces -  468
-Ground truth faces   -  508
-Positive accuracy    -  0.653543307087
-Detection accuracy   -  0.92125984252
-Accuracy             -  0.624657992942
-(epoch - 4, step - 65280) - (accuracy - 0.968858, class loss - 0.130070, bbox loss - 0.047253, landmark loss - 0.006568, L2 loss - 0.017725, lr - 0.000940 )
-(epoch - 4, step - 69120) - (accuracy - 0.979094, class loss - 0.094146, bbox loss - 0.047567, landmark loss - 0.003475, L2 loss - 0.017890, lr - 0.000940 )
-(epoch - 4, step - 72960) - (accuracy - 0.979167, class loss - 0.104118, bbox loss - 0.048490, landmark loss - 0.004502, L2 loss - 0.018080, lr - 0.000940 )
-(epoch - 4, step - 76800) - (accuracy - 0.973064, class loss - 0.091205, bbox loss - 0.041969, landmark loss - 0.004336, L2 loss - 0.018128, lr - 0.000940 )
-(epoch - 4, step - 80640) - (accuracy - 0.965278, class loss - 0.089302, bbox loss - 0.039773, landmark loss - 0.004003, L2 loss - 0.018237, lr - 0.000940 )
-(epoch - 4, step - 84480) - (accuracy - 0.986395, class loss - 0.062689, bbox loss - 0.040599, landmark loss - 0.004095, L2 loss - 0.018407, lr - 0.000940 )
-epoch - 4, step - 86336
-Positive faces       -  309
-Partial faces        -  159
-Total detected faces -  468
-Ground truth faces   -  508
-Positive accuracy    -  0.608267716535
-Detection accuracy   -  0.92125984252
-Accuracy             -  0.620211296687
-(epoch - 5, step - 88320) - (accuracy - 0.962963, class loss - 0.120069, bbox loss - 0.039964, landmark loss - 0.003652, L2 loss - 0.018419, lr - 0.000884 )
-(epoch - 5, step - 92160) - (accuracy - 0.979381, class loss - 0.081728, bbox loss - 0.034396, landmark loss - 0.003393, L2 loss - 0.018362, lr - 0.000884 )
-(epoch - 5, step - 96000) - (accuracy - 0.966102, class loss - 0.143134, bbox loss - 0.040147, landmark loss - 0.008841, L2 loss - 0.018498, lr - 0.000884 )
-(epoch - 5, step - 99840) - (accuracy - 0.965986, class loss - 0.125231, bbox loss - 0.057239, landmark loss - 0.005440, L2 loss - 0.018516, lr - 0.000884 )
-(epoch - 5, step - 103680) - (accuracy - 0.976431, class loss - 0.090623, bbox loss - 0.034717, landmark loss - 0.006300, L2 loss - 0.018544, lr - 0.000884 )
-(epoch - 5, step - 107520) - (accuracy - 0.963333, class loss - 0.093135, bbox loss - 0.045894, landmark loss - 0.004733, L2 loss - 0.018640, lr - 0.000884 )
-epoch - 5, step - 107920
-Positive faces       -  331
-Partial faces        -  140
-Total detected faces -  471
-Ground truth faces   -  508
-Positive accuracy    -  0.65157480315
-Detection accuracy   -  0.927165354331
-Accuracy             -  0.627844090489
-(epoch - 6, step - 111360) - (accuracy - 0.993333, class loss - 0.063640, bbox loss - 0.038606, landmark loss - 0.003846, L2 loss - 0.018682, lr - 0.000884 )
-(epoch - 6, step - 115200) - (accuracy - 0.958763, class loss - 0.129898, bbox loss - 0.046436, landmark loss - 0.004300, L2 loss - 0.018713, lr - 0.000884 )
-(epoch - 6, step - 119040) - (accuracy - 0.976109, class loss - 0.112212, bbox loss - 0.037999, landmark loss - 0.006719, L2 loss - 0.018776, lr - 0.000884 )
-(epoch - 6, step - 122880) - (accuracy - 0.989761, class loss - 0.056361, bbox loss - 0.040649, landmark loss - 0.005061, L2 loss - 0.018781, lr - 0.000884 )
-(epoch - 6, step - 126720) - (accuracy - 0.979310, class loss - 0.074801, bbox loss - 0.052142, landmark loss - 0.007824, L2 loss - 0.018831, lr - 0.000884 )
-epoch - 6, step - 129504
-Positive faces       -  315
-Partial faces        -  154
-Total detected faces -  469
-Ground truth faces   -  508
-Positive accuracy    -  0.620078740157
-Detection accuracy   -  0.923228346457
-Accuracy             -  0.621100897875
-(epoch - 7, step - 130560) - (accuracy - 0.979798, class loss - 0.111066, bbox loss - 0.041638, landmark loss - 0.004721, L2 loss - 0.018854, lr - 0.000831 )
-(epoch - 7, step - 134400) - (accuracy - 0.969492, class loss - 0.103971, bbox loss - 0.053767, landmark loss - 0.003893, L2 loss - 0.018742, lr - 0.000831 )
-(epoch - 7, step - 138240) - (accuracy - 0.966330, class loss - 0.111508, bbox loss - 0.032695, landmark loss - 0.005315, L2 loss - 0.018699, lr - 0.000831 )
-(epoch - 7, step - 142080) - (accuracy - 0.976190, class loss - 0.075824, bbox loss - 0.042651, landmark loss - 0.009974, L2 loss - 0.018718, lr - 0.000831 )
-(epoch - 7, step - 145920) - (accuracy - 0.983165, class loss - 0.072568, bbox loss - 0.049614, landmark loss - 0.005778, L2 loss - 0.018747, lr - 0.000831 )
-(epoch - 7, step - 149760) - (accuracy - 0.972696, class loss - 0.090833, bbox loss - 0.049821, landmark loss - 0.005418, L2 loss - 0.018762, lr - 0.000831 )
-epoch - 7, step - 151088
-Positive faces       -  315
-Partial faces        -  151
-Total detected faces -  466
-Ground truth faces   -  508
-Positive accuracy    -  0.620078740157
-Detection accuracy   -  0.917322834646
-Accuracy             -  0.620658296276
-(epoch - 8, step - 153600) - (accuracy - 0.979381, class loss - 0.077961, bbox loss - 0.047180, landmark loss - 0.004314, L2 loss - 0.018773, lr - 0.000831 )
-(epoch - 8, step - 157440) - (accuracy - 0.959596, class loss - 0.118960, bbox loss - 0.041217, landmark loss - 0.004518, L2 loss - 0.018781, lr - 0.000831 )
-(epoch - 8, step - 161280) - (accuracy - 0.980132, class loss - 0.087879, bbox loss - 0.054958, landmark loss - 0.004484, L2 loss - 0.018845, lr - 0.000831 )
-(epoch - 8, step - 165120) - (accuracy - 0.965986, class loss - 0.110258, bbox loss - 0.052675, landmark loss - 0.002891, L2 loss - 0.018878, lr - 0.000831 )
-(epoch - 8, step - 168960) - (accuracy - 0.972789, class loss - 0.093113, bbox loss - 0.047123, landmark loss - 0.004952, L2 loss - 0.018954, lr - 0.000831 )
-epoch - 8, step - 172672
-Positive faces       -  322
-Partial faces        -  145
-Total detected faces -  467
-Ground truth faces   -  508
-Positive accuracy    -  0.633858267717
-Detection accuracy   -  0.919291338583
-Accuracy             -  0.623626699197
-(epoch - 9, step - 172800) - (accuracy - 0.989865, class loss - 0.043525, bbox loss - 0.035538, landmark loss - 0.005167, L2 loss - 0.019024, lr - 0.000781 )
-(epoch - 9, step - 176640) - (accuracy - 0.969388, class loss - 0.103594, bbox loss - 0.032083, landmark loss - 0.003984, L2 loss - 0.018869, lr - 0.000781 )
-(epoch - 9, step - 180480) - (accuracy - 0.989726, class loss - 0.061137, bbox loss - 0.038454, landmark loss - 0.003212, L2 loss - 0.018899, lr - 0.000781 )
-(epoch - 9, step - 184320) - (accuracy - 0.980000, class loss - 0.090025, bbox loss - 0.049194, landmark loss - 0.005545, L2 loss - 0.018864, lr - 0.000781 )
-(epoch - 9, step - 188160) - (accuracy - 0.979661, class loss - 0.089402, bbox loss - 0.044213, landmark loss - 0.003907, L2 loss - 0.018789, lr - 0.000781 )
-(epoch - 9, step - 192000) - (accuracy - 0.983221, class loss - 0.104541, bbox loss - 0.043368, landmark loss - 0.005228, L2 loss - 0.018842, lr - 0.000781 )
-epoch - 9, step - 194256
-Positive faces       -  322
-Partial faces        -  148
+(epoch - 1, step - 3840) - (accuracy - 0.948630, class loss - 0.205189, bbox loss - 0.065900, landmark loss - 0.012004, L2 loss - 0.007279, lr - 0.001000 )
+(epoch - 1, step - 7680) - (accuracy - 0.968531, class loss - 0.144361, bbox loss - 0.045685, landmark loss - 0.005268, L2 loss - 0.010020, lr - 0.001000 )
+(epoch - 1, step - 11520) - (accuracy - 0.952542, class loss - 0.183495, bbox loss - 0.041221, landmark loss - 0.005411, L2 loss - 0.012291, lr - 0.001000 )
+(epoch - 1, step - 15360) - (accuracy - 0.976271, class loss - 0.114428, bbox loss - 0.039251, landmark loss - 0.003179, L2 loss - 0.013987, lr - 0.001000 )
+(epoch - 1, step - 19200) - (accuracy - 0.959459, class loss - 0.171672, bbox loss - 0.053413, landmark loss - 0.004787, L2 loss - 0.015279, lr - 0.001000 )
+epoch - 1, step - 21435
+Positive faces       -  304
+Partial faces        -  166
 Total detected faces -  470
 Ground truth faces   -  508
-Positive accuracy    -  0.633858267717
+Positive accuracy    -  0.59842519685
 Detection accuracy   -  0.925196850394
-Accuracy             -  0.624497538247
-(epoch - 10, step - 195840) - (accuracy - 0.956522, class loss - 0.173051, bbox loss - 0.042163, landmark loss - 0.004795, L2 loss - 0.018886, lr - 0.000781 )
-(epoch - 10, step - 199680) - (accuracy - 0.976190, class loss - 0.069347, bbox loss - 0.043539, landmark loss - 0.003989, L2 loss - 0.018910, lr - 0.000781 )
-(epoch - 10, step - 203520) - (accuracy - 0.989726, class loss - 0.056402, bbox loss - 0.047928, landmark loss - 0.005116, L2 loss - 0.018946, lr - 0.000781 )
-(epoch - 10, step - 207360) - (accuracy - 0.979239, class loss - 0.096969, bbox loss - 0.052787, landmark loss - 0.004715, L2 loss - 0.018970, lr - 0.000781 )
-(epoch - 10, step - 211200) - (accuracy - 0.970100, class loss - 0.125045, bbox loss - 0.042373, landmark loss - 0.002571, L2 loss - 0.018952, lr - 0.000781 )
-(epoch - 10, step - 215040) - (accuracy - 0.982517, class loss - 0.079060, bbox loss - 0.038780, landmark loss - 0.005097, L2 loss - 0.019011, lr - 0.000781 )
-epoch - 10, step - 215840
-Positive faces       -  308
-Partial faces        -  164
-Total detected faces -  472
+Accuracy             -  0.6213494147717306
+(epoch - 2, step - 23040) - (accuracy - 0.962963, class loss - 0.155620, bbox loss - 0.044872, landmark loss - 0.017737, L2 loss - 0.016229, lr - 0.001000 )
+(epoch - 2, step - 26880) - (accuracy - 0.979310, class loss - 0.104028, bbox loss - 0.051817, landmark loss - 0.004025, L2 loss - 0.017007, lr - 0.001000 )
+(epoch - 2, step - 30720) - (accuracy - 0.954545, class loss - 0.151884, bbox loss - 0.051482, landmark loss - 0.005675, L2 loss - 0.017744, lr - 0.001000 )
+(epoch - 2, step - 34560) - (accuracy - 0.962585, class loss - 0.148398, bbox loss - 0.049988, landmark loss - 0.004420, L2 loss - 0.018164, lr - 0.001000 )
+(epoch - 2, step - 38400) - (accuracy - 0.966330, class loss - 0.121004, bbox loss - 0.049293, landmark loss - 0.007243, L2 loss - 0.018500, lr - 0.001000 )
+(epoch - 2, step - 42240) - (accuracy - 0.965870, class loss - 0.144312, bbox loss - 0.049668, landmark loss - 0.004567, L2 loss - 0.018778, lr - 0.001000 )
+epoch - 2, step - 42870
+Positive faces       -  304
+Partial faces        -  169
+Total detected faces -  473
 Ground truth faces   -  508
-Positive accuracy    -  0.606299212598
-Detection accuracy   -  0.929133858268
-Accuracy             -  0.62370759972
-(epoch - 11, step - 218880) - (accuracy - 0.968750, class loss - 0.103893, bbox loss - 0.036570, landmark loss - 0.003742, L2 loss - 0.018929, lr - 0.000734 )
-(epoch - 11, step - 222720) - (accuracy - 0.972318, class loss - 0.103324, bbox loss - 0.045145, landmark loss - 0.003303, L2 loss - 0.018881, lr - 0.000734 )
-(epoch - 11, step - 226560) - (accuracy - 0.973064, class loss - 0.116748, bbox loss - 0.039269, landmark loss - 0.003477, L2 loss - 0.018845, lr - 0.000734 )
-(epoch - 11, step - 230400) - (accuracy - 0.979730, class loss - 0.089792, bbox loss - 0.055683, landmark loss - 0.003904, L2 loss - 0.018831, lr - 0.000734 )
-(epoch - 11, step - 234240) - (accuracy - 0.969388, class loss - 0.079207, bbox loss - 0.045188, landmark loss - 0.002961, L2 loss - 0.018824, lr - 0.000734 )
-epoch - 11, step - 237424
-Positive faces       -  323
-Partial faces        -  147
-Total detected faces -  470
+Positive accuracy    -  0.59842519685
+Detection accuracy   -  0.931102362205
+Accuracy             -  0.6253335367752713
+(epoch - 3, step - 46080) - (accuracy - 0.962585, class loss - 0.108625, bbox loss - 0.057597, landmark loss - 0.004119, L2 loss - 0.019083, lr - 0.000940 )
+(epoch - 3, step - 49920) - (accuracy - 0.975439, class loss - 0.099547, bbox loss - 0.047838, landmark loss - 0.005167, L2 loss - 0.019364, lr - 0.000940 )
+(epoch - 3, step - 53760) - (accuracy - 0.966216, class loss - 0.106948, bbox loss - 0.037401, landmark loss - 0.004891, L2 loss - 0.019612, lr - 0.000940 )
+(epoch - 3, step - 57600) - (accuracy - 0.966216, class loss - 0.124410, bbox loss - 0.035928, landmark loss - 0.004082, L2 loss - 0.019699, lr - 0.000940 )
+(epoch - 3, step - 61440) - (accuracy - 0.976271, class loss - 0.083035, bbox loss - 0.043707, landmark loss - 0.004367, L2 loss - 0.019914, lr - 0.000940 )
+epoch - 3, step - 64305
+Positive faces       -  304
+Partial faces        -  169
+Total detected faces -  473
 Ground truth faces   -  508
-Positive accuracy    -  0.635826771654
-Detection accuracy   -  0.925196850394
-Accuracy             -  0.625534388747
-(epoch - 12, step - 238080) - (accuracy - 0.979310, class loss - 0.058631, bbox loss - 0.034071, landmark loss - 0.005359, L2 loss - 0.018857, lr - 0.000734 )
-(epoch - 12, step - 241920) - (accuracy - 0.983221, class loss - 0.075548, bbox loss - 0.046744, landmark loss - 0.006760, L2 loss - 0.018861, lr - 0.000734 )
-(epoch - 12, step - 245760) - (accuracy - 0.983051, class loss - 0.052208, bbox loss - 0.039868, landmark loss - 0.017594, L2 loss - 0.018946, lr - 0.000734 )
-(epoch - 12, step - 249600) - (accuracy - 0.976589, class loss - 0.082234, bbox loss - 0.040686, landmark loss - 0.003814, L2 loss - 0.018925, lr - 0.000734 )
-(epoch - 12, step - 253440) - (accuracy - 0.972603, class loss - 0.116019, bbox loss - 0.050143, landmark loss - 0.005372, L2 loss - 0.018940, lr - 0.000734 )
-(epoch - 12, step - 257280) - (accuracy - 0.996564, class loss - 0.053470, bbox loss - 0.041002, landmark loss - 0.004769, L2 loss - 0.018972, lr - 0.000734 )
-epoch - 12, step - 259008
-Positive faces       -  312
-Partial faces        -  158
-Total detected faces -  470
-Ground truth faces   -  508
-Positive accuracy    -  0.614173228346
-Detection accuracy   -  0.925196850394
-Accuracy             -  0.623422673686
-(epoch - 13, step - 261120) - (accuracy - 0.969697, class loss - 0.091623, bbox loss - 0.033619, landmark loss - 0.004311, L2 loss - 0.018965, lr - 0.000690 )
-(epoch - 13, step - 264960) - (accuracy - 0.976271, class loss - 0.098904, bbox loss - 0.045674, landmark loss - 0.004966, L2 loss - 0.018935, lr - 0.000690 )
-(epoch - 13, step - 268800) - (accuracy - 0.989899, class loss - 0.057279, bbox loss - 0.046155, landmark loss - 0.005377, L2 loss - 0.018885, lr - 0.000690 )
-(epoch - 13, step - 272640) - (accuracy - 0.972318, class loss - 0.106037, bbox loss - 0.056790, landmark loss - 0.004656, L2 loss - 0.018890, lr - 0.000690 )
-(epoch - 13, step - 276480) - (accuracy - 0.979592, class loss - 0.084679, bbox loss - 0.056312, landmark loss - 0.008622, L2 loss - 0.018869, lr - 0.000690 )
-(epoch - 13, step - 280320) - (accuracy - 0.969799, class loss - 0.112180, bbox loss - 0.047856, landmark loss - 0.004634, L2 loss - 0.018899, lr - 0.000690 )
-epoch - 13, step - 280592
-Positive faces       -  323
-Partial faces        -  147
-Total detected faces -  470
-Ground truth faces   -  508
-Positive accuracy    -  0.635826771654
-Detection accuracy   -  0.925196850394
-Accuracy             -  0.62520534044
-(epoch - 14, step - 284160) - (accuracy - 0.983333, class loss - 0.079860, bbox loss - 0.041607, landmark loss - 0.009627, L2 loss - 0.018891, lr - 0.000690 )
-(epoch - 14, step - 288000) - (accuracy - 0.976190, class loss - 0.087442, bbox loss - 0.045578, landmark loss - 0.007076, L2 loss - 0.018883, lr - 0.000690 )
-(epoch - 14, step - 291840) - (accuracy - 0.983051, class loss - 0.072911, bbox loss - 0.049317, landmark loss - 0.004064, L2 loss - 0.018883, lr - 0.000690 )
-(epoch - 14, step - 295680) - (accuracy - 0.986254, class loss - 0.074243, bbox loss - 0.044548, landmark loss - 0.009055, L2 loss - 0.018871, lr - 0.000690 )
-(epoch - 14, step - 299520) - (accuracy - 0.989761, class loss - 0.047819, bbox loss - 0.042111, landmark loss - 0.004676, L2 loss - 0.018928, lr - 0.000690 )
-epoch - 14, step - 302176
-Positive faces       -  298
-Partial faces        -  174
-Total detected faces -  472
-Ground truth faces   -  508
-Positive accuracy    -  0.586614173228
-Detection accuracy   -  0.929133858268
-Accuracy             -  0.622772408637
-(epoch - 15, step - 303360) - (accuracy - 0.976027, class loss - 0.068899, bbox loss - 0.043690, landmark loss - 0.011174, L2 loss - 0.018906, lr - 0.000648 )
-(epoch - 15, step - 307200) - (accuracy - 0.975610, class loss - 0.072851, bbox loss - 0.038547, landmark loss - 0.008990, L2 loss - 0.018821, lr - 0.000648 )
-(epoch - 15, step - 311040) - (accuracy - 0.979798, class loss - 0.068040, bbox loss - 0.036017, landmark loss - 0.004633, L2 loss - 0.018794, lr - 0.000648 )
-(epoch - 15, step - 314880) - (accuracy - 0.986441, class loss - 0.088804, bbox loss - 0.046495, landmark loss - 0.003512, L2 loss - 0.018814, lr - 0.000648 )
-(epoch - 15, step - 318720) - (accuracy - 0.972603, class loss - 0.078761, bbox loss - 0.044597, landmark loss - 0.010678, L2 loss - 0.018796, lr - 0.000648 )
-(epoch - 15, step - 322560) - (accuracy - 0.986441, class loss - 0.044865, bbox loss - 0.034071, landmark loss - 0.002873, L2 loss - 0.018805, lr - 0.000648 )
-epoch - 15, step - 323760
-Positive faces       -  315
-Partial faces        -  151
-Total detected faces -  466
-Ground truth faces   -  508
-Positive accuracy    -  0.620078740157
-Detection accuracy   -  0.917322834646
-Accuracy             -  0.622151649311
-(epoch - 16, step - 326400) - (accuracy - 0.986159, class loss - 0.058666, bbox loss - 0.043356, landmark loss - 0.007046, L2 loss - 0.018849, lr - 0.000648 )
-(epoch - 16, step - 330240) - (accuracy - 0.979592, class loss - 0.100350, bbox loss - 0.034448, landmark loss - 0.003952, L2 loss - 0.018819, lr - 0.000648 )
-(epoch - 16, step - 334080) - (accuracy - 0.986486, class loss - 0.055501, bbox loss - 0.036018, landmark loss - 0.007799, L2 loss - 0.018863, lr - 0.000648 )
-(epoch - 16, step - 337920) - (accuracy - 0.979522, class loss - 0.126367, bbox loss - 0.047674, landmark loss - 0.002448, L2 loss - 0.018839, lr - 0.000648 )
-(epoch - 16, step - 341760) - (accuracy - 0.983165, class loss - 0.059779, bbox loss - 0.038846, landmark loss - 0.007451, L2 loss - 0.018811, lr - 0.000648 )
-epoch - 16, step - 345344
-Positive faces       -  321
-Partial faces        -  151
-Total detected faces -  472
-Ground truth faces   -  508
-Positive accuracy    -  0.63188976378
-Detection accuracy   -  0.929133858268
-Accuracy             -  0.628834379635
-(epoch - 17, step - 345600) - (accuracy - 0.983221, class loss - 0.079572, bbox loss - 0.059015, landmark loss - 0.003472, L2 loss - 0.018862, lr - 0.000610 )
-(epoch - 17, step - 349440) - (accuracy - 0.976190, class loss - 0.079692, bbox loss - 0.039230, landmark loss - 0.003803, L2 loss - 0.018757, lr - 0.000610 )
-(epoch - 17, step - 353280) - (accuracy - 0.979381, class loss - 0.087485, bbox loss - 0.037222, landmark loss - 0.003571, L2 loss - 0.018773, lr - 0.000610 )
-(epoch - 17, step - 357120) - (accuracy - 0.982699, class loss - 0.068391, bbox loss - 0.048649, landmark loss - 0.004450, L2 loss - 0.018773, lr - 0.000610 )
-(epoch - 17, step - 360960) - (accuracy - 0.979381, class loss - 0.084854, bbox loss - 0.050020, landmark loss - 0.004812, L2 loss - 0.018761, lr - 0.000610 )
-(epoch - 17, step - 364800) - (accuracy - 0.993220, class loss - 0.062088, bbox loss - 0.036333, landmark loss - 0.007432, L2 loss - 0.018727, lr - 0.000610 )
-epoch - 17, step - 366928
+Positive accuracy    -  0.59842519685
+Detection accuracy   -  0.931102362205
+Accuracy             -  0.6236660034188135
+(epoch - 4, step - 65280) - (accuracy - 0.959866, class loss - 0.129147, bbox loss - 0.030880, landmark loss - 0.003516, L2 loss - 0.020140, lr - 0.000940 )
+(epoch - 4, step - 69120) - (accuracy - 0.979522, class loss - 0.101803, bbox loss - 0.042807, landmark loss - 0.004260, L2 loss - 0.020152, lr - 0.000940 )
+(epoch - 4, step - 72960) - (accuracy - 0.982935, class loss - 0.090028, bbox loss - 0.034224, landmark loss - 0.004724, L2 loss - 0.020290, lr - 0.000940 )
+(epoch - 4, step - 76800) - (accuracy - 0.958333, class loss - 0.147839, bbox loss - 0.053407, landmark loss - 0.005099, L2 loss - 0.020357, lr - 0.000940 )
+(epoch - 4, step - 80640) - (accuracy - 0.965986, class loss - 0.122685, bbox loss - 0.036738, landmark loss - 0.002669, L2 loss - 0.020495, lr - 0.000940 )
+(epoch - 4, step - 84480) - (accuracy - 0.976510, class loss - 0.103925, bbox loss - 0.038563, landmark loss - 0.004547, L2 loss - 0.020560, lr - 0.000940 )
+epoch - 4, step - 85740
 Positive faces       -  312
 Partial faces        -  160
 Total detected faces -  472
 Ground truth faces   -  508
 Positive accuracy    -  0.614173228346
 Detection accuracy   -  0.929133858268
-Accuracy             -  0.62603991934
-(epoch - 18, step - 368640) - (accuracy - 0.976431, class loss - 0.121008, bbox loss - 0.063752, landmark loss - 0.001910, L2 loss - 0.018710, lr - 0.000610 )
-(epoch - 18, step - 372480) - (accuracy - 0.986667, class loss - 0.048206, bbox loss - 0.050388, landmark loss - 0.003493, L2 loss - 0.018716, lr - 0.000610 )
-(epoch - 18, step - 376320) - (accuracy - 0.979239, class loss - 0.064266, bbox loss - 0.057808, landmark loss - 0.005295, L2 loss - 0.018696, lr - 0.000610 )
-(epoch - 18, step - 380160) - (accuracy - 0.969492, class loss - 0.076591, bbox loss - 0.051306, landmark loss - 0.003388, L2 loss - 0.018745, lr - 0.000610 )
-(epoch - 18, step - 384000) - (accuracy - 0.979730, class loss - 0.060994, bbox loss - 0.046513, landmark loss - 0.005025, L2 loss - 0.018737, lr - 0.000610 )
-(epoch - 18, step - 387840) - (accuracy - 0.972509, class loss - 0.074468, bbox loss - 0.037316, landmark loss - 0.003458, L2 loss - 0.018756, lr - 0.000610 )
-epoch - 18, step - 388512
-Positive faces       -  328
-Partial faces        -  143
-Total detected faces -  471
-Ground truth faces   -  508
-Positive accuracy    -  0.645669291339
-Detection accuracy   -  0.927165354331
-Accuracy             -  0.62758174733
-(epoch - 19, step - 391680) - (accuracy - 0.979381, class loss - 0.068989, bbox loss - 0.042897, landmark loss - 0.003258, L2 loss - 0.018719, lr - 0.000573 )
-(epoch - 19, step - 395520) - (accuracy - 0.986532, class loss - 0.056033, bbox loss - 0.043768, landmark loss - 0.003030, L2 loss - 0.018677, lr - 0.000573 )
-(epoch - 19, step - 399360) - (accuracy - 0.983108, class loss - 0.076796, bbox loss - 0.040415, landmark loss - 0.004436, L2 loss - 0.018682, lr - 0.000573 )
-(epoch - 19, step - 403200) - (accuracy - 0.993080, class loss - 0.030052, bbox loss - 0.036120, landmark loss - 0.009383, L2 loss - 0.018651, lr - 0.000573 )
-(epoch - 19, step - 407040) - (accuracy - 0.969492, class loss - 0.070386, bbox loss - 0.041022, landmark loss - 0.005430, L2 loss - 0.018627, lr - 0.000573 )
-epoch - 19, step - 410096
-Positive faces       -  322
-Partial faces        -  145
-Total detected faces -  467
-Ground truth faces   -  508
-Positive accuracy    -  0.633858267717
-Detection accuracy   -  0.919291338583
-Accuracy             -  0.621090921185
-(epoch - 20, step - 410880) - (accuracy - 0.982578, class loss - 0.059344, bbox loss - 0.047679, landmark loss - 0.003355, L2 loss - 0.018636, lr - 0.000573 )
-(epoch - 20, step - 414720) - (accuracy - 0.993220, class loss - 0.035635, bbox loss - 0.045129, landmark loss - 0.004464, L2 loss - 0.018618, lr - 0.000573 )
-(epoch - 20, step - 418560) - (accuracy - 0.989933, class loss - 0.047521, bbox loss - 0.032827, landmark loss - 0.005147, L2 loss - 0.018606, lr - 0.000573 )
-(epoch - 20, step - 422400) - (accuracy - 0.979798, class loss - 0.117290, bbox loss - 0.047685, landmark loss - 0.002960, L2 loss - 0.018607, lr - 0.000573 )
-(epoch - 20, step - 426240) - (accuracy - 0.986254, class loss - 0.079281, bbox loss - 0.044171, landmark loss - 0.007671, L2 loss - 0.018644, lr - 0.000573 )
-(epoch - 20, step - 430080) - (accuracy - 0.986441, class loss - 0.040731, bbox loss - 0.037206, landmark loss - 0.004763, L2 loss - 0.018614, lr - 0.000573 )
-epoch - 20, step - 431680
-Positive faces       -  323
-Partial faces        -  149
-Total detected faces -  472
-Ground truth faces   -  508
-Positive accuracy    -  0.635826771654
-Detection accuracy   -  0.929133858268
-Accuracy             -  0.625220976962
-(epoch - 21, step - 433920) - (accuracy - 0.976431, class loss - 0.076485, bbox loss - 0.053938, landmark loss - 0.007154, L2 loss - 0.018626, lr - 0.000539 )
-(epoch - 21, step - 437760) - (accuracy - 0.993007, class loss - 0.042059, bbox loss - 0.036625, landmark loss - 0.002810, L2 loss - 0.018552, lr - 0.000539 )
-(epoch - 21, step - 441600) - (accuracy - 0.962838, class loss - 0.094802, bbox loss - 0.040226, landmark loss - 0.007728, L2 loss - 0.018527, lr - 0.000539 )
-(epoch - 21, step - 445440) - (accuracy - 0.986301, class loss - 0.062921, bbox loss - 0.044162, landmark loss - 0.002278, L2 loss - 0.018543, lr - 0.000539 )
-(epoch - 21, step - 449280) - (accuracy - 0.982759, class loss - 0.078239, bbox loss - 0.049953, landmark loss - 0.003211, L2 loss - 0.018508, lr - 0.000539 )
-(epoch - 21, step - 453120) - (accuracy - 0.986577, class loss - 0.048064, bbox loss - 0.046864, landmark loss - 0.002936, L2 loss - 0.018503, lr - 0.000539 )
-epoch - 21, step - 453264
-Positive faces       -  307
-Partial faces        -  163
-Total detected faces -  470
-Ground truth faces   -  508
-Positive accuracy    -  0.604330708661
-Detection accuracy   -  0.925196850394
-Accuracy             -  0.622721280444
-(epoch - 22, step - 456960) - (accuracy - 0.975945, class loss - 0.099887, bbox loss - 0.046590, landmark loss - 0.005509, L2 loss - 0.018510, lr - 0.000539 )
-(epoch - 22, step - 460800) - (accuracy - 0.996552, class loss - 0.029345, bbox loss - 0.040576, landmark loss - 0.003605, L2 loss - 0.018524, lr - 0.000539 )
-(epoch - 22, step - 464640) - (accuracy - 0.993289, class loss - 0.039631, bbox loss - 0.045860, landmark loss - 0.003351, L2 loss - 0.018525, lr - 0.000539 )
-(epoch - 22, step - 468480) - (accuracy - 1.000000, class loss - 0.027914, bbox loss - 0.043743, landmark loss - 0.004058, L2 loss - 0.018567, lr - 0.000539 )
-(epoch - 22, step - 472320) - (accuracy - 0.996575, class loss - 0.026207, bbox loss - 0.040277, landmark loss - 0.004857, L2 loss - 0.018549, lr - 0.000539 )
-epoch - 22, step - 474848
-Positive faces       -  321
-Partial faces        -  151
-Total detected faces -  472
-Ground truth faces   -  508
-Positive accuracy    -  0.63188976378
-Detection accuracy   -  0.929133858268
-Accuracy             -  0.627170716209
-(epoch - 23, step - 476160) - (accuracy - 0.982993, class loss - 0.066391, bbox loss - 0.038439, landmark loss - 0.003401, L2 loss - 0.018535, lr - 0.000506 )
-(epoch - 23, step - 480000) - (accuracy - 0.972789, class loss - 0.109617, bbox loss - 0.038206, landmark loss - 0.005300, L2 loss - 0.018505, lr - 0.000506 )
-(epoch - 23, step - 483840) - (accuracy - 0.975862, class loss - 0.068547, bbox loss - 0.045790, landmark loss - 0.003851, L2 loss - 0.018452, lr - 0.000506 )
-(epoch - 23, step - 487680) - (accuracy - 0.989726, class loss - 0.039544, bbox loss - 0.047925, landmark loss - 0.004559, L2 loss - 0.018471, lr - 0.000506 )
-(epoch - 23, step - 491520) - (accuracy - 0.982993, class loss - 0.079166, bbox loss - 0.050010, landmark loss - 0.002715, L2 loss - 0.018472, lr - 0.000506 )
-(epoch - 23, step - 495360) - (accuracy - 0.986622, class loss - 0.082899, bbox loss - 0.045265, landmark loss - 0.004604, L2 loss - 0.018389, lr - 0.000506 )
-epoch - 23, step - 496432
-Positive faces       -  327
-Partial faces        -  146
+Accuracy             -  0.6237454769809528
+(epoch - 5, step - 88320) - (accuracy - 0.979522, class loss - 0.092788, bbox loss - 0.048306, landmark loss - 0.004631, L2 loss - 0.020531, lr - 0.000884 )
+(epoch - 5, step - 92160) - (accuracy - 0.972414, class loss - 0.089861, bbox loss - 0.056859, landmark loss - 0.005094, L2 loss - 0.020692, lr - 0.000884 )
+(epoch - 5, step - 96000) - (accuracy - 0.979798, class loss - 0.077115, bbox loss - 0.055519, landmark loss - 0.005515, L2 loss - 0.020779, lr - 0.000884 )
+(epoch - 5, step - 99840) - (accuracy - 0.986348, class loss - 0.071344, bbox loss - 0.038693, landmark loss - 0.004626, L2 loss - 0.020791, lr - 0.000884 )
+(epoch - 5, step - 103680) - (accuracy - 0.975779, class loss - 0.086194, bbox loss - 0.054133, landmark loss - 0.004333, L2 loss - 0.020917, lr - 0.000884 )
+epoch - 5, step - 107175
+Positive faces       -  309
+Partial faces        -  164
 Total detected faces -  473
 Ground truth faces   -  508
-Positive accuracy    -  0.643700787402
+Positive accuracy    -  0.608267716535
 Detection accuracy   -  0.931102362205
-Accuracy             -  0.629829478745
-(epoch - 24, step - 499200) - (accuracy - 0.993355, class loss - 0.056214, bbox loss - 0.047747, landmark loss - 0.003371, L2 loss - 0.018394, lr - 0.000506 )
-(epoch - 24, step - 503040) - (accuracy - 0.986159, class loss - 0.057317, bbox loss - 0.036629, landmark loss - 0.003642, L2 loss - 0.018408, lr - 0.000506 )
-(epoch - 24, step - 506880) - (accuracy - 0.989865, class loss - 0.047478, bbox loss - 0.040279, landmark loss - 0.003795, L2 loss - 0.018387, lr - 0.000506 )
-(epoch - 24, step - 510720) - (accuracy - 0.989619, class loss - 0.034508, bbox loss - 0.048369, landmark loss - 0.003536, L2 loss - 0.018431, lr - 0.000506 )
-(epoch - 24, step - 514560) - (accuracy - 0.976190, class loss - 0.083097, bbox loss - 0.048002, landmark loss - 0.003592, L2 loss - 0.018399, lr - 0.000506 )
-epoch - 24, step - 518016
-Positive faces       -  307
+Accuracy             -  0.6267652391796882
+(epoch - 6, step - 107520) - (accuracy - 0.969697, class loss - 0.098647, bbox loss - 0.032280, landmark loss - 0.003788, L2 loss - 0.020981, lr - 0.000884 )
+(epoch - 6, step - 111360) - (accuracy - 0.972789, class loss - 0.105978, bbox loss - 0.047622, landmark loss - 0.006149, L2 loss - 0.020981, lr - 0.000884 )
+(epoch - 6, step - 115200) - (accuracy - 0.965278, class loss - 0.121820, bbox loss - 0.051312, landmark loss - 0.004272, L2 loss - 0.021033, lr - 0.000884 )
+(epoch - 6, step - 119040) - (accuracy - 0.983221, class loss - 0.065159, bbox loss - 0.042087, landmark loss - 0.005722, L2 loss - 0.021038, lr - 0.000884 )
+(epoch - 6, step - 122880) - (accuracy - 0.982877, class loss - 0.092199, bbox loss - 0.043373, landmark loss - 0.002822, L2 loss - 0.021091, lr - 0.000884 )
+(epoch - 6, step - 126720) - (accuracy - 0.976510, class loss - 0.093315, bbox loss - 0.039510, landmark loss - 0.003822, L2 loss - 0.021123, lr - 0.000884 )
+epoch - 6, step - 128610
+Positive faces       -  315
+Partial faces        -  159
+Total detected faces -  474
+Ground truth faces   -  508
+Positive accuracy    -  0.620078740157
+Detection accuracy   -  0.933070866142
+Accuracy             -  0.6283057255563546
+(epoch - 7, step - 130560) - (accuracy - 0.976109, class loss - 0.112329, bbox loss - 0.041177, landmark loss - 0.005169, L2 loss - 0.021213, lr - 0.000831 )
+(epoch - 7, step - 134400) - (accuracy - 0.969388, class loss - 0.121819, bbox loss - 0.047057, landmark loss - 0.002902, L2 loss - 0.021133, lr - 0.000831 )
+(epoch - 7, step - 138240) - (accuracy - 0.976431, class loss - 0.090427, bbox loss - 0.040764, landmark loss - 0.006325, L2 loss - 0.021109, lr - 0.000831 )
+(epoch - 7, step - 142080) - (accuracy - 0.992933, class loss - 0.062907, bbox loss - 0.039462, landmark loss - 0.005060, L2 loss - 0.021159, lr - 0.000831 )
+(epoch - 7, step - 145920) - (accuracy - 0.975610, class loss - 0.143703, bbox loss - 0.049929, landmark loss - 0.004671, L2 loss - 0.021272, lr - 0.000831 )
+(epoch - 7, step - 149760) - (accuracy - 0.959866, class loss - 0.136783, bbox loss - 0.050960, landmark loss - 0.002129, L2 loss - 0.021318, lr - 0.000831 )
+epoch - 7, step - 150045
+Positive faces       -  325
+Partial faces        -  148
+Total detected faces -  473
+Ground truth faces   -  508
+Positive accuracy    -  0.639763779528
+Detection accuracy   -  0.931102362205
+Accuracy             -  0.6273001050349775
+(epoch - 8, step - 153600) - (accuracy - 0.976190, class loss - 0.077525, bbox loss - 0.046740, landmark loss - 0.007415, L2 loss - 0.021232, lr - 0.000831 )
+(epoch - 8, step - 157440) - (accuracy - 0.952703, class loss - 0.163445, bbox loss - 0.038932, landmark loss - 0.003666, L2 loss - 0.021278, lr - 0.000831 )
+(epoch - 8, step - 161280) - (accuracy - 0.979592, class loss - 0.081635, bbox loss - 0.041123, landmark loss - 0.003172, L2 loss - 0.021226, lr - 0.000831 )
+(epoch - 8, step - 165120) - (accuracy - 0.962963, class loss - 0.105268, bbox loss - 0.061203, landmark loss - 0.003824, L2 loss - 0.021310, lr - 0.000831 )
+(epoch - 8, step - 168960) - (accuracy - 0.979933, class loss - 0.063973, bbox loss - 0.047468, landmark loss - 0.002669, L2 loss - 0.021320, lr - 0.000831 )
+epoch - 8, step - 171480
+Positive faces       -  330
+Partial faces        -  145
+Total detected faces -  475
+Ground truth faces   -  508
+Positive accuracy    -  0.649606299213
+Detection accuracy   -  0.935039370079
+Accuracy             -  0.6305458149585593
+(epoch - 9, step - 172800) - (accuracy - 0.982639, class loss - 0.054939, bbox loss - 0.051549, landmark loss - 0.006436, L2 loss - 0.021314, lr - 0.000781 )
+(epoch - 9, step - 176640) - (accuracy - 0.979798, class loss - 0.069818, bbox loss - 0.049903, landmark loss - 0.002946, L2 loss - 0.021436, lr - 0.000781 )
+(epoch - 9, step - 180480) - (accuracy - 0.979730, class loss - 0.084693, bbox loss - 0.046495, landmark loss - 0.004392, L2 loss - 0.021417, lr - 0.000781 )
+(epoch - 9, step - 184320) - (accuracy - 0.976510, class loss - 0.091478, bbox loss - 0.058633, landmark loss - 0.003884, L2 loss - 0.021518, lr - 0.000781 )
+(epoch - 9, step - 188160) - (accuracy - 0.976744, class loss - 0.085041, bbox loss - 0.039767, landmark loss - 0.004184, L2 loss - 0.021535, lr - 0.000781 )
+(epoch - 9, step - 192000) - (accuracy - 0.962585, class loss - 0.132524, bbox loss - 0.036101, landmark loss - 0.023118, L2 loss - 0.021502, lr - 0.000781 )
+epoch - 9, step - 192915
+Positive faces       -  316
+Partial faces        -  159
+Total detected faces -  475
+Ground truth faces   -  508
+Positive accuracy    -  0.622047244094
+Detection accuracy   -  0.935039370079
+Accuracy             -  0.6289759025977216
+(epoch - 10, step - 195840) - (accuracy - 0.979381, class loss - 0.089447, bbox loss - 0.050621, landmark loss - 0.007765, L2 loss - 0.021726, lr - 0.000781 )
+(epoch - 10, step - 199680) - (accuracy - 0.966443, class loss - 0.106036, bbox loss - 0.047436, landmark loss - 0.004702, L2 loss - 0.021600, lr - 0.000781 )
+(epoch - 10, step - 203520) - (accuracy - 0.979167, class loss - 0.084500, bbox loss - 0.050458, landmark loss - 0.004261, L2 loss - 0.021602, lr - 0.000781 )
+(epoch - 10, step - 207360) - (accuracy - 0.975524, class loss - 0.088331, bbox loss - 0.036920, landmark loss - 0.006706, L2 loss - 0.021572, lr - 0.000781 )
+(epoch - 10, step - 211200) - (accuracy - 0.986667, class loss - 0.064352, bbox loss - 0.038521, landmark loss - 0.006504, L2 loss - 0.021655, lr - 0.000781 )
+epoch - 10, step - 214350
+Positive faces       -  267
+Partial faces        -  206
+Total detected faces -  473
+Ground truth faces   -  508
+Positive accuracy    -  0.525590551181
+Detection accuracy   -  0.931102362205
+Accuracy             -  0.6184387954180298
+(epoch - 11, step - 215040) - (accuracy - 0.979798, class loss - 0.104068, bbox loss - 0.049405, landmark loss - 0.009159, L2 loss - 0.021677, lr - 0.000734 )
+(epoch - 11, step - 218880) - (accuracy - 0.969178, class loss - 0.132322, bbox loss - 0.036177, landmark loss - 0.015342, L2 loss - 0.021638, lr - 0.000734 )
+(epoch - 11, step - 222720) - (accuracy - 0.976589, class loss - 0.121437, bbox loss - 0.039345, landmark loss - 0.004057, L2 loss - 0.021578, lr - 0.000734 )
+(epoch - 11, step - 226560) - (accuracy - 0.983108, class loss - 0.071377, bbox loss - 0.048428, landmark loss - 0.002963, L2 loss - 0.021651, lr - 0.000734 )
+(epoch - 11, step - 230400) - (accuracy - 0.969595, class loss - 0.104403, bbox loss - 0.056366, landmark loss - 0.004536, L2 loss - 0.021646, lr - 0.000734 )
+(epoch - 11, step - 234240) - (accuracy - 0.976027, class loss - 0.083392, bbox loss - 0.044352, landmark loss - 0.004170, L2 loss - 0.021639, lr - 0.000734 )
+epoch - 11, step - 235785
+Positive faces       -  321
+Partial faces        -  154
+Total detected faces -  475
+Ground truth faces   -  508
+Positive accuracy    -  0.63188976378
+Detection accuracy   -  0.935039370079
+Accuracy             -  0.6311539300572525
+(epoch - 12, step - 238080) - (accuracy - 0.962712, class loss - 0.137982, bbox loss - 0.043795, landmark loss - 0.004152, L2 loss - 0.021691, lr - 0.000734 )
+(epoch - 12, step - 241920) - (accuracy - 0.993127, class loss - 0.049382, bbox loss - 0.058756, landmark loss - 0.006831, L2 loss - 0.021680, lr - 0.000734 )
+(epoch - 12, step - 245760) - (accuracy - 0.969697, class loss - 0.119554, bbox loss - 0.038496, landmark loss - 0.010372, L2 loss - 0.021646, lr - 0.000734 )
+(epoch - 12, step - 249600) - (accuracy - 0.979866, class loss - 0.108186, bbox loss - 0.062659, landmark loss - 0.006936, L2 loss - 0.021715, lr - 0.000734 )
+(epoch - 12, step - 253440) - (accuracy - 0.973064, class loss - 0.077048, bbox loss - 0.050860, landmark loss - 0.005373, L2 loss - 0.021754, lr - 0.000734 )
+epoch - 12, step - 257220
+Positive faces       -  310
 Partial faces        -  164
+Total detected faces -  474
+Ground truth faces   -  508
+Positive accuracy    -  0.610236220472
+Detection accuracy   -  0.933070866142
+Accuracy             -  0.6295462397097163
+(epoch - 13, step - 257280) - (accuracy - 0.979452, class loss - 0.121597, bbox loss - 0.038328, landmark loss - 0.003452, L2 loss - 0.021762, lr - 0.000690 )
+(epoch - 13, step - 261120) - (accuracy - 0.949324, class loss - 0.147263, bbox loss - 0.055934, landmark loss - 0.004510, L2 loss - 0.021862, lr - 0.000690 )
+(epoch - 13, step - 264960) - (accuracy - 0.979592, class loss - 0.081466, bbox loss - 0.032382, landmark loss - 0.004329, L2 loss - 0.021832, lr - 0.000690 )
+(epoch - 13, step - 268800) - (accuracy - 0.982877, class loss - 0.081309, bbox loss - 0.050624, landmark loss - 0.004906, L2 loss - 0.021810, lr - 0.000690 )
+(epoch - 13, step - 272640) - (accuracy - 0.979730, class loss - 0.074697, bbox loss - 0.048724, landmark loss - 0.015346, L2 loss - 0.021869, lr - 0.000690 )
+(epoch - 13, step - 276480) - (accuracy - 0.969492, class loss - 0.105339, bbox loss - 0.039508, landmark loss - 0.003953, L2 loss - 0.021876, lr - 0.000690 )
+epoch - 13, step - 278655
+Positive faces       -  324
+Partial faces        -  151
+Total detected faces -  475
+Ground truth faces   -  508
+Positive accuracy    -  0.637795275591
+Detection accuracy   -  0.935039370079
+Accuracy             -  0.631749884506584
+(epoch - 14, step - 280320) - (accuracy - 0.983389, class loss - 0.060743, bbox loss - 0.054234, landmark loss - 0.005884, L2 loss - 0.021871, lr - 0.000690 )
+(epoch - 14, step - 284160) - (accuracy - 0.972789, class loss - 0.088008, bbox loss - 0.033951, landmark loss - 0.006948, L2 loss - 0.021914, lr - 0.000690 )
+(epoch - 14, step - 288000) - (accuracy - 0.986395, class loss - 0.073670, bbox loss - 0.045103, landmark loss - 0.005074, L2 loss - 0.021892, lr - 0.000690 )
+(epoch - 14, step - 291840) - (accuracy - 0.975862, class loss - 0.094967, bbox loss - 0.049162, landmark loss - 0.007406, L2 loss - 0.021789, lr - 0.000690 )
+(epoch - 14, step - 295680) - (accuracy - 0.983051, class loss - 0.104825, bbox loss - 0.045157, landmark loss - 0.004515, L2 loss - 0.021880, lr - 0.000690 )
+(epoch - 14, step - 299520) - (accuracy - 0.965870, class loss - 0.121815, bbox loss - 0.043299, landmark loss - 0.003319, L2 loss - 0.021967, lr - 0.000690 )
+epoch - 14, step - 300090
+Positive faces       -  310
+Partial faces        -  166
+Total detected faces -  476
+Ground truth faces   -  508
+Positive accuracy    -  0.610236220472
+Detection accuracy   -  0.937007874016
+Accuracy             -  0.629989948926078
+(epoch - 15, step - 303360) - (accuracy - 0.972603, class loss - 0.091168, bbox loss - 0.042790, landmark loss - 0.011003, L2 loss - 0.021913, lr - 0.000648 )
+(epoch - 15, step - 307200) - (accuracy - 0.979661, class loss - 0.099634, bbox loss - 0.043617, landmark loss - 0.003945, L2 loss - 0.021815, lr - 0.000648 )
+(epoch - 15, step - 311040) - (accuracy - 0.986348, class loss - 0.093424, bbox loss - 0.040494, landmark loss - 0.007076, L2 loss - 0.021960, lr - 0.000648 )
+(epoch - 15, step - 314880) - (accuracy - 0.989619, class loss - 0.057412, bbox loss - 0.048129, landmark loss - 0.010677, L2 loss - 0.021974, lr - 0.000648 )
+(epoch - 15, step - 318720) - (accuracy - 0.986014, class loss - 0.080313, bbox loss - 0.044799, landmark loss - 0.006064, L2 loss - 0.021961, lr - 0.000648 )
+epoch - 15, step - 321525
+Positive faces       -  303
+Partial faces        -  168
 Total detected faces -  471
 Ground truth faces   -  508
-Positive accuracy    -  0.604330708661
+Positive accuracy    -  0.596456692913
 Detection accuracy   -  0.927165354331
-Accuracy             -  0.622705731176
-(epoch - 25, step - 518400) - (accuracy - 0.986301, class loss - 0.075373, bbox loss - 0.049733, landmark loss - 0.004664, L2 loss - 0.018398, lr - 0.000476 )
-(epoch - 25, step - 522240) - (accuracy - 0.982993, class loss - 0.045753, bbox loss - 0.047228, landmark loss - 0.004609, L2 loss - 0.018348, lr - 0.000476 )
-(epoch - 25, step - 526080) - (accuracy - 0.983333, class loss - 0.049299, bbox loss - 0.047849, landmark loss - 0.003199, L2 loss - 0.018311, lr - 0.000476 )
-(epoch - 25, step - 529920) - (accuracy - 0.986622, class loss - 0.054659, bbox loss - 0.035491, landmark loss - 0.004199, L2 loss - 0.018315, lr - 0.000476 )
-(epoch - 25, step - 533760) - (accuracy - 0.989967, class loss - 0.049972, bbox loss - 0.051140, landmark loss - 0.003239, L2 loss - 0.018320, lr - 0.000476 )
-(epoch - 25, step - 537600) - (accuracy - 0.993333, class loss - 0.034494, bbox loss - 0.045372, landmark loss - 0.011694, L2 loss - 0.018286, lr - 0.000476 )
-epoch - 25, step - 539600
+Accuracy             -  0.623206004258537
+(epoch - 16, step - 322560) - (accuracy - 0.979381, class loss - 0.106068, bbox loss - 0.050378, landmark loss - 0.005948, L2 loss - 0.022039, lr - 0.000648 )
+(epoch - 16, step - 326400) - (accuracy - 0.966443, class loss - 0.094818, bbox loss - 0.060665, landmark loss - 0.006500, L2 loss - 0.022004, lr - 0.000648 )
+(epoch - 16, step - 330240) - (accuracy - 0.972789, class loss - 0.082678, bbox loss - 0.045575, landmark loss - 0.003847, L2 loss - 0.021973, lr - 0.000648 )
+(epoch - 16, step - 334080) - (accuracy - 0.955782, class loss - 0.139717, bbox loss - 0.049233, landmark loss - 0.003675, L2 loss - 0.022026, lr - 0.000648 )
+(epoch - 16, step - 337920) - (accuracy - 0.973064, class loss - 0.109424, bbox loss - 0.047221, landmark loss - 0.005000, L2 loss - 0.021968, lr - 0.000648 )
+(epoch - 16, step - 341760) - (accuracy - 0.975862, class loss - 0.091891, bbox loss - 0.047524, landmark loss - 0.006690, L2 loss - 0.022072, lr - 0.000648 )
+epoch - 16, step - 342960
 Positive faces       -  305
-Partial faces        -  167
-Total detected faces -  472
+Partial faces        -  172
+Total detected faces -  477
 Ground truth faces   -  508
 Positive accuracy    -  0.600393700787
-Detection accuracy   -  0.929133858268
-Accuracy             -  0.625077816392
-(epoch - 26, step - 541440) - (accuracy - 0.993266, class loss - 0.049653, bbox loss - 0.043923, landmark loss - 0.003054, L2 loss - 0.018293, lr - 0.000476 )
-(epoch - 26, step - 545280) - (accuracy - 0.973064, class loss - 0.090861, bbox loss - 0.050504, landmark loss - 0.005200, L2 loss - 0.018331, lr - 0.000476 )
-(epoch - 26, step - 549120) - (accuracy - 0.976271, class loss - 0.058469, bbox loss - 0.042428, landmark loss - 0.008373, L2 loss - 0.018346, lr - 0.000476 )
-(epoch - 26, step - 552960) - (accuracy - 0.979381, class loss - 0.061439, bbox loss - 0.047043, landmark loss - 0.005930, L2 loss - 0.018311, lr - 0.000476 )
-(epoch - 26, step - 556800) - (accuracy - 0.996564, class loss - 0.029627, bbox loss - 0.040623, landmark loss - 0.003434, L2 loss - 0.018286, lr - 0.000476 )
-(epoch - 26, step - 560640) - (accuracy - 0.979592, class loss - 0.060391, bbox loss - 0.031745, landmark loss - 0.003301, L2 loss - 0.018284, lr - 0.000476 )
-epoch - 26, step - 561184
-Positive faces       -  298
-Partial faces        -  172
-Total detected faces -  470
+Detection accuracy   -  0.938976377953
+Accuracy             -  0.6295031378797803
+(epoch - 17, step - 345600) - (accuracy - 0.993127, class loss - 0.060722, bbox loss - 0.052755, landmark loss - 0.008970, L2 loss - 0.022032, lr - 0.000610 )
+(epoch - 17, step - 349440) - (accuracy - 0.989899, class loss - 0.064170, bbox loss - 0.050010, landmark loss - 0.003695, L2 loss - 0.022093, lr - 0.000610 )
+(epoch - 17, step - 353280) - (accuracy - 0.982578, class loss - 0.054449, bbox loss - 0.054713, landmark loss - 0.007076, L2 loss - 0.021993, lr - 0.000610 )
+(epoch - 17, step - 357120) - (accuracy - 0.965870, class loss - 0.128447, bbox loss - 0.049653, landmark loss - 0.005106, L2 loss - 0.022038, lr - 0.000610 )
+(epoch - 17, step - 360960) - (accuracy - 0.989761, class loss - 0.055222, bbox loss - 0.037598, landmark loss - 0.010108, L2 loss - 0.022029, lr - 0.000610 )
+epoch - 17, step - 364395
+Positive faces       -  286
+Partial faces        -  189
+Total detected faces -  475
 Ground truth faces   -  508
-Positive accuracy    -  0.586614173228
-Detection accuracy   -  0.925196850394
-Accuracy             -  0.618786460188
-(epoch - 27, step - 564480) - (accuracy - 0.993007, class loss - 0.032637, bbox loss - 0.048956, landmark loss - 0.005240, L2 loss - 0.018248, lr - 0.000447 )
-(epoch - 27, step - 568320) - (accuracy - 0.982699, class loss - 0.053344, bbox loss - 0.042201, landmark loss - 0.002889, L2 loss - 0.018218, lr - 0.000447 )
-(epoch - 27, step - 572160) - (accuracy - 0.986254, class loss - 0.049876, bbox loss - 0.043561, landmark loss - 0.004026, L2 loss - 0.018203, lr - 0.000447 )
-(epoch - 27, step - 576000) - (accuracy - 0.986667, class loss - 0.051781, bbox loss - 0.034035, landmark loss - 0.001997, L2 loss - 0.018232, lr - 0.000447 )
-(epoch - 27, step - 579840) - (accuracy - 0.996564, class loss - 0.029442, bbox loss - 0.047570, landmark loss - 0.003410, L2 loss - 0.018201, lr - 0.000447 )
-epoch - 27, step - 582768
-Positive faces       -  317
+Positive accuracy    -  0.562992125984
+Detection accuracy   -  0.935039370079
+Accuracy             -  0.6232402405919826
+(epoch - 18, step - 364800) - (accuracy - 0.989691, class loss - 0.066286, bbox loss - 0.046239, landmark loss - 0.004578, L2 loss - 0.021968, lr - 0.000610 )
+(epoch - 18, step - 368640) - (accuracy - 0.979661, class loss - 0.080367, bbox loss - 0.045918, landmark loss - 0.003459, L2 loss - 0.022014, lr - 0.000610 )
+(epoch - 18, step - 372480) - (accuracy - 0.989691, class loss - 0.076715, bbox loss - 0.048660, landmark loss - 0.006319, L2 loss - 0.021934, lr - 0.000610 )
+(epoch - 18, step - 376320) - (accuracy - 0.982935, class loss - 0.081296, bbox loss - 0.035979, landmark loss - 0.006036, L2 loss - 0.022073, lr - 0.000610 )
+(epoch - 18, step - 380160) - (accuracy - 0.959459, class loss - 0.106706, bbox loss - 0.039289, landmark loss - 0.004999, L2 loss - 0.022050, lr - 0.000610 )
+(epoch - 18, step - 384000) - (accuracy - 0.976271, class loss - 0.085633, bbox loss - 0.041508, landmark loss - 0.005856, L2 loss - 0.022031, lr - 0.000610 )
+epoch - 18, step - 385830
+Positive faces       -  299
+Partial faces        -  178
+Total detected faces -  477
+Ground truth faces   -  508
+Positive accuracy    -  0.588582677165
+Detection accuracy   -  0.938976377953
+Accuracy             -  0.6251483592973932
+(epoch - 19, step - 387840) - (accuracy - 0.966777, class loss - 0.149701, bbox loss - 0.044840, landmark loss - 0.002610, L2 loss - 0.021995, lr - 0.000573 )
+(epoch - 19, step - 391680) - (accuracy - 0.972603, class loss - 0.087475, bbox loss - 0.037838, landmark loss - 0.007529, L2 loss - 0.022056, lr - 0.000573 )
+(epoch - 19, step - 395520) - (accuracy - 0.965753, class loss - 0.139126, bbox loss - 0.051616, landmark loss - 0.005819, L2 loss - 0.022070, lr - 0.000573 )
+(epoch - 19, step - 399360) - (accuracy - 0.982993, class loss - 0.050587, bbox loss - 0.042978, landmark loss - 0.010192, L2 loss - 0.022084, lr - 0.000573 )
+(epoch - 19, step - 403200) - (accuracy - 0.986395, class loss - 0.079064, bbox loss - 0.044951, landmark loss - 0.003672, L2 loss - 0.022059, lr - 0.000573 )
+(epoch - 19, step - 407040) - (accuracy - 0.982877, class loss - 0.070965, bbox loss - 0.054317, landmark loss - 0.004030, L2 loss - 0.022136, lr - 0.000573 )
+epoch - 19, step - 407265
+Positive faces       -  311
+Partial faces        -  167
+Total detected faces -  478
+Ground truth faces   -  508
+Positive accuracy    -  0.612204724409
+Detection accuracy   -  0.94094488189
+Accuracy             -  0.6303052784998492
+(epoch - 20, step - 410880) - (accuracy - 0.966102, class loss - 0.122894, bbox loss - 0.062246, landmark loss - 0.007049, L2 loss - 0.022130, lr - 0.000573 )
+(epoch - 20, step - 414720) - (accuracy - 0.972603, class loss - 0.105443, bbox loss - 0.044372, landmark loss - 0.005074, L2 loss - 0.022112, lr - 0.000573 )
+(epoch - 20, step - 418560) - (accuracy - 0.976589, class loss - 0.094136, bbox loss - 0.040946, landmark loss - 0.007236, L2 loss - 0.022213, lr - 0.000573 )
+(epoch - 20, step - 422400) - (accuracy - 0.972881, class loss - 0.100876, bbox loss - 0.047842, landmark loss - 0.005406, L2 loss - 0.022153, lr - 0.000573 )
+(epoch - 20, step - 426240) - (accuracy - 0.972414, class loss - 0.116439, bbox loss - 0.048540, landmark loss - 0.004550, L2 loss - 0.022164, lr - 0.000573 )
+epoch - 20, step - 428700
+Positive faces       -  311
+Partial faces        -  165
+Total detected faces -  476
+Ground truth faces   -  508
+Positive accuracy    -  0.612204724409
+Detection accuracy   -  0.937007874016
+Accuracy             -  0.6276565336374038
+(epoch - 21, step - 430080) - (accuracy - 0.982699, class loss - 0.077617, bbox loss - 0.045652, landmark loss - 0.003866, L2 loss - 0.022273, lr - 0.000539 )
+(epoch - 21, step - 433920) - (accuracy - 0.972973, class loss - 0.103192, bbox loss - 0.046941, landmark loss - 0.003749, L2 loss - 0.022202, lr - 0.000539 )
+(epoch - 21, step - 437760) - (accuracy - 0.982639, class loss - 0.065670, bbox loss - 0.044032, landmark loss - 0.005403, L2 loss - 0.022089, lr - 0.000539 )
+(epoch - 21, step - 441600) - (accuracy - 0.975945, class loss - 0.102083, bbox loss - 0.051484, landmark loss - 0.003639, L2 loss - 0.022251, lr - 0.000539 )
+(epoch - 21, step - 445440) - (accuracy - 0.986486, class loss - 0.072683, bbox loss - 0.037205, landmark loss - 0.004002, L2 loss - 0.022200, lr - 0.000539 )
+(epoch - 21, step - 449280) - (accuracy - 0.982699, class loss - 0.089473, bbox loss - 0.047308, landmark loss - 0.004506, L2 loss - 0.022215, lr - 0.000539 )
+epoch - 21, step - 450135
+Positive faces       -  329
+Partial faces        -  150
+Total detected faces -  479
+Ground truth faces   -  508
+Positive accuracy    -  0.647637795276
+Detection accuracy   -  0.942913385827
+Accuracy             -  0.6359935746816371
+(epoch - 22, step - 453120) - (accuracy - 0.969900, class loss - 0.118550, bbox loss - 0.040674, landmark loss - 0.005452, L2 loss - 0.022103, lr - 0.000539 )
+(epoch - 22, step - 456960) - (accuracy - 0.982935, class loss - 0.046968, bbox loss - 0.037757, landmark loss - 0.005780, L2 loss - 0.022224, lr - 0.000539 )
+(epoch - 22, step - 460800) - (accuracy - 0.976351, class loss - 0.087081, bbox loss - 0.044039, landmark loss - 0.015015, L2 loss - 0.022252, lr - 0.000539 )
+(epoch - 22, step - 464640) - (accuracy - 0.972973, class loss - 0.106761, bbox loss - 0.041899, landmark loss - 0.013610, L2 loss - 0.022298, lr - 0.000539 )
+(epoch - 22, step - 468480) - (accuracy - 0.972696, class loss - 0.107926, bbox loss - 0.034388, landmark loss - 0.007998, L2 loss - 0.022175, lr - 0.000539 )
+epoch - 22, step - 471570
+Positive faces       -  319
 Partial faces        -  154
-Total detected faces -  471
+Total detected faces -  473
+Ground truth faces   -  508
+Positive accuracy    -  0.627952755906
+Detection accuracy   -  0.931102362205
+Accuracy             -  0.6292325245153358
+(epoch - 23, step - 472320) - (accuracy - 0.982639, class loss - 0.069405, bbox loss - 0.039947, landmark loss - 0.009076, L2 loss - 0.022252, lr - 0.000506 )
+(epoch - 23, step - 476160) - (accuracy - 0.982935, class loss - 0.073070, bbox loss - 0.041657, landmark loss - 0.005485, L2 loss - 0.022212, lr - 0.000506 )
+(epoch - 23, step - 480000) - (accuracy - 0.982818, class loss - 0.049189, bbox loss - 0.056032, landmark loss - 0.003885, L2 loss - 0.022287, lr - 0.000506 )
+(epoch - 23, step - 483840) - (accuracy - 0.989830, class loss - 0.065686, bbox loss - 0.037727, landmark loss - 0.005559, L2 loss - 0.022437, lr - 0.000506 )
+(epoch - 23, step - 487680) - (accuracy - 0.965398, class loss - 0.096904, bbox loss - 0.044978, landmark loss - 0.004119, L2 loss - 0.022333, lr - 0.000506 )
+(epoch - 23, step - 491520) - (accuracy - 0.971930, class loss - 0.073485, bbox loss - 0.047190, landmark loss - 0.004301, L2 loss - 0.022252, lr - 0.000506 )
+epoch - 23, step - 493005
+Positive faces       -  311
+Partial faces        -  162
+Total detected faces -  473
+Ground truth faces   -  508
+Positive accuracy    -  0.612204724409
+Detection accuracy   -  0.931102362205
+Accuracy             -  0.6281162002131098
+(epoch - 24, step - 495360) - (accuracy - 0.965035, class loss - 0.094044, bbox loss - 0.050559, landmark loss - 0.003920, L2 loss - 0.022286, lr - 0.000506 )
+(epoch - 24, step - 499200) - (accuracy - 0.983389, class loss - 0.098089, bbox loss - 0.040411, landmark loss - 0.011136, L2 loss - 0.022236, lr - 0.000506 )
+(epoch - 24, step - 503040) - (accuracy - 0.989619, class loss - 0.051079, bbox loss - 0.041468, landmark loss - 0.003824, L2 loss - 0.022401, lr - 0.000506 )
+(epoch - 24, step - 506880) - (accuracy - 0.982877, class loss - 0.070872, bbox loss - 0.049123, landmark loss - 0.004556, L2 loss - 0.022210, lr - 0.000506 )
+(epoch - 24, step - 510720) - (accuracy - 0.986486, class loss - 0.080075, bbox loss - 0.063274, landmark loss - 0.011075, L2 loss - 0.022330, lr - 0.000506 )
+epoch - 24, step - 514440
+Positive faces       -  317
+Partial faces        -  159
+Total detected faces -  476
 Ground truth faces   -  508
 Positive accuracy    -  0.624015748031
-Detection accuracy   -  0.927165354331
-Accuracy             -  0.62722847356
-(epoch - 28, step - 583680) - (accuracy - 0.980198, class loss - 0.072880, bbox loss - 0.047701, landmark loss - 0.005020, L2 loss - 0.018175, lr - 0.000447 )
-(epoch - 28, step - 587520) - (accuracy - 0.989691, class loss - 0.040031, bbox loss - 0.040126, landmark loss - 0.004673, L2 loss - 0.018191, lr - 0.000447 )
-(epoch - 28, step - 591360) - (accuracy - 0.986622, class loss - 0.038302, bbox loss - 0.045072, landmark loss - 0.009930, L2 loss - 0.018156, lr - 0.000447 )
-(epoch - 28, step - 595200) - (accuracy - 0.986395, class loss - 0.035745, bbox loss - 0.045916, landmark loss - 0.002891, L2 loss - 0.018139, lr - 0.000447 )
-(epoch - 28, step - 599040) - (accuracy - 0.996610, class loss - 0.029573, bbox loss - 0.046167, landmark loss - 0.003651, L2 loss - 0.018150, lr - 0.000447 )
-(epoch - 28, step - 602880) - (accuracy - 0.979522, class loss - 0.090794, bbox loss - 0.045031, landmark loss - 0.004012, L2 loss - 0.018149, lr - 0.000447 )
-epoch - 28, step - 604352
-Positive faces       -  323
-Partial faces        -  145
-Total detected faces -  468
+Detection accuracy   -  0.937007874016
+Accuracy             -  0.6295736467952284
+(epoch - 25, step - 514560) - (accuracy - 0.972414, class loss - 0.104133, bbox loss - 0.034608, landmark loss - 0.007951, L2 loss - 0.022279, lr - 0.000476 )
+(epoch - 25, step - 518400) - (accuracy - 0.979239, class loss - 0.077552, bbox loss - 0.056951, landmark loss - 0.002975, L2 loss - 0.022290, lr - 0.000476 )
+(epoch - 25, step - 522240) - (accuracy - 0.989830, class loss - 0.053776, bbox loss - 0.041757, landmark loss - 0.011345, L2 loss - 0.022345, lr - 0.000476 )
+(epoch - 25, step - 526080) - (accuracy - 0.986395, class loss - 0.063830, bbox loss - 0.043387, landmark loss - 0.003955, L2 loss - 0.022287, lr - 0.000476 )
+(epoch - 25, step - 529920) - (accuracy - 0.972789, class loss - 0.099451, bbox loss - 0.048750, landmark loss - 0.011008, L2 loss - 0.022367, lr - 0.000476 )
+(epoch - 25, step - 533760) - (accuracy - 0.973064, class loss - 0.093961, bbox loss - 0.036892, landmark loss - 0.003968, L2 loss - 0.022348, lr - 0.000476 )
+epoch - 25, step - 535875
+Positive faces       -  292
+Partial faces        -  183
+Total detected faces -  475
 Ground truth faces   -  508
-Positive accuracy    -  0.635826771654
-Detection accuracy   -  0.92125984252
-Accuracy             -  0.625015663096
-(epoch - 29, step - 606720) - (accuracy - 0.982935, class loss - 0.063855, bbox loss - 0.043106, landmark loss - 0.004511, L2 loss - 0.018099, lr - 0.000421 )
-(epoch - 29, step - 610560) - (accuracy - 0.996575, class loss - 0.025524, bbox loss - 0.049992, landmark loss - 0.003318, L2 loss - 0.018088, lr - 0.000421 )
-(epoch - 29, step - 614400) - (accuracy - 0.989865, class loss - 0.021588, bbox loss - 0.048899, landmark loss - 0.004817, L2 loss - 0.018045, lr - 0.000421 )
-(epoch - 29, step - 618240) - (accuracy - 0.993266, class loss - 0.038847, bbox loss - 0.038743, landmark loss - 0.004146, L2 loss - 0.018033, lr - 0.000421 )
-(epoch - 29, step - 622080) - (accuracy - 0.986207, class loss - 0.053740, bbox loss - 0.053639, landmark loss - 0.004317, L2 loss - 0.018030, lr - 0.000421 )
-(epoch - 29, step - 625920) - (accuracy - 0.983165, class loss - 0.047186, bbox loss - 0.045921, landmark loss - 0.003029, L2 loss - 0.018024, lr - 0.000421 )
-epoch - 29, step - 625936
-Positive faces       -  313
-Partial faces        -  159
-Total detected faces -  472
-Ground truth faces   -  508
-Positive accuracy    -  0.616141732283
-Detection accuracy   -  0.929133858268
-Accuracy             -  0.625451284526
-(epoch - 30, step - 629760) - (accuracy - 0.986395, class loss - 0.051075, bbox loss - 0.044566, landmark loss - 0.005653, L2 loss - 0.018012, lr - 0.000421 )
-(epoch - 30, step - 633600) - (accuracy - 0.990066, class loss - 0.045709, bbox loss - 0.042217, landmark loss - 0.002530, L2 loss - 0.018007, lr - 0.000421 )
-(epoch - 30, step - 637440) - (accuracy - 0.996587, class loss - 0.023863, bbox loss - 0.046303, landmark loss - 0.004153, L2 loss - 0.018011, lr - 0.000421 )
-(epoch - 30, step - 641280) - (accuracy - 0.982935, class loss - 0.053483, bbox loss - 0.046102, landmark loss - 0.003836, L2 loss - 0.018013, lr - 0.000421 )
-(epoch - 30, step - 645120) - (accuracy - 0.989761, class loss - 0.038140, bbox loss - 0.049194, landmark loss - 0.002580, L2 loss - 0.018014, lr - 0.000421 )
-epoch - 30, step - 647520
-Positive faces       -  312
+Positive accuracy    -  0.574803149606
+Detection accuracy   -  0.935039370079
+Accuracy             -  0.6230591063282639
+(epoch - 26, step - 537600) - (accuracy - 0.969492, class loss - 0.116638, bbox loss - 0.042786, landmark loss - 0.005516, L2 loss - 0.022587, lr - 0.000476 )
+(epoch - 26, step - 541440) - (accuracy - 0.979661, class loss - 0.089322, bbox loss - 0.044358, landmark loss - 0.006442, L2 loss - 0.022315, lr - 0.000476 )
+(epoch - 26, step - 545280) - (accuracy - 0.986207, class loss - 0.054367, bbox loss - 0.037664, landmark loss - 0.003883, L2 loss - 0.022304, lr - 0.000476 )
+(epoch - 26, step - 549120) - (accuracy - 0.983165, class loss - 0.078352, bbox loss - 0.046644, landmark loss - 0.006702, L2 loss - 0.022261, lr - 0.000476 )
+(epoch - 26, step - 552960) - (accuracy - 0.979798, class loss - 0.062744, bbox loss - 0.048185, landmark loss - 0.004290, L2 loss - 0.022305, lr - 0.000476 )
+(epoch - 26, step - 556800) - (accuracy - 0.976027, class loss - 0.066044, bbox loss - 0.035157, landmark loss - 0.010795, L2 loss - 0.022230, lr - 0.000476 )
+epoch - 26, step - 557310
+Positive faces       -  316
 Partial faces        -  158
-Total detected faces -  470
+Total detected faces -  474
 Ground truth faces   -  508
-Positive accuracy    -  0.614173228346
-Detection accuracy   -  0.925196850394
-Accuracy             -  0.627951455126
-ONet - network is trained and weights are generated at ../data/models/mtcnn/train
+Positive accuracy    -  0.622047244094
+Detection accuracy   -  0.933070866142
+Accuracy             -  0.6295585528373023
+(epoch - 27, step - 560640) - (accuracy - 0.976027, class loss - 0.077534, bbox loss - 0.046580, landmark loss - 0.004170, L2 loss - 0.022299, lr - 0.000447 )
+(epoch - 27, step - 564480) - (accuracy - 0.983165, class loss - 0.079853, bbox loss - 0.047638, landmark loss - 0.003810, L2 loss - 0.022292, lr - 0.000447 )
+(epoch - 27, step - 568320) - (accuracy - 0.976667, class loss - 0.090270, bbox loss - 0.045074, landmark loss - 0.004146, L2 loss - 0.022278, lr - 0.000447 )
+(epoch - 27, step - 572160) - (accuracy - 0.976271, class loss - 0.078886, bbox loss - 0.048818, landmark loss - 0.004728, L2 loss - 0.022258, lr - 0.000447 )
+(epoch - 27, step - 576000) - (accuracy - 0.972318, class loss - 0.102822, bbox loss - 0.039702, landmark loss - 0.004213, L2 loss - 0.022278, lr - 0.000447 )
+epoch - 27, step - 578745
+Positive faces       -  309
+Partial faces        -  165
+Total detected faces -  474
+Ground truth faces   -  508
+Positive accuracy    -  0.608267716535
+Detection accuracy   -  0.933070866142
+Accuracy             -  0.6271340965471448
+(epoch - 28, step - 579840) - (accuracy - 0.986667, class loss - 0.073701, bbox loss - 0.049991, landmark loss - 0.005987, L2 loss - 0.022241, lr - 0.000447 )
+(epoch - 28, step - 583680) - (accuracy - 0.986254, class loss - 0.066833, bbox loss - 0.048837, landmark loss - 0.004028, L2 loss - 0.022349, lr - 0.000447 )
+(epoch - 28, step - 587520) - (accuracy - 0.968966, class loss - 0.107124, bbox loss - 0.043884, landmark loss - 0.003338, L2 loss - 0.022223, lr - 0.000447 )
+(epoch - 28, step - 591360) - (accuracy - 0.962457, class loss - 0.154234, bbox loss - 0.054704, landmark loss - 0.007032, L2 loss - 0.022253, lr - 0.000447 )
+(epoch - 28, step - 595200) - (accuracy - 0.989830, class loss - 0.062288, bbox loss - 0.043114, landmark loss - 0.006749, L2 loss - 0.022346, lr - 0.000447 )
+(epoch - 28, step - 599040) - (accuracy - 0.975352, class loss - 0.115682, bbox loss - 0.049976, landmark loss - 0.009785, L2 loss - 0.022270, lr - 0.000447 )
+epoch - 28, step - 600180
+Positive faces       -  309
+Partial faces        -  168
+Total detected faces -  477
+Ground truth faces   -  508
+Positive accuracy    -  0.608267716535
+Detection accuracy   -  0.938976377953
+Accuracy             -  0.6259298566103931
+(epoch - 29, step - 602880) - (accuracy - 0.973333, class loss - 0.081706, bbox loss - 0.051840, landmark loss - 0.002463, L2 loss - 0.022352, lr - 0.000421 )
+(epoch - 29, step - 606720) - (accuracy - 0.983278, class loss - 0.075328, bbox loss - 0.048030, landmark loss - 0.004065, L2 loss - 0.022285, lr - 0.000421 )
+(epoch - 29, step - 610560) - (accuracy - 0.989933, class loss - 0.052226, bbox loss - 0.051651, landmark loss - 0.004770, L2 loss - 0.022302, lr - 0.000421 )
+(epoch - 29, step - 614400) - (accuracy - 0.969492, class loss - 0.099560, bbox loss - 0.052844, landmark loss - 0.006222, L2 loss - 0.023099, lr - 0.000421 )
+(epoch - 29, step - 618240) - (accuracy - 0.969283, class loss - 0.115131, bbox loss - 0.043574, landmark loss - 0.008387, L2 loss - 0.022568, lr - 0.000421 )
+epoch - 29, step - 621615
+Positive faces       -  324
+Partial faces        -  149
+Total detected faces -  473
+Ground truth faces   -  508
+Positive accuracy    -  0.637795275591
+Detection accuracy   -  0.931102362205
+Accuracy             -  0.6246593836680546
+(epoch - 30, step - 622080) - (accuracy - 0.969178, class loss - 0.126430, bbox loss - 0.038472, landmark loss - 0.003989, L2 loss - 0.023113, lr - 0.000421 )
+(epoch - 30, step - 625920) - (accuracy - 0.983165, class loss - 0.076993, bbox loss - 0.046335, landmark loss - 0.005744, L2 loss - 0.022509, lr - 0.000421 )
+(epoch - 30, step - 629760) - (accuracy - 0.969388, class loss - 0.119905, bbox loss - 0.039960, landmark loss - 0.010292, L2 loss - 0.022623, lr - 0.000421 )
+(epoch - 30, step - 633600) - (accuracy - 0.973597, class loss - 0.115788, bbox loss - 0.043476, landmark loss - 0.005715, L2 loss - 0.022489, lr - 0.000421 )
+(epoch - 30, step - 637440) - (accuracy - 0.962585, class loss - 0.160617, bbox loss - 0.059529, landmark loss - 0.004558, L2 loss - 0.022507, lr - 0.000421 )
+(epoch - 30, step - 641280) - (accuracy - 0.983051, class loss - 0.070647, bbox loss - 0.038894, landmark loss - 0.004498, L2 loss - 0.022545, lr - 0.000421 )
+epoch - 30, step - 643050
+Positive faces       -  322
+Partial faces        -  152
+Total detected faces -  474
+Ground truth faces   -  508
+Positive accuracy    -  0.633858267717
+Detection accuracy   -  0.933070866142
+Accuracy             -  0.6300153857751062
+ONet - network is trained and weights are generated at /scratch/ppshete/workspace/tfmtcnn/data/models/mtcnn/train1
 Trained ONet.
 ########################################################################################################################################################################################################

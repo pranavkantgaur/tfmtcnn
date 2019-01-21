@@ -31,7 +31,7 @@ python tfmtcnn/tfmtcnn/train_model.py \
 	--train_root_dir ../data/models/mtcnn/train \
 	--dataset_root_dir ../data/datasets/mtcnn \
 	--base_learning_rate 0.001 \
-	--max_number_of_epoch 5 \
+	--max_number_of_epoch 19 \
 	--test_dataset FDDBDataset \
 	--test_annotation_image_dir /datasets/FDDB/ \
 	--test_annotation_file /datasets/FDDB/FDDB-folds/FDDB-fold-01-ellipseList.txt
@@ -59,7 +59,7 @@ python tfmtcnn/tfmtcnn/train_model.py \
 	--train_root_dir ../data/models/mtcnn/train \
 	--dataset_root_dir ../data/datasets/mtcnn \
 	--base_learning_rate 0.001 \
-	--max_number_of_epoch 23 \
+	--max_number_of_epoch 22 \
 	--test_dataset FDDBDataset \
 	--test_annotation_image_dir /datasets/FDDB/ \
 	--test_annotation_file /datasets/FDDB/FDDB-folds/FDDB-fold-01-ellipseList.txt
@@ -87,7 +87,7 @@ python tfmtcnn/tfmtcnn/train_model.py \
 	--train_root_dir ../data/models/mtcnn/train \
 	--dataset_root_dir ../data/datasets/mtcnn \
 	--base_learning_rate 0.001 \
-	--max_number_of_epoch 10 \
+	--max_number_of_epoch 21 \
 	--test_dataset FDDBDataset \
 	--test_annotation_image_dir /datasets/FDDB/ \
 	--test_annotation_file /datasets/FDDB/FDDB-folds/FDDB-fold-01-ellipseList.txt

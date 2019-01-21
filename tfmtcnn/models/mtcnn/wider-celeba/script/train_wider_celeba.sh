@@ -38,7 +38,7 @@ echo '##########################################################################
 
 echo 'Train PNet.'
 
-python train_model.py --network_name PNet --train_root_dir ../data/models/mtcnn/train --dataset_root_dir ../data/datasets/mtcnn --base_learning_rate 0.001 --learning_rate_epoch 5 10 15 --max_number_of_epoch 5 --test_dataset FDDBDataset --test_annotation_image_dir /datasets/FDDB/ --test_annotation_file /datasets/FDDB/FDDB-folds/FDDB-fold-01-ellipseList.txt
+python train_model.py --network_name PNet --train_root_dir ../data/models/mtcnn/train --dataset_root_dir ../data/datasets/mtcnn --base_learning_rate 0.001 --max_number_of_epoch 19 --test_dataset FDDBDataset --test_annotation_image_dir /datasets/FDDB/ --test_annotation_file /datasets/FDDB/FDDB-folds/FDDB-fold-01-ellipseList.txt
 
 echo 'Trained PNet.'
 
@@ -54,7 +54,7 @@ echo '##########################################################################
 
 echo 'Train RNet.'
 
-python train_model.py --network_name RNet --train_root_dir ../data/models/mtcnn/train --dataset_root_dir ../data/datasets/mtcnn --base_learning_rate 0.001 --learning_rate_epoch 23 30 40 --max_number_of_epoch 23 --test_dataset FDDBDataset --test_annotation_image_dir /datasets/FDDB/ --test_annotation_file /datasets/FDDB/FDDB-folds/FDDB-fold-01-ellipseList.txt
+python train_model.py --network_name RNet --train_root_dir ../data/models/mtcnn/train --dataset_root_dir ../data/datasets/mtcnn --base_learning_rate 0.001 --max_number_of_epoch 22 --test_dataset FDDBDataset --test_annotation_image_dir /datasets/FDDB/ --test_annotation_file /datasets/FDDB/FDDB-folds/FDDB-fold-01-ellipseList.txt
 
 echo 'Trained RNet.'
 
@@ -70,7 +70,7 @@ echo '##########################################################################
 
 echo 'Train ONet.'
 
-python train_model.py --network_name ONet --train_root_dir ../data/models/mtcnn/train --dataset_root_dir ../data/datasets/mtcnn --base_learning_rate 0.001 --learning_rate_epoch 10 20 30 --max_number_of_epoch 10 --test_dataset FDDBDataset --test_annotation_image_dir /datasets/FDDB/ --test_annotation_file /datasets/FDDB/FDDB-folds/FDDB-fold-01-ellipseList.txt
+python train_model.py --network_name ONet --train_root_dir ../data/models/mtcnn/train --dataset_root_dir ../data/datasets/mtcnn --base_learning_rate 0.001 --max_number_of_epoch 21 --test_dataset FDDBDataset --test_annotation_image_dir /datasets/FDDB/ --test_annotation_file /datasets/FDDB/FDDB-folds/FDDB-fold-01-ellipseList.txt
 
 echo 'Trained ONet.'
 
