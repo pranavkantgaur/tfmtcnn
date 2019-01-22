@@ -27,6 +27,9 @@ Usage:
 $ python tfmtcnn/tfmtcnn/webcamera_demo.py
 
 $ python tfmtcnn/tfmtcnn/webcamera_demo.py \
+	 --webcamera_id 0 
+
+$ python tfmtcnn/tfmtcnn/webcamera_demo.py \
 	 --webcamera_id 0 \
 	 --threshold 0.9 
 
@@ -39,6 +42,12 @@ $ python tfmtcnn/tfmtcnn/webcamera_demo.py \
 	 --webcamera_id 0 \
 	 --threshold 0.9 \
 	 --model_root_dir tfmtcnn/models/mtcnn/wider-celeba
+
+$ python tfmtcnn/tfmtcnn/webcamera_demo.py \
+	 --webcamera_id 0 \
+	 --threshold 0.9 \
+	 --minimum_face_size 120 \
+	 --model_root_dir tfmtcnn/models/mtcnn/wider-celeba 
 ```
 """
 
@@ -61,6 +70,7 @@ def parse_arguments(argv):
     parser = argparse.ArgumentParser()
     parser.add_argument(
         '--webcamera_id', type=int, help='Webcamera ID.', default=0)
+
     parser.add_argument(
         '--threshold',
         type=float,
@@ -75,6 +85,7 @@ def parse_arguments(argv):
 
     parser.add_argument('--test_mode', action='store_true')
 
+    parser.add_argument('--minimum_face_size', type=int, help='Minimum face size.', default=100)
     return (parser.parse_args(argv))
 
 
@@ -120,6 +131,12 @@ def main(args):
                     int(min(bounding_box[2], image_width)),
                     int(min(bounding_box[3], image_height))
                 ]
+
+                crop_width = crop_box[3] - crop_box[1]
+                crop_height = crop_box[2] - crop_box[0]
+
+                if(crop_height < args.minimum_face_size) or (crop_width < args.minimum_face_size):
+                    continue
 
                 if (probability > args.threshold):
                     cv2.rectangle(input_bgr_image, (crop_box[0], crop_box[1]),
