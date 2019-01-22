@@ -25,12 +25,21 @@ Usage:
 ```shell
 
 $ python tfmtcnn/tfmtcnn/evaluate_model.py \
-	--model_root_dir tfmtcnn/tfmtcnn/models/mtcnn/deploy \
 	--annotation_image_dir /datasets/WIDER_Face/WIDER_val/images \ 
 	--annotation_file_name /datasets/WIDER_Face/WIDER_val/wider_face_val_bbx_gt.txt
 
 $ python tfmtcnn/tfmtcnn/evaluate_model.py \
-	--model_root_dir tfmtcnn/tfmtcnn/models/mtcnn/deploy \
+	--model_root_dir tfmtcnn/tfmtcnn/models/mtcnn/wider-celeba \
+	--annotation_image_dir /datasets/WIDER_Face/WIDER_val/images \ 
+	--annotation_file_name /datasets/WIDER_Face/WIDER_val/wider_face_val_bbx_gt.txt
+
+$ python tfmtcnn/tfmtcnn/evaluate_model.py \
+	--dataset_name FDDBDataset \
+	--annotation_image_dir /datasets/FDDB/ \ 
+	--annotation_file_name /datasets/FDDB/FDDB-folds/FDDB-fold-01-ellipseList.txt  
+
+$ python tfmtcnn/tfmtcnn/evaluate_model.py \
+	--model_root_dir tfmtcnn/tfmtcnn/models/mtcnn/wider-celeba \
 	--dataset_name FDDBDataset \
 	--annotation_image_dir /datasets/FDDB/ \ 
 	--annotation_file_name /datasets/FDDB/FDDB-folds/FDDB-fold-01-ellipseList.txt  
