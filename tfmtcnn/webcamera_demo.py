@@ -85,7 +85,11 @@ def parse_arguments(argv):
 
     parser.add_argument('--test_mode', action='store_true')
 
-    parser.add_argument('--minimum_face_size', type=int, help='Minimum face size.', default=100)
+    parser.add_argument(
+        '--minimum_face_size',
+        type=int,
+        help='Minimum face size.',
+        default=100)
     return (parser.parse_args(argv))
 
 
@@ -135,7 +139,8 @@ def main(args):
                 crop_width = crop_box[3] - crop_box[1]
                 crop_height = crop_box[2] - crop_box[0]
 
-                if(crop_height < args.minimum_face_size) or (crop_width < args.minimum_face_size):
+                if (crop_height < args.minimum_face_size) or (
+                        crop_width < args.minimum_face_size):
                     continue
 
                 if (probability > args.threshold):
