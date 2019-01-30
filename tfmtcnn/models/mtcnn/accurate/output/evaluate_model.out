@@ -1,0 +1,110 @@
+1)
+python tfmtcnn/tfmtcnn/evaluate_model.py --model_root_dir tfmtcnn/tfmtcnn/models/mtcnn/accurate/ --dataset_name FDDBDataset --annotation_image_dir /datasets/FDDB/ --annotation_file_name /datasets/FDDB/FDDB-folds/FDDB-fold-01-ellipseList.txt
+508 faces in  290 number of images for FDDB dataset.
+Positive faces       -  325
+Partial faces        -  159
+Total detected faces -  484
+Ground truth faces   -  508
+Positive accuracy    -  0.639763779528
+Detection accuracy   -  0.952755905512
+Accuracy             -  0.6420943762348852
+
+2)
+python tfmtcnn/tfmtcnn/evaluate_model.py --model_root_dir tfmtcnn/tfmtcnn/models/mtcnn/accurate/ --dataset_name FDDBDataset --annotation_image_dir /datasets/FDDB/ --annotation_file_name /datasets/FDDB/FDDB-folds/FDDB-fold-02-ellipseList.txt
+514 faces in  285 number of images for FDDB dataset.
+Positive faces       -  338
+Partial faces        -  143
+Total detected faces -  481
+Ground truth faces   -  514
+Positive accuracy    -  0.657587548638
+Detection accuracy   -  0.93579766537
+Accuracy             -  0.6360464828549774
+
+3)
+python tfmtcnn/tfmtcnn/evaluate_model.py --model_root_dir tfmtcnn/tfmtcnn/models/mtcnn/accurate/ --dataset_name FDDBDataset --annotation_image_dir /datasets/FDDB/ --annotation_file_name /datasets/FDDB/FDDB-folds/FDDB-fold-03-ellipseList.txt
+509 faces in  274 number of images for FDDB dataset.
+Positive faces       -  334
+Partial faces        -  148
+Total detected faces -  482
+Ground truth faces   -  509
+Positive accuracy    -  0.656188605108
+Detection accuracy   -  0.94695481336
+Accuracy             -  0.6399299512143984
+
+4)
+python tfmtcnn/tfmtcnn/evaluate_model.py --model_root_dir tfmtcnn/tfmtcnn/models/mtcnn/accurate/ --dataset_name FDDBDataset --annotation_image_dir /datasets/FDDB/ --annotation_file_name /datasets/FDDB/FDDB-folds/FDDB-fold-04-ellipseList.txt
+512 faces in  302 number of images for FDDB dataset.
+Positive faces       -  334
+Partial faces        -  152
+Total detected faces -  486
+Ground truth faces   -  512
+Positive accuracy    -  0.65234375
+Detection accuracy   -  0.94921875
+Accuracy             -  0.6445976613305154
+
+5)
+python tfmtcnn/tfmtcnn/evaluate_model.py --model_root_dir tfmtcnn/tfmtcnn/models/mtcnn/accurate/ --dataset_name FDDBDataset --annotation_image_dir /datasets/FDDB/ --annotation_file_name /datasets/FDDB/FDDB-folds/FDDB-fold-05-ellipseList.txt
+510 faces in  298 number of images for FDDB dataset.
+Positive faces       -  353
+Partial faces        -  132
+Total detected faces -  485
+Ground truth faces   -  510
+Positive accuracy    -  0.692156862745
+Detection accuracy   -  0.950980392157
+Accuracy             -  0.6485074600024933
+
+6)
+python tfmtcnn/tfmtcnn/evaluate_model.py --model_root_dir tfmtcnn/tfmtcnn/models/mtcnn/accurate/ --dataset_name FDDBDataset --annotation_image_dir /datasets/FDDB/ --annotation_file_name /datasets/FDDB/FDDB-folds/FDDB-fold-06-ellipseList.txt
+511 faces in  302 number of images for FDDB dataset.
+Positive faces       -  351
+Partial faces        -  132
+Total detected faces -  483
+Ground truth faces   -  511
+Positive accuracy    -  0.686888454012
+Detection accuracy   -  0.945205479452
+Accuracy             -  0.6414654078736426
+
+7)
+python tfmtcnn/tfmtcnn/evaluate_model.py --model_root_dir tfmtcnn/tfmtcnn/models/mtcnn/accurate/ --dataset_name FDDBDataset --annotation_image_dir /datasets/FDDB/ --annotation_file_name /datasets/FDDB/FDDB-folds/FDDB-fold-07-ellipseList.txt
+511 faces in  279 number of images for FDDB dataset.
+Positive faces       -  317
+Partial faces        -  169
+Total detected faces -  486
+Ground truth faces   -  511
+Positive accuracy    -  0.620352250489
+Detection accuracy   -  0.951076320939
+Accuracy             -  0.636333035252139
+
+8)
+python tfmtcnn/tfmtcnn/evaluate_model.py --model_root_dir tfmtcnn/tfmtcnn/models/mtcnn/accurate/ --dataset_name FDDBDataset --annotation_image_dir /datasets/FDDB/ --annotation_file_name /datasets/FDDB/FDDB-folds/FDDB-fold-08-ellipseList.txt
+508 faces in  276 number of images for FDDB dataset.
+Positive faces       -  324
+Partial faces        -  148
+Total detected faces -  472
+Ground truth faces   -  508
+Positive accuracy    -  0.637795275591
+Detection accuracy   -  0.929133858268
+Accuracy             -  0.6315823174214422
+
+9)
+python tfmtcnn/tfmtcnn/evaluate_model.py --model_root_dir tfmtcnn/tfmtcnn/models/mtcnn/accurate/ --dataset_name FDDBDataset --annotation_image_dir /datasets/FDDB/ --annotation_file_name /datasets/FDDB/FDDB-folds/FDDB-fold-09-ellipseList.txt
+498 faces in  259 number of images for FDDB dataset.
+Positive faces       -  335
+Partial faces        -  135
+Total detected faces -  470
+Ground truth faces   -  498
+Positive accuracy    -  0.672690763052
+Detection accuracy   -  0.943775100402
+Accuracy             -  0.6384681356331422
+
+10)
+python tfmtcnn/tfmtcnn/evaluate_model.py --model_root_dir tfmtcnn/tfmtcnn/models/mtcnn/accurate/ --dataset_name FDDBDataset --annotation_image_dir /datasets/FDDB/ --annotation_file_name /datasets/FDDB/FDDB-folds/FDDB-fold-10-ellipseList.txt
+521 faces in  280 number of images for FDDB dataset.
+Positive faces       -  341
+Partial faces        -  147
+Total detected faces -  488
+Ground truth faces   -  521
+Positive accuracy    -  0.654510556622
+Detection accuracy   -  0.936660268714
+Accuracy             -  0.636424680247805
+
