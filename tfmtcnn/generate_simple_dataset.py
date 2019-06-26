@@ -88,7 +88,8 @@ def parse_arguments(argv):
 
     return (parser.parse_args(argv))
 
-
+# reads bounding box training data from WIDER dataset and landmark training data from CelebA dataset.
+# converts these datasets to the input format assumed by P-Net.
 def main(args):
 
     if (not args.annotation_image_dir):
