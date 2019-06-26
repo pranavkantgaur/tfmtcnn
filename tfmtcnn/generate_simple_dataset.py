@@ -41,7 +41,7 @@ from __future__ import print_function
 import sys
 import argparse
 
-from tfmtcnn.datasets.SimpleDataset import SimpleDataset
+from tfmtcnn.datasets.SimpleDataset import SimpleDataset # models the simple dataset generator
 import tfmtcnn.datasets.constants as datasets_constants
 
 default_base_number_of_images = datasets_constants.default_base_number_of_images
