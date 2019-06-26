@@ -34,7 +34,8 @@ from tfmtcnn.datasets.TensorFlowDataset import TensorFlowDataset
 
 from tfmtcnn.networks.NetworkFactory import NetworkFactory
 
-
+# generates simple dataset from input landmark and bounding box datasets.
+# this is used for training PNet.
 class SimpleDataset(AbstractDataset):
     def __init__(self, network_name='PNet'):
         AbstractDataset.__init__(self, network_name)
@@ -97,7 +98,9 @@ class SimpleDataset(AbstractDataset):
             return (False)
 
         return (True)
-
+    
+    # generates image and landmark samples from the input data from WIDER Face and CelebA datasets.
+    # it also generates Tensorflow compatible dataset
     def generate(self, annotation_image_dir, annotation_file_name,
                  landmark_image_dir, landmark_file_name, base_number_of_images,
                  target_root_dir):
