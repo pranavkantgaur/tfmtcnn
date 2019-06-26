@@ -38,24 +38,25 @@ from __future__ import print_function
 import sys
 import os
 import re
-import argparse
+import argparse # for parsing command0line arguments
 
-
+# reads the celebA dataset and writes it to a common output file
+# celeb data contains the bounding box coordinates and landmark position information for each input image.
 def prepare_dataset(bounding_box_file_name, landmark_file_name,
                     output_file_name):
-    if (not os.path.isfile(bounding_box_file_name)):
+    if (not os.path.isfile(bounding_box_file_name)): # invalid paths
         return (False)
     if (not os.path.isfile(landmark_file_name)):
         return (False)
 
-    bounding_box_file = open(bounding_box_file_name, 'r')
+    bounding_box_file = open(bounding_box_file_name, 'r') # opens bounding box and landmark file for reading
     landmark_file = open(landmark_file_name, 'r')
-    output_file = open(output_file_name, 'w')
+    output_file = open(output_file_name, 'w') # bounding box and landmark information will be writen to the output file.
 
-    number_of_bounding_boxes = int(bounding_box_file.readline())
+    number_of_bounding_boxes = int(bounding_box_file.readline()) 
     number_of_landmarks = int(landmark_file.readline())
 
-    if (number_of_bounding_boxes != number_of_landmarks):
+    if (number_of_bounding_boxes != number_of_landmarks): # one landmark data per bounding box
         return (False)
 
     # Read bounding box file header.
@@ -67,13 +68,13 @@ def prepare_dataset(bounding_box_file_name, landmark_file_name,
     bounding_boxes = bounding_box_file.readlines()
     landmarks = landmark_file.readlines()
 
-    if ((number_of_bounding_boxes != number_of_landmarks)
+    if ((number_of_bounding_boxes != number_of_landmarks) # always false!!
             or (len(bounding_boxes) != len(landmarks))
             or (len(bounding_boxes) != number_of_bounding_boxes)
             or (number_of_bounding_boxes <= 0)):
         return (False)
 
-    for bounding_box, landmark in zip(bounding_boxes, landmarks):
+    for bounding_box, landmark in zip(bounding_boxes, landmarks): # iterate over all bounding box, landmark pairs
         bounding_box_info = bounding_box.strip('\n').strip('\r')
         bounding_box_info = re.sub('\s+', ' ', bounding_box_info)
         bounding_box_info = bounding_box_info.split(' ')
@@ -82,12 +83,12 @@ def prepare_dataset(bounding_box_file_name, landmark_file_name,
         landmark_info = re.sub('\s+', ' ', landmark_info)
         landmark_info = landmark_info.split(' ')
 
-        bounding_box_current_file_name = bounding_box_info[0]
+        bounding_box_current_file_name = bounding_box_info[0] # reads the filename containing bounding box coordinates
         landmark_current_file_name = landmark_info[0]
 
         if ((bounding_box_current_file_name != landmark_current_file_name)
-                or (len(bounding_box_info) != 5)
-                or (len(landmark_info) != 11)):
+                or (len(bounding_box_info) != 5) # TODO: from where these numbers? should it be >= 5??
+                or (len(landmark_info) != 11)): # number of bounding boxes must not be 5 and number of landmarks per box must not be 11, WHY?
             continue
 
         output_file.write(
